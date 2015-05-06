@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package GW2CS;
+package Vista;
 
 /**
  *
