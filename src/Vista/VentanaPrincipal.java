@@ -195,6 +195,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
+        PanelPestañas.setBackground(new java.awt.Color(153, 0, 153));
+
+        PanelPersonajes.setBackground(new java.awt.Color(102, 102, 0));
+        PanelPersonajes.setOpaque(false);
+
         TablaPersonajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -206,6 +211,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        TablaPersonajes.setOpaque(false);
         PanelPersonajes.setViewportView(TablaPersonajes);
 
         PanelPestañas.addTab("Personajes", PanelPersonajes);
