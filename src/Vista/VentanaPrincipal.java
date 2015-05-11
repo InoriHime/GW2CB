@@ -528,7 +528,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(jLabel3);
         jLabel3.setBounds(180, 240, 50, 50);
 
-        icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar1.jpg"))); // NOI18N
+        icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar.jpg"))); // NOI18N
         icoEspaldar.setMaximumSize(new java.awt.Dimension(40, 40));
         icoEspaldar.setMinimumSize(new java.awt.Dimension(40, 40));
         icoEspaldar.setPreferredSize(new java.awt.Dimension(40, 40));
