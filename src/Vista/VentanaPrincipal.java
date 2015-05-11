@@ -69,6 +69,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         grupoBuscador = new javax.swing.ButtonGroup();
+        tituloBusqueda = new javax.swing.JLabel();
+        tituloPersonaje = new javax.swing.JLabel();
+        tituloEquipo = new javax.swing.JLabel();
         PanelPersonajes = new javax.swing.JScrollPane();
         TablaPersonajes = new javax.swing.JTable();
         PanelInformacion = new javax.swing.JPanel();
@@ -130,7 +133,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         FondoPj = new javax.swing.JLabel();
         PanelBusqueda = new javax.swing.JPanel();
-        etiBusqyeda = new javax.swing.JLabel();
         txtBusqueda = new javax.swing.JTextField();
         radPersonaje = new javax.swing.JRadioButton();
         radClan = new javax.swing.JRadioButton();
@@ -152,6 +154,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chkAleman2 = new javax.swing.JCheckBox();
         chkEspanyol2 = new javax.swing.JCheckBox();
         chkFrances2 = new javax.swing.JCheckBox();
+        jCheckBox1 = new javax.swing.JCheckBox();
         fondoBusqueda = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -183,6 +186,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tituloBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/busqueda.png"))); // NOI18N
+        getContentPane().add(tituloBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 28, 220, 40));
+
+        tituloPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/personaje.png"))); // NOI18N
+        getContentPane().add(tituloPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 365, 220, 40));
+
+        tituloEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/equipo.png"))); // NOI18N
+        getContentPane().add(tituloEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 28, 220, 40));
+
         PanelPersonajes.setBackground(new java.awt.Color(255, 51, 51));
         PanelPersonajes.setBorder(null);
         PanelPersonajes.setOpaque(false);
@@ -204,7 +216,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         TablaPersonajes.getTableHeader().setReorderingAllowed(false);
         PanelPersonajes.setViewportView(TablaPersonajes);
 
-        getContentPane().add(PanelPersonajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 465, 340));
+        getContentPane().add(PanelPersonajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 465, 320));
 
         PanelInformacion.setMaximumSize(new java.awt.Dimension(467, 245));
         PanelInformacion.setMinimumSize(new java.awt.Dimension(467, 245));
@@ -213,23 +225,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mostrarNombrePersonaje.setForeground(new java.awt.Color(209, 194, 170));
         mostrarNombrePersonaje.setText("-");
-        PanelInformacion.add(mostrarNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 11, 129, -1));
+        PanelInformacion.add(mostrarNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 129, -1));
 
         etiNomPj.setForeground(new java.awt.Color(209, 194, 170));
         etiNomPj.setText("Nombre Personaje:");
-        PanelInformacion.add(etiNomPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        PanelInformacion.add(etiNomPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         etiIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         etiIdiomas.setText("Idiomas:");
-        PanelInformacion.add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 31, 55, -1));
+        PanelInformacion.add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 55, -1));
 
         etiCuenta.setForeground(new java.awt.Color(209, 194, 170));
         etiCuenta.setText("Nombre de cuenta:");
-        PanelInformacion.add(etiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 11, -1, -1));
+        PanelInformacion.add(etiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
         etiServidor.setForeground(new java.awt.Color(209, 194, 170));
         etiServidor.setText("Servidor:");
-        PanelInformacion.add(etiServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 31, 92, -1));
+        PanelInformacion.add(etiServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 92, -1));
 
         PanelAtributos.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Atributos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelAtributos.setOpaque(false);
@@ -431,27 +443,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelInformacion.add(PanelAtributos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 76, -1, -1));
+        PanelInformacion.add(PanelAtributos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, 150));
 
         mostrarNombreCuenta.setForeground(new java.awt.Color(209, 194, 170));
         mostrarNombreCuenta.setText("-");
-        PanelInformacion.add(mostrarNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 11, 112, -1));
+        PanelInformacion.add(mostrarNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 112, -1));
 
         mostrarIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         mostrarIdiomas.setText("-");
-        PanelInformacion.add(mostrarIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 31, 149, 29));
+        PanelInformacion.add(mostrarIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 149, 29));
 
         mostrarServidor.setForeground(new java.awt.Color(209, 194, 170));
         mostrarServidor.setText("-");
-        PanelInformacion.add(mostrarServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 31, 129, -1));
+        PanelInformacion.add(mostrarServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 129, -1));
 
         etiClase.setForeground(new java.awt.Color(209, 194, 170));
         etiClase.setText("Clase:");
-        PanelInformacion.add(etiClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 51, 92, -1));
+        PanelInformacion.add(etiClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 92, -1));
 
         mostrarClase.setForeground(new java.awt.Color(209, 194, 170));
         mostrarClase.setText("-");
-        PanelInformacion.add(mostrarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 51, 129, -1));
+        PanelInformacion.add(mostrarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 129, -1));
 
         fondoInformacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
         PanelInformacion.add(fondoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 240));
@@ -463,35 +475,35 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         icoCabeza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cabeza.jpg"))); // NOI18N
         PanelEquipo.add(icoCabeza);
-        icoCabeza.setBounds(10, 30, 60, 54);
+        icoCabeza.setBounds(10, 20, 60, 54);
 
         icoHombros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/hombreras.jpg"))); // NOI18N
         PanelEquipo.add(icoHombros);
-        icoHombros.setBounds(10, 90, 60, 54);
+        icoHombros.setBounds(10, 80, 60, 54);
 
         icoPecho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/pecho.jpg"))); // NOI18N
         PanelEquipo.add(icoPecho);
-        icoPecho.setBounds(10, 150, 60, 54);
+        icoPecho.setBounds(10, 140, 60, 54);
 
         icoManos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/guantes.jpg"))); // NOI18N
         PanelEquipo.add(icoManos);
-        icoManos.setBounds(10, 210, 60, 54);
+        icoManos.setBounds(10, 200, 60, 54);
 
         icoPiernas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/pantalon.jpg"))); // NOI18N
         PanelEquipo.add(icoPiernas);
-        icoPiernas.setBounds(10, 270, 60, 54);
+        icoPiernas.setBounds(10, 260, 60, 54);
 
         icoPies.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/botas.jpg"))); // NOI18N
         PanelEquipo.add(icoPies);
-        icoPies.setBounds(10, 330, 60, 54);
+        icoPies.setBounds(10, 320, 60, 54);
 
         icoSetArma1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma1.png"))); // NOI18N
         PanelEquipo.add(icoSetArma1);
-        icoSetArma1.setBounds(130, 10, 60, 110);
+        icoSetArma1.setBounds(130, 16, 60, 110);
 
         icoSetArma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma2.png"))); // NOI18N
         PanelEquipo.add(icoSetArma2);
-        icoSetArma2.setBounds(130, 120, 60, 110);
+        icoSetArma2.setBounds(130, 126, 60, 110);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
         jLabel7.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -546,11 +558,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 149, Short.MAX_VALUE)
         );
 
         PanelEquipo.add(jPanel1);
-        jPanel1.setBounds(10, 403, 240, 180);
+        jPanel1.setBounds(10, 403, 240, 170);
 
         FondoPj.setBackground(new java.awt.Color(209, 194, 170));
         FondoPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
@@ -558,27 +570,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(FondoPj);
         FondoPj.setBounds(0, 0, 260, 590);
 
-        getContentPane().add(PanelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 40, 258, 590));
+        getContentPane().add(PanelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 50, 258, 580));
 
         PanelBusqueda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelBusqueda.setAlignmentX(0.0F);
         PanelBusqueda.setAlignmentY(0.0F);
         PanelBusqueda.setPreferredSize(new java.awt.Dimension(221, 36));
         PanelBusqueda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        etiBusqyeda.setBackground(new java.awt.Color(209, 194, 170));
-        etiBusqyeda.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        etiBusqyeda.setForeground(new java.awt.Color(27, 23, 20));
-        etiBusqyeda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etiBusqyeda.setText("Búsqueda");
-        etiBusqyeda.setAlignmentY(0.0F);
-        etiBusqyeda.setBorder(new javax.swing.border.MatteBorder(null));
-        etiBusqyeda.setMaximumSize(new java.awt.Dimension(41, 20));
-        etiBusqyeda.setMinimumSize(new java.awt.Dimension(41, 20));
-        etiBusqyeda.setOpaque(true);
-        etiBusqyeda.setPreferredSize(new java.awt.Dimension(41, 20));
-        PanelBusqueda.add(etiBusqyeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -1, 230, -1));
-        PanelBusqueda.add(txtBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 43, 197, -1));
+        PanelBusqueda.add(txtBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 197, -1));
 
         grupoBuscador.add(radPersonaje);
         radPersonaje.setForeground(new java.awt.Color(209, 194, 170));
@@ -589,129 +588,143 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 radPersonajeActionPerformed(evt);
             }
         });
-        PanelBusqueda.add(radPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 65, -1, -1));
+        PanelBusqueda.add(radPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         grupoBuscador.add(radClan);
         radClan.setForeground(new java.awt.Color(209, 194, 170));
         radClan.setText("Clan");
         radClan.setOpaque(false);
-        PanelBusqueda.add(radClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 65, -1, -1));
+        PanelBusqueda.add(radClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, -1, -1));
 
         grupoBuscador.add(radCuenta);
         radCuenta.setForeground(new java.awt.Color(209, 194, 170));
         radCuenta.setText("Cuenta");
         radCuenta.setOpaque(false);
-        PanelBusqueda.add(radCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 65, -1, -1));
+        PanelBusqueda.add(radCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(209, 194, 170));
         jLabel1.setText("R. Agonía minima:");
-        PanelBusqueda.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
-        PanelBusqueda.add(txtAgoniaMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 75, -1));
+        PanelBusqueda.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, -1));
+        PanelBusqueda.add(txtAgoniaMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 75, -1));
 
         btnBuscar.setBackground(new java.awt.Color(209, 194, 170));
         btnBuscar.setText("Buscar");
         btnBuscar.setOpaque(false);
-        PanelBusqueda.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 197, -1));
+        PanelBusqueda.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 197, -1));
 
         etiIdioma.setForeground(new java.awt.Color(209, 194, 170));
         etiIdioma.setText("Idioma:");
-        PanelBusqueda.add(etiIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        PanelBusqueda.add(etiIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
 
         chkEspanyol.setForeground(new java.awt.Color(209, 194, 170));
         chkEspanyol.setText("Español");
         chkEspanyol.setOpaque(false);
-        PanelBusqueda.add(chkEspanyol, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
+        PanelBusqueda.add(chkEspanyol, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, -1));
 
         chkAleman.setForeground(new java.awt.Color(209, 194, 170));
         chkAleman.setText("Alemán");
         chkAleman.setOpaque(false);
-        PanelBusqueda.add(chkAleman, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
+        PanelBusqueda.add(chkAleman, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         chkFrances.setForeground(new java.awt.Color(209, 194, 170));
         chkFrances.setSelected(true);
         chkFrances.setText("Francés");
         chkFrances.setOpaque(false);
-        PanelBusqueda.add(chkFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, -1, -1));
+        PanelBusqueda.add(chkFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
 
         chkIngles.setForeground(new java.awt.Color(209, 194, 170));
         chkIngles.setText("Inglés");
         chkIngles.setOpaque(false);
-        PanelBusqueda.add(chkIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+        PanelBusqueda.add(chkIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(209, 194, 170));
         jLabel2.setText("Clases:");
-        PanelBusqueda.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        PanelBusqueda.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         chkIngles1.setForeground(new java.awt.Color(209, 194, 170));
         chkIngles1.setText("Guardián");
         chkIngles1.setOpaque(false);
-        PanelBusqueda.add(chkIngles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        PanelBusqueda.add(chkIngles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
         chkAleman1.setForeground(new java.awt.Color(209, 194, 170));
         chkAleman1.setText("Elementalista");
         chkAleman1.setOpaque(false);
-        PanelBusqueda.add(chkAleman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+        PanelBusqueda.add(chkAleman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         chkEspanyol1.setForeground(new java.awt.Color(209, 194, 170));
         chkEspanyol1.setText("Guerrero");
         chkEspanyol1.setOpaque(false);
-        PanelBusqueda.add(chkEspanyol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
+        PanelBusqueda.add(chkEspanyol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
         chkFrances1.setForeground(new java.awt.Color(209, 194, 170));
         chkFrances1.setSelected(true);
         chkFrances1.setText("Nigromante");
         chkFrances1.setOpaque(false);
-        PanelBusqueda.add(chkFrances1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
+        PanelBusqueda.add(chkFrances1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
         chkIngles2.setForeground(new java.awt.Color(209, 194, 170));
         chkIngles2.setText("Guardabosques");
         chkIngles2.setOpaque(false);
-        PanelBusqueda.add(chkIngles2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+        PanelBusqueda.add(chkIngles2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         chkAleman2.setForeground(new java.awt.Color(209, 194, 170));
         chkAleman2.setText("Ingeniero");
         chkAleman2.setOpaque(false);
-        PanelBusqueda.add(chkAleman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+        PanelBusqueda.add(chkAleman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         chkEspanyol2.setForeground(new java.awt.Color(209, 194, 170));
         chkEspanyol2.setText("Ladron");
         chkEspanyol2.setOpaque(false);
-        PanelBusqueda.add(chkEspanyol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+        PanelBusqueda.add(chkEspanyol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         chkFrances2.setForeground(new java.awt.Color(209, 194, 170));
         chkFrances2.setSelected(true);
         chkFrances2.setText("Hipnotizador");
         chkFrances2.setOpaque(false);
-        PanelBusqueda.add(chkFrances2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, -1, -1));
+        PanelBusqueda.add(chkFrances2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+
+        jCheckBox1.setForeground(new java.awt.Color(209, 194, 170));
+        jCheckBox1.setText("Buscar solo miembros de mi clan");
+        jCheckBox1.setOpaque(false);
+        PanelBusqueda.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         fondoBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 400));
+        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 407));
 
-        getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 400));
+        getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 407));
 
         jLabel11.setText("Conectado como:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
 
         jLabel12.setText("-");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 132, 20));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 9, 132, 20));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 10, 139, -1));
+        jComboBox2.setOpaque(false);
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 8, 139, 22));
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(946, 9, 26, -1));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setOpaque(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 6, 27, 26));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         jLabel17.setText("jLabel17");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 20));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 240, 20));
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Personaje:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 13, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 12, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         jLabel16.setText("jLabel16");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, 70, 20));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 9, 80, 20));
 
         FondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/4.jpg"))); // NOI18N
         getContentPane().add(FondoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 987, 640));
@@ -766,6 +779,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void radPersonajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radPersonajeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_radPersonajeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -831,7 +848,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkIngles2;
     private javax.swing.JLabel etiAgonia;
     private javax.swing.JLabel etiArmadura;
-    private javax.swing.JLabel etiBusqyeda;
     private javax.swing.JLabel etiClase;
     private javax.swing.JLabel etiCuenta;
     private javax.swing.JLabel etiDanyoCondicion;
@@ -867,6 +883,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemCerrarUsuario;
     private javax.swing.JMenuItem itemModificarDatos;
     private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -909,6 +926,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JRadioButton radClan;
     private javax.swing.JRadioButton radCuenta;
     private javax.swing.JRadioButton radPersonaje;
+    private javax.swing.JLabel tituloBusqueda;
+    private javax.swing.JLabel tituloEquipo;
+    private javax.swing.JLabel tituloPersonaje;
     private javax.swing.JTextField txtAgoniaMinima;
     private javax.swing.JTextField txtBusqueda;
     // End of variables declaration//GEN-END:variables
