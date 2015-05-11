@@ -6,9 +6,9 @@ public class Database {
   /** base de datos por defecto es test*/
   private String db = "GW2CB";
   /** usuario */
-  private String user = "root";
+  private String user = "admin";
   /** contraseña de MySql*/
-  private String password = "toor";
+  private String password = "raspiroot";
   /** Cadena de conexion */
   private String url = "jdbc:mysql://85.136.81.194/"+db;
   /** variable para trabajar con la conexion a la base de datos */
