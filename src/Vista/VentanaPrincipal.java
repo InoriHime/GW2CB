@@ -140,7 +140,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Guild Wars 2 Character Search");
-        setMaximumSize(new java.awt.Dimension(982, 661));
         setMinimumSize(new java.awt.Dimension(982, 661));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -413,9 +412,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelPersonaje.setLayout(null);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cabeza.jpg"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(54, 54));
-        jLabel2.setMinimumSize(new java.awt.Dimension(54, 54));
-        jLabel2.setPreferredSize(new java.awt.Dimension(54, 54));
         PanelPersonaje.add(jLabel2);
         jLabel2.setBounds(10, 10, 60, 54);
 
