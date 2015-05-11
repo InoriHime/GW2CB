@@ -181,7 +181,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         itemAcerca = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Guild Wars 2 Character Search");
+        setTitle("Guild Wars 2 Character Browser");
         setMinimumSize(new java.awt.Dimension(982, 661));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -704,6 +704,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 8, 139, 22));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
+        jButton1.setToolTipText("Editar equipo del personaje");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setOpaque(false);

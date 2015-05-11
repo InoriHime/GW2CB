@@ -76,7 +76,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Guild Wars 2 Character Search"/>
+    <Property name="title" type="java.lang.String" value="Guild Wars 2 Character Browser"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[982, 661]"/>
     </Property>
@@ -1419,6 +1419,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Vista/Imagenes/edit1.png"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Editar equipo del personaje"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
         </Property>
