@@ -99,6 +99,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chkAleman = new javax.swing.JCheckBox();
         chkFrances = new javax.swing.JCheckBox();
         chkIngles = new javax.swing.JCheckBox();
+        jLabel16 = new javax.swing.JLabel();
         BarraMenu = new javax.swing.JMenuBar();
         UsuarioMenu = new javax.swing.JMenu();
         itemModificarDatos = new javax.swing.JMenuItem();
@@ -116,7 +117,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Guild Wars 2 Character Search");
-        setMinimumSize(new java.awt.Dimension(800, 600));
+        setMaximumSize(new java.awt.Dimension(1137, 633));
+        setMinimumSize(new java.awt.Dimension(1137, 633));
+        setPreferredSize(new java.awt.Dimension(1200, 690));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
         PanelUsuario.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelUsuario.setAlignmentX(0.0F);
@@ -195,10 +200,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
+        getContentPane().add(PanelUsuario);
+        PanelUsuario.setBounds(10, 285, 221, 277);
+
         PanelPestañas.setBackground(new java.awt.Color(153, 0, 153));
 
         PanelPersonajes.setBackground(new java.awt.Color(102, 102, 0));
-        PanelPersonajes.setOpaque(false);
 
         TablaPersonajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -230,6 +237,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelClanes.setViewportView(TablaClanes);
 
         PanelPestañas.addTab("Clan", PanelClanes);
+
+        getContentPane().add(PanelPestañas);
+        PanelPestañas.setBounds(237, 11, 626, 369);
 
         PanelInformacion.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -462,6 +472,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(PanelInformacion);
+        PanelInformacion.setBounds(237, 386, 626, 215);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel45.setText("Nombre del Personaje:");
@@ -493,8 +506,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
                     .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(869, 11, 258, 590);
 
         PanelBusqueda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelBusqueda.setAlignmentX(0.0F);
@@ -603,6 +619,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(PanelBusqueda);
+        PanelBusqueda.setBounds(10, 11, 221, 268);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/4.jpg"))); // NOI18N
+        jLabel16.setText("jLabel16");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(0, 0, 1140, 610);
+
         UsuarioMenu.setText("Usuario");
 
         itemModificarDatos.setText("Modificar datos...");
@@ -642,43 +666,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         BarraMenu.add(AyudaMenu);
 
         setJMenuBar(BarraMenu);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PanelBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PanelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PanelInformacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PanelPestañas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(PanelBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PanelUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(PanelPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PanelInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -757,6 +744,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
