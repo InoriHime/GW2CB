@@ -51,7 +51,6 @@ public class ModeloPrincipal extends Database{
                 data[i][0] = res.getString("NomPj");
                 data[i][1] = res.getString("Cuenta");
                 data[i][2] = res.getString("NomClase");
-               System.out.println("Insertados personaje, cuenta y clase");
                 ResultSet res1 = stmt1.executeQuery("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas,Personajes WHERE NomCuenta='"+data[i][1]+"'");
                     res1.next();
                     data[i][3] = res1.getString("Nivfractales");
@@ -70,13 +69,11 @@ public class ModeloPrincipal extends Database{
                         cad=cad.concat("[GER]");
                     }
                 data[i][6] = cad;
-               System.out.println(cad + "Insertadonivel de fractales");
                 
                 ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][1]+"') as Agonia");
                 res3.next();
                 data[i][4] = res3.getString("Agonia");
                 
-                System.out.println("Insertado ar");
                 
                 try{
                 ResultSet res2 = stmt2.executeQuery("SELECT Clan FROM Clan_Cuenta WHERE Cuenta='"+data[i][1]+"'");
@@ -91,12 +88,6 @@ public class ModeloPrincipal extends Database{
                 
             i++;
             
-         }
-         
-         for(int j=0; i<registros;i++){
-             for (int k=0; k<7;i++){
-                 System.out.println(data[j][k]);
-             }
          }
          //se añade la matriz de datos en el DefaultTableModel
          tablemodel.setDataVector(data, columNames );

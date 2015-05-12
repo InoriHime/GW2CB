@@ -1,7 +1,5 @@
 package Modelo;
 import java.sql.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.JOptionPane;
 
 public class ModeloLogin extends Database{
     /* Constructor de clase */
