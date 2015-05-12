@@ -69,6 +69,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         grupoBuscador = new javax.swing.ButtonGroup();
+        DialogoModificarUsuario = new javax.swing.JDialog();
+        txtRepeContrasena = new javax.swing.JPasswordField();
+        combServidor = new javax.swing.JComboBox();
+        etiCuenta1 = new javax.swing.JLabel();
+        panelIdiomas = new javax.swing.JPanel();
+        chkIngles3 = new javax.swing.JCheckBox();
+        chkEspanol = new javax.swing.JCheckBox();
+        chkAleman3 = new javax.swing.JCheckBox();
+        chkFrances3 = new javax.swing.JCheckBox();
+        etiEmail = new javax.swing.JLabel();
+        etiContrasena = new javax.swing.JLabel();
+        etiRepeContrasena = new javax.swing.JLabel();
+        etiServidor1 = new javax.swing.JLabel();
+        etiIdiomas1 = new javax.swing.JLabel();
+        txtCuenta = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
+        txtContrasena = new javax.swing.JPasswordField();
         tituloBusqueda = new javax.swing.JLabel();
         tituloPersonaje = new javax.swing.JLabel();
         tituloEquipo = new javax.swing.JLabel();
@@ -177,8 +194,121 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        ConfiguracionMenu = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         AyudaMenu = new javax.swing.JMenu();
         itemAcerca = new javax.swing.JMenuItem();
+
+        DialogoModificarUsuario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        DialogoModificarUsuario.setTitle("Modificar Usuario");
+        DialogoModificarUsuario.setAlwaysOnTop(true);
+        DialogoModificarUsuario.setResizable(false);
+
+        combServidor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        etiCuenta1.setText("Nombre cuenta (GW2)");
+
+        panelIdiomas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        chkIngles3.setText("Inglés");
+
+        chkEspanol.setText("Español");
+
+        chkAleman3.setText("Aleman");
+
+        chkFrances3.setText("Francés");
+
+        javax.swing.GroupLayout panelIdiomasLayout = new javax.swing.GroupLayout(panelIdiomas);
+        panelIdiomas.setLayout(panelIdiomasLayout);
+        panelIdiomasLayout.setHorizontalGroup(
+            panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIdiomasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkIngles3)
+                    .addComponent(chkAleman3))
+                .addGap(41, 41, 41)
+                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkEspanol)
+                    .addComponent(chkFrances3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelIdiomasLayout.setVerticalGroup(
+            panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIdiomasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chkIngles3)
+                    .addComponent(chkEspanol))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chkAleman3)
+                    .addComponent(chkFrances3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        etiEmail.setText("Email");
+
+        etiContrasena.setText("Contraseña");
+
+        etiRepeContrasena.setText("Repetir contraseña");
+
+        etiServidor1.setText("Servidor");
+
+        etiIdiomas1.setText("Idiomas");
+
+        javax.swing.GroupLayout DialogoModificarUsuarioLayout = new javax.swing.GroupLayout(DialogoModificarUsuario.getContentPane());
+        DialogoModificarUsuario.getContentPane().setLayout(DialogoModificarUsuarioLayout);
+        DialogoModificarUsuarioLayout.setHorizontalGroup(
+            DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogoModificarUsuarioLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(etiRepeContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiCuenta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiIdiomas1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiServidor1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelIdiomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCuenta)
+                    .addComponent(txtEmail)
+                    .addComponent(combServidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtRepeContrasena)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        DialogoModificarUsuarioLayout.setVerticalGroup(
+            DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DialogoModificarUsuarioLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiCuenta1)
+                    .addComponent(txtCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiEmail)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiContrasena)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(etiRepeContrasena)
+                    .addComponent(txtRepeContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiServidor1)
+                    .addComponent(combServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiIdiomas1))
+                .addContainerGap(178, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Guild Wars 2 Character Browser");
@@ -328,7 +458,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiDanyoCritico.setText("Daño Crítico:");
 
         etiAgonia.setForeground(new java.awt.Color(209, 194, 170));
-        etiAgonia.setText("Resis. Agonía:");
+        etiAgonia.setText("Resist. Agonía:");
 
         javax.swing.GroupLayout PanelAtributosLayout = new javax.swing.GroupLayout(PanelAtributos);
         PanelAtributos.setLayout(PanelAtributosLayout);
@@ -451,6 +581,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mostrarIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         mostrarIdiomas.setText("-");
+        mostrarIdiomas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         PanelInformacion.add(mostrarIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 149, 29));
 
         mostrarServidor.setForeground(new java.awt.Color(209, 194, 170));
@@ -603,7 +734,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelBusqueda.add(radCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(209, 194, 170));
-        jLabel1.setText("R. Agonía minima:");
+        jLabel1.setText("Resist. Agonía mínima:");
         PanelBusqueda.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, -1));
         PanelBusqueda.add(txtAgoniaMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 75, -1));
 
@@ -627,7 +758,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelBusqueda.add(chkAleman, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         chkFrances.setForeground(new java.awt.Color(209, 194, 170));
-        chkFrances.setSelected(true);
         chkFrances.setText("Francés");
         chkFrances.setOpaque(false);
         PanelBusqueda.add(chkFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
@@ -657,7 +787,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelBusqueda.add(chkEspanyol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
         chkFrances1.setForeground(new java.awt.Color(209, 194, 170));
-        chkFrances1.setSelected(true);
         chkFrances1.setText("Nigromante");
         chkFrances1.setOpaque(false);
         PanelBusqueda.add(chkFrances1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
@@ -673,12 +802,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelBusqueda.add(chkAleman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         chkEspanyol2.setForeground(new java.awt.Color(209, 194, 170));
-        chkEspanyol2.setText("Ladron");
+        chkEspanyol2.setText("Ladrón");
         chkEspanyol2.setOpaque(false);
+        chkEspanyol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkEspanyol2ActionPerformed(evt);
+            }
+        });
         PanelBusqueda.add(chkEspanyol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         chkFrances2.setForeground(new java.awt.Color(209, 194, 170));
-        chkFrances2.setSelected(true);
         chkFrances2.setText("Hipnotizador");
         chkFrances2.setOpaque(false);
         PanelBusqueda.add(chkFrances2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
@@ -765,6 +898,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         BarraMenu.add(EditarMenu);
 
+        ConfiguracionMenu.setText("Configuración");
+
+        jMenuItem2.setText("Cambiar Base de Datos...");
+        ConfiguracionMenu.add(jMenuItem2);
+
+        BarraMenu.add(ConfiguracionMenu);
+
         AyudaMenu.setText("Ayuda");
 
         itemAcerca.setText("Acerca de...");
@@ -784,6 +924,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void chkEspanyol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEspanyol2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkEspanyol2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -823,6 +967,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu AyudaMenu;
     private javax.swing.JMenuBar BarraMenu;
+    private javax.swing.JMenu ConfiguracionMenu;
+    private javax.swing.JDialog DialogoModificarUsuario;
     private javax.swing.JMenu EditarMenu;
     private javax.swing.JLabel FondoPj;
     private javax.swing.JLabel FondoPrincipal;
@@ -838,34 +984,45 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkAleman;
     private javax.swing.JCheckBox chkAleman1;
     private javax.swing.JCheckBox chkAleman2;
+    private javax.swing.JCheckBox chkAleman3;
+    private javax.swing.JCheckBox chkEspanol;
     private javax.swing.JCheckBox chkEspanyol;
     private javax.swing.JCheckBox chkEspanyol1;
     private javax.swing.JCheckBox chkEspanyol2;
     private javax.swing.JCheckBox chkFrances;
     private javax.swing.JCheckBox chkFrances1;
     private javax.swing.JCheckBox chkFrances2;
+    private javax.swing.JCheckBox chkFrances3;
     private javax.swing.JCheckBox chkIngles;
     private javax.swing.JCheckBox chkIngles1;
     private javax.swing.JCheckBox chkIngles2;
+    private javax.swing.JCheckBox chkIngles3;
+    private javax.swing.JComboBox combServidor;
     private javax.swing.JLabel etiAgonia;
     private javax.swing.JLabel etiArmadura;
     private javax.swing.JLabel etiClase;
+    private javax.swing.JLabel etiContrasena;
     private javax.swing.JLabel etiCuenta;
+    private javax.swing.JLabel etiCuenta1;
     private javax.swing.JLabel etiDanyoCondicion;
     private javax.swing.JLabel etiDanyoCritico;
     private javax.swing.JLabel etiDuracionBendicion;
     private javax.swing.JLabel etiDuracionCondicion;
     private javax.swing.JLabel etiDureza;
+    private javax.swing.JLabel etiEmail;
     private javax.swing.JLabel etiFerocidad;
     private javax.swing.JLabel etiIdioma;
     private javax.swing.JLabel etiIdiomas;
+    private javax.swing.JLabel etiIdiomas1;
     private javax.swing.JLabel etiNomPj;
     private javax.swing.JLabel etiPoder;
     private javax.swing.JLabel etiPoderCuracion;
     private javax.swing.JLabel etiPrecision;
     private javax.swing.JLabel etiProbabilidadCritica;
+    private javax.swing.JLabel etiRepeContrasena;
     private javax.swing.JLabel etiSalud;
     private javax.swing.JLabel etiServidor;
+    private javax.swing.JLabel etiServidor1;
     private javax.swing.JLabel etiVitalidad;
     private javax.swing.JLabel fondoBusqueda;
     private javax.swing.JLabel fondoInformacion;
@@ -899,6 +1056,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -924,6 +1082,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel mostrarSalud;
     private javax.swing.JLabel mostrarServidor;
     private javax.swing.JLabel mostrarVitalidad;
+    private javax.swing.JPanel panelIdiomas;
     private javax.swing.JRadioButton radClan;
     private javax.swing.JRadioButton radCuenta;
     private javax.swing.JRadioButton radPersonaje;
@@ -932,5 +1091,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel tituloPersonaje;
     private javax.swing.JTextField txtAgoniaMinima;
     private javax.swing.JTextField txtBusqueda;
+    private javax.swing.JPasswordField txtContrasena;
+    private javax.swing.JTextField txtCuenta;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JPasswordField txtRepeContrasena;
     // End of variables declaration//GEN-END:variables
 }
