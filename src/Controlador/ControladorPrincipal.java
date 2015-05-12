@@ -43,7 +43,7 @@ public class ControladorPrincipal{
           catch (IllegalAccessException ex) {}
         // Mostramos datos en la tabla
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
-
+        this.vista.PanelTabla.getViewport().setBorder(null);
       
     }
     

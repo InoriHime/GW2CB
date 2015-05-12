@@ -8,13 +8,9 @@ package Vista;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Graphics;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JTable;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableCellRenderer;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
@@ -44,10 +40,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         /*Hacemos invisible el JScrollpane*/
         PanelTabla.setOpaque(false);
         PanelTabla.getViewport().setOpaque(false);
-        PanelTabla.setBorder(null);
         PanelTabla.getViewport().setBorder(null);
+        //Le quiamos el borde al JScrollPane
+        PanelTabla.setBorder(BorderFactory.createEmptyBorder());
         
         TablaPersonajes.setBackground(new Color(160, 133, 117, 159));
+        TablaPersonajes.setGridColor(new Color(27, 23, 20));
         
 
     }
@@ -236,7 +234,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiPersonaje = new javax.swing.JLabel();
         fondoPersonaje = new javax.swing.JLabel();
         fondoPrincipal = new javax.swing.JLabel();
-        fondotable = new javax.swing.JLabel();
         MenuBarra = new javax.swing.JMenuBar();
         menuUsuario = new javax.swing.JMenu();
         itemModificarDatos = new javax.swing.JMenuItem();
@@ -922,12 +919,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(tituloPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 365, 220, 40));
 
         tituloEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/equipo.png"))); // NOI18N
-        getContentPane().add(tituloEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 28, 220, 40));
+        getContentPane().add(tituloEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, 220, 40));
 
         PanelTabla.setBackground(new java.awt.Color(255, 51, 51));
         PanelTabla.setBorder(null);
         PanelTabla.setOpaque(false);
 
+        TablaPersonajes.setForeground(new java.awt.Color(27, 23, 20));
         TablaPersonajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -945,7 +943,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         TablaPersonajes.getTableHeader().setReorderingAllowed(false);
         PanelTabla.setViewportView(TablaPersonajes);
 
-        getContentPane().add(PanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 465, 320));
+        getContentPane().add(PanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 580, 320));
 
         PanelInformacion.setMaximumSize(new java.awt.Dimension(467, 245));
         PanelInformacion.setMinimumSize(new java.awt.Dimension(467, 245));
@@ -1195,10 +1193,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mostrarClase.setText("-");
         PanelInformacion.add(mostrarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 129, -1));
 
-        fondoInformacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        PanelInformacion.add(fondoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 240));
+        fondoInformacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo1.jpg"))); // NOI18N
+        PanelInformacion.add(fondoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 240));
 
-        getContentPane().add(PanelInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 465, 240));
+        getContentPane().add(PanelInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 580, 240));
 
         PanelEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelEquipo.setLayout(null);
@@ -1300,7 +1298,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(fondoEquipo);
         fondoEquipo.setBounds(0, 0, 260, 590);
 
-        getContentPane().add(PanelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 50, 258, 580));
+        getContentPane().add(PanelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 50, 258, 580));
 
         PanelBusqueda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelBusqueda.setAlignmentX(0.0F);
@@ -1433,7 +1431,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cbPersonaje.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbPersonaje.setOpaque(false);
-        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 8, 139, 22));
+        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 10, 139, 22));
 
         btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
         btnModPj.setToolTipText("Editar equipo del personaje");
@@ -1445,7 +1443,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 btnModPjActionPerformed(evt);
             }
         });
-        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 6, 27, 26));
+        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 8, 27, 26));
 
         fondoConectadoComo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoConectadoComo.setText("jLabel17");
@@ -1453,18 +1451,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         etiPersonaje.setBackground(new java.awt.Color(255, 255, 255));
         etiPersonaje.setText("Personaje:");
-        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 12, -1, -1));
+        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 70, 20));
 
         fondoPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoPersonaje.setText("jLabel16");
-        getContentPane().add(fondoPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 9, 80, 20));
+        getContentPane().add(fondoPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 11, 80, 20));
 
-        fondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/4.jpg"))); // NOI18N
-        getContentPane().add(fondoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 640));
-
-        fondotable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        fondotable.setText("jLabel6");
-        getContentPane().add(fondotable, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 470, 340));
+        fondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondogeneral.jpg"))); // NOI18N
+        fondoPrincipal.setMaximumSize(new java.awt.Dimension(1280, 640));
+        fondoPrincipal.setMinimumSize(new java.awt.Dimension(1280, 640));
+        fondoPrincipal.setPreferredSize(new java.awt.Dimension(1280, 640));
+        fondoPrincipal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(fondoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 640));
 
         menuUsuario.setText("Usuario");
 
@@ -1579,25 +1577,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar MenuBarra;
-    private javax.swing.JPanel PanelAtributos;
-    private javax.swing.JPanel PanelBusqueda;
-    private javax.swing.JPanel PanelEquipo;
-    private javax.swing.JPanel PanelEstadisticas;
-    private javax.swing.JPanel PanelInformacion;
-    private javax.swing.JScrollPane PanelTabla;
+    public javax.swing.JMenuBar MenuBarra;
+    public javax.swing.JPanel PanelAtributos;
+    public javax.swing.JPanel PanelBusqueda;
+    public javax.swing.JPanel PanelEquipo;
+    public javax.swing.JPanel PanelEstadisticas;
+    public javax.swing.JPanel PanelInformacion;
+    public javax.swing.JScrollPane PanelTabla;
     private javax.swing.JPanel Panel_dialogoMU_CambiarContrasenya;
     private javax.swing.JPanel Panel_dialogoMU_Idiomas;
-    private javax.swing.JTable TablaPersonajes;
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnModPj;
+    public javax.swing.JTable TablaPersonajes;
+    public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnModPj;
     private javax.swing.JButton btn_dialogoMP_Cancelar;
     private javax.swing.JButton btn_dialogoMP_Modificar;
     private javax.swing.JButton btn_dialogoMU_Cancelar;
     private javax.swing.JButton btn_dialogoMU_Modificar;
     private javax.swing.JButton btn_dialogoRP_Cancelar;
     private javax.swing.JButton btn_dialogoRP_Registrar;
-    private javax.swing.JComboBox cbPersonaje;
+    public javax.swing.JComboBox cbPersonaje;
     private javax.swing.JComboBox cb_dialogoMP_Clase;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArma;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArmadura;
@@ -1617,19 +1615,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox cb_dialogoRP_SlotArma;
     private javax.swing.JComboBox cb_dialogoRP_SlotArmadura;
     private javax.swing.JComboBox cb_dialogoRP_TipoArma;
-    private javax.swing.JCheckBox chkAleman;
-    private javax.swing.JCheckBox chkBuscarMiembrosMiClan;
-    private javax.swing.JCheckBox chkElementalista;
-    private javax.swing.JCheckBox chkEspanyol;
-    private javax.swing.JCheckBox chkFrances;
-    private javax.swing.JCheckBox chkGuardabosques;
-    private javax.swing.JCheckBox chkGuardian;
-    private javax.swing.JCheckBox chkGuerrero;
-    private javax.swing.JCheckBox chkHipnotizador;
-    private javax.swing.JCheckBox chkIngeniero;
-    private javax.swing.JCheckBox chkIngles;
-    private javax.swing.JCheckBox chkLadron;
-    private javax.swing.JCheckBox chkNigromante;
+    public javax.swing.JCheckBox chkAleman;
+    public javax.swing.JCheckBox chkBuscarMiembrosMiClan;
+    public javax.swing.JCheckBox chkElementalista;
+    public javax.swing.JCheckBox chkEspanyol;
+    public javax.swing.JCheckBox chkFrances;
+    public javax.swing.JCheckBox chkGuardabosques;
+    public javax.swing.JCheckBox chkGuardian;
+    public javax.swing.JCheckBox chkGuerrero;
+    public javax.swing.JCheckBox chkHipnotizador;
+    public javax.swing.JCheckBox chkIngeniero;
+    public javax.swing.JCheckBox chkIngles;
+    public javax.swing.JCheckBox chkLadron;
+    public javax.swing.JCheckBox chkNigromante;
     private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica1Arma;
     private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica2Arma;
     private javax.swing.JCheckBox chk_dialogoMP_InfusionBasicaArmadura;
@@ -1643,30 +1641,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDialog dialogoModificarPersonaje;
     private javax.swing.JDialog dialogoModificarUsuario;
     private javax.swing.JDialog dialogoRegistrarPersonaje;
-    private javax.swing.JLabel etiAgonia;
-    private javax.swing.JLabel etiArmadura;
-    private javax.swing.JLabel etiClase;
-    private javax.swing.JLabel etiClases;
-    private javax.swing.JLabel etiConectadoComo;
-    private javax.swing.JLabel etiDanyoCondicion;
-    private javax.swing.JLabel etiDanyoCritico;
-    private javax.swing.JLabel etiDuracionBendicion;
-    private javax.swing.JLabel etiDuracionCondicion;
-    private javax.swing.JLabel etiDureza;
-    private javax.swing.JLabel etiFerocidad;
-    private javax.swing.JLabel etiIdioma;
-    private javax.swing.JLabel etiIdiomas;
-    private javax.swing.JLabel etiNombreCuenta;
-    private javax.swing.JLabel etiNombrePersonaje;
-    private javax.swing.JLabel etiPersonaje;
-    private javax.swing.JLabel etiPoder;
-    private javax.swing.JLabel etiPoderCuracion;
-    private javax.swing.JLabel etiPrecision;
-    private javax.swing.JLabel etiProbabilidadCritica;
-    private javax.swing.JLabel etiResistAgoniaMin;
-    private javax.swing.JLabel etiSalud;
-    private javax.swing.JLabel etiServidor;
-    private javax.swing.JLabel etiVitalidad;
+    public javax.swing.JLabel etiAgonia;
+    public javax.swing.JLabel etiArmadura;
+    public javax.swing.JLabel etiClase;
+    public javax.swing.JLabel etiClases;
+    public javax.swing.JLabel etiConectadoComo;
+    public javax.swing.JLabel etiDanyoCondicion;
+    public javax.swing.JLabel etiDanyoCritico;
+    public javax.swing.JLabel etiDuracionBendicion;
+    public javax.swing.JLabel etiDuracionCondicion;
+    public javax.swing.JLabel etiDureza;
+    public javax.swing.JLabel etiFerocidad;
+    public javax.swing.JLabel etiIdioma;
+    public javax.swing.JLabel etiIdiomas;
+    public javax.swing.JLabel etiNombreCuenta;
+    public javax.swing.JLabel etiNombrePersonaje;
+    public javax.swing.JLabel etiPersonaje;
+    public javax.swing.JLabel etiPoder;
+    public javax.swing.JLabel etiPoderCuracion;
+    public javax.swing.JLabel etiPrecision;
+    public javax.swing.JLabel etiProbabilidadCritica;
+    public javax.swing.JLabel etiResistAgoniaMin;
+    public javax.swing.JLabel etiSalud;
+    public javax.swing.JLabel etiServidor;
+    public javax.swing.JLabel etiVitalidad;
     private javax.swing.JLabel eti_dialogoMP_Clase;
     private javax.swing.JLabel eti_dialogoMP_InfusionAgoniaArmadura;
     private javax.swing.JLabel eti_dialogoMP_ModificadorArma;
@@ -1696,81 +1694,80 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoRP_SlotArma;
     private javax.swing.JLabel eti_dialogoRP_SlotArmadura;
     private javax.swing.JLabel eti_dialogoRP_TipoArma;
-    private javax.swing.JLabel fondoBusqueda;
-    private javax.swing.JLabel fondoConectadoComo;
-    private javax.swing.JLabel fondoEquipo;
-    private javax.swing.JLabel fondoInformacion;
-    private javax.swing.JLabel fondoPersonaje;
-    private javax.swing.JLabel fondoPrincipal;
-    private javax.swing.JLabel fondotable;
+    public javax.swing.JLabel fondoBusqueda;
+    public javax.swing.JLabel fondoConectadoComo;
+    public javax.swing.JLabel fondoEquipo;
+    public javax.swing.JLabel fondoInformacion;
+    public javax.swing.JLabel fondoPersonaje;
+    public javax.swing.JLabel fondoPrincipal;
     private javax.swing.ButtonGroup grupoBuscador;
-    private javax.swing.JLabel icoAccesorio1;
-    private javax.swing.JLabel icoAccesorio2;
-    private javax.swing.JLabel icoAmuleto;
-    private javax.swing.JLabel icoAnillo1;
-    private javax.swing.JLabel icoAnillo2;
-    private javax.swing.JLabel icoCabeza;
-    private javax.swing.JLabel icoEspaldar;
-    private javax.swing.JLabel icoHombros;
-    private javax.swing.JLabel icoManos;
-    private javax.swing.JLabel icoPecho;
-    private javax.swing.JLabel icoPiernas;
-    private javax.swing.JLabel icoPies;
-    private javax.swing.JLabel icoSetArma1;
-    private javax.swing.JLabel icoSetArma2;
-    private javax.swing.JMenuItem itemAbandonarClan;
-    private javax.swing.JMenuItem itemAcerca;
-    private javax.swing.JMenuItem itemCambiarBD;
-    private javax.swing.JMenuItem itemCerrarUsuario;
-    private javax.swing.JMenuItem itemEliminarClan;
-    private javax.swing.JMenuItem itemModClan;
-    private javax.swing.JMenuItem itemModPj;
-    private javax.swing.JMenuItem itemModificarDatos;
-    private javax.swing.JMenuItem itemRegClan;
-    private javax.swing.JMenuItem itemRegPj;
-    private javax.swing.JMenuItem itemUnirClan;
-    private javax.swing.JMenu menuAyuda;
-    private javax.swing.JMenu menuConfiguracion;
-    private javax.swing.JMenu menuEditar;
-    private javax.swing.JMenu menuUsuario;
+    public javax.swing.JLabel icoAccesorio1;
+    public javax.swing.JLabel icoAccesorio2;
+    public javax.swing.JLabel icoAmuleto;
+    public javax.swing.JLabel icoAnillo1;
+    public javax.swing.JLabel icoAnillo2;
+    public javax.swing.JLabel icoCabeza;
+    public javax.swing.JLabel icoEspaldar;
+    public javax.swing.JLabel icoHombros;
+    public javax.swing.JLabel icoManos;
+    public javax.swing.JLabel icoPecho;
+    public javax.swing.JLabel icoPiernas;
+    public javax.swing.JLabel icoPies;
+    public javax.swing.JLabel icoSetArma1;
+    public javax.swing.JLabel icoSetArma2;
+    public javax.swing.JMenuItem itemAbandonarClan;
+    public javax.swing.JMenuItem itemAcerca;
+    public javax.swing.JMenuItem itemCambiarBD;
+    public javax.swing.JMenuItem itemCerrarUsuario;
+    public javax.swing.JMenuItem itemEliminarClan;
+    public javax.swing.JMenuItem itemModClan;
+    public javax.swing.JMenuItem itemModPj;
+    public javax.swing.JMenuItem itemModificarDatos;
+    public javax.swing.JMenuItem itemRegClan;
+    public javax.swing.JMenuItem itemRegPj;
+    public javax.swing.JMenuItem itemUnirClan;
+    public javax.swing.JMenu menuAyuda;
+    public javax.swing.JMenu menuConfiguracion;
+    public javax.swing.JMenu menuEditar;
+    public javax.swing.JMenu menuUsuario;
     private javax.swing.JLabel mostar_dialogoMU_NombreCuenta;
-    private javax.swing.JLabel mostrarAgonia;
-    private javax.swing.JLabel mostrarArmadura;
-    private javax.swing.JLabel mostrarClase;
-    private javax.swing.JLabel mostrarDanyoCondicion;
-    private javax.swing.JLabel mostrarDanyoCritico;
-    private javax.swing.JLabel mostrarDuracionBendicion;
-    private javax.swing.JLabel mostrarDuracionCondicion;
-    private javax.swing.JLabel mostrarDureza;
-    private javax.swing.JLabel mostrarFerocidad;
-    private javax.swing.JLabel mostrarIdiomas;
-    private javax.swing.JLabel mostrarNombreCuenta;
-    private javax.swing.JLabel mostrarNombrePersonaje;
-    private javax.swing.JLabel mostrarPoder;
-    private javax.swing.JLabel mostrarPoderCuracion;
-    private javax.swing.JLabel mostrarPrecision;
-    private javax.swing.JLabel mostrarProbabilidadCritica;
-    private javax.swing.JLabel mostrarSalud;
-    private javax.swing.JLabel mostrarServidor;
-    private javax.swing.JLabel mostrarUsuario;
-    private javax.swing.JLabel mostrarVitalidad;
+    public javax.swing.JLabel mostrarAgonia;
+    public javax.swing.JLabel mostrarArmadura;
+    public javax.swing.JLabel mostrarClase;
+    public javax.swing.JLabel mostrarDanyoCondicion;
+    public javax.swing.JLabel mostrarDanyoCritico;
+    public javax.swing.JLabel mostrarDuracionBendicion;
+    public javax.swing.JLabel mostrarDuracionCondicion;
+    public javax.swing.JLabel mostrarDureza;
+    public javax.swing.JLabel mostrarFerocidad;
+    public javax.swing.JLabel mostrarIdiomas;
+    public javax.swing.JLabel mostrarNombreCuenta;
+    public javax.swing.JLabel mostrarNombrePersonaje;
+    public javax.swing.JLabel mostrarPoder;
+    public javax.swing.JLabel mostrarPoderCuracion;
+    public javax.swing.JLabel mostrarPrecision;
+    public javax.swing.JLabel mostrarProbabilidadCritica;
+    public javax.swing.JLabel mostrarSalud;
+    public javax.swing.JLabel mostrarServidor;
+    public javax.swing.JLabel mostrarUsuario;
+    public javax.swing.JLabel mostrarVitalidad;
     private javax.swing.JPanel panel_dialogoMP_ConfigArma;
     private javax.swing.JPanel panel_dialogoMP_ConfigArmadura;
     private javax.swing.JPanel panel_dialogoMP_Equipo;
     private javax.swing.JPanel panel_dialogoRP_ConfigArma;
     private javax.swing.JPanel panel_dialogoRP_ConfigArmadura;
     private javax.swing.JPanel panel_dialogoRP_Equipo;
-    private javax.swing.JRadioButton radClan;
-    private javax.swing.JRadioButton radCuenta;
-    private javax.swing.JRadioButton radPersonaje;
-    private javax.swing.JPopupMenu.Separator separadorEditar1;
-    private javax.swing.JPopupMenu.Separator separadorEditar2;
-    private javax.swing.JPopupMenu.Separator separadorUsuario;
-    private javax.swing.JLabel tituloBusqueda;
-    private javax.swing.JLabel tituloEquipo;
-    private javax.swing.JLabel tituloPersonaje;
-    private javax.swing.JTextField txtAgoniaMinima;
-    private javax.swing.JTextField txtBusqueda;
+    public javax.swing.JRadioButton radClan;
+    public javax.swing.JRadioButton radCuenta;
+    public javax.swing.JRadioButton radPersonaje;
+    public javax.swing.JPopupMenu.Separator separadorEditar1;
+    public javax.swing.JPopupMenu.Separator separadorEditar2;
+    public javax.swing.JPopupMenu.Separator separadorUsuario;
+    public javax.swing.JLabel tituloBusqueda;
+    public javax.swing.JLabel tituloEquipo;
+    public javax.swing.JLabel tituloPersonaje;
+    public javax.swing.JTextField txtAgoniaMinima;
+    public javax.swing.JTextField txtBusqueda;
     private javax.swing.JTextField txt_dialogoMP_InfusionAgoniaArmadura;
     private javax.swing.JTextField txt_dialogoMP_Nombre;
     private javax.swing.JTextField txt_dialogoMU_ContrasenyaAntigua;

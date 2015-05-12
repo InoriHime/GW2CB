@@ -18,7 +18,7 @@ public class ModeloPrincipal extends Database{
     {
       DefaultTableModel tablemodel = new DefaultTableModel();
       int registros = 0;
-      String[] columNames = {"Nombre Personaje","Cuenta","Clase","Nivel Fractales","Resis. Agonía","Clan","Idiomas"};
+      String[] columNames = {"Personaje","Cuenta","Clase","Niv. Fractales","R. Agonía","Clan","Idiomas"};
       //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
       //para formar la matriz de datos
       
@@ -26,12 +26,14 @@ public class ModeloPrincipal extends Database{
       Statement stmt1=null;
       Statement stmt2=null;
       Statement stmt3=null;
+      Statement stmt4=null;
       try{     
 
          stmt= db.getConexion().createStatement();
          stmt1= db.getConexion().createStatement();
          stmt2= db.getConexion().createStatement();
          stmt3= db.getConexion().createStatement();
+         stmt4= db.getConexion().createStatement();
          ResultSet res= stmt.executeQuery("SELECT count(*) as total FROM Personajes");
          res.next();
          registros = res.getInt("total");
@@ -43,12 +45,12 @@ public class ModeloPrincipal extends Database{
     Object[][] data = new String[registros][7];
       try{
           //realizamos la consulta sql y llenamos los datos en la matriz "Object[][] data"
-         ResultSet res = stmt.executeQuery("SELECT NomPj,Cuenta,Clase FROM Personajes");
+         ResultSet res = stmt.executeQuery("SELECT NomPj,Cuenta,NomClase, Clase FROM Personajes, Clases WHERE ID_Clase=Clase");
          int i=0;
          while(res.next()){
                 data[i][0] = res.getString("NomPj");
                 data[i][1] = res.getString("Cuenta");
-                data[i][2] = res.getString("Clase");
+                data[i][2] = res.getString("NomClase");
                System.out.println("Insertados personaje, cuenta y clase");
                 ResultSet res1 = stmt1.executeQuery("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas,Personajes WHERE NomCuenta='"+data[i][1]+"'");
                     res1.next();
@@ -56,19 +58,19 @@ public class ModeloPrincipal extends Database{
                 
                 String cad = "";
                     if(res1.getBoolean("IdiomaIngles")){
-                        cad.concat("EN, ");
+                        cad=cad.concat("[EN]");
                     }
                     if(res1.getBoolean("IdiomaEspañol")){
-                        cad.concat("ES, ");
+                        cad=cad.concat("[ES]");
                     }
                     if(res1.getBoolean("IdiomaFrances")){
-                        cad.concat("FR, ");
+                        cad=cad.concat("[FR]");
                     }
                     if(res1.getBoolean("IdiomaAleman")){
-                        cad.concat("GR");
+                        cad=cad.concat("[GER]");
                     }
-                data[i][6] = "cad";
-               System.out.println("Insertadonivel de fractales");
+                data[i][6] = cad;
+               System.out.println(cad + "Insertadonivel de fractales");
                 
                 ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][1]+"') as Agonia");
                 res3.next();
@@ -76,15 +78,17 @@ public class ModeloPrincipal extends Database{
                 
                 System.out.println("Insertado ar");
                 
-                
-                /*ResultSet res2 = stmt2.executeQuery("SELECT Clan FROM Clan_Cuenta WHERE Cuenta='"+data[i][1]+"'");
+                try{
+                ResultSet res2 = stmt2.executeQuery("SELECT Clan FROM Clan_Cuenta WHERE Cuenta='"+data[i][1]+"'");
                 res2.next();
                 data[i][5] = res2.getString("Clan");
                 res2.close();
                 System.out.println("Insertado clan");
-                */
-                data[i][5] = "(Sin clan)";
+                }catch(Exception e){
+                data[i][5] = "-";
                 System.out.println("Insertado clan");
+                }
+                
             i++;
             
          }
