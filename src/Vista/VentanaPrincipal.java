@@ -22,18 +22,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     public VentanaPrincipal() {
         
-        /*Interfaz del estilo Look and Feel*/
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
         initComponents();
         
         
@@ -54,10 +42,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
         });
         /*Hacemos invisible el JScrollpane*/
-        PanelPersonajes.setOpaque(false);
-        PanelPersonajes.getViewport().setOpaque(false);
-        PanelPersonajes.setBorder(null);
-        PanelPersonajes.getViewport().setBorder(null);
+        PanelTabla.setOpaque(false);
+        PanelTabla.getViewport().setOpaque(false);
+        PanelTabla.setBorder(null);
+        PanelTabla.getViewport().setBorder(null);
         
         TablaPersonajes.setBackground(new Color(160, 133, 117, 159));
         
@@ -69,33 +57,100 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         grupoBuscador = new javax.swing.ButtonGroup();
-        DialogoModificarUsuario = new javax.swing.JDialog();
-        txtRepeContrasena = new javax.swing.JPasswordField();
-        combServidor = new javax.swing.JComboBox();
-        etiCuenta1 = new javax.swing.JLabel();
-        panelIdiomas = new javax.swing.JPanel();
-        chkIngles3 = new javax.swing.JCheckBox();
-        chkEspanol = new javax.swing.JCheckBox();
-        chkAleman3 = new javax.swing.JCheckBox();
-        chkFrances3 = new javax.swing.JCheckBox();
-        etiEmail = new javax.swing.JLabel();
-        etiContrasena = new javax.swing.JLabel();
-        etiRepeContrasena = new javax.swing.JLabel();
-        etiServidor1 = new javax.swing.JLabel();
-        etiIdiomas1 = new javax.swing.JLabel();
-        txtCuenta = new javax.swing.JTextField();
-        txtEmail = new javax.swing.JTextField();
-        txtContrasena = new javax.swing.JPasswordField();
+        dialogoModificarUsuario = new javax.swing.JDialog();
+        cb_dialogoMU_Servidor = new javax.swing.JComboBox();
+        eti_dialogoMU_NombreCuenta = new javax.swing.JLabel();
+        Panel_dialogoMU_Idiomas = new javax.swing.JPanel();
+        chk_dialogoMU_Ingles = new javax.swing.JCheckBox();
+        chk_dialogoMU_Espanyol = new javax.swing.JCheckBox();
+        chk_dialogoMU_Aleman = new javax.swing.JCheckBox();
+        chk_dialogoMU_Frances = new javax.swing.JCheckBox();
+        eti_dialogoMU_Email = new javax.swing.JLabel();
+        eti_dialogoMU_Servidor = new javax.swing.JLabel();
+        eti_dialogoMU_Idiomas = new javax.swing.JLabel();
+        txt_dialogoMU_Email = new javax.swing.JTextField();
+        mostar_dialogoMU_NombreCuenta = new javax.swing.JLabel();
+        Panel_dialogoMU_CambiarContrasenya = new javax.swing.JPanel();
+        eti_dialogoMU_NuevaContrasenya = new javax.swing.JLabel();
+        eti_dialogoMU_RepetirContrasenya = new javax.swing.JLabel();
+        txt_dialogoMU_RepetirContrasenya = new javax.swing.JPasswordField();
+        txt_dialogoMU_NuevaContrasenya = new javax.swing.JPasswordField();
+        eti_dialogoMU_ContrasenyaAntigua = new javax.swing.JLabel();
+        txt_dialogoMU_ContrasenyaAntigua = new javax.swing.JTextField();
+        btn_dialogoMU_Modificar = new javax.swing.JButton();
+        btn_dialogoMU_Cancelar = new javax.swing.JButton();
+        dialogoRegistrarPersonaje = new javax.swing.JDialog();
+        eti_dialogoRP_Nombre = new javax.swing.JLabel();
+        txt_dialogoRP_Nombre = new javax.swing.JTextField();
+        eti_dialogoRP_Raza = new javax.swing.JLabel();
+        cb_dialogoRP_Raza = new javax.swing.JComboBox();
+        cb_dialogoRP_Clase = new javax.swing.JComboBox();
+        eti_dialogoRP_Clase = new javax.swing.JLabel();
+        panel_dialogoRP_Equipo = new javax.swing.JPanel();
+        eti_dialogoRP_SlotArma = new javax.swing.JLabel();
+        cb_dialogoRP_SlotArma = new javax.swing.JComboBox();
+        panel_dialogoRP_ConfigArmadura = new javax.swing.JPanel();
+        cb_dialogoRP_RarezaArmadura = new javax.swing.JComboBox();
+        eti_dialogoRP_RarezaArmadura = new javax.swing.JLabel();
+        eti_dialogoRP_ModificadorArmadura = new javax.swing.JLabel();
+        cb_dialogoRP_ModificadorArmadura = new javax.swing.JComboBox();
+        chk_dialogoRP_InfusionBasicaArmadura = new javax.swing.JCheckBox();
+        eti_dialogoRP_InfusionAgoniaArmadura = new javax.swing.JLabel();
+        txt_dialogoRP_InfusionAgoniaArmadura = new javax.swing.JTextField();
+        eti_dialogoRP_SlotArmadura = new javax.swing.JLabel();
+        cb_dialogoRP_SlotArmadura = new javax.swing.JComboBox();
+        panel_dialogoRP_ConfigArma = new javax.swing.JPanel();
+        cb_dialogoRP_TipoArma = new javax.swing.JComboBox();
+        eti_dialogoRP_TipoArma = new javax.swing.JLabel();
+        cb_dialogoRP_RarezaArma = new javax.swing.JComboBox();
+        eti_dialogoRP_RarezaArma = new javax.swing.JLabel();
+        eti_dialogoRP_ModificadorArma = new javax.swing.JLabel();
+        cb_dialogoRP_ModificadorArma = new javax.swing.JComboBox();
+        chk_dialogoRP_InfusionBasica1Arma = new javax.swing.JCheckBox();
+        chk_dialogoRP_InfusionBasica2Arma = new javax.swing.JCheckBox();
+        btn_dialogoRP_Registrar = new javax.swing.JButton();
+        btn_dialogoRP_Cancelar = new javax.swing.JButton();
+        dialogoModificarPersonaje = new javax.swing.JDialog();
+        eti_dialogoMP_Nombre = new javax.swing.JLabel();
+        txt_dialogoMP_Nombre = new javax.swing.JTextField();
+        eti_dialogoMP_Raza = new javax.swing.JLabel();
+        cb_dialogoMP_Raza = new javax.swing.JComboBox();
+        cb_dialogoMP_Clase = new javax.swing.JComboBox();
+        eti_dialogoMP_Clase = new javax.swing.JLabel();
+        panel_dialogoMP_Equipo = new javax.swing.JPanel();
+        eti_dialogoMP_SlotArma = new javax.swing.JLabel();
+        cb_dialogoMP_SlotArma = new javax.swing.JComboBox();
+        panel_dialogoMP_ConfigArmadura = new javax.swing.JPanel();
+        cb_dialogoMP_RarezaArmadura = new javax.swing.JComboBox();
+        eti_dialogoMP_RarezaArmadura = new javax.swing.JLabel();
+        eti_dialogoMP_ModificadorArmadura = new javax.swing.JLabel();
+        cb_dialogoMP_ModificadorArmadura = new javax.swing.JComboBox();
+        chk_dialogoMP_InfusionBasicaArmadura = new javax.swing.JCheckBox();
+        eti_dialogoMP_InfusionAgoniaArmadura = new javax.swing.JLabel();
+        txt_dialogoMP_InfusionAgoniaArmadura = new javax.swing.JTextField();
+        eti_dialogoMP_SlotArmadura = new javax.swing.JLabel();
+        cb_dialogoMP_SlotArmadura = new javax.swing.JComboBox();
+        panel_dialogoMP_ConfigArma = new javax.swing.JPanel();
+        cb_dialogoMP_TipoArma = new javax.swing.JComboBox();
+        eti_dialogoMP_TipoArma = new javax.swing.JLabel();
+        cb_dialogoMP_RarezaArma = new javax.swing.JComboBox();
+        eti_dialogoMP_RarezaArma = new javax.swing.JLabel();
+        eti_dialogoMP_ModificadorArma = new javax.swing.JLabel();
+        cb_dialogoMP_ModificadorArma = new javax.swing.JComboBox();
+        chk_dialogoMP_InfusionBasica1Arma = new javax.swing.JCheckBox();
+        chk_dialogoMP_InfusionBasica2Arma = new javax.swing.JCheckBox();
+        btn_dialogoMP_Modificar = new javax.swing.JButton();
+        btn_dialogoMP_Cancelar = new javax.swing.JButton();
         tituloBusqueda = new javax.swing.JLabel();
         tituloPersonaje = new javax.swing.JLabel();
         tituloEquipo = new javax.swing.JLabel();
-        PanelPersonajes = new javax.swing.JScrollPane();
+        PanelTabla = new javax.swing.JScrollPane();
         TablaPersonajes = new javax.swing.JTable();
         PanelInformacion = new javax.swing.JPanel();
         mostrarNombrePersonaje = new javax.swing.JLabel();
-        etiNomPj = new javax.swing.JLabel();
+        etiNombrePersonaje = new javax.swing.JLabel();
         etiIdiomas = new javax.swing.JLabel();
-        etiCuenta = new javax.swing.JLabel();
+        etiNombreCuenta = new javax.swing.JLabel();
         etiServidor = new javax.swing.JLabel();
         PanelAtributos = new javax.swing.JPanel();
         etiPoder = new javax.swing.JLabel();
@@ -141,20 +196,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoPies = new javax.swing.JLabel();
         icoSetArma1 = new javax.swing.JLabel();
         icoSetArma2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        icoAnillo2 = new javax.swing.JLabel();
+        icoAnillo1 = new javax.swing.JLabel();
+        icoAccesorio2 = new javax.swing.JLabel();
+        icoAccesorio1 = new javax.swing.JLabel();
+        icoAmuleto = new javax.swing.JLabel();
         icoEspaldar = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        FondoPj = new javax.swing.JLabel();
+        PanelEstadisticas = new javax.swing.JPanel();
+        fondoEquipo = new javax.swing.JLabel();
         PanelBusqueda = new javax.swing.JPanel();
         txtBusqueda = new javax.swing.JTextField();
         radPersonaje = new javax.swing.JRadioButton();
         radClan = new javax.swing.JRadioButton();
         radCuenta = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
+        etiResistAgoniaMin = new javax.swing.JLabel();
         txtAgoniaMinima = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         etiIdioma = new javax.swing.JLabel();
@@ -162,152 +217,696 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chkAleman = new javax.swing.JCheckBox();
         chkFrances = new javax.swing.JCheckBox();
         chkIngles = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        chkIngles1 = new javax.swing.JCheckBox();
-        chkAleman1 = new javax.swing.JCheckBox();
-        chkEspanyol1 = new javax.swing.JCheckBox();
-        chkFrances1 = new javax.swing.JCheckBox();
-        chkIngles2 = new javax.swing.JCheckBox();
-        chkAleman2 = new javax.swing.JCheckBox();
-        chkEspanyol2 = new javax.swing.JCheckBox();
-        chkFrances2 = new javax.swing.JCheckBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        etiClases = new javax.swing.JLabel();
+        chkGuardian = new javax.swing.JCheckBox();
+        chkElementalista = new javax.swing.JCheckBox();
+        chkGuerrero = new javax.swing.JCheckBox();
+        chkNigromante = new javax.swing.JCheckBox();
+        chkGuardabosques = new javax.swing.JCheckBox();
+        chkIngeniero = new javax.swing.JCheckBox();
+        chkLadron = new javax.swing.JCheckBox();
+        chkHipnotizador = new javax.swing.JCheckBox();
+        chkBuscarMiembrosMiClan = new javax.swing.JCheckBox();
         fondoBusqueda = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        FondoPrincipal = new javax.swing.JLabel();
+        etiConectadoComo = new javax.swing.JLabel();
+        mostrarUsuario = new javax.swing.JLabel();
+        cbPersonaje = new javax.swing.JComboBox();
+        btnModPj = new javax.swing.JButton();
+        fondoConectadoComo = new javax.swing.JLabel();
+        etiPersonaje = new javax.swing.JLabel();
+        fondoPersonaje = new javax.swing.JLabel();
+        fondoPrincipal = new javax.swing.JLabel();
         fondotable = new javax.swing.JLabel();
-        BarraMenu = new javax.swing.JMenuBar();
-        UsuarioMenu = new javax.swing.JMenu();
+        MenuBarra = new javax.swing.JMenuBar();
+        menuUsuario = new javax.swing.JMenu();
         itemModificarDatos = new javax.swing.JMenuItem();
-        SeparadorUsuario2 = new javax.swing.JPopupMenu.Separator();
+        separadorUsuario = new javax.swing.JPopupMenu.Separator();
         itemCerrarUsuario = new javax.swing.JMenuItem();
-        EditarMenu = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        ConfiguracionMenu = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        AyudaMenu = new javax.swing.JMenu();
+        menuEditar = new javax.swing.JMenu();
+        itemRegPj = new javax.swing.JMenuItem();
+        itemModPj = new javax.swing.JMenuItem();
+        separadorEditar1 = new javax.swing.JPopupMenu.Separator();
+        itemUnirClan = new javax.swing.JMenuItem();
+        itemAbandonarClan = new javax.swing.JMenuItem();
+        separadorEditar2 = new javax.swing.JPopupMenu.Separator();
+        itemRegClan = new javax.swing.JMenuItem();
+        itemModClan = new javax.swing.JMenuItem();
+        itemEliminarClan = new javax.swing.JMenuItem();
+        menuConfiguracion = new javax.swing.JMenu();
+        itemCambiarBD = new javax.swing.JMenuItem();
+        menuAyuda = new javax.swing.JMenu();
         itemAcerca = new javax.swing.JMenuItem();
 
-        DialogoModificarUsuario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        DialogoModificarUsuario.setTitle("Modificar Usuario");
-        DialogoModificarUsuario.setAlwaysOnTop(true);
-        DialogoModificarUsuario.setResizable(false);
+        dialogoModificarUsuario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoModificarUsuario.setTitle("Modificar Usuario");
+        dialogoModificarUsuario.setAlwaysOnTop(true);
+        dialogoModificarUsuario.setResizable(false);
 
-        combServidor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoMU_Servidor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        etiCuenta1.setText("Nombre cuenta (GW2)");
+        eti_dialogoMU_NombreCuenta.setText("Nombre cuenta (GW2):");
 
-        panelIdiomas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Panel_dialogoMU_Idiomas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        chkIngles3.setText("Inglés");
+        chk_dialogoMU_Ingles.setText("Inglés");
 
-        chkEspanol.setText("Español");
+        chk_dialogoMU_Espanyol.setText("Español");
 
-        chkAleman3.setText("Aleman");
+        chk_dialogoMU_Aleman.setText("Aleman");
 
-        chkFrances3.setText("Francés");
+        chk_dialogoMU_Frances.setText("Francés");
 
-        javax.swing.GroupLayout panelIdiomasLayout = new javax.swing.GroupLayout(panelIdiomas);
-        panelIdiomas.setLayout(panelIdiomasLayout);
-        panelIdiomasLayout.setHorizontalGroup(
-            panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIdiomasLayout.createSequentialGroup()
+        javax.swing.GroupLayout Panel_dialogoMU_IdiomasLayout = new javax.swing.GroupLayout(Panel_dialogoMU_Idiomas);
+        Panel_dialogoMU_Idiomas.setLayout(Panel_dialogoMU_IdiomasLayout);
+        Panel_dialogoMU_IdiomasLayout.setHorizontalGroup(
+            Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_dialogoMU_IdiomasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkIngles3)
-                    .addComponent(chkAleman3))
+                .addGroup(Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chk_dialogoMU_Ingles)
+                    .addComponent(chk_dialogoMU_Aleman))
                 .addGap(41, 41, 41)
-                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkEspanol)
-                    .addComponent(chkFrances3))
+                .addGroup(Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chk_dialogoMU_Espanyol)
+                    .addComponent(chk_dialogoMU_Frances))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelIdiomasLayout.setVerticalGroup(
-            panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIdiomasLayout.createSequentialGroup()
+        Panel_dialogoMU_IdiomasLayout.setVerticalGroup(
+            Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_dialogoMU_IdiomasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkIngles3)
-                    .addComponent(chkEspanol))
+                .addGroup(Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoMU_Ingles)
+                    .addComponent(chk_dialogoMU_Espanyol))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelIdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkAleman3)
-                    .addComponent(chkFrances3))
+                .addGroup(Panel_dialogoMU_IdiomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoMU_Aleman)
+                    .addComponent(chk_dialogoMU_Frances))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        etiEmail.setText("Email");
+        eti_dialogoMU_Email.setText("Email:");
 
-        etiContrasena.setText("Contraseña");
+        eti_dialogoMU_Servidor.setText("Servidor:");
 
-        etiRepeContrasena.setText("Repetir contraseña");
+        eti_dialogoMU_Idiomas.setText("Idiomas:");
 
-        etiServidor1.setText("Servidor");
+        mostar_dialogoMU_NombreCuenta.setText("-");
 
-        etiIdiomas1.setText("Idiomas");
+        Panel_dialogoMU_CambiarContrasenya.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Cambiar Contraseña"));
 
-        javax.swing.GroupLayout DialogoModificarUsuarioLayout = new javax.swing.GroupLayout(DialogoModificarUsuario.getContentPane());
-        DialogoModificarUsuario.getContentPane().setLayout(DialogoModificarUsuarioLayout);
-        DialogoModificarUsuarioLayout.setHorizontalGroup(
-            DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DialogoModificarUsuarioLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etiRepeContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiCuenta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiIdiomas1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(etiServidor1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelIdiomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtCuenta)
-                    .addComponent(txtEmail)
-                    .addComponent(combServidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtRepeContrasena)
-                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(84, Short.MAX_VALUE))
+        eti_dialogoMU_NuevaContrasenya.setText("Nueva contraseña:");
+
+        eti_dialogoMU_RepetirContrasenya.setText("Repetir contraseña:");
+
+        eti_dialogoMU_ContrasenyaAntigua.setText("Contraseña antigua:");
+
+        javax.swing.GroupLayout Panel_dialogoMU_CambiarContrasenyaLayout = new javax.swing.GroupLayout(Panel_dialogoMU_CambiarContrasenya);
+        Panel_dialogoMU_CambiarContrasenya.setLayout(Panel_dialogoMU_CambiarContrasenyaLayout);
+        Panel_dialogoMU_CambiarContrasenyaLayout.setHorizontalGroup(
+            Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                        .addComponent(eti_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                        .addComponent(eti_dialogoMU_ContrasenyaAntigua)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_dialogoMU_ContrasenyaAntigua, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                        .addComponent(eti_dialogoMU_RepetirContrasenya)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txt_dialogoMU_RepetirContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25))
         );
-        DialogoModificarUsuarioLayout.setVerticalGroup(
-            DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DialogoModificarUsuarioLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiCuenta1)
-                    .addComponent(txtCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        Panel_dialogoMU_CambiarContrasenyaLayout.setVerticalGroup(
+            Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMU_ContrasenyaAntigua)
+                    .addComponent(txt_dialogoMU_ContrasenyaAntigua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMU_NuevaContrasenya))
                 .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiContrasena)
-                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoMU_RepetirContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMU_RepetirContrasenya))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btn_dialogoMU_Modificar.setText("Modificar");
+
+        btn_dialogoMU_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoModificarUsuarioLayout = new javax.swing.GroupLayout(dialogoModificarUsuario.getContentPane());
+        dialogoModificarUsuario.getContentPane().setLayout(dialogoModificarUsuarioLayout);
+        dialogoModificarUsuarioLayout.setHorizontalGroup(
+            dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarUsuarioLayout.createSequentialGroup()
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dialogoModificarUsuarioLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Panel_dialogoMU_CambiarContrasenya, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(dialogoModificarUsuarioLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(eti_dialogoMU_Email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(eti_dialogoMU_NombreCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(eti_dialogoMU_Idiomas, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(eti_dialogoMU_Servidor, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Panel_dialogoMU_Idiomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_dialogoMU_Email)
+                            .addComponent(cb_dialogoMU_Servidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mostar_dialogoMU_NombreCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 20, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(dialogoModificarUsuarioLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(btn_dialogoMU_Modificar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_dialogoMU_Cancelar)
+                .addGap(70, 70, 70))
+        );
+        dialogoModificarUsuarioLayout.setVerticalGroup(
+            dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarUsuarioLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMU_NombreCuenta)
+                    .addComponent(mostar_dialogoMU_NombreCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(etiRepeContrasena)
-                    .addComponent(txtRepeContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMU_Email)
+                    .addComponent(txt_dialogoMU_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiServidor1)
-                    .addComponent(combServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMU_Servidor)
+                    .addComponent(cb_dialogoMU_Servidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(DialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(etiIdiomas1))
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Panel_dialogoMU_Idiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMU_Idiomas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Panel_dialogoMU_CambiarContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(dialogoModificarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoMU_Modificar)
+                    .addComponent(btn_dialogoMU_Cancelar))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        dialogoRegistrarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoRegistrarPersonaje.setTitle("Registrar Personaje");
+        dialogoRegistrarPersonaje.setAlwaysOnTop(true);
+        dialogoRegistrarPersonaje.setResizable(false);
+
+        eti_dialogoRP_Nombre.setText("Nombre:");
+
+        txt_dialogoRP_Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoRP_NombreActionPerformed(evt);
+            }
+        });
+
+        eti_dialogoRP_Raza.setText("Raza:");
+
+        cb_dialogoRP_Raza.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cb_dialogoRP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoRP_Clase.setText("Clase:");
+
+        panel_dialogoRP_Equipo.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
+
+        eti_dialogoRP_SlotArma.setText("Hueco del Arma:");
+
+        cb_dialogoRP_SlotArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        panel_dialogoRP_ConfigArmadura.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Configuración del Armadura"));
+
+        cb_dialogoRP_RarezaArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoRP_RarezaArmadura.setText("Rareza:");
+
+        eti_dialogoRP_ModificadorArmadura.setText("Modificador:");
+
+        cb_dialogoRP_ModificadorArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        chk_dialogoRP_InfusionBasicaArmadura.setText("Infusión Básica");
+
+        eti_dialogoRP_InfusionAgoniaArmadura.setText("Infusión Agonía:");
+
+        javax.swing.GroupLayout panel_dialogoRP_ConfigArmaduraLayout = new javax.swing.GroupLayout(panel_dialogoRP_ConfigArmadura);
+        panel_dialogoRP_ConfigArmadura.setLayout(panel_dialogoRP_ConfigArmaduraLayout);
+        panel_dialogoRP_ConfigArmaduraLayout.setHorizontalGroup(
+            panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
+                .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(eti_dialogoRP_RarezaArmadura)
+                        .addGap(48, 48, 48)
+                        .addComponent(cb_dialogoRP_RarezaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46))
+                    .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chk_dialogoRP_InfusionBasicaArmadura)
+                        .addGap(36, 36, 36)))
+                .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eti_dialogoRP_InfusionAgoniaArmadura)
+                    .addComponent(eti_dialogoRP_ModificadorArmadura))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cb_dialogoRP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_dialogoRP_ConfigArmaduraLayout.setVerticalGroup(
+            panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
+                .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoRP_RarezaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_RarezaArmadura)
+                    .addComponent(cb_dialogoRP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_ModificadorArmadura))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoRP_InfusionBasicaArmadura)
+                    .addComponent(eti_dialogoRP_InfusionAgoniaArmadura)
+                    .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        eti_dialogoRP_SlotArmadura.setText("Hueco de la Armadura:");
+
+        cb_dialogoRP_SlotArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        panel_dialogoRP_ConfigArma.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Configuración del Arma"));
+
+        cb_dialogoRP_TipoArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoRP_TipoArma.setText("Tipo de Arma:");
+
+        cb_dialogoRP_RarezaArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoRP_RarezaArma.setText("Rareza:");
+
+        eti_dialogoRP_ModificadorArma.setText("Modificador:");
+
+        cb_dialogoRP_ModificadorArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        chk_dialogoRP_InfusionBasica1Arma.setText("Infusión Básica 1");
+
+        chk_dialogoRP_InfusionBasica2Arma.setText("Infusión Básica 2");
+
+        javax.swing.GroupLayout panel_dialogoRP_ConfigArmaLayout = new javax.swing.GroupLayout(panel_dialogoRP_ConfigArma);
+        panel_dialogoRP_ConfigArma.setLayout(panel_dialogoRP_ConfigArmaLayout);
+        panel_dialogoRP_ConfigArmaLayout.setHorizontalGroup(
+            panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eti_dialogoRP_TipoArma)
+                    .addComponent(eti_dialogoRP_RarezaArma))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_dialogoRP_TipoArma, 0, 120, Short.MAX_VALUE)
+                    .addComponent(cb_dialogoRP_RarezaArma, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chk_dialogoRP_InfusionBasica1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
+                        .addComponent(chk_dialogoRP_InfusionBasica2Arma)
+                        .addGap(120, 120, 120))
+                    .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
+                        .addComponent(eti_dialogoRP_ModificadorArma)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cb_dialogoRP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+        panel_dialogoRP_ConfigArmaLayout.setVerticalGroup(
+            panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoRP_TipoArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_TipoArma))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoRP_RarezaArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_RarezaArma)
+                    .addComponent(eti_dialogoRP_ModificadorArma)
+                    .addComponent(cb_dialogoRP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoRP_InfusionBasica1Arma)
+                    .addComponent(chk_dialogoRP_InfusionBasica2Arma)))
+        );
+
+        javax.swing.GroupLayout panel_dialogoRP_EquipoLayout = new javax.swing.GroupLayout(panel_dialogoRP_Equipo);
+        panel_dialogoRP_Equipo.setLayout(panel_dialogoRP_EquipoLayout);
+        panel_dialogoRP_EquipoLayout.setHorizontalGroup(
+            panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_EquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panel_dialogoRP_ConfigArmadura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel_dialogoRP_EquipoLayout.createSequentialGroup()
+                        .addGroup(panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_dialogoRP_EquipoLayout.createSequentialGroup()
+                                .addComponent(eti_dialogoRP_SlotArma)
+                                .addGap(49, 49, 49))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_dialogoRP_EquipoLayout.createSequentialGroup()
+                                .addComponent(eti_dialogoRP_SlotArmadura)
+                                .addGap(18, 18, 18)))
+                        .addGroup(panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_dialogoRP_SlotArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_dialogoRP_SlotArma, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(panel_dialogoRP_ConfigArma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panel_dialogoRP_EquipoLayout.setVerticalGroup(
+            panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoRP_EquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoRP_SlotArma)
+                    .addComponent(cb_dialogoRP_SlotArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_dialogoRP_ConfigArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(panel_dialogoRP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoRP_SlotArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_SlotArmadura))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_dialogoRP_ConfigArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        btn_dialogoRP_Registrar.setText("Registrar");
+
+        btn_dialogoRP_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoRegistrarPersonajeLayout = new javax.swing.GroupLayout(dialogoRegistrarPersonaje.getContentPane());
+        dialogoRegistrarPersonaje.getContentPane().setLayout(dialogoRegistrarPersonajeLayout);
+        dialogoRegistrarPersonajeLayout.setHorizontalGroup(
+            dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoRegistrarPersonajeLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(btn_dialogoRP_Registrar)
+                .addGap(122, 122, 122)
+                .addComponent(btn_dialogoRP_Cancelar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoRegistrarPersonajeLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoRegistrarPersonajeLayout.createSequentialGroup()
+                        .addComponent(panel_dialogoRP_Equipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoRegistrarPersonajeLayout.createSequentialGroup()
+                        .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eti_dialogoRP_Nombre)
+                            .addComponent(eti_dialogoRP_Raza))
+                        .addGap(30, 30, 30)
+                        .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_dialogoRP_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_dialogoRP_Raza, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37)
+                        .addComponent(eti_dialogoRP_Clase)
+                        .addGap(31, 31, 31)
+                        .addComponent(cb_dialogoRP_Clase, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))))
+        );
+        dialogoRegistrarPersonajeLayout.setVerticalGroup(
+            dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoRegistrarPersonajeLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoRP_Nombre)
+                    .addComponent(txt_dialogoRP_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoRP_Raza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_Raza)
+                    .addComponent(cb_dialogoRP_Clase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_Clase))
+                .addGap(18, 18, 18)
+                .addComponent(panel_dialogoRP_Equipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(dialogoRegistrarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoRP_Registrar)
+                    .addComponent(btn_dialogoRP_Cancelar))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        dialogoModificarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoModificarPersonaje.setTitle("Modificar Personaje");
+        dialogoModificarPersonaje.setAlwaysOnTop(true);
+        dialogoModificarPersonaje.setResizable(false);
+
+        eti_dialogoMP_Nombre.setText("Nombre:");
+
+        txt_dialogoMP_Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoMP_NombreActionPerformed(evt);
+            }
+        });
+
+        eti_dialogoMP_Raza.setText("Raza:");
+
+        cb_dialogoMP_Raza.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cb_dialogoMP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoMP_Clase.setText("Clase:");
+
+        panel_dialogoMP_Equipo.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
+
+        eti_dialogoMP_SlotArma.setText("Hueco del Arma:");
+
+        cb_dialogoMP_SlotArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        panel_dialogoMP_ConfigArmadura.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Configuración del Armadura"));
+
+        cb_dialogoMP_RarezaArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoMP_RarezaArmadura.setText("Rareza:");
+
+        eti_dialogoMP_ModificadorArmadura.setText("Modificador:");
+
+        cb_dialogoMP_ModificadorArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        chk_dialogoMP_InfusionBasicaArmadura.setText("Infusión Básica");
+
+        eti_dialogoMP_InfusionAgoniaArmadura.setText("Infusión Agonía:");
+
+        javax.swing.GroupLayout panel_dialogoMP_ConfigArmaduraLayout = new javax.swing.GroupLayout(panel_dialogoMP_ConfigArmadura);
+        panel_dialogoMP_ConfigArmadura.setLayout(panel_dialogoMP_ConfigArmaduraLayout);
+        panel_dialogoMP_ConfigArmaduraLayout.setHorizontalGroup(
+            panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
+                .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(eti_dialogoMP_RarezaArmadura)
+                        .addGap(48, 48, 48)
+                        .addComponent(cb_dialogoMP_RarezaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46))
+                    .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chk_dialogoMP_InfusionBasicaArmadura)
+                        .addGap(36, 36, 36)))
+                .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eti_dialogoMP_InfusionAgoniaArmadura)
+                    .addComponent(eti_dialogoMP_ModificadorArmadura))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cb_dialogoMP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_dialogoMP_ConfigArmaduraLayout.setVerticalGroup(
+            panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
+                .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoMP_RarezaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_RarezaArmadura)
+                    .addComponent(cb_dialogoMP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_ModificadorArmadura))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoMP_InfusionBasicaArmadura)
+                    .addComponent(eti_dialogoMP_InfusionAgoniaArmadura)
+                    .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        eti_dialogoMP_SlotArmadura.setText("Hueco de la Armadura:");
+
+        cb_dialogoMP_SlotArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        panel_dialogoMP_ConfigArma.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Configuración del Arma"));
+
+        cb_dialogoMP_TipoArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoMP_TipoArma.setText("Tipo de Arma:");
+
+        cb_dialogoMP_RarezaArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        eti_dialogoMP_RarezaArma.setText("Rareza:");
+
+        eti_dialogoMP_ModificadorArma.setText("Modificador:");
+
+        cb_dialogoMP_ModificadorArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        chk_dialogoMP_InfusionBasica1Arma.setText("Infusión Básica 1");
+
+        chk_dialogoMP_InfusionBasica2Arma.setText("Infusión Básica 2");
+
+        javax.swing.GroupLayout panel_dialogoMP_ConfigArmaLayout = new javax.swing.GroupLayout(panel_dialogoMP_ConfigArma);
+        panel_dialogoMP_ConfigArma.setLayout(panel_dialogoMP_ConfigArmaLayout);
+        panel_dialogoMP_ConfigArmaLayout.setHorizontalGroup(
+            panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eti_dialogoMP_TipoArma)
+                    .addComponent(eti_dialogoMP_RarezaArma))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cb_dialogoMP_TipoArma, 0, 120, Short.MAX_VALUE)
+                    .addComponent(cb_dialogoMP_RarezaArma, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chk_dialogoMP_InfusionBasica1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
+                        .addComponent(chk_dialogoMP_InfusionBasica2Arma)
+                        .addGap(120, 120, 120))
+                    .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
+                        .addComponent(eti_dialogoMP_ModificadorArma)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cb_dialogoMP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+        panel_dialogoMP_ConfigArmaLayout.setVerticalGroup(
+            panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoMP_TipoArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_TipoArma))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoMP_RarezaArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_RarezaArma)
+                    .addComponent(eti_dialogoMP_ModificadorArma)
+                    .addComponent(cb_dialogoMP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chk_dialogoMP_InfusionBasica1Arma)
+                    .addComponent(chk_dialogoMP_InfusionBasica2Arma)))
+        );
+
+        javax.swing.GroupLayout panel_dialogoMP_EquipoLayout = new javax.swing.GroupLayout(panel_dialogoMP_Equipo);
+        panel_dialogoMP_Equipo.setLayout(panel_dialogoMP_EquipoLayout);
+        panel_dialogoMP_EquipoLayout.setHorizontalGroup(
+            panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_EquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panel_dialogoMP_ConfigArmadura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel_dialogoMP_EquipoLayout.createSequentialGroup()
+                        .addGroup(panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_dialogoMP_EquipoLayout.createSequentialGroup()
+                                .addComponent(eti_dialogoMP_SlotArma)
+                                .addGap(49, 49, 49))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_dialogoMP_EquipoLayout.createSequentialGroup()
+                                .addComponent(eti_dialogoMP_SlotArmadura)
+                                .addGap(18, 18, 18)))
+                        .addGroup(panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_dialogoMP_SlotArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_dialogoMP_SlotArma, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(panel_dialogoMP_ConfigArma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panel_dialogoMP_EquipoLayout.setVerticalGroup(
+            panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_dialogoMP_EquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMP_SlotArma)
+                    .addComponent(cb_dialogoMP_SlotArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_dialogoMP_ConfigArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGroup(panel_dialogoMP_EquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoMP_SlotArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_SlotArmadura))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panel_dialogoMP_ConfigArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        btn_dialogoMP_Modificar.setText("Modificar");
+
+        btn_dialogoMP_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoModificarPersonajeLayout = new javax.swing.GroupLayout(dialogoModificarPersonaje.getContentPane());
+        dialogoModificarPersonaje.getContentPane().setLayout(dialogoModificarPersonajeLayout);
+        dialogoModificarPersonajeLayout.setHorizontalGroup(
+            dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarPersonajeLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(btn_dialogoMP_Modificar)
+                .addGap(122, 122, 122)
+                .addComponent(btn_dialogoMP_Cancelar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoModificarPersonajeLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoModificarPersonajeLayout.createSequentialGroup()
+                        .addComponent(panel_dialogoMP_Equipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoModificarPersonajeLayout.createSequentialGroup()
+                        .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eti_dialogoMP_Nombre)
+                            .addComponent(eti_dialogoMP_Raza))
+                        .addGap(30, 30, 30)
+                        .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_dialogoMP_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_dialogoMP_Raza, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37)
+                        .addComponent(eti_dialogoMP_Clase)
+                        .addGap(31, 31, 31)
+                        .addComponent(cb_dialogoMP_Clase, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))))
+        );
+        dialogoModificarPersonajeLayout.setVerticalGroup(
+            dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarPersonajeLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMP_Nombre)
+                    .addComponent(txt_dialogoMP_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoMP_Raza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_Raza)
+                    .addComponent(cb_dialogoMP_Clase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_Clase))
+                .addGap(18, 18, 18)
+                .addComponent(panel_dialogoMP_Equipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(dialogoModificarPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoMP_Modificar)
+                    .addComponent(btn_dialogoMP_Cancelar))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -325,9 +924,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         tituloEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/equipo.png"))); // NOI18N
         getContentPane().add(tituloEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 28, 220, 40));
 
-        PanelPersonajes.setBackground(new java.awt.Color(255, 51, 51));
-        PanelPersonajes.setBorder(null);
-        PanelPersonajes.setOpaque(false);
+        PanelTabla.setBackground(new java.awt.Color(255, 51, 51));
+        PanelTabla.setBorder(null);
+        PanelTabla.setOpaque(false);
 
         TablaPersonajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -344,9 +943,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         TablaPersonajes.setRowSelectionAllowed(false);
         TablaPersonajes.getTableHeader().setResizingAllowed(false);
         TablaPersonajes.getTableHeader().setReorderingAllowed(false);
-        PanelPersonajes.setViewportView(TablaPersonajes);
+        PanelTabla.setViewportView(TablaPersonajes);
 
-        getContentPane().add(PanelPersonajes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 465, 320));
+        getContentPane().add(PanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 465, 320));
 
         PanelInformacion.setMaximumSize(new java.awt.Dimension(467, 245));
         PanelInformacion.setMinimumSize(new java.awt.Dimension(467, 245));
@@ -357,17 +956,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mostrarNombrePersonaje.setText("-");
         PanelInformacion.add(mostrarNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 129, -1));
 
-        etiNomPj.setForeground(new java.awt.Color(209, 194, 170));
-        etiNomPj.setText("Nombre Personaje:");
-        PanelInformacion.add(etiNomPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        etiNombrePersonaje.setForeground(new java.awt.Color(209, 194, 170));
+        etiNombrePersonaje.setText("Nombre Personaje:");
+        PanelInformacion.add(etiNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         etiIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         etiIdiomas.setText("Idiomas:");
         PanelInformacion.add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 55, -1));
 
-        etiCuenta.setForeground(new java.awt.Color(209, 194, 170));
-        etiCuenta.setText("Nombre de cuenta:");
-        PanelInformacion.add(etiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        etiNombreCuenta.setForeground(new java.awt.Color(209, 194, 170));
+        etiNombreCuenta.setText("Nombre de cuenta:");
+        PanelInformacion.add(etiNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
         etiServidor.setForeground(new java.awt.Color(209, 194, 170));
         etiServidor.setText("Servidor:");
@@ -636,40 +1235,40 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoSetArma2);
         icoSetArma2.setBounds(130, 126, 60, 110);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
-        jLabel7.setMaximumSize(new java.awt.Dimension(40, 40));
-        jLabel7.setMinimumSize(new java.awt.Dimension(40, 40));
-        jLabel7.setPreferredSize(new java.awt.Dimension(40, 40));
-        PanelEquipo.add(jLabel7);
-        jLabel7.setBounds(180, 340, 50, 50);
+        icoAnillo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
+        icoAnillo2.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoAnillo2.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoAnillo2.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoAnillo2);
+        icoAnillo2.setBounds(180, 340, 50, 50);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo1.jpg"))); // NOI18N
-        jLabel6.setMaximumSize(new java.awt.Dimension(40, 40));
-        jLabel6.setMinimumSize(new java.awt.Dimension(40, 40));
-        jLabel6.setPreferredSize(new java.awt.Dimension(40, 40));
-        PanelEquipo.add(jLabel6);
-        jLabel6.setBounds(130, 340, 50, 50);
+        icoAnillo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo1.jpg"))); // NOI18N
+        icoAnillo1.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoAnillo1.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoAnillo1.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoAnillo1);
+        icoAnillo1.setBounds(130, 340, 50, 50);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio2.jpg"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(40, 40));
-        jLabel5.setMinimumSize(new java.awt.Dimension(40, 40));
-        jLabel5.setPreferredSize(new java.awt.Dimension(40, 40));
-        PanelEquipo.add(jLabel5);
-        jLabel5.setBounds(180, 290, 50, 50);
+        icoAccesorio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio2.jpg"))); // NOI18N
+        icoAccesorio2.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoAccesorio2.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoAccesorio2.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoAccesorio2);
+        icoAccesorio2.setBounds(180, 290, 50, 50);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio1.jpg"))); // NOI18N
-        jLabel4.setMaximumSize(new java.awt.Dimension(40, 40));
-        jLabel4.setMinimumSize(new java.awt.Dimension(40, 40));
-        jLabel4.setPreferredSize(new java.awt.Dimension(40, 40));
-        PanelEquipo.add(jLabel4);
-        jLabel4.setBounds(130, 290, 50, 50);
+        icoAccesorio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio1.jpg"))); // NOI18N
+        icoAccesorio1.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoAccesorio1.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoAccesorio1.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoAccesorio1);
+        icoAccesorio1.setBounds(130, 290, 50, 50);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/amuleto.jpg"))); // NOI18N
-        jLabel3.setMaximumSize(new java.awt.Dimension(40, 40));
-        jLabel3.setMinimumSize(new java.awt.Dimension(40, 40));
-        jLabel3.setPreferredSize(new java.awt.Dimension(40, 40));
-        PanelEquipo.add(jLabel3);
-        jLabel3.setBounds(180, 240, 50, 50);
+        icoAmuleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/amuleto.jpg"))); // NOI18N
+        icoAmuleto.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoAmuleto.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoAmuleto.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoAmuleto);
+        icoAmuleto.setBounds(180, 240, 50, 50);
 
         icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar.jpg"))); // NOI18N
         icoEspaldar.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -678,28 +1277,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoEspaldar);
         icoEspaldar.setBounds(130, 240, 50, 50);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
-        jPanel1.setOpaque(false);
+        PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
+        PanelEstadisticas.setOpaque(false);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelEstadisticasLayout = new javax.swing.GroupLayout(PanelEstadisticas);
+        PanelEstadisticas.setLayout(PanelEstadisticasLayout);
+        PanelEstadisticasLayout.setHorizontalGroup(
+            PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 230, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PanelEstadisticasLayout.setVerticalGroup(
+            PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 149, Short.MAX_VALUE)
         );
 
-        PanelEquipo.add(jPanel1);
-        jPanel1.setBounds(10, 403, 240, 170);
+        PanelEquipo.add(PanelEstadisticas);
+        PanelEstadisticas.setBounds(10, 403, 240, 170);
 
-        FondoPj.setBackground(new java.awt.Color(209, 194, 170));
-        FondoPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        FondoPj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(46, 33, 33)));
-        PanelEquipo.add(FondoPj);
-        FondoPj.setBounds(0, 0, 260, 590);
+        fondoEquipo.setBackground(new java.awt.Color(209, 194, 170));
+        fondoEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
+        fondoEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(46, 33, 33)));
+        PanelEquipo.add(fondoEquipo);
+        fondoEquipo.setBounds(0, 0, 260, 590);
 
         getContentPane().add(PanelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(714, 50, 258, 580));
 
@@ -733,9 +1332,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         radCuenta.setOpaque(false);
         PanelBusqueda.add(radCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
-        jLabel1.setForeground(new java.awt.Color(209, 194, 170));
-        jLabel1.setText("Resist. Agonía mínima:");
-        PanelBusqueda.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, -1));
+        etiResistAgoniaMin.setForeground(new java.awt.Color(209, 194, 170));
+        etiResistAgoniaMin.setText("Resist. Agonía mínima:");
+        PanelBusqueda.add(etiResistAgoniaMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, -1));
         PanelBusqueda.add(txtAgoniaMinima, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 75, -1));
 
         btnBuscar.setBackground(new java.awt.Color(209, 194, 170));
@@ -767,152 +1366,159 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chkIngles.setOpaque(false);
         PanelBusqueda.add(chkIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
-        jLabel2.setForeground(new java.awt.Color(209, 194, 170));
-        jLabel2.setText("Clases:");
-        PanelBusqueda.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        etiClases.setForeground(new java.awt.Color(209, 194, 170));
+        etiClases.setText("Clases:");
+        PanelBusqueda.add(etiClases, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        chkIngles1.setForeground(new java.awt.Color(209, 194, 170));
-        chkIngles1.setText("Guardián");
-        chkIngles1.setOpaque(false);
-        PanelBusqueda.add(chkIngles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        chkGuardian.setForeground(new java.awt.Color(209, 194, 170));
+        chkGuardian.setText("Guardián");
+        chkGuardian.setOpaque(false);
+        PanelBusqueda.add(chkGuardian, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
-        chkAleman1.setForeground(new java.awt.Color(209, 194, 170));
-        chkAleman1.setText("Elementalista");
-        chkAleman1.setOpaque(false);
-        PanelBusqueda.add(chkAleman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        chkElementalista.setForeground(new java.awt.Color(209, 194, 170));
+        chkElementalista.setText("Elementalista");
+        chkElementalista.setOpaque(false);
+        PanelBusqueda.add(chkElementalista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        chkEspanyol1.setForeground(new java.awt.Color(209, 194, 170));
-        chkEspanyol1.setText("Guerrero");
-        chkEspanyol1.setOpaque(false);
-        PanelBusqueda.add(chkEspanyol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        chkGuerrero.setForeground(new java.awt.Color(209, 194, 170));
+        chkGuerrero.setText("Guerrero");
+        chkGuerrero.setOpaque(false);
+        PanelBusqueda.add(chkGuerrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
-        chkFrances1.setForeground(new java.awt.Color(209, 194, 170));
-        chkFrances1.setText("Nigromante");
-        chkFrances1.setOpaque(false);
-        PanelBusqueda.add(chkFrances1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
+        chkNigromante.setForeground(new java.awt.Color(209, 194, 170));
+        chkNigromante.setText("Nigromante");
+        chkNigromante.setOpaque(false);
+        PanelBusqueda.add(chkNigromante, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
-        chkIngles2.setForeground(new java.awt.Color(209, 194, 170));
-        chkIngles2.setText("Guardabosques");
-        chkIngles2.setOpaque(false);
-        PanelBusqueda.add(chkIngles2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        chkGuardabosques.setForeground(new java.awt.Color(209, 194, 170));
+        chkGuardabosques.setText("Guardabosques");
+        chkGuardabosques.setOpaque(false);
+        PanelBusqueda.add(chkGuardabosques, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
-        chkAleman2.setForeground(new java.awt.Color(209, 194, 170));
-        chkAleman2.setText("Ingeniero");
-        chkAleman2.setOpaque(false);
-        PanelBusqueda.add(chkAleman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        chkIngeniero.setForeground(new java.awt.Color(209, 194, 170));
+        chkIngeniero.setText("Ingeniero");
+        chkIngeniero.setOpaque(false);
+        PanelBusqueda.add(chkIngeniero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
-        chkEspanyol2.setForeground(new java.awt.Color(209, 194, 170));
-        chkEspanyol2.setText("Ladrón");
-        chkEspanyol2.setOpaque(false);
-        chkEspanyol2.addActionListener(new java.awt.event.ActionListener() {
+        chkLadron.setForeground(new java.awt.Color(209, 194, 170));
+        chkLadron.setText("Ladrón");
+        chkLadron.setOpaque(false);
+        chkLadron.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkEspanyol2ActionPerformed(evt);
+                chkLadronActionPerformed(evt);
             }
         });
-        PanelBusqueda.add(chkEspanyol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        PanelBusqueda.add(chkLadron, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
-        chkFrances2.setForeground(new java.awt.Color(209, 194, 170));
-        chkFrances2.setText("Hipnotizador");
-        chkFrances2.setOpaque(false);
-        PanelBusqueda.add(chkFrances2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+        chkHipnotizador.setForeground(new java.awt.Color(209, 194, 170));
+        chkHipnotizador.setText("Hipnotizador");
+        chkHipnotizador.setOpaque(false);
+        PanelBusqueda.add(chkHipnotizador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
-        jCheckBox1.setForeground(new java.awt.Color(209, 194, 170));
-        jCheckBox1.setText("Buscar solo miembros de mi clan");
-        jCheckBox1.setOpaque(false);
-        PanelBusqueda.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        chkBuscarMiembrosMiClan.setForeground(new java.awt.Color(209, 194, 170));
+        chkBuscarMiembrosMiClan.setText("Buscar solo miembros de mi clan");
+        chkBuscarMiembrosMiClan.setOpaque(false);
+        PanelBusqueda.add(chkBuscarMiembrosMiClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         fondoBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
         PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 407));
 
         getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 407));
 
-        jLabel11.setText("Conectado como:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
+        etiConectadoComo.setText("Conectado como:");
+        getContentPane().add(etiConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
 
-        jLabel12.setText("-");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 9, 132, 20));
+        mostrarUsuario.setText("-");
+        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 9, 132, 20));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setOpaque(false);
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 8, 139, 22));
+        cbPersonaje.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbPersonaje.setOpaque(false);
+        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 8, 139, 22));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
-        jButton1.setToolTipText("Editar equipo del personaje");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setOpaque(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
+        btnModPj.setToolTipText("Editar equipo del personaje");
+        btnModPj.setBorder(null);
+        btnModPj.setBorderPainted(false);
+        btnModPj.setOpaque(false);
+        btnModPj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnModPjActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 6, 27, 26));
+        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 6, 27, 26));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
-        jLabel17.setText("jLabel17");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 240, 20));
+        fondoConectadoComo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
+        fondoConectadoComo.setText("jLabel17");
+        getContentPane().add(fondoConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 240, 20));
 
-        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Personaje:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 12, -1, -1));
+        etiPersonaje.setBackground(new java.awt.Color(255, 255, 255));
+        etiPersonaje.setText("Personaje:");
+        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 12, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
-        jLabel16.setText("jLabel16");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 9, 80, 20));
+        fondoPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
+        fondoPersonaje.setText("jLabel16");
+        getContentPane().add(fondoPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 9, 80, 20));
 
-        FondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/4.jpg"))); // NOI18N
-        getContentPane().add(FondoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 640));
+        fondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/4.jpg"))); // NOI18N
+        getContentPane().add(fondoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 640));
 
         fondotable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
         fondotable.setText("jLabel6");
         getContentPane().add(fondotable, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 470, 340));
 
-        UsuarioMenu.setText("Usuario");
+        menuUsuario.setText("Usuario");
 
         itemModificarDatos.setText("Modificar datos...");
-        UsuarioMenu.add(itemModificarDatos);
-        UsuarioMenu.add(SeparadorUsuario2);
+        menuUsuario.add(itemModificarDatos);
+        menuUsuario.add(separadorUsuario);
 
         itemCerrarUsuario.setText("Cerrar usuario");
-        UsuarioMenu.add(itemCerrarUsuario);
+        menuUsuario.add(itemCerrarUsuario);
 
-        BarraMenu.add(UsuarioMenu);
+        MenuBarra.add(menuUsuario);
 
-        EditarMenu.setText("Editar");
+        menuEditar.setText("Editar");
 
-        jMenuItem1.setText("Registrar Personaje...");
-        EditarMenu.add(jMenuItem1);
+        itemRegPj.setText("Registrar Personaje...");
+        menuEditar.add(itemRegPj);
 
-        jMenuItem3.setText("Eliminar Personaje...");
-        EditarMenu.add(jMenuItem3);
-        EditarMenu.add(jSeparator1);
+        itemModPj.setText("Modificar Personaje...");
+        menuEditar.add(itemModPj);
+        menuEditar.add(separadorEditar1);
 
-        jMenuItem4.setText("Registrar Clan...");
-        EditarMenu.add(jMenuItem4);
+        itemUnirClan.setText("Unirse al Clan...");
+        menuEditar.add(itemUnirClan);
 
-        jMenuItem5.setText("Modificar Clan...");
-        EditarMenu.add(jMenuItem5);
+        itemAbandonarClan.setText("Abandonar Clan...");
+        menuEditar.add(itemAbandonarClan);
+        menuEditar.add(separadorEditar2);
 
-        jMenuItem6.setText("Eliminar Clan...");
-        EditarMenu.add(jMenuItem6);
+        itemRegClan.setText("Registrar Clan...");
+        menuEditar.add(itemRegClan);
 
-        BarraMenu.add(EditarMenu);
+        itemModClan.setText("Modificar Clan...");
+        menuEditar.add(itemModClan);
 
-        ConfiguracionMenu.setText("Configuración");
+        itemEliminarClan.setText("Eliminar Clan...");
+        menuEditar.add(itemEliminarClan);
 
-        jMenuItem2.setText("Cambiar Base de Datos...");
-        ConfiguracionMenu.add(jMenuItem2);
+        MenuBarra.add(menuEditar);
 
-        BarraMenu.add(ConfiguracionMenu);
+        menuConfiguracion.setText("Configuración");
 
-        AyudaMenu.setText("Ayuda");
+        itemCambiarBD.setText("Cambiar Base de Datos...");
+        menuConfiguracion.add(itemCambiarBD);
+
+        MenuBarra.add(menuConfiguracion);
+
+        menuAyuda.setText("Ayuda");
 
         itemAcerca.setText("Acerca de...");
-        AyudaMenu.add(itemAcerca);
+        menuAyuda.add(itemAcerca);
 
-        BarraMenu.add(AyudaMenu);
+        MenuBarra.add(menuAyuda);
 
-        setJMenuBar(BarraMenu);
+        setJMenuBar(MenuBarra);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -921,13 +1527,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_radPersonajeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnModPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModPjActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnModPjActionPerformed
 
-    private void chkEspanyol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEspanyol2ActionPerformed
+    private void chkLadronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkLadronActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chkEspanyol2ActionPerformed
+    }//GEN-LAST:event_chkLadronActionPerformed
+
+    private void txt_dialogoRP_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoRP_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoRP_NombreActionPerformed
+
+    private void txt_dialogoMP_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoMP_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoMP_NombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -965,69 +1579,136 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu AyudaMenu;
-    private javax.swing.JMenuBar BarraMenu;
-    private javax.swing.JMenu ConfiguracionMenu;
-    private javax.swing.JDialog DialogoModificarUsuario;
-    private javax.swing.JMenu EditarMenu;
-    private javax.swing.JLabel FondoPj;
-    private javax.swing.JLabel FondoPrincipal;
+    private javax.swing.JMenuBar MenuBarra;
     private javax.swing.JPanel PanelAtributos;
     private javax.swing.JPanel PanelBusqueda;
     private javax.swing.JPanel PanelEquipo;
+    private javax.swing.JPanel PanelEstadisticas;
     private javax.swing.JPanel PanelInformacion;
-    private javax.swing.JScrollPane PanelPersonajes;
-    private javax.swing.JPopupMenu.Separator SeparadorUsuario2;
+    private javax.swing.JScrollPane PanelTabla;
+    private javax.swing.JPanel Panel_dialogoMU_CambiarContrasenya;
+    private javax.swing.JPanel Panel_dialogoMU_Idiomas;
     private javax.swing.JTable TablaPersonajes;
-    private javax.swing.JMenu UsuarioMenu;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnModPj;
+    private javax.swing.JButton btn_dialogoMP_Cancelar;
+    private javax.swing.JButton btn_dialogoMP_Modificar;
+    private javax.swing.JButton btn_dialogoMU_Cancelar;
+    private javax.swing.JButton btn_dialogoMU_Modificar;
+    private javax.swing.JButton btn_dialogoRP_Cancelar;
+    private javax.swing.JButton btn_dialogoRP_Registrar;
+    private javax.swing.JComboBox cbPersonaje;
+    private javax.swing.JComboBox cb_dialogoMP_Clase;
+    private javax.swing.JComboBox cb_dialogoMP_ModificadorArma;
+    private javax.swing.JComboBox cb_dialogoMP_ModificadorArmadura;
+    private javax.swing.JComboBox cb_dialogoMP_RarezaArma;
+    private javax.swing.JComboBox cb_dialogoMP_RarezaArmadura;
+    private javax.swing.JComboBox cb_dialogoMP_Raza;
+    private javax.swing.JComboBox cb_dialogoMP_SlotArma;
+    private javax.swing.JComboBox cb_dialogoMP_SlotArmadura;
+    private javax.swing.JComboBox cb_dialogoMP_TipoArma;
+    private javax.swing.JComboBox cb_dialogoMU_Servidor;
+    private javax.swing.JComboBox cb_dialogoRP_Clase;
+    private javax.swing.JComboBox cb_dialogoRP_ModificadorArma;
+    private javax.swing.JComboBox cb_dialogoRP_ModificadorArmadura;
+    private javax.swing.JComboBox cb_dialogoRP_RarezaArma;
+    private javax.swing.JComboBox cb_dialogoRP_RarezaArmadura;
+    private javax.swing.JComboBox cb_dialogoRP_Raza;
+    private javax.swing.JComboBox cb_dialogoRP_SlotArma;
+    private javax.swing.JComboBox cb_dialogoRP_SlotArmadura;
+    private javax.swing.JComboBox cb_dialogoRP_TipoArma;
     private javax.swing.JCheckBox chkAleman;
-    private javax.swing.JCheckBox chkAleman1;
-    private javax.swing.JCheckBox chkAleman2;
-    private javax.swing.JCheckBox chkAleman3;
-    private javax.swing.JCheckBox chkEspanol;
+    private javax.swing.JCheckBox chkBuscarMiembrosMiClan;
+    private javax.swing.JCheckBox chkElementalista;
     private javax.swing.JCheckBox chkEspanyol;
-    private javax.swing.JCheckBox chkEspanyol1;
-    private javax.swing.JCheckBox chkEspanyol2;
     private javax.swing.JCheckBox chkFrances;
-    private javax.swing.JCheckBox chkFrances1;
-    private javax.swing.JCheckBox chkFrances2;
-    private javax.swing.JCheckBox chkFrances3;
+    private javax.swing.JCheckBox chkGuardabosques;
+    private javax.swing.JCheckBox chkGuardian;
+    private javax.swing.JCheckBox chkGuerrero;
+    private javax.swing.JCheckBox chkHipnotizador;
+    private javax.swing.JCheckBox chkIngeniero;
     private javax.swing.JCheckBox chkIngles;
-    private javax.swing.JCheckBox chkIngles1;
-    private javax.swing.JCheckBox chkIngles2;
-    private javax.swing.JCheckBox chkIngles3;
-    private javax.swing.JComboBox combServidor;
+    private javax.swing.JCheckBox chkLadron;
+    private javax.swing.JCheckBox chkNigromante;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica1Arma;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica2Arma;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasicaArmadura;
+    private javax.swing.JCheckBox chk_dialogoMU_Aleman;
+    private javax.swing.JCheckBox chk_dialogoMU_Espanyol;
+    private javax.swing.JCheckBox chk_dialogoMU_Frances;
+    private javax.swing.JCheckBox chk_dialogoMU_Ingles;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasica1Arma;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasica2Arma;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasicaArmadura;
+    private javax.swing.JDialog dialogoModificarPersonaje;
+    private javax.swing.JDialog dialogoModificarUsuario;
+    private javax.swing.JDialog dialogoRegistrarPersonaje;
     private javax.swing.JLabel etiAgonia;
     private javax.swing.JLabel etiArmadura;
     private javax.swing.JLabel etiClase;
-    private javax.swing.JLabel etiContrasena;
-    private javax.swing.JLabel etiCuenta;
-    private javax.swing.JLabel etiCuenta1;
+    private javax.swing.JLabel etiClases;
+    private javax.swing.JLabel etiConectadoComo;
     private javax.swing.JLabel etiDanyoCondicion;
     private javax.swing.JLabel etiDanyoCritico;
     private javax.swing.JLabel etiDuracionBendicion;
     private javax.swing.JLabel etiDuracionCondicion;
     private javax.swing.JLabel etiDureza;
-    private javax.swing.JLabel etiEmail;
     private javax.swing.JLabel etiFerocidad;
     private javax.swing.JLabel etiIdioma;
     private javax.swing.JLabel etiIdiomas;
-    private javax.swing.JLabel etiIdiomas1;
-    private javax.swing.JLabel etiNomPj;
+    private javax.swing.JLabel etiNombreCuenta;
+    private javax.swing.JLabel etiNombrePersonaje;
+    private javax.swing.JLabel etiPersonaje;
     private javax.swing.JLabel etiPoder;
     private javax.swing.JLabel etiPoderCuracion;
     private javax.swing.JLabel etiPrecision;
     private javax.swing.JLabel etiProbabilidadCritica;
-    private javax.swing.JLabel etiRepeContrasena;
+    private javax.swing.JLabel etiResistAgoniaMin;
     private javax.swing.JLabel etiSalud;
     private javax.swing.JLabel etiServidor;
-    private javax.swing.JLabel etiServidor1;
     private javax.swing.JLabel etiVitalidad;
+    private javax.swing.JLabel eti_dialogoMP_Clase;
+    private javax.swing.JLabel eti_dialogoMP_InfusionAgoniaArmadura;
+    private javax.swing.JLabel eti_dialogoMP_ModificadorArma;
+    private javax.swing.JLabel eti_dialogoMP_ModificadorArmadura;
+    private javax.swing.JLabel eti_dialogoMP_Nombre;
+    private javax.swing.JLabel eti_dialogoMP_RarezaArma;
+    private javax.swing.JLabel eti_dialogoMP_RarezaArmadura;
+    private javax.swing.JLabel eti_dialogoMP_Raza;
+    private javax.swing.JLabel eti_dialogoMP_SlotArma;
+    private javax.swing.JLabel eti_dialogoMP_SlotArmadura;
+    private javax.swing.JLabel eti_dialogoMP_TipoArma;
+    private javax.swing.JLabel eti_dialogoMU_ContrasenyaAntigua;
+    private javax.swing.JLabel eti_dialogoMU_Email;
+    private javax.swing.JLabel eti_dialogoMU_Idiomas;
+    private javax.swing.JLabel eti_dialogoMU_NombreCuenta;
+    private javax.swing.JLabel eti_dialogoMU_NuevaContrasenya;
+    private javax.swing.JLabel eti_dialogoMU_RepetirContrasenya;
+    private javax.swing.JLabel eti_dialogoMU_Servidor;
+    private javax.swing.JLabel eti_dialogoRP_Clase;
+    private javax.swing.JLabel eti_dialogoRP_InfusionAgoniaArmadura;
+    private javax.swing.JLabel eti_dialogoRP_ModificadorArma;
+    private javax.swing.JLabel eti_dialogoRP_ModificadorArmadura;
+    private javax.swing.JLabel eti_dialogoRP_Nombre;
+    private javax.swing.JLabel eti_dialogoRP_RarezaArma;
+    private javax.swing.JLabel eti_dialogoRP_RarezaArmadura;
+    private javax.swing.JLabel eti_dialogoRP_Raza;
+    private javax.swing.JLabel eti_dialogoRP_SlotArma;
+    private javax.swing.JLabel eti_dialogoRP_SlotArmadura;
+    private javax.swing.JLabel eti_dialogoRP_TipoArma;
     private javax.swing.JLabel fondoBusqueda;
+    private javax.swing.JLabel fondoConectadoComo;
+    private javax.swing.JLabel fondoEquipo;
     private javax.swing.JLabel fondoInformacion;
+    private javax.swing.JLabel fondoPersonaje;
+    private javax.swing.JLabel fondoPrincipal;
     private javax.swing.JLabel fondotable;
     private javax.swing.ButtonGroup grupoBuscador;
+    private javax.swing.JLabel icoAccesorio1;
+    private javax.swing.JLabel icoAccesorio2;
+    private javax.swing.JLabel icoAmuleto;
+    private javax.swing.JLabel icoAnillo1;
+    private javax.swing.JLabel icoAnillo2;
     private javax.swing.JLabel icoCabeza;
     private javax.swing.JLabel icoEspaldar;
     private javax.swing.JLabel icoHombros;
@@ -1037,32 +1718,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel icoPies;
     private javax.swing.JLabel icoSetArma1;
     private javax.swing.JLabel icoSetArma2;
+    private javax.swing.JMenuItem itemAbandonarClan;
     private javax.swing.JMenuItem itemAcerca;
+    private javax.swing.JMenuItem itemCambiarBD;
     private javax.swing.JMenuItem itemCerrarUsuario;
+    private javax.swing.JMenuItem itemEliminarClan;
+    private javax.swing.JMenuItem itemModClan;
+    private javax.swing.JMenuItem itemModPj;
     private javax.swing.JMenuItem itemModificarDatos;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem itemRegClan;
+    private javax.swing.JMenuItem itemRegPj;
+    private javax.swing.JMenuItem itemUnirClan;
+    private javax.swing.JMenu menuAyuda;
+    private javax.swing.JMenu menuConfiguracion;
+    private javax.swing.JMenu menuEditar;
+    private javax.swing.JMenu menuUsuario;
+    private javax.swing.JLabel mostar_dialogoMU_NombreCuenta;
     private javax.swing.JLabel mostrarAgonia;
     private javax.swing.JLabel mostrarArmadura;
     private javax.swing.JLabel mostrarClase;
@@ -1081,19 +1752,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel mostrarProbabilidadCritica;
     private javax.swing.JLabel mostrarSalud;
     private javax.swing.JLabel mostrarServidor;
+    private javax.swing.JLabel mostrarUsuario;
     private javax.swing.JLabel mostrarVitalidad;
-    private javax.swing.JPanel panelIdiomas;
+    private javax.swing.JPanel panel_dialogoMP_ConfigArma;
+    private javax.swing.JPanel panel_dialogoMP_ConfigArmadura;
+    private javax.swing.JPanel panel_dialogoMP_Equipo;
+    private javax.swing.JPanel panel_dialogoRP_ConfigArma;
+    private javax.swing.JPanel panel_dialogoRP_ConfigArmadura;
+    private javax.swing.JPanel panel_dialogoRP_Equipo;
     private javax.swing.JRadioButton radClan;
     private javax.swing.JRadioButton radCuenta;
     private javax.swing.JRadioButton radPersonaje;
+    private javax.swing.JPopupMenu.Separator separadorEditar1;
+    private javax.swing.JPopupMenu.Separator separadorEditar2;
+    private javax.swing.JPopupMenu.Separator separadorUsuario;
     private javax.swing.JLabel tituloBusqueda;
     private javax.swing.JLabel tituloEquipo;
     private javax.swing.JLabel tituloPersonaje;
     private javax.swing.JTextField txtAgoniaMinima;
     private javax.swing.JTextField txtBusqueda;
-    private javax.swing.JPasswordField txtContrasena;
-    private javax.swing.JTextField txtCuenta;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JPasswordField txtRepeContrasena;
+    private javax.swing.JTextField txt_dialogoMP_InfusionAgoniaArmadura;
+    private javax.swing.JTextField txt_dialogoMP_Nombre;
+    private javax.swing.JTextField txt_dialogoMU_ContrasenyaAntigua;
+    private javax.swing.JTextField txt_dialogoMU_Email;
+    private javax.swing.JPasswordField txt_dialogoMU_NuevaContrasenya;
+    private javax.swing.JPasswordField txt_dialogoMU_RepetirContrasenya;
+    private javax.swing.JTextField txt_dialogoRP_InfusionAgoniaArmadura;
+    private javax.swing.JTextField txt_dialogoRP_Nombre;
     // End of variables declaration//GEN-END:variables
 }

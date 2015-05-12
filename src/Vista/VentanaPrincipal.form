@@ -4,7 +4,7 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="grupoBuscador">
     </Component>
-    <Container class="javax.swing.JDialog" name="DialogoModificarUsuario">
+    <Container class="javax.swing.JDialog" name="dialogoModificarUsuario">
       <Properties>
         <Property name="defaultCloseOperation" type="int" value="2"/>
         <Property name="title" type="java.lang.String" value="Modificar Usuario"/>
@@ -15,71 +15,78 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Panel_dialogoMU_CambiarContrasenya" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="eti_dialogoMU_Email" alignment="0" max="32767" attributes="0"/>
+                              <Component id="eti_dialogoMU_NombreCuenta" alignment="0" max="32767" attributes="0"/>
+                              <Component id="eti_dialogoMU_Idiomas" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMU_Servidor" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Panel_dialogoMU_Idiomas" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_dialogoMU_Email" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cb_dialogoMU_Servidor" alignment="0" max="32767" attributes="0"/>
+                              <Component id="mostar_dialogoMU_NombreCuenta" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="etiRepeContrasena" alignment="0" max="32767" attributes="0"/>
-                      <Component id="etiContrasena" alignment="0" max="32767" attributes="0"/>
-                      <Component id="etiEmail" alignment="0" max="32767" attributes="0"/>
-                      <Component id="etiCuenta1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="etiIdiomas1" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
-                      <Component id="etiServidor1" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="panelIdiomas" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtCuenta" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
-                      <Component id="combServidor" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtRepeContrasena" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtContrasena" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="84" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <Component id="btn_dialogoMU_Modificar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btn_dialogoMU_Cancelar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="etiCuenta1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMU_NombreCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="mostar_dialogoMU_NombreCuenta" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="etiEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMU_Email" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_dialogoMU_Email" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="etiContrasena" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtContrasena" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="etiRepeContrasena" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtRepeContrasena" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="etiServidor1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="combServidor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMU_Servidor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cb_dialogoMU_Servidor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="panelIdiomas" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="etiIdiomas1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Panel_dialogoMU_Idiomas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMU_Idiomas" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="178" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="Panel_dialogoMU_CambiarContrasenya" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_dialogoMU_Modificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_dialogoMU_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JPasswordField" name="txtRepeContrasena">
-        </Component>
-        <Component class="javax.swing.JComboBox" name="combServidor">
+        <Component class="javax.swing.JComboBox" name="cb_dialogoMU_Servidor">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -91,12 +98,12 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiCuenta1">
+        <Component class="javax.swing.JLabel" name="eti_dialogoMU_NombreCuenta">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre cuenta (GW2)"/>
+            <Property name="text" type="java.lang.String" value="Nombre cuenta (GW2):"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="panelIdiomas">
+        <Container class="javax.swing.JPanel" name="Panel_dialogoMU_Idiomas">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -111,13 +118,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="chkIngles3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkAleman3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Ingles" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Aleman" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="chkEspanol" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkFrances3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Espanyol" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Frances" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -128,13 +135,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="chkIngles3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkEspanol" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Ingles" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Espanyol" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="chkAleman3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkFrances3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Aleman" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chk_dialogoMU_Frances" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -142,64 +149,1099 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JCheckBox" name="chkIngles3">
+            <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Ingles">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingl&#xe9;s"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkEspanol">
+            <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Espanyol">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Espa&#xf1;ol"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkAleman3">
+            <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Aleman">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aleman"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkFrances3">
+            <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Frances">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Franc&#xe9;s"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="etiEmail">
+        <Component class="javax.swing.JLabel" name="eti_dialogoMU_Email">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Email"/>
+            <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiContrasena">
+        <Component class="javax.swing.JLabel" name="eti_dialogoMU_Servidor">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
+            <Property name="text" type="java.lang.String" value="Servidor:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiRepeContrasena">
+        <Component class="javax.swing.JLabel" name="eti_dialogoMU_Idiomas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Repetir contrase&#xf1;a"/>
+            <Property name="text" type="java.lang.String" value="Idiomas:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiServidor1">
+        <Component class="javax.swing.JTextField" name="txt_dialogoMU_Email">
+        </Component>
+        <Component class="javax.swing.JLabel" name="mostar_dialogoMU_NombreCuenta">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Servidor"/>
+            <Property name="text" type="java.lang.String" value="-"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiIdiomas1">
+        <Container class="javax.swing.JPanel" name="Panel_dialogoMU_CambiarContrasenya">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Idiomas"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Cambiar Contrase&#xf1;a">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true"/>
+                  </Border>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="eti_dialogoMU_NuevaContrasenya" min="-2" pref="96" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txt_dialogoMU_NuevaContrasenya" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="eti_dialogoMU_ContrasenyaAntigua" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txt_dialogoMU_ContrasenyaAntigua" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="eti_dialogoMU_RepetirContrasenya" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txt_dialogoMU_RepetirContrasenya" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="eti_dialogoMU_ContrasenyaAntigua" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_dialogoMU_ContrasenyaAntigua" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txt_dialogoMU_NuevaContrasenya" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoMU_NuevaContrasenya" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txt_dialogoMU_RepetirContrasenya" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoMU_RepetirContrasenya" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="eti_dialogoMU_NuevaContrasenya">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nueva contrase&#xf1;a:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="eti_dialogoMU_RepetirContrasenya">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Repetir contrase&#xf1;a:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_RepetirContrasenya">
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_NuevaContrasenya">
+            </Component>
+            <Component class="javax.swing.JLabel" name="eti_dialogoMU_ContrasenyaAntigua">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Contrase&#xf1;a antigua:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_dialogoMU_ContrasenyaAntigua">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_dialogoMU_Modificar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modificar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCuenta">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtEmail">
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="txtContrasena">
+        <Component class="javax.swing.JButton" name="btn_dialogoMU_Cancelar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Menu class="javax.swing.JMenuBar" name="BarraMenu">
+    <Container class="javax.swing.JDialog" name="dialogoRegistrarPersonaje">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Registrar Personaje"/>
+        <Property name="alwaysOnTop" type="boolean" value="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                  <Component id="btn_dialogoRP_Registrar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="btn_dialogoRP_Cancelar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="panel_dialogoRP_Equipo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoRP_Nombre" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_Raza" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_dialogoRP_Nombre" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoRP_Raza" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoRP_Clase" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="cb_dialogoRP_Clase" min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="eti_dialogoRP_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_dialogoRP_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cb_dialogoRP_Raza" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoRP_Raza" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cb_dialogoRP_Clase" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoRP_Clase" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="panel_dialogoRP_Equipo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_dialogoRP_Registrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_dialogoRP_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="UsuarioMenu">
+        <Component class="javax.swing.JLabel" name="eti_dialogoRP_Nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_dialogoRP_Nombre">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoRP_NombreActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="eti_dialogoRP_Raza">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Raza:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Raza">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Clase">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="eti_dialogoRP_Clase">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clase:"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="panel_dialogoRP_Equipo">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Equipo">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true"/>
+                  </Border>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="panel_dialogoRP_ConfigArmadura" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="eti_dialogoRP_SlotArma" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="eti_dialogoRP_SlotArmadura" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cb_dialogoRP_SlotArmadura" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="cb_dialogoRP_SlotArma" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="panel_dialogoRP_ConfigArma" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="eti_dialogoRP_SlotArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cb_dialogoRP_SlotArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panel_dialogoRP_ConfigArma" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cb_dialogoRP_SlotArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoRP_SlotArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panel_dialogoRP_ConfigArmadura" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="eti_dialogoRP_SlotArma">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hueco del Arma:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArma">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JPanel" name="panel_dialogoRP_ConfigArmadura">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Configuraci&#xf3;n del Armadura">
+                      <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="eti_dialogoRP_RarezaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="cb_dialogoRP_RarezaArmadura" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="chk_dialogoRP_InfusionBasicaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoRP_InfusionAgoniaArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_ModificadorArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cb_dialogoRP_ModificadorArmadura" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="txt_dialogoRP_InfusionAgoniaArmadura" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoRP_RarezaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_RarezaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoRP_ModificadorArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_ModificadorArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="chk_dialogoRP_InfusionBasicaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_dialogoRP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoRP_RarezaArmadura">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_RarezaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rareza:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_ModificadorArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificador:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoRP_ModificadorArmadura">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasicaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_InfusionAgoniaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_dialogoRP_InfusionAgoniaArmadura">
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="eti_dialogoRP_SlotArmadura">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hueco de la Armadura:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArmadura">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JPanel" name="panel_dialogoRP_ConfigArma">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Configuraci&#xf3;n del Arma">
+                      <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoRP_TipoArma" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_RarezaArma" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="cb_dialogoRP_TipoArma" alignment="0" pref="120" max="32767" attributes="0"/>
+                              <Component id="cb_dialogoRP_RarezaArma" alignment="0" max="32767" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionBasica1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="chk_dialogoRP_InfusionBasica2Arma" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="eti_dialogoRP_ModificadorArma" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="cb_dialogoRP_ModificadorArma" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoRP_TipoArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_TipoArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoRP_RarezaArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_RarezaArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_ModificadorArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoRP_ModificadorArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="chk_dialogoRP_InfusionBasica1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionBasica2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoRP_TipoArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_TipoArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tipo de Arma:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoRP_RarezaArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_RarezaArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rareza:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_ModificadorArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificador:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoRP_ModificadorArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasica1Arma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasica2Arma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 2"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_dialogoRP_Registrar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registrar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_dialogoRP_Cancelar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dialogoModificarPersonaje">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Modificar Personaje"/>
+        <Property name="alwaysOnTop" type="boolean" value="true"/>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                  <Component id="btn_dialogoMP_Modificar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="btn_dialogoMP_Cancelar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="panel_dialogoMP_Equipo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoMP_Nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_Raza" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_dialogoMP_Nombre" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoMP_Raza" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoMP_Clase" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="cb_dialogoMP_Clase" min="-2" pref="140" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="eti_dialogoMP_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_dialogoMP_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cb_dialogoMP_Raza" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMP_Raza" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cb_dialogoMP_Clase" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="eti_dialogoMP_Clase" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="panel_dialogoMP_Equipo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_dialogoMP_Modificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_dialogoMP_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="eti_dialogoMP_Nombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_dialogoMP_Nombre">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoMP_NombreActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="eti_dialogoMP_Raza">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Raza:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Raza">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Clase">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="eti_dialogoMP_Clase">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clase:"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="panel_dialogoMP_Equipo">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Equipo">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true"/>
+                  </Border>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="panel_dialogoMP_ConfigArmadura" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="eti_dialogoMP_SlotArma" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="eti_dialogoMP_SlotArmadura" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cb_dialogoMP_SlotArmadura" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="cb_dialogoMP_SlotArma" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="panel_dialogoMP_ConfigArma" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="eti_dialogoMP_SlotArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cb_dialogoMP_SlotArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panel_dialogoMP_ConfigArma" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cb_dialogoMP_SlotArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eti_dialogoMP_SlotArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panel_dialogoMP_ConfigArmadura" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="eti_dialogoMP_SlotArma">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hueco del Arma:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArma">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JPanel" name="panel_dialogoMP_ConfigArmadura">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Configuraci&#xf3;n del Armadura">
+                      <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="eti_dialogoMP_RarezaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="cb_dialogoMP_RarezaArmadura" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="chk_dialogoMP_InfusionBasicaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoMP_InfusionAgoniaArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_ModificadorArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cb_dialogoMP_ModificadorArmadura" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="txt_dialogoMP_InfusionAgoniaArmadura" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoMP_RarezaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_RarezaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoMP_ModificadorArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_ModificadorArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="chk_dialogoMP_InfusionBasicaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_dialogoMP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoMP_RarezaArmadura">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_RarezaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rareza:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_ModificadorArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificador:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoMP_ModificadorArmadura">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasicaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_InfusionAgoniaArmadura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txt_dialogoMP_InfusionAgoniaArmadura">
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="eti_dialogoMP_SlotArmadura">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hueco de la Armadura:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArmadura">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JPanel" name="panel_dialogoMP_ConfigArma">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Configuraci&#xf3;n del Arma">
+                      <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </TitledBorder>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="eti_dialogoMP_TipoArma" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_RarezaArma" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="cb_dialogoMP_TipoArma" alignment="0" pref="120" max="32767" attributes="0"/>
+                              <Component id="cb_dialogoMP_RarezaArma" alignment="0" max="32767" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionBasica1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="chk_dialogoMP_InfusionBasica2Arma" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="eti_dialogoMP_ModificadorArma" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="cb_dialogoMP_ModificadorArma" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoMP_TipoArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_TipoArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cb_dialogoMP_RarezaArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_RarezaArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_ModificadorArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_dialogoMP_ModificadorArma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="chk_dialogoMP_InfusionBasica1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionBasica2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoMP_TipoArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_TipoArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tipo de Arma:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoMP_RarezaArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_RarezaArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rareza:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_ModificadorArma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Modificador:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cb_dialogoMP_ModificadorArma">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasica1Arma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasica2Arma">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 2"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_dialogoMP_Modificar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modificar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_dialogoMP_Cancelar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Menu class="javax.swing.JMenuBar" name="MenuBarra">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="menuUsuario">
           <Properties>
             <Property name="text" type="java.lang.String" value="Usuario"/>
           </Properties>
@@ -209,7 +1251,7 @@
                 <Property name="text" type="java.lang.String" value="Modificar datos..."/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JPopupMenu$Separator" name="SeparadorUsuario2">
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separadorUsuario">
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemCerrarUsuario">
               <Properties>
@@ -218,53 +1260,65 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="EditarMenu">
+        <Menu class="javax.swing.JMenu" name="menuEditar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="itemRegPj">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registrar Personaje..."/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+            <MenuItem class="javax.swing.JMenuItem" name="itemModPj">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Eliminar Personaje..."/>
+                <Property name="text" type="java.lang.String" value="Modificar Personaje..."/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separadorEditar1">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+            <MenuItem class="javax.swing.JMenuItem" name="itemUnirClan">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unirse al Clan..."/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itemAbandonarClan">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Abandonar Clan..."/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separadorEditar2">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itemRegClan">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registrar Clan..."/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
+            <MenuItem class="javax.swing.JMenuItem" name="itemModClan">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar Clan..."/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
+            <MenuItem class="javax.swing.JMenuItem" name="itemEliminarClan">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar Clan..."/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="ConfiguracionMenu">
+        <Menu class="javax.swing.JMenu" name="menuConfiguracion">
           <Properties>
             <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="itemCambiarBD">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cambiar Base de Datos..."/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="AyudaMenu">
+        <Menu class="javax.swing.JMenu" name="menuAyuda">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ayuda"/>
           </Properties>
@@ -288,7 +1342,7 @@
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="BarraMenu"/>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="MenuBarra"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -345,7 +1399,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="PanelPersonajes">
+    <Container class="javax.swing.JScrollPane" name="PanelTabla">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -417,7 +1471,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiNomPj">
+        <Component class="javax.swing.JLabel" name="etiNombrePersonaje">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -443,7 +1497,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="etiCuenta">
+        <Component class="javax.swing.JLabel" name="etiNombreCuenta">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1054,7 +2108,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="icoAnillo2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/Imagenes/anillo2.jpg"/>
@@ -1075,7 +2129,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="icoAnillo1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/Imagenes/anillo1.jpg"/>
@@ -1096,7 +2150,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="icoAccesorio2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/Imagenes/accesorio2.jpg"/>
@@ -1117,7 +2171,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="icoAccesorio1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/Imagenes/accesorio1.jpg"/>
@@ -1138,7 +2192,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="icoAmuleto">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Vista/Imagenes/amuleto.jpg"/>
@@ -1180,7 +2234,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="PanelEstadisticas">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -1215,7 +2269,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JLabel" name="FondoPj">
+        <Component class="javax.swing.JLabel" name="fondoEquipo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1323,7 +2377,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="etiResistAgoniaMin">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1426,7 +2480,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="etiClases">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1439,7 +2493,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkIngles1">
+        <Component class="javax.swing.JCheckBox" name="chkGuardian">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1453,7 +2507,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkAleman1">
+        <Component class="javax.swing.JCheckBox" name="chkElementalista">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1467,7 +2521,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkEspanyol1">
+        <Component class="javax.swing.JCheckBox" name="chkGuerrero">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1481,7 +2535,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkFrances1">
+        <Component class="javax.swing.JCheckBox" name="chkNigromante">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1495,7 +2549,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkIngles2">
+        <Component class="javax.swing.JCheckBox" name="chkGuardabosques">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1509,7 +2563,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkAleman2">
+        <Component class="javax.swing.JCheckBox" name="chkIngeniero">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1523,7 +2577,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkEspanyol2">
+        <Component class="javax.swing.JCheckBox" name="chkLadron">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1532,7 +2586,7 @@
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkEspanyol2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkLadronActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1540,7 +2594,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="chkFrances2">
+        <Component class="javax.swing.JCheckBox" name="chkHipnotizador">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1554,7 +2608,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="chkBuscarMiembrosMiClan">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1582,7 +2636,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="etiConectadoComo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Conectado como:"/>
       </Properties>
@@ -1592,7 +2646,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
+    <Component class="javax.swing.JLabel" name="mostrarUsuario">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
@@ -1602,7 +2656,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
+    <Component class="javax.swing.JComboBox" name="cbPersonaje">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -1620,7 +2674,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btnModPj">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Vista/Imagenes/edit1.png"/>
@@ -1633,7 +2687,7 @@
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModPjActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1641,7 +2695,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel17">
+    <Component class="javax.swing.JLabel" name="fondoConectadoComo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Vista/Imagenes/fondolabel.png"/>
@@ -1654,7 +2708,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
+    <Component class="javax.swing.JLabel" name="etiPersonaje">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1667,7 +2721,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
+    <Component class="javax.swing.JLabel" name="fondoPersonaje">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Vista/Imagenes/fondolabel.png"/>
@@ -1680,7 +2734,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="FondoPrincipal">
+    <Component class="javax.swing.JLabel" name="fondoPrincipal">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Vista/Imagenes/4.jpg"/>
