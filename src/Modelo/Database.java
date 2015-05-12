@@ -6,17 +6,17 @@ public class Database {
   /** base de datos por defecto es test*/
   private String db = "GW2CB";
   /** usuario */
-  private String user = "admin";
+  private String user = "root";
   /** contraseña de MySql*/
-  private String password = "raspiroot";
+  private String password = "toor";
   /** Cadena de conexion */
-  private String url = "jdbc:mysql://85.136.81.194/"+db;
+  private String url = "jdbc:mysql://192.168.1.12/"+db;
   /** variable para trabajar con la conexion a la base de datos */
   private Connection conn = null;
 
    /** Constructor de clase */
    public Database(){
-        this.url = "jdbc:mysql://85.136.81.194/"+this.db;
+        this.url = "jdbc:mysql://192.168.1.12/"+this.db;
        try{
          //obtenemos el driver de para mysql
          Class.forName("com.mysql.jdbc.Driver");

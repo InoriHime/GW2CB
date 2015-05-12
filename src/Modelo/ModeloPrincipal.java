@@ -1,15 +1,17 @@
-
 package Modelo;
 
-import java.sql.PreparedStatement;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.table.DefaultTableModel;
 
 public class ModeloPrincipal extends Database{
-    
+    Database db=null;
     /*Constructor de la clase*/
-    public ModeloPrincipal(){}
+    public ModeloPrincipal(){
+        db = new Database();
+    }
     
     /** Obtiene registros de la tabla Personajes y los devuelve en un DefaultTableModel*/
     public DefaultTableModel getTablaPersonaje()
@@ -19,55 +21,83 @@ public class ModeloPrincipal extends Database{
       String[] columNames = {"Nombre Personaje","Cuenta","Clase","Nivel Fractales","Resis. Agonía","Clan","Idiomas"};
       //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
       //para formar la matriz de datos
-      try{
-         PreparedStatement pstm = this.getConexion().prepareStatement( "SELECT count(*) as total FROM Personajes");
-         ResultSet res = pstm.executeQuery();
+      
+      Statement stmt=null;
+      Statement stmt1=null;
+      Statement stmt2=null;
+      Statement stmt3=null;
+      try{     
+
+         stmt= db.getConexion().createStatement();
+         stmt1= db.getConexion().createStatement();
+         stmt2= db.getConexion().createStatement();
+         stmt3= db.getConexion().createStatement();
+         ResultSet res= stmt.executeQuery("SELECT count(*) as total FROM Personajes");
          res.next();
          registros = res.getInt("total");
-         res.close();
+         
       }catch(SQLException e){
-         System.err.println( e.getMessage() );
+         System.err.println(e.getMessage() );
       }
     //se crea una matriz con tantas filas y columnas que necesite
     Object[][] data = new String[registros][7];
       try{
           //realizamos la consulta sql y llenamos los datos en la matriz "Object[][] data"
-         PreparedStatement pstm = this.getConexion().prepareStatement("SELECT NomPj,Cuenta,Clase FROM Personajes");
-         ResultSet res = pstm.executeQuery();
+         ResultSet res = stmt.executeQuery("SELECT NomPj,Cuenta,Clase FROM Personajes");
          int i=0;
          while(res.next()){
-             PreparedStatement pstm1 = this.getConexion().prepareStatement("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas C,Personajes P WHERE Cuenta=NomCuenta");
-             ResultSet res1 = pstm.executeQuery();
-             PreparedStatement pstm2 = this.getConexion().prepareStatement("SELECT Clan FROM Clan-Cuenta ,Cuentas WHERE NomCuenta=Cuenta");
-             ResultSet res2 = pstm.executeQuery();
-             String cad = "";
-             if(res1.getBoolean("IdiomaIngles")){
-                 cad.concat("EN, ");
-             }
-             if(res1.getBoolean("IdiomaEspañol")){
-                 cad.concat("ES, ");
-             }
-             if(res1.getBoolean("IdiomaFrances")){
-                 cad.concat("FR, ");
-             }
-             if(res1.getBoolean("IdiomaAleman")){
-                 cad.concat("GR");
-             }
-             
-                data[i][0] = res.getString( "NomPj" );
-                data[i][1] = res.getString( "Cuenta" );
-                data[i][2] = res.getString( "Clase" );
-                data[i][3] = res1.getString( "Nivfractales" );
-                data[i][4] = res.getString( "p_cantidad" );
-                data[i][5] = res2.getString("Clan");
+                data[i][0] = res.getString("NomPj");
+                data[i][1] = res.getString("Cuenta");
+                data[i][2] = res.getString("Clase");
+               System.out.println("Insertados personaje, cuenta y clase");
+                ResultSet res1 = stmt1.executeQuery("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas,Personajes WHERE NomCuenta='"+data[i][1]+"'");
+                    res1.next();
+                    data[i][3] = res1.getString("Nivfractales");
+                
+                String cad = "";
+                    if(res1.getBoolean("IdiomaIngles")){
+                        cad.concat("EN, ");
+                    }
+                    if(res1.getBoolean("IdiomaEspañol")){
+                        cad.concat("ES, ");
+                    }
+                    if(res1.getBoolean("IdiomaFrances")){
+                        cad.concat("FR, ");
+                    }
+                    if(res1.getBoolean("IdiomaAleman")){
+                        cad.concat("GR");
+                    }
                 data[i][6] = "cad";
+               System.out.println("Insertadonivel de fractales");
+                
+                ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][1]+"') as Agonia");
+                res3.next();
+                data[i][4] = res3.getString("Agonia");
+                
+                System.out.println("Insertado ar");
+                
+                
+                /*ResultSet res2 = stmt2.executeQuery("SELECT Clan FROM Clan_Cuenta WHERE Cuenta='"+data[i][1]+"'");
+                res2.next();
+                data[i][5] = res2.getString("Clan");
+                res2.close();
+                System.out.println("Insertado clan");
+                */
+                data[i][5] = "(Sin clan)";
+                System.out.println("Insertado clan");
             i++;
+            
          }
-         res.close();
+         
+         for(int j=0; i<registros;i++){
+             for (int k=0; k<7;i++){
+                 System.out.println(data[j][k]);
+             }
+         }
          //se añade la matriz de datos en el DefaultTableModel
          tablemodel.setDataVector(data, columNames );
          }catch(SQLException e){
-            System.err.println( e.getMessage() );
+            System.err.println(e.getMessage() );
         }
         return tablemodel;
     }
