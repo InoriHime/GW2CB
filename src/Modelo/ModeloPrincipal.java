@@ -40,6 +40,19 @@ public class ModeloPrincipal extends Database{
              ResultSet res1 = pstm.executeQuery();
              PreparedStatement pstm2 = this.getConexion().prepareStatement("SELECT Clan FROM Clan-Cuenta ,Cuentas WHERE NomCuenta=Cuenta");
              ResultSet res2 = pstm.executeQuery();
+             String cad = "";
+             if(res1.getBoolean("IdiomaIngles")){
+                 cad.concat("EN, ");
+             }
+             if(res1.getBoolean("IdiomaEspañol")){
+                 cad.concat("ES, ");
+             }
+             if(res1.getBoolean("IdiomaFrances")){
+                 cad.concat("FR, ");
+             }
+             if(res1.getBoolean("IdiomaAleman")){
+                 cad.concat("GR");
+             }
              
                 data[i][0] = res.getString( "NomPj" );
                 data[i][1] = res.getString( "Cuenta" );
@@ -47,7 +60,7 @@ public class ModeloPrincipal extends Database{
                 data[i][3] = res1.getString( "Nivfractales" );
                 data[i][4] = res.getString( "p_cantidad" );
                 data[i][5] = res2.getString("Clan");
-                data[i][6] = res.getString( "p_cantidad" );
+                data[i][6] = "cad";
             i++;
          }
          res.close();
