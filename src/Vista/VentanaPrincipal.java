@@ -31,7 +31,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 
             l.setBackground(new Color(27, 23, 20));
-            l.setForeground(Color.white);
+            l.setForeground(new Color(209,194,170));
             l.setHorizontalAlignment(CENTER);
             
             return l;
