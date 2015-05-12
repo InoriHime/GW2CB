@@ -12,7 +12,7 @@ nbproject/
 *.out
 
 # Package Files #
-*.jar
+*.jar binary
 *.war
 *.ear
 /build/
