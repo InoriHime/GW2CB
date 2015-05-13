@@ -201,6 +201,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoAccesorio2 = new javax.swing.JLabel();
         icoAccesorio1 = new javax.swing.JLabel();
         icoAmuleto = new javax.swing.JLabel();
+        icoArmaAcu1 = new javax.swing.JLabel();
+        icoArmaAcu2 = new javax.swing.JLabel();
+        icoCabezaAcu = new javax.swing.JLabel();
         icoEspaldar = new javax.swing.JLabel();
         PanelEstadisticas = new javax.swing.JPanel();
         fondoEquipo = new javax.swing.JLabel();
@@ -1291,6 +1294,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoAmuleto);
         icoAmuleto.setBounds(140, 140, 50, 50);
 
+        icoArmaAcu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
+        icoArmaAcu1.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoArmaAcu1.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoArmaAcu1.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoArmaAcu1);
+        icoArmaAcu1.setBounds(160, 310, 50, 50);
+
+        icoArmaAcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
+        icoArmaAcu2.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoArmaAcu2.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoArmaAcu2.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoArmaAcu2);
+        icoArmaAcu2.setBounds(140, 250, 50, 50);
+
+        icoCabezaAcu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
+        icoCabezaAcu.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoCabezaAcu.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoCabezaAcu.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoCabezaAcu);
+        icoCabezaAcu.setBounds(140, 250, 50, 50);
+
         icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar.jpg"))); // NOI18N
         icoEspaldar.setMaximumSize(new java.awt.Dimension(40, 40));
         icoEspaldar.setMinimumSize(new java.awt.Dimension(40, 40));
@@ -1766,7 +1790,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel icoAmuleto;
     public javax.swing.JLabel icoAnillo1;
     public javax.swing.JLabel icoAnillo2;
+    public javax.swing.JLabel icoArmaAcu1;
+    public javax.swing.JLabel icoArmaAcu2;
     public javax.swing.JLabel icoCabeza;
+    public javax.swing.JLabel icoCabezaAcu;
     public javax.swing.JLabel icoEspaldar;
     public javax.swing.JLabel icoHombros;
     public javax.swing.JLabel icoManos;
