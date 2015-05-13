@@ -231,8 +231,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiConectadoComo = new javax.swing.JLabel();
         mostrarUsuario = new javax.swing.JLabel();
         cbPersonaje = new javax.swing.JComboBox();
+        btnCrearPj = new javax.swing.JButton();
         btnModPj = new javax.swing.JButton();
         fondoConectadoComo = new javax.swing.JLabel();
+        etiNivelFractales = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        fondoNivelFractales = new javax.swing.JLabel();
         etiPersonaje = new javax.swing.JLabel();
         fondoPersonaje = new javax.swing.JLabel();
         fondoPrincipal = new javax.swing.JLabel();
@@ -1246,53 +1250,53 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         icoSetArma1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma1.png"))); // NOI18N
         PanelEquipo.add(icoSetArma1);
-        icoSetArma1.setBounds(130, 16, 60, 110);
+        icoSetArma1.setBounds(90, 20, 60, 110);
 
         icoSetArma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma2.png"))); // NOI18N
         PanelEquipo.add(icoSetArma2);
-        icoSetArma2.setBounds(130, 126, 60, 110);
+        icoSetArma2.setBounds(170, 20, 60, 110);
 
         icoAnillo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
         icoAnillo2.setMaximumSize(new java.awt.Dimension(40, 40));
         icoAnillo2.setMinimumSize(new java.awt.Dimension(40, 40));
         icoAnillo2.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoAnillo2);
-        icoAnillo2.setBounds(180, 340, 50, 50);
+        icoAnillo2.setBounds(190, 190, 50, 50);
 
         icoAnillo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo1.jpg"))); // NOI18N
         icoAnillo1.setMaximumSize(new java.awt.Dimension(40, 40));
         icoAnillo1.setMinimumSize(new java.awt.Dimension(40, 40));
         icoAnillo1.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoAnillo1);
-        icoAnillo1.setBounds(130, 340, 50, 50);
+        icoAnillo1.setBounds(140, 190, 50, 50);
 
         icoAccesorio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio2.jpg"))); // NOI18N
         icoAccesorio2.setMaximumSize(new java.awt.Dimension(40, 40));
         icoAccesorio2.setMinimumSize(new java.awt.Dimension(40, 40));
         icoAccesorio2.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoAccesorio2);
-        icoAccesorio2.setBounds(180, 290, 50, 50);
+        icoAccesorio2.setBounds(90, 190, 50, 50);
 
         icoAccesorio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/accesorio1.jpg"))); // NOI18N
         icoAccesorio1.setMaximumSize(new java.awt.Dimension(40, 40));
         icoAccesorio1.setMinimumSize(new java.awt.Dimension(40, 40));
         icoAccesorio1.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoAccesorio1);
-        icoAccesorio1.setBounds(130, 290, 50, 50);
+        icoAccesorio1.setBounds(190, 140, 50, 50);
 
         icoAmuleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/amuleto.jpg"))); // NOI18N
         icoAmuleto.setMaximumSize(new java.awt.Dimension(40, 40));
         icoAmuleto.setMinimumSize(new java.awt.Dimension(40, 40));
         icoAmuleto.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoAmuleto);
-        icoAmuleto.setBounds(180, 240, 50, 50);
+        icoAmuleto.setBounds(140, 140, 50, 50);
 
         icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar.jpg"))); // NOI18N
         icoEspaldar.setMaximumSize(new java.awt.Dimension(40, 40));
         icoEspaldar.setMinimumSize(new java.awt.Dimension(40, 40));
         icoEspaldar.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoEspaldar);
-        icoEspaldar.setBounds(130, 240, 50, 50);
+        icoEspaldar.setBounds(90, 140, 50, 50);
 
         PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelEstadisticas.setOpaque(false);
@@ -1445,12 +1449,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiConectadoComo.setText("Conectado como:");
         getContentPane().add(etiConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
 
+        mostrarUsuario.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         mostrarUsuario.setText("-");
-        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 9, 132, 20));
+        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 20));
 
         cbPersonaje.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbPersonaje.setToolTipText("Seleccionar personaje");
         cbPersonaje.setOpaque(false);
-        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 10, 139, 22));
+        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(892, 10, 130, 22));
+
+        btnCrearPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/add.png"))); // NOI18N
+        btnCrearPj.setToolTipText("Crear nuevo personaje");
+        btnCrearPj.setBorder(null);
+        btnCrearPj.setBorderPainted(false);
+        btnCrearPj.setOpaque(false);
+        btnCrearPj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearPjActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCrearPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 8, 27, 26));
 
         btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
         btnModPj.setToolTipText("Editar equipo del personaje");
@@ -1462,19 +1480,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 btnModPjActionPerformed(evt);
             }
         });
-        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 8, 27, 26));
+        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1022, 8, 27, 26));
 
         fondoConectadoComo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoConectadoComo.setText("jLabel17");
-        getContentPane().add(fondoConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 240, 20));
+        getContentPane().add(fondoConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 220, 20));
+
+        etiNivelFractales.setText("Nivel de Fractales:");
+        getContentPane().add(etiNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, -1, 20));
+
+        jSpinner1.setToolTipText("Tu nivel actual de fractales");
+        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 40, -1));
+
+        fondoNivelFractales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
+        fondoNivelFractales.setText("jLabel17");
+        getContentPane().add(fondoNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 150, 20));
 
         etiPersonaje.setBackground(new java.awt.Color(255, 255, 255));
         etiPersonaje.setText("Personaje:");
-        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 70, 20));
+        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 70, 20));
 
         fondoPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoPersonaje.setText("jLabel16");
-        getContentPane().add(fondoPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 11, 80, 20));
+        getContentPane().add(fondoPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 11, 100, 20));
 
         fondoPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondogeneral.jpg"))); // NOI18N
         fondoPrincipal.setMaximumSize(new java.awt.Dimension(1280, 640));
@@ -1564,6 +1592,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_chk_dialogoMP_InfusionSimpleArmaduraActionPerformed
 
+    private void btnCrearPjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPjActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearPjActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1611,6 +1643,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_dialogoMU_Idiomas;
     public javax.swing.JTable TablaPersonajes;
     public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnCrearPj;
     public javax.swing.JButton btnModPj;
     private javax.swing.JButton btn_dialogoMP_Cancelar;
     private javax.swing.JButton btn_dialogoMP_Modificar;
@@ -1677,6 +1710,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiFerocidad;
     public javax.swing.JLabel etiIdioma;
     public javax.swing.JLabel etiIdiomas;
+    private javax.swing.JLabel etiNivelFractales;
     public javax.swing.JLabel etiNombreCuenta;
     public javax.swing.JLabel etiNombrePersonaje;
     public javax.swing.JLabel etiPersonaje;
@@ -1723,6 +1757,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel fondoConectadoComo;
     public javax.swing.JLabel fondoEquipo;
     public javax.swing.JLabel fondoInformacion;
+    public javax.swing.JLabel fondoNivelFractales;
     public javax.swing.JLabel fondoPersonaje;
     public javax.swing.JLabel fondoPrincipal;
     private javax.swing.ButtonGroup grupoBuscador;
@@ -1751,6 +1786,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
     public javax.swing.JMenuItem itemUnirClan;
+    private javax.swing.JSpinner jSpinner1;
     public javax.swing.JMenu menuAyuda;
     public javax.swing.JMenu menuConfiguracion;
     public javax.swing.JMenu menuEditar;

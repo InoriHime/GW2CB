@@ -44,6 +44,7 @@ public class ControladorPrincipal{
         // Mostramos datos en la tabla
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
         this.vista.PanelTabla.getViewport().setBorder(null);
+        this.vista.txtBusqueda.requestFocus(true);
       
     }
     
