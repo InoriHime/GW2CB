@@ -14,8 +14,7 @@ public class ModeloPrincipal extends Database{
     }
     
     /** Obtiene registros de la tabla Personajes y los devuelve en un DefaultTableModel*/
-    public DefaultTableModel getTablaPersonaje()
-    {
+    public DefaultTableModel getTablaPersonaje() {
       DefaultTableModel tablemodel = new DefaultTableModel();
       int registros = 0;
       String[] columNames = {"Personaje","Cuenta","Clase","Niv. Fractales","R. Agonía","Clan","Idiomas"};
@@ -25,15 +24,13 @@ public class ModeloPrincipal extends Database{
       Statement stmt=null;
       Statement stmt1=null;
       Statement stmt2=null;
-      Statement stmt3=null;
-      Statement stmt4=null;
+      Statement stmt3=null;               
       try{     
 
          stmt= db.getConexion().createStatement();
          stmt1= db.getConexion().createStatement();
          stmt2= db.getConexion().createStatement();
          stmt3= db.getConexion().createStatement();
-         stmt4= db.getConexion().createStatement();
          ResultSet res= stmt.executeQuery("SELECT count(*) as total FROM Personajes");
          res.next();
          registros = res.getInt("total");
@@ -80,10 +77,8 @@ public class ModeloPrincipal extends Database{
                 res2.next();
                 data[i][5] = res2.getString("Clan");
                 res2.close();
-                System.out.println("Insertado clan");
                 }catch(Exception e){
                 data[i][5] = "-";
-                System.out.println("Insertado clan");
                 }
                 
             i++;
@@ -94,6 +89,7 @@ public class ModeloPrincipal extends Database{
          }catch(SQLException e){
             System.err.println(e.getMessage() );
         }
+      
         return tablemodel;
     }
 }

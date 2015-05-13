@@ -92,9 +92,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoRP_RarezaArmadura = new javax.swing.JLabel();
         eti_dialogoRP_ModificadorArmadura = new javax.swing.JLabel();
         cb_dialogoRP_ModificadorArmadura = new javax.swing.JComboBox();
-        chk_dialogoRP_InfusionBasicaArmadura = new javax.swing.JCheckBox();
+        chk_dialogoRP_InfusionSimpleArmadura = new javax.swing.JCheckBox();
         eti_dialogoRP_InfusionAgoniaArmadura = new javax.swing.JLabel();
         txt_dialogoRP_InfusionAgoniaArmadura = new javax.swing.JTextField();
+        eti_dialogoRP_AR = new javax.swing.JLabel();
         eti_dialogoRP_SlotArmadura = new javax.swing.JLabel();
         cb_dialogoRP_SlotArmadura = new javax.swing.JComboBox();
         panel_dialogoRP_ConfigArma = new javax.swing.JPanel();
@@ -104,8 +105,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoRP_RarezaArma = new javax.swing.JLabel();
         eti_dialogoRP_ModificadorArma = new javax.swing.JLabel();
         cb_dialogoRP_ModificadorArma = new javax.swing.JComboBox();
-        chk_dialogoRP_InfusionBasica1Arma = new javax.swing.JCheckBox();
-        chk_dialogoRP_InfusionBasica2Arma = new javax.swing.JCheckBox();
+        chk_dialogoRP_InfusionSimple1Arma = new javax.swing.JCheckBox();
+        chk_dialogoRP_InfusionSimple2Arma = new javax.swing.JCheckBox();
         btn_dialogoRP_Registrar = new javax.swing.JButton();
         btn_dialogoRP_Cancelar = new javax.swing.JButton();
         dialogoModificarPersonaje = new javax.swing.JDialog();
@@ -123,9 +124,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMP_RarezaArmadura = new javax.swing.JLabel();
         eti_dialogoMP_ModificadorArmadura = new javax.swing.JLabel();
         cb_dialogoMP_ModificadorArmadura = new javax.swing.JComboBox();
-        chk_dialogoMP_InfusionBasicaArmadura = new javax.swing.JCheckBox();
+        chk_dialogoMP_InfusionSimpleArmadura = new javax.swing.JCheckBox();
         eti_dialogoMP_InfusionAgoniaArmadura = new javax.swing.JLabel();
         txt_dialogoMP_InfusionAgoniaArmadura = new javax.swing.JTextField();
+        eti_dialogoMP_AR = new javax.swing.JLabel();
         eti_dialogoMP_SlotArmadura = new javax.swing.JLabel();
         cb_dialogoMP_SlotArmadura = new javax.swing.JComboBox();
         panel_dialogoMP_ConfigArma = new javax.swing.JPanel();
@@ -135,8 +137,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMP_RarezaArma = new javax.swing.JLabel();
         eti_dialogoMP_ModificadorArma = new javax.swing.JLabel();
         cb_dialogoMP_ModificadorArma = new javax.swing.JComboBox();
-        chk_dialogoMP_InfusionBasica1Arma = new javax.swing.JCheckBox();
-        chk_dialogoMP_InfusionBasica2Arma = new javax.swing.JCheckBox();
+        chk_dialogoMP_InfusionSimple1Arma = new javax.swing.JCheckBox();
+        chk_dialogoMP_InfusionSimple2Arma = new javax.swing.JCheckBox();
         btn_dialogoMP_Modificar = new javax.swing.JButton();
         btn_dialogoMP_Cancelar = new javax.swing.JButton();
         tituloBusqueda = new javax.swing.JLabel();
@@ -443,7 +445,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         panel_dialogoRP_Equipo.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
 
-        eti_dialogoRP_SlotArma.setText("Hueco del Arma:");
+        eti_dialogoRP_SlotArma.setText("Slot del Arma:");
 
         cb_dialogoRP_SlotArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -457,9 +459,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cb_dialogoRP_ModificadorArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        chk_dialogoRP_InfusionBasicaArmadura.setText("Infusión Básica");
+        chk_dialogoRP_InfusionSimpleArmadura.setText("Infusión Simple (+5 AR)");
 
-        eti_dialogoRP_InfusionAgoniaArmadura.setText("Infusión Agonía:");
+        eti_dialogoRP_InfusionAgoniaArmadura.setText("Infusión Agonía:  +");
+
+        eti_dialogoRP_AR.setText("AR");
 
         javax.swing.GroupLayout panel_dialogoRP_ConfigArmaduraLayout = new javax.swing.GroupLayout(panel_dialogoRP_ConfigArmadura);
         panel_dialogoRP_ConfigArmadura.setLayout(panel_dialogoRP_ConfigArmaduraLayout);
@@ -475,15 +479,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGap(46, 46, 46))
                     .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chk_dialogoRP_InfusionBasicaArmadura)
+                        .addComponent(chk_dialogoRP_InfusionSimpleArmadura)
                         .addGap(36, 36, 36)))
                 .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(eti_dialogoRP_InfusionAgoniaArmadura)
-                    .addComponent(eti_dialogoRP_ModificadorArmadura))
-                .addGap(18, 18, 18)
+                    .addComponent(eti_dialogoRP_ModificadorArmadura)
+                    .addComponent(eti_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cb_dialogoRP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(eti_dialogoRP_AR, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_dialogoRP_ConfigArmaduraLayout.setVerticalGroup(
@@ -496,12 +503,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(eti_dialogoRP_ModificadorArmadura))
                 .addGap(18, 18, 18)
                 .addGroup(panel_dialogoRP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_dialogoRP_InfusionBasicaArmadura)
+                    .addComponent(chk_dialogoRP_InfusionSimpleArmadura)
                     .addComponent(eti_dialogoRP_InfusionAgoniaArmadura)
-                    .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txt_dialogoRP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoRP_AR)))
         );
 
-        eti_dialogoRP_SlotArmadura.setText("Hueco de la Armadura:");
+        eti_dialogoRP_SlotArmadura.setText("Slot de la Armadura:");
 
         cb_dialogoRP_SlotArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -519,9 +527,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cb_dialogoRP_ModificadorArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        chk_dialogoRP_InfusionBasica1Arma.setText("Infusión Básica 1");
+        chk_dialogoRP_InfusionSimple1Arma.setText("Infusión Simple 1");
 
-        chk_dialogoRP_InfusionBasica2Arma.setText("Infusión Básica 2");
+        chk_dialogoRP_InfusionSimple2Arma.setText("Infusión Simple 2");
 
         javax.swing.GroupLayout panel_dialogoRP_ConfigArmaLayout = new javax.swing.GroupLayout(panel_dialogoRP_ConfigArma);
         panel_dialogoRP_ConfigArma.setLayout(panel_dialogoRP_ConfigArmaLayout);
@@ -536,11 +544,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cb_dialogoRP_TipoArma, 0, 120, Short.MAX_VALUE)
                     .addComponent(cb_dialogoRP_RarezaArma, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chk_dialogoRP_InfusionBasica1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(chk_dialogoRP_InfusionSimple1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
-                        .addComponent(chk_dialogoRP_InfusionBasica2Arma)
+                        .addComponent(chk_dialogoRP_InfusionSimple2Arma)
                         .addGap(120, 120, 120))
                     .addGroup(panel_dialogoRP_ConfigArmaLayout.createSequentialGroup()
                         .addComponent(eti_dialogoRP_ModificadorArma)
@@ -562,8 +570,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(cb_dialogoRP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panel_dialogoRP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_dialogoRP_InfusionBasica1Arma)
-                    .addComponent(chk_dialogoRP_InfusionBasica2Arma)))
+                    .addComponent(chk_dialogoRP_InfusionSimple1Arma)
+                    .addComponent(chk_dialogoRP_InfusionSimple2Arma)))
         );
 
         javax.swing.GroupLayout panel_dialogoRP_EquipoLayout = new javax.swing.GroupLayout(panel_dialogoRP_Equipo);
@@ -686,7 +694,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         panel_dialogoMP_Equipo.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
 
-        eti_dialogoMP_SlotArma.setText("Hueco del Arma:");
+        eti_dialogoMP_SlotArma.setText("Slot del Arma:");
 
         cb_dialogoMP_SlotArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -700,9 +708,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cb_dialogoMP_ModificadorArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        chk_dialogoMP_InfusionBasicaArmadura.setText("Infusión Básica");
+        chk_dialogoMP_InfusionSimpleArmadura.setText("Infusión Simple (+5 AR)");
+        chk_dialogoMP_InfusionSimpleArmadura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_dialogoMP_InfusionSimpleArmaduraActionPerformed(evt);
+            }
+        });
 
-        eti_dialogoMP_InfusionAgoniaArmadura.setText("Infusión Agonía:");
+        eti_dialogoMP_InfusionAgoniaArmadura.setText("Infusión Agonía:  +");
+
+        eti_dialogoMP_AR.setText("AR");
 
         javax.swing.GroupLayout panel_dialogoMP_ConfigArmaduraLayout = new javax.swing.GroupLayout(panel_dialogoMP_ConfigArmadura);
         panel_dialogoMP_ConfigArmadura.setLayout(panel_dialogoMP_ConfigArmaduraLayout);
@@ -718,15 +733,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGap(46, 46, 46))
                     .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chk_dialogoMP_InfusionBasicaArmadura)
+                        .addComponent(chk_dialogoMP_InfusionSimpleArmadura)
                         .addGap(36, 36, 36)))
                 .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(eti_dialogoMP_InfusionAgoniaArmadura)
-                    .addComponent(eti_dialogoMP_ModificadorArmadura))
-                .addGap(18, 18, 18)
+                    .addComponent(eti_dialogoMP_ModificadorArmadura)
+                    .addComponent(eti_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cb_dialogoMP_ModificadorArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createSequentialGroup()
+                        .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(eti_dialogoMP_AR)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_dialogoMP_ConfigArmaduraLayout.setVerticalGroup(
@@ -739,12 +757,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(eti_dialogoMP_ModificadorArmadura))
                 .addGap(18, 18, 18)
                 .addGroup(panel_dialogoMP_ConfigArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_dialogoMP_InfusionBasicaArmadura)
+                    .addComponent(chk_dialogoMP_InfusionSimpleArmadura)
                     .addComponent(eti_dialogoMP_InfusionAgoniaArmadura)
-                    .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txt_dialogoMP_InfusionAgoniaArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMP_AR)))
         );
 
-        eti_dialogoMP_SlotArmadura.setText("Hueco de la Armadura:");
+        eti_dialogoMP_SlotArmadura.setText("Slot de la Armadura:");
 
         cb_dialogoMP_SlotArmadura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -762,9 +781,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cb_dialogoMP_ModificadorArma.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        chk_dialogoMP_InfusionBasica1Arma.setText("Infusión Básica 1");
+        chk_dialogoMP_InfusionSimple1Arma.setText("Infusión Simple 1");
 
-        chk_dialogoMP_InfusionBasica2Arma.setText("Infusión Básica 2");
+        chk_dialogoMP_InfusionSimple2Arma.setText("Infusión Simple 2");
 
         javax.swing.GroupLayout panel_dialogoMP_ConfigArmaLayout = new javax.swing.GroupLayout(panel_dialogoMP_ConfigArma);
         panel_dialogoMP_ConfigArma.setLayout(panel_dialogoMP_ConfigArmaLayout);
@@ -779,11 +798,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cb_dialogoMP_TipoArma, 0, 120, Short.MAX_VALUE)
                     .addComponent(cb_dialogoMP_RarezaArma, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chk_dialogoMP_InfusionBasica1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(chk_dialogoMP_InfusionSimple1Arma, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
-                        .addComponent(chk_dialogoMP_InfusionBasica2Arma)
+                        .addComponent(chk_dialogoMP_InfusionSimple2Arma)
                         .addGap(120, 120, 120))
                     .addGroup(panel_dialogoMP_ConfigArmaLayout.createSequentialGroup()
                         .addComponent(eti_dialogoMP_ModificadorArma)
@@ -805,8 +824,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(cb_dialogoMP_ModificadorArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panel_dialogoMP_ConfigArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_dialogoMP_InfusionBasica1Arma)
-                    .addComponent(chk_dialogoMP_InfusionBasica2Arma)))
+                    .addComponent(chk_dialogoMP_InfusionSimple1Arma)
+                    .addComponent(chk_dialogoMP_InfusionSimple2Arma)))
         );
 
         javax.swing.GroupLayout panel_dialogoMP_EquipoLayout = new javax.swing.GroupLayout(panel_dialogoMP_Equipo);
@@ -1541,6 +1560,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_dialogoMP_NombreActionPerformed
 
+    private void chk_dialogoMP_InfusionSimpleArmaduraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_dialogoMP_InfusionSimpleArmaduraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_dialogoMP_InfusionSimpleArmaduraActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1628,16 +1651,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JCheckBox chkIngles;
     public javax.swing.JCheckBox chkLadron;
     public javax.swing.JCheckBox chkNigromante;
-    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica1Arma;
-    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasica2Arma;
-    private javax.swing.JCheckBox chk_dialogoMP_InfusionBasicaArmadura;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionSimple1Arma;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionSimple2Arma;
+    private javax.swing.JCheckBox chk_dialogoMP_InfusionSimpleArmadura;
     private javax.swing.JCheckBox chk_dialogoMU_Aleman;
     private javax.swing.JCheckBox chk_dialogoMU_Espanyol;
     private javax.swing.JCheckBox chk_dialogoMU_Frances;
     private javax.swing.JCheckBox chk_dialogoMU_Ingles;
-    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasica1Arma;
-    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasica2Arma;
-    private javax.swing.JCheckBox chk_dialogoRP_InfusionBasicaArmadura;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionSimple1Arma;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionSimple2Arma;
+    private javax.swing.JCheckBox chk_dialogoRP_InfusionSimpleArmadura;
     private javax.swing.JDialog dialogoModificarPersonaje;
     private javax.swing.JDialog dialogoModificarUsuario;
     private javax.swing.JDialog dialogoRegistrarPersonaje;
@@ -1665,6 +1688,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiSalud;
     public javax.swing.JLabel etiServidor;
     public javax.swing.JLabel etiVitalidad;
+    private javax.swing.JLabel eti_dialogoMP_AR;
     private javax.swing.JLabel eti_dialogoMP_Clase;
     private javax.swing.JLabel eti_dialogoMP_InfusionAgoniaArmadura;
     private javax.swing.JLabel eti_dialogoMP_ModificadorArma;
@@ -1683,6 +1707,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoMU_NuevaContrasenya;
     private javax.swing.JLabel eti_dialogoMU_RepetirContrasenya;
     private javax.swing.JLabel eti_dialogoMU_Servidor;
+    private javax.swing.JLabel eti_dialogoRP_AR;
     private javax.swing.JLabel eti_dialogoRP_Clase;
     private javax.swing.JLabel eti_dialogoRP_InfusionAgoniaArmadura;
     private javax.swing.JLabel eti_dialogoRP_ModificadorArma;

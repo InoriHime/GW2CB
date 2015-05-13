@@ -13,34 +13,55 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="btnAceptar" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="etiRepeContrasena" max="32767" attributes="0"/>
-                          <Component id="etiContrasena" alignment="0" max="32767" attributes="0"/>
-                          <Component id="etiEmail" alignment="0" max="32767" attributes="0"/>
-                          <Component id="etiCuenta" alignment="0" max="32767" attributes="0"/>
-                          <Component id="etiIdiomas" alignment="0" max="32767" attributes="0"/>
-                          <Component id="etiServidor" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="panelIdiomas" max="32767" attributes="0"/>
-                              <Component id="txtCuenta" max="32767" attributes="0"/>
-                              <Component id="txtEmail" max="32767" attributes="0"/>
-                              <Component id="combServidor" max="32767" attributes="0"/>
-                              <Component id="txtRepeContrasena" max="32767" attributes="0"/>
-                              <Component id="txtContrasena" min="-2" pref="181" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="btnAceptar" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="etiNivelFrac" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="etiRepeContrasena" max="32767" attributes="0"/>
+                                      <Component id="etiContrasena" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="etiEmail" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="etiCuenta" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtCuenta" max="32767" attributes="0"/>
+                                      <Component id="txtEmail" max="32767" attributes="0"/>
+                                      <Component id="txtRepeContrasena" max="32767" attributes="0"/>
+                                      <Component id="txtContrasena" pref="181" max="32767" attributes="0"/>
+                                      <Component id="txtNivelFrac" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="etiIdiomas" alignment="0" max="32767" attributes="0"/>
+                              <Component id="etiServidor" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <Component id="combServidor" min="-2" pref="178" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="panelIdiomas" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -71,18 +92,27 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiNivelFrac" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNivelFrac" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="etiServidor" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="combServidor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="panelIdiomas" min="-2" max="-2" attributes="0"/>
-                      <Component id="etiIdiomas" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="etiIdiomas" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnAceptar" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="panelIdiomas" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -120,6 +150,11 @@
             <Property name="text" type="java.lang.String" value="Idiomas"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="etiNivelFrac">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nivel de Fractales"/>
+          </Properties>
+        </Component>
         <Component class="javax.swing.JTextField" name="txtCuenta">
         </Component>
         <Component class="javax.swing.JTextField" name="txtEmail">
@@ -127,6 +162,8 @@
         <Component class="javax.swing.JPasswordField" name="txtContrasena">
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtRepeContrasena">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtNivelFrac">
         </Component>
         <Component class="javax.swing.JComboBox" name="combServidor">
           <Properties>

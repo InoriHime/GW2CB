@@ -35,14 +35,12 @@ public class ModeloLogin extends Database{
     private boolean valida_datos(String usuario, String email, int nivFrac, String contrasenya, String servidor, String[] idiomas)
     {
         boolean usuarioCorrecto=usuario.matches("[a-zA-Z\\s]{3,20}'.'[\\n]{4}");
-        boolean emailCorrecto=email.matches("[-\\w\\.]+@\\w+\\.\\w+");
+        boolean emailCorrecto=email.matches("[-\\w\\.]+@\\w+\\.\\w+")&&email.length()<=40;
         if(usuarioCorrecto&&emailCorrecto){
-           if(contrasenya.length()>=6&&!servidor.equals("")){
-               if(idiomas[0].equals("")&&idiomas[1].equals("")&&idiomas[2].equals("")&&idiomas[3].equals("")){
-                   if(nivFrac>0&&nivFrac<51){
-                       return true;
-                   }
-               }
+           if(contrasenya.length()>=6&&contrasenya.length()<=20&&!servidor.equals("")){
+                if(nivFrac>0&&nivFrac<51){
+                    return true;
+                }
            }else{
                return false;
            }

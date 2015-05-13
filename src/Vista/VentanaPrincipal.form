@@ -476,7 +476,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="eti_dialogoRP_SlotArma">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Hueco del Arma:"/>
+                <Property name="text" type="java.lang.String" value="Slot del Arma:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArma">
@@ -518,18 +518,22 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="chk_dialogoRP_InfusionBasicaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_dialogoRP_InfusionSimpleArmadura" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="eti_dialogoRP_InfusionAgoniaArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="eti_dialogoRP_ModificadorArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_ModificadorArmadura" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_InfusionAgoniaArmadura" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cb_dialogoRP_ModificadorArmadura" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="txt_dialogoRP_InfusionAgoniaArmadura" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="txt_dialogoRP_InfusionAgoniaArmadura" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="eti_dialogoRP_AR" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -546,9 +550,10 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="chk_dialogoRP_InfusionBasicaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionSimpleArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="eti_dialogoRP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_dialogoRP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoRP_AR" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -589,23 +594,28 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasicaArmadura">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionSimpleArmadura">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple (+5 AR)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="eti_dialogoRP_InfusionAgoniaArmadura">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:  +"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_dialogoRP_InfusionAgoniaArmadura">
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoRP_AR">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="AR"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="eti_dialogoRP_SlotArmadura">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Hueco de la Armadura:"/>
+                <Property name="text" type="java.lang.String" value="Slot de la Armadura:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArmadura">
@@ -646,12 +656,12 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="cb_dialogoRP_TipoArma" alignment="0" pref="120" max="32767" attributes="0"/>
                               <Component id="cb_dialogoRP_RarezaArma" alignment="0" max="32767" attributes="0"/>
-                              <Component id="chk_dialogoRP_InfusionBasica1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionSimple1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="chk_dialogoRP_InfusionBasica2Arma" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_dialogoRP_InfusionSimple2Arma" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -680,8 +690,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="chk_dialogoRP_InfusionBasica1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_dialogoRP_InfusionBasica2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionSimple1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoRP_InfusionSimple2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -739,14 +749,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasica1Arma">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionSimple1Arma">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 1"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple 1"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionBasica2Arma">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoRP_InfusionSimple2Arma">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 2"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple 2"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -950,7 +960,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="eti_dialogoMP_SlotArma">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Hueco del Arma:"/>
+                <Property name="text" type="java.lang.String" value="Slot del Arma:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArma">
@@ -992,18 +1002,22 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="chk_dialogoMP_InfusionBasicaArmadura" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_dialogoMP_InfusionSimpleArmadura" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="eti_dialogoMP_InfusionAgoniaArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="eti_dialogoMP_ModificadorArmadura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_ModificadorArmadura" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_InfusionAgoniaArmadura" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cb_dialogoMP_ModificadorArmadura" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="txt_dialogoMP_InfusionAgoniaArmadura" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="txt_dialogoMP_InfusionAgoniaArmadura" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="eti_dialogoMP_AR" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -1020,9 +1034,10 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="chk_dialogoMP_InfusionBasicaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionSimpleArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="eti_dialogoMP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_dialogoMP_InfusionAgoniaArmadura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eti_dialogoMP_AR" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -1063,23 +1078,31 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasicaArmadura">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionSimpleArmadura">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple (+5 AR)"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_dialogoMP_InfusionSimpleArmaduraActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="eti_dialogoMP_InfusionAgoniaArmadura">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a:  +"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_dialogoMP_InfusionAgoniaArmadura">
+                </Component>
+                <Component class="javax.swing.JLabel" name="eti_dialogoMP_AR">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="AR"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="eti_dialogoMP_SlotArmadura">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Hueco de la Armadura:"/>
+                <Property name="text" type="java.lang.String" value="Slot de la Armadura:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArmadura">
@@ -1120,12 +1143,12 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="cb_dialogoMP_TipoArma" alignment="0" pref="120" max="32767" attributes="0"/>
                               <Component id="cb_dialogoMP_RarezaArma" alignment="0" max="32767" attributes="0"/>
-                              <Component id="chk_dialogoMP_InfusionBasica1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionSimple1Arma" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="chk_dialogoMP_InfusionBasica2Arma" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_dialogoMP_InfusionSimple2Arma" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1154,8 +1177,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="chk_dialogoMP_InfusionBasica1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chk_dialogoMP_InfusionBasica2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionSimple1Arma" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_dialogoMP_InfusionSimple2Arma" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -1213,14 +1236,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasica1Arma">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionSimple1Arma">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 1"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple 1"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionBasica2Arma">
+                <Component class="javax.swing.JCheckBox" name="chk_dialogoMP_InfusionSimple2Arma">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n B&#xe1;sica 2"/>
+                    <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Simple 2"/>
                   </Properties>
                 </Component>
               </SubComponents>
