@@ -74,7 +74,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txt_dialogoMU_RepetirContrasenya = new javax.swing.JPasswordField();
         txt_dialogoMU_NuevaContrasenya = new javax.swing.JPasswordField();
         eti_dialogoMU_ContrasenyaAntigua = new javax.swing.JLabel();
-        txt_dialogoMU_ContrasenyaAntigua = new javax.swing.JTextField();
+        txt_dialogoMU_ContrasenyaAntigua = new javax.swing.JPasswordField();
         btn_dialogoMU_Modificar = new javax.swing.JButton();
         btn_dialogoMU_Cancelar = new javax.swing.JButton();
         dialogoRegistrarPersonaje = new javax.swing.JDialog();
@@ -141,6 +141,49 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chk_dialogoMP_InfusionSimple2Arma = new javax.swing.JCheckBox();
         btn_dialogoMP_Modificar = new javax.swing.JButton();
         btn_dialogoMP_Cancelar = new javax.swing.JButton();
+        dialogoUnirseClan = new javax.swing.JDialog();
+        eti_dialogoUC_Clan = new javax.swing.JLabel();
+        cb_dialogoUC_Clan = new javax.swing.JComboBox();
+        btn_dialogoUC_Unirse = new javax.swing.JButton();
+        btn_dialogoUC_Cancelar = new javax.swing.JButton();
+        dialogoAbandonarClan = new javax.swing.JDialog();
+        eti_dialogoAC_Clan = new javax.swing.JLabel();
+        cb_dialogoAC_Clan = new javax.swing.JComboBox();
+        btn_dialogoAC_Abandonar = new javax.swing.JButton();
+        btn_dialogoAC_Cancelar = new javax.swing.JButton();
+        dialogoCrearClan = new javax.swing.JDialog();
+        eti_dialogoCC_NombreClan = new javax.swing.JLabel();
+        txt_dialogoCC_NombreClan = new javax.swing.JTextField();
+        eti_dialogoCC_Tag = new javax.swing.JLabel();
+        txt_dialogoCC_Tag = new javax.swing.JTextField();
+        btn_dialogoCC_Crear = new javax.swing.JButton();
+        btn_dialogoCC_Cancelar = new javax.swing.JButton();
+        dialogoModificarClan = new javax.swing.JDialog();
+        eti_dialogoMC_NombreClan = new javax.swing.JLabel();
+        txt_dialogoMC_NombreClan = new javax.swing.JTextField();
+        eti_dialogoMC_Tag = new javax.swing.JLabel();
+        txt_dialogoMC_Tag = new javax.swing.JTextField();
+        btn_dialogoMC_Modificar = new javax.swing.JButton();
+        btn_dialogoMC_Cancelar = new javax.swing.JButton();
+        dialogoEliminarClan = new javax.swing.JDialog();
+        eti_dialogoEC_Clan = new javax.swing.JLabel();
+        cb_dialogoEC_Clan = new javax.swing.JComboBox();
+        btn_dialogoEC_Eliminar = new javax.swing.JButton();
+        btn_dialogoEC_Cancelar = new javax.swing.JButton();
+        dialogoCambioServidor = new javax.swing.JDialog();
+        eti_dialogoCS_DireccionIP = new javax.swing.JLabel();
+        txt_dialogoCS_DireccionIP = new javax.swing.JTextField();
+        eti_dialogoCS_NombreBD = new javax.swing.JLabel();
+        txt_dialogoCS_NombreBD = new javax.swing.JTextField();
+        eti_dialogoCS_Usuario = new javax.swing.JLabel();
+        txt_dialogoCS_Usuario = new javax.swing.JTextField();
+        txt_dialogoCS_Contraseña = new javax.swing.JPasswordField();
+        eti_dialogoCS_Contraseña = new javax.swing.JLabel();
+        btn_dialogoCS_Aplicar = new javax.swing.JButton();
+        btn_dialogoCS_Cancelar = new javax.swing.JButton();
+        dialogoAcercaDe = new javax.swing.JDialog();
+        btn_dialogoAD_Aceptar = new javax.swing.JButton();
+        eti_dialogoAD_Texto = new javax.swing.JLabel();
         tituloBusqueda = new javax.swing.JLabel();
         tituloPersonaje = new javax.swing.JLabel();
         tituloEquipo = new javax.swing.JLabel();
@@ -335,17 +378,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
-                        .addComponent(eti_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txt_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
-                        .addComponent(eti_dialogoMU_ContrasenyaAntigua)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txt_dialogoMU_ContrasenyaAntigua, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
                         .addComponent(eti_dialogoMU_RepetirContrasenya)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txt_dialogoMU_RepetirContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_dialogoMU_RepetirContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createSequentialGroup()
+                        .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eti_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(eti_dialogoMU_ContrasenyaAntigua))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(Panel_dialogoMU_CambiarContrasenyaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_dialogoMU_NuevaContrasenya, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(txt_dialogoMU_ContrasenyaAntigua))))
                 .addGap(25, 25, 25))
         );
         Panel_dialogoMU_CambiarContrasenyaLayout.setVerticalGroup(
@@ -930,6 +973,378 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(btn_dialogoMP_Modificar)
                     .addComponent(btn_dialogoMP_Cancelar))
                 .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        dialogoUnirseClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoUnirseClan.setTitle("Unirse al Clan");
+        dialogoUnirseClan.setAlwaysOnTop(true);
+        dialogoUnirseClan.setResizable(false);
+
+        eti_dialogoUC_Clan.setText("Clan:");
+
+        cb_dialogoUC_Clan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoUC_Clan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_dialogoUC_ClanActionPerformed(evt);
+            }
+        });
+
+        btn_dialogoUC_Unirse.setText("Unirse");
+
+        btn_dialogoUC_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoUnirseClanLayout = new javax.swing.GroupLayout(dialogoUnirseClan.getContentPane());
+        dialogoUnirseClan.getContentPane().setLayout(dialogoUnirseClanLayout);
+        dialogoUnirseClanLayout.setHorizontalGroup(
+            dialogoUnirseClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoUnirseClanLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(eti_dialogoUC_Clan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(cb_dialogoUC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(dialogoUnirseClanLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(btn_dialogoUC_Unirse)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_dialogoUC_Cancelar)
+                .addGap(45, 45, 45))
+        );
+        dialogoUnirseClanLayout.setVerticalGroup(
+            dialogoUnirseClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoUnirseClanLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(dialogoUnirseClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoUC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoUC_Clan))
+                .addGap(32, 32, 32)
+                .addGroup(dialogoUnirseClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoUC_Unirse)
+                    .addComponent(btn_dialogoUC_Cancelar))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        dialogoAbandonarClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoAbandonarClan.setTitle("Abandonar Clan");
+        dialogoAbandonarClan.setAlwaysOnTop(true);
+        dialogoAbandonarClan.setResizable(false);
+
+        eti_dialogoAC_Clan.setText("Clan:");
+
+        cb_dialogoAC_Clan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoAC_Clan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_dialogoAC_ClanActionPerformed(evt);
+            }
+        });
+
+        btn_dialogoAC_Abandonar.setText("Abandonar");
+
+        btn_dialogoAC_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoAbandonarClanLayout = new javax.swing.GroupLayout(dialogoAbandonarClan.getContentPane());
+        dialogoAbandonarClan.getContentPane().setLayout(dialogoAbandonarClanLayout);
+        dialogoAbandonarClanLayout.setHorizontalGroup(
+            dialogoAbandonarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoAbandonarClanLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(eti_dialogoAC_Clan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(cb_dialogoAC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(dialogoAbandonarClanLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(btn_dialogoAC_Abandonar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_dialogoAC_Cancelar)
+                .addGap(45, 45, 45))
+        );
+        dialogoAbandonarClanLayout.setVerticalGroup(
+            dialogoAbandonarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoAbandonarClanLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(dialogoAbandonarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoAC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoAC_Clan))
+                .addGap(32, 32, 32)
+                .addGroup(dialogoAbandonarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoAC_Abandonar)
+                    .addComponent(btn_dialogoAC_Cancelar))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        dialogoCrearClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoCrearClan.setTitle("Crear Clan");
+        dialogoCrearClan.setAlwaysOnTop(true);
+        dialogoCrearClan.setResizable(false);
+
+        eti_dialogoCC_NombreClan.setText("Nombre del Clan:");
+
+        txt_dialogoCC_NombreClan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoCC_NombreClanActionPerformed(evt);
+            }
+        });
+
+        eti_dialogoCC_Tag.setText("Tag:");
+
+        btn_dialogoCC_Crear.setText("Crear");
+        btn_dialogoCC_Crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dialogoCC_CrearActionPerformed(evt);
+            }
+        });
+
+        btn_dialogoCC_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoCrearClanLayout = new javax.swing.GroupLayout(dialogoCrearClan.getContentPane());
+        dialogoCrearClan.getContentPane().setLayout(dialogoCrearClanLayout);
+        dialogoCrearClanLayout.setHorizontalGroup(
+            dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoCrearClanLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_dialogoCC_Crear)
+                    .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(eti_dialogoCC_NombreClan)
+                        .addComponent(eti_dialogoCC_Tag)))
+                .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dialogoCrearClanLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_dialogoCC_NombreClan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_dialogoCC_Tag, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(dialogoCrearClanLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_dialogoCC_Cancelar)
+                        .addGap(51, 51, 51))))
+        );
+        dialogoCrearClanLayout.setVerticalGroup(
+            dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoCrearClanLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoCC_NombreClan)
+                    .addComponent(txt_dialogoCC_NombreClan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoCC_Tag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoCC_Tag))
+                .addGap(31, 31, 31)
+                .addGroup(dialogoCrearClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoCC_Crear)
+                    .addComponent(btn_dialogoCC_Cancelar))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        dialogoModificarClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoModificarClan.setTitle("Modificar Clan");
+        dialogoModificarClan.setAlwaysOnTop(true);
+        dialogoModificarClan.setResizable(false);
+
+        eti_dialogoMC_NombreClan.setText("Nombre del Clan:");
+
+        txt_dialogoMC_NombreClan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoMC_NombreClanActionPerformed(evt);
+            }
+        });
+
+        eti_dialogoMC_Tag.setText("Tag:");
+
+        btn_dialogoMC_Modificar.setText("Crear");
+        btn_dialogoMC_Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dialogoMC_ModificarActionPerformed(evt);
+            }
+        });
+
+        btn_dialogoMC_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoModificarClanLayout = new javax.swing.GroupLayout(dialogoModificarClan.getContentPane());
+        dialogoModificarClan.getContentPane().setLayout(dialogoModificarClanLayout);
+        dialogoModificarClanLayout.setHorizontalGroup(
+            dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarClanLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_dialogoMC_Modificar)
+                    .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(eti_dialogoMC_NombreClan)
+                        .addComponent(eti_dialogoMC_Tag)))
+                .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dialogoModificarClanLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_dialogoMC_NombreClan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_dialogoMC_Tag, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(dialogoModificarClanLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_dialogoMC_Cancelar)
+                        .addGap(51, 51, 51))))
+        );
+        dialogoModificarClanLayout.setVerticalGroup(
+            dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoModificarClanLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(eti_dialogoMC_NombreClan)
+                    .addComponent(txt_dialogoMC_NombreClan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoMC_Tag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoMC_Tag))
+                .addGap(31, 31, 31)
+                .addGroup(dialogoModificarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoMC_Modificar)
+                    .addComponent(btn_dialogoMC_Cancelar))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        dialogoEliminarClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dialogoEliminarClan.setTitle("Eliminar Clan");
+        dialogoEliminarClan.setAlwaysOnTop(true);
+        dialogoEliminarClan.setResizable(false);
+
+        eti_dialogoEC_Clan.setText("Clan:");
+
+        cb_dialogoEC_Clan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoEC_Clan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_dialogoEC_ClanActionPerformed(evt);
+            }
+        });
+
+        btn_dialogoEC_Eliminar.setText("Eliminar");
+
+        btn_dialogoEC_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoEliminarClanLayout = new javax.swing.GroupLayout(dialogoEliminarClan.getContentPane());
+        dialogoEliminarClan.getContentPane().setLayout(dialogoEliminarClanLayout);
+        dialogoEliminarClanLayout.setHorizontalGroup(
+            dialogoEliminarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoEliminarClanLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(eti_dialogoEC_Clan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(cb_dialogoEC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+            .addGroup(dialogoEliminarClanLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(btn_dialogoEC_Eliminar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_dialogoEC_Cancelar)
+                .addGap(45, 45, 45))
+        );
+        dialogoEliminarClanLayout.setVerticalGroup(
+            dialogoEliminarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoEliminarClanLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(dialogoEliminarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_dialogoEC_Clan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoEC_Clan))
+                .addGap(32, 32, 32)
+                .addGroup(dialogoEliminarClanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoEC_Eliminar)
+                    .addComponent(btn_dialogoEC_Cancelar))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        dialogoCambioServidor.setTitle("Cambiar Servidor");
+        dialogoCambioServidor.setAlwaysOnTop(true);
+        dialogoCambioServidor.setResizable(false);
+
+        eti_dialogoCS_DireccionIP.setText("Dirección IP:");
+
+        eti_dialogoCS_NombreBD.setText("Nombre de la Base de Datos:");
+
+        eti_dialogoCS_Usuario.setText("Usuario de la BD:");
+
+        eti_dialogoCS_Contraseña.setText("Contraseña:");
+
+        btn_dialogoCS_Aplicar.setText("Aplicar");
+
+        btn_dialogoCS_Cancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout dialogoCambioServidorLayout = new javax.swing.GroupLayout(dialogoCambioServidor.getContentPane());
+        dialogoCambioServidor.getContentPane().setLayout(dialogoCambioServidorLayout);
+        dialogoCambioServidorLayout.setHorizontalGroup(
+            dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoCambioServidorLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eti_dialogoCS_DireccionIP)
+                    .addComponent(eti_dialogoCS_NombreBD)
+                    .addComponent(eti_dialogoCS_Usuario)
+                    .addComponent(eti_dialogoCS_Contraseña))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_dialogoCS_Contraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .addComponent(txt_dialogoCS_NombreBD)
+                    .addComponent(txt_dialogoCS_DireccionIP)
+                    .addComponent(txt_dialogoCS_Usuario))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(dialogoCambioServidorLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(btn_dialogoCS_Aplicar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addComponent(btn_dialogoCS_Cancelar)
+                .addGap(56, 56, 56))
+        );
+        dialogoCambioServidorLayout.setVerticalGroup(
+            dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoCambioServidorLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoCS_DireccionIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoCS_DireccionIP))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoCS_NombreBD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoCS_NombreBD))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoCS_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoCS_Usuario))
+                .addGap(18, 18, 18)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dialogoCS_Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eti_dialogoCS_Contraseña))
+                .addGap(34, 34, 34)
+                .addGroup(dialogoCambioServidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dialogoCS_Aplicar)
+                    .addComponent(btn_dialogoCS_Cancelar))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        btn_dialogoAD_Aceptar.setText("Aceptar");
+
+        eti_dialogoAD_Texto.setText("jLabel2");
+
+        javax.swing.GroupLayout dialogoAcercaDeLayout = new javax.swing.GroupLayout(dialogoAcercaDe.getContentPane());
+        dialogoAcercaDe.getContentPane().setLayout(dialogoAcercaDeLayout);
+        dialogoAcercaDeLayout.setHorizontalGroup(
+            dialogoAcercaDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dialogoAcercaDeLayout.createSequentialGroup()
+                .addGroup(dialogoAcercaDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dialogoAcercaDeLayout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(btn_dialogoAD_Aceptar))
+                    .addGroup(dialogoAcercaDeLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(eti_dialogoAD_Texto)))
+                .addContainerGap(153, Short.MAX_VALUE))
+        );
+        dialogoAcercaDeLayout.setVerticalGroup(
+            dialogoAcercaDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dialogoAcercaDeLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(eti_dialogoAD_Texto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addComponent(btn_dialogoAD_Aceptar)
+                .addGap(20, 20, 20))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1620,6 +2035,34 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearPjActionPerformed
 
+    private void cb_dialogoUC_ClanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dialogoUC_ClanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_dialogoUC_ClanActionPerformed
+
+    private void cb_dialogoAC_ClanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dialogoAC_ClanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_dialogoAC_ClanActionPerformed
+
+    private void txt_dialogoCC_NombreClanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoCC_NombreClanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoCC_NombreClanActionPerformed
+
+    private void btn_dialogoCC_CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dialogoCC_CrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_dialogoCC_CrearActionPerformed
+
+    private void txt_dialogoMC_NombreClanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoMC_NombreClanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoMC_NombreClanActionPerformed
+
+    private void btn_dialogoMC_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dialogoMC_ModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_dialogoMC_ModificarActionPerformed
+
+    private void cb_dialogoEC_ClanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dialogoEC_ClanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_dialogoEC_ClanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1669,13 +2112,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnCrearPj;
     public javax.swing.JButton btnModPj;
+    private javax.swing.JButton btn_dialogoAC_Abandonar;
+    private javax.swing.JButton btn_dialogoAC_Cancelar;
+    private javax.swing.JButton btn_dialogoAD_Aceptar;
+    private javax.swing.JButton btn_dialogoCC_Cancelar;
+    private javax.swing.JButton btn_dialogoCC_Crear;
+    private javax.swing.JButton btn_dialogoCS_Aplicar;
+    private javax.swing.JButton btn_dialogoCS_Cancelar;
+    private javax.swing.JButton btn_dialogoEC_Cancelar;
+    private javax.swing.JButton btn_dialogoEC_Eliminar;
+    private javax.swing.JButton btn_dialogoMC_Cancelar;
+    private javax.swing.JButton btn_dialogoMC_Modificar;
     private javax.swing.JButton btn_dialogoMP_Cancelar;
     private javax.swing.JButton btn_dialogoMP_Modificar;
     private javax.swing.JButton btn_dialogoMU_Cancelar;
     private javax.swing.JButton btn_dialogoMU_Modificar;
     private javax.swing.JButton btn_dialogoRP_Cancelar;
     private javax.swing.JButton btn_dialogoRP_Registrar;
+    private javax.swing.JButton btn_dialogoUC_Cancelar;
+    private javax.swing.JButton btn_dialogoUC_Unirse;
     public javax.swing.JComboBox cbPersonaje;
+    private javax.swing.JComboBox cb_dialogoAC_Clan;
+    private javax.swing.JComboBox cb_dialogoEC_Clan;
     private javax.swing.JComboBox cb_dialogoMP_Clase;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArma;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArmadura;
@@ -1695,6 +2153,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox cb_dialogoRP_SlotArma;
     private javax.swing.JComboBox cb_dialogoRP_SlotArmadura;
     private javax.swing.JComboBox cb_dialogoRP_TipoArma;
+    private javax.swing.JComboBox cb_dialogoUC_Clan;
     public javax.swing.JCheckBox chkAleman;
     public javax.swing.JCheckBox chkBuscarMiembrosMiClan;
     public javax.swing.JCheckBox chkElementalista;
@@ -1718,9 +2177,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JCheckBox chk_dialogoRP_InfusionSimple1Arma;
     private javax.swing.JCheckBox chk_dialogoRP_InfusionSimple2Arma;
     private javax.swing.JCheckBox chk_dialogoRP_InfusionSimpleArmadura;
+    private javax.swing.JDialog dialogoAbandonarClan;
+    private javax.swing.JDialog dialogoAcercaDe;
+    private javax.swing.JDialog dialogoCambioServidor;
+    private javax.swing.JDialog dialogoCrearClan;
+    private javax.swing.JDialog dialogoEliminarClan;
+    private javax.swing.JDialog dialogoModificarClan;
     private javax.swing.JDialog dialogoModificarPersonaje;
     private javax.swing.JDialog dialogoModificarUsuario;
     private javax.swing.JDialog dialogoRegistrarPersonaje;
+    private javax.swing.JDialog dialogoUnirseClan;
     public javax.swing.JLabel etiAgonia;
     public javax.swing.JLabel etiArmadura;
     public javax.swing.JLabel etiClase;
@@ -1746,6 +2212,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiSalud;
     public javax.swing.JLabel etiServidor;
     public javax.swing.JLabel etiVitalidad;
+    private javax.swing.JLabel eti_dialogoAC_Clan;
+    private javax.swing.JLabel eti_dialogoAD_Texto;
+    private javax.swing.JLabel eti_dialogoCC_NombreClan;
+    private javax.swing.JLabel eti_dialogoCC_Tag;
+    private javax.swing.JLabel eti_dialogoCS_Contraseña;
+    private javax.swing.JLabel eti_dialogoCS_DireccionIP;
+    private javax.swing.JLabel eti_dialogoCS_NombreBD;
+    private javax.swing.JLabel eti_dialogoCS_Usuario;
+    private javax.swing.JLabel eti_dialogoEC_Clan;
+    private javax.swing.JLabel eti_dialogoMC_NombreClan;
+    private javax.swing.JLabel eti_dialogoMC_Tag;
     private javax.swing.JLabel eti_dialogoMP_AR;
     private javax.swing.JLabel eti_dialogoMP_Clase;
     private javax.swing.JLabel eti_dialogoMP_InfusionAgoniaArmadura;
@@ -1777,6 +2254,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoRP_SlotArma;
     private javax.swing.JLabel eti_dialogoRP_SlotArmadura;
     private javax.swing.JLabel eti_dialogoRP_TipoArma;
+    private javax.swing.JLabel eti_dialogoUC_Clan;
     public javax.swing.JLabel fondoBusqueda;
     public javax.swing.JLabel fondoConectadoComo;
     public javax.swing.JLabel fondoEquipo;
@@ -1856,9 +2334,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel tituloPersonaje;
     public javax.swing.JTextField txtAgoniaMinima;
     public javax.swing.JTextField txtBusqueda;
+    private javax.swing.JTextField txt_dialogoCC_NombreClan;
+    private javax.swing.JTextField txt_dialogoCC_Tag;
+    private javax.swing.JPasswordField txt_dialogoCS_Contraseña;
+    private javax.swing.JTextField txt_dialogoCS_DireccionIP;
+    private javax.swing.JTextField txt_dialogoCS_NombreBD;
+    private javax.swing.JTextField txt_dialogoCS_Usuario;
+    private javax.swing.JTextField txt_dialogoMC_NombreClan;
+    private javax.swing.JTextField txt_dialogoMC_Tag;
     private javax.swing.JTextField txt_dialogoMP_InfusionAgoniaArmadura;
     private javax.swing.JTextField txt_dialogoMP_Nombre;
-    private javax.swing.JTextField txt_dialogoMU_ContrasenyaAntigua;
+    private javax.swing.JPasswordField txt_dialogoMU_ContrasenyaAntigua;
     private javax.swing.JTextField txt_dialogoMU_Email;
     private javax.swing.JPasswordField txt_dialogoMU_NuevaContrasenya;
     private javax.swing.JPasswordField txt_dialogoMU_RepetirContrasenya;
