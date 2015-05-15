@@ -57,6 +57,9 @@ public class Login extends javax.swing.JFrame {
         btnRegistro = new javax.swing.JButton();
 
         Registro.setTitle("Registro");
+        Registro.setMaximumSize(new java.awt.Dimension(370, 400));
+        Registro.setMinimumSize(new java.awt.Dimension(370, 400));
+        Registro.setPreferredSize(new java.awt.Dimension(370, 400));
         Registro.setResizable(false);
 
         etiCuenta.setText("Nombre cuenta (GW2)");
@@ -316,33 +319,33 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog Registro;
-    private javax.swing.JButton btnAceptar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnRegistro;
-    private javax.swing.JCheckBox chkAleman;
-    private javax.swing.JCheckBox chkEspanol;
-    private javax.swing.JCheckBox chkFrances;
-    private javax.swing.JCheckBox chkIngles;
-    private javax.swing.JComboBox combServidor;
-    private javax.swing.JLabel etiContrasena;
-    private javax.swing.JLabel etiCuenta;
-    private javax.swing.JLabel etiEmail;
-    private javax.swing.JLabel etiIdiomas;
-    private javax.swing.JLabel etiLoginContrasena;
-    private javax.swing.JLabel etiLoginCuenta;
-    private javax.swing.JLabel etiNivelFrac;
-    private javax.swing.JLabel etiRepeContrasena;
-    private javax.swing.JLabel etiServidor;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel panelIdiomas;
-    private javax.swing.JPasswordField txtContrasena;
-    private javax.swing.JTextField txtCuenta;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JPasswordField txtLoginContrasena;
-    private javax.swing.JTextField txtLoginCuenta;
-    private javax.swing.JTextField txtNivelFrac;
-    private javax.swing.JPasswordField txtRepeContrasena;
+    public javax.swing.JDialog Registro;
+    public javax.swing.JButton btnAceptar;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnLogin;
+    public javax.swing.JButton btnRegistro;
+    public javax.swing.JCheckBox chkAleman;
+    public javax.swing.JCheckBox chkEspanol;
+    public javax.swing.JCheckBox chkFrances;
+    public javax.swing.JCheckBox chkIngles;
+    public javax.swing.JComboBox combServidor;
+    public javax.swing.JLabel etiContrasena;
+    public javax.swing.JLabel etiCuenta;
+    public javax.swing.JLabel etiEmail;
+    public javax.swing.JLabel etiIdiomas;
+    public javax.swing.JLabel etiLoginContrasena;
+    public javax.swing.JLabel etiLoginCuenta;
+    public javax.swing.JLabel etiNivelFrac;
+    public javax.swing.JLabel etiRepeContrasena;
+    public javax.swing.JLabel etiServidor;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel panelIdiomas;
+    public javax.swing.JPasswordField txtContrasena;
+    public javax.swing.JTextField txtCuenta;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JPasswordField txtLoginContrasena;
+    public javax.swing.JTextField txtLoginCuenta;
+    public javax.swing.JTextField txtNivelFrac;
+    public javax.swing.JPasswordField txtRepeContrasena;
     // End of variables declaration//GEN-END:variables
 }
