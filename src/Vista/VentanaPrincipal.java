@@ -248,6 +248,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoArmaAcu2 = new javax.swing.JLabel();
         icoCabezaAcu = new javax.swing.JLabel();
         icoEspaldar = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         PanelEstadisticas = new javax.swing.JPanel();
         fondoEquipo = new javax.swing.JLabel();
         PanelBusqueda = new javax.swing.JPanel();
@@ -1672,7 +1674,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         icoSetArma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma2.png"))); // NOI18N
         PanelEquipo.add(icoSetArma2);
-        icoSetArma2.setBounds(170, 20, 60, 110);
+        icoSetArma2.setBounds(180, 20, 60, 110);
 
         icoAnillo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
         icoAnillo2.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -1709,26 +1711,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoAmuleto);
         icoAmuleto.setBounds(140, 140, 50, 50);
 
-        icoArmaAcu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
+        icoArmaAcu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuaarma1.png"))); // NOI18N
         icoArmaAcu1.setMaximumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu1.setMinimumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu1.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoArmaAcu1);
-        icoArmaAcu1.setBounds(160, 310, 50, 50);
+        icoArmaAcu1.setBounds(100, 320, 50, 50);
 
-        icoArmaAcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
+        icoArmaAcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuaarma2.png"))); // NOI18N
         icoArmaAcu2.setMaximumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu2.setMinimumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu2.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoArmaAcu2);
-        icoArmaAcu2.setBounds(140, 250, 50, 50);
+        icoArmaAcu2.setBounds(180, 320, 50, 50);
 
         icoCabezaAcu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/acuacabeza.png"))); // NOI18N
         icoCabezaAcu.setMaximumSize(new java.awt.Dimension(40, 40));
         icoCabezaAcu.setMinimumSize(new java.awt.Dimension(40, 40));
         icoCabezaAcu.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoCabezaAcu);
-        icoCabezaAcu.setBounds(140, 250, 50, 50);
+        icoCabezaAcu.setBounds(140, 260, 50, 50);
 
         icoEspaldar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/espaldar.jpg"))); // NOI18N
         icoEspaldar.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -1736,6 +1738,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoEspaldar.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoEspaldar);
         icoEspaldar.setBounds(90, 140, 50, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
+        PanelEquipo.add(jLabel2);
+        jLabel2.setBounds(148, 320, 30, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
+        PanelEquipo.add(jLabel1);
+        jLabel1.setBounds(147, 60, 30, 40);
 
         PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelEstadisticas.setOpaque(false);
@@ -2291,6 +2301,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
     public javax.swing.JMenuItem itemUnirClan;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSpinner jSpinner1;
     public javax.swing.JMenu menuAyuda;
     public javax.swing.JMenu menuConfiguracion;
