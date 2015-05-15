@@ -1,6 +1,8 @@
 package Modelo;
 import java.sql.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import Vista.Login;
 
 public class ModeloLogin extends Database{
     Database db=null;
@@ -12,7 +14,7 @@ public class ModeloLogin extends Database{
     /* Registra un nuevo usuario*/
     public boolean NuevoUsuario(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya,
             String servidor, int[] idiomas){
-        int idservidor = this.getIdServidor(servidor);//valida_datos(usuario, email, nivFrac, contrasenya, repeContrasenya)
+        int idservidor = this.getIdServidor(servidor);//validaDatosRegistro(usuario, email, nivFrac, contrasenya, repeContrasenya)
         if(true){
             //Se arma la consulta
             String q=" INSERT INTO Cuentas ( NomCuenta , NivFractales , Email, Contraseña, Servidor, IdiomaIngles"
@@ -25,6 +27,7 @@ public class ModeloLogin extends Database{
                 PreparedStatement pstm = this.getConexion().prepareStatement(q);
                 pstm.execute();
                 pstm.close();
+                JOptionPane.showMessageDialog(null, "Cuenta creada con exito");
                 return true;
             }catch(SQLException e){
                 System.err.println( e.getMessage() );
@@ -36,7 +39,7 @@ public class ModeloLogin extends Database{
     }
     
     /* Metodo  para validar datos */
-    private boolean valida_datos(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya)
+    private boolean validaDatosRegistro(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya)
     {
         boolean usuarioCorrecto=usuario.matches("[a-zA-Z\\s]{3,20}'.'[\\n]{4}");
         boolean emailCorrecto=email.matches("[-\\w\\.]+@\\w+\\.\\w+")&&email.length()<=40;
@@ -95,11 +98,33 @@ public class ModeloLogin extends Database{
              ResultSet res = stmt.executeQuery(q);
              res.next();
              idServ=res.getInt("Id_Servidor");
-             System.out.println(idServ);
              return idServ;
              
          }catch(SQLException e){
             System.err.println(e.getMessage() );
+        }
+         return 0;
+    }
+    public int comprobarDatosLogin(String usu, String pass){
+        Statement stmt=null;
+         String contr;
+         String q="SELECT Contraseña FROM Cuentas WHERE NomCuenta='"+usu+"'";
+         try {
+                stmt=db.getConexion().createStatement();
+            }catch(SQLException e){
+                System.err.println( e.getMessage() );
+            }
+         
+         try{
+             ResultSet res = stmt.executeQuery(q);
+             res.next();
+             contr=res.getString("Contraseña");
+             if(contr.equals(pass)){
+                 return 1;
+             }
+             
+         }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
         }
          return 0;
     }

@@ -5,10 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import Vista.VentanaPrincipal;
+import javax.swing.JOptionPane;
 
 public class ControladorLogin implements ActionListener{
     
@@ -81,13 +82,23 @@ public class ControladorLogin implements ActionListener{
                                          String.valueOf(this.vista.txtRepeContrasena.getPassword()),
                                          this.vista.combServidor.getSelectedItem().toString(),
                                          idiomas);
+                this.vista.Registro.setVisible(false);
+                this.vista.setVisible(true);
                 break;
             case Cancelar:
                 this.vista.Registro.setVisible(false);
                 this.vista.setVisible(true);
                 break;
             case Login:
-                
+                String id = this.vista.txtLoginCuenta.getText();
+                String pass = String.valueOf(this.vista.txtLoginContrasena.getPassword());
+                if(this.modelo.comprobarDatosLogin(id, pass)==1){
+                    System.out.println("fs");
+                    new ControladorPrincipal(new VentanaPrincipal()).iniciar();
+                    this.vista.setVisible(false);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
+                }
                 break;
             case Registro:
                 this.vista.Registro.setAlwaysOnTop(true);
