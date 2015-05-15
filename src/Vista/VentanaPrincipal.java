@@ -248,8 +248,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoArmaAcu2 = new javax.swing.JLabel();
         icoCabezaAcu = new javax.swing.JLabel();
         icoEspaldar = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        icoCambio2 = new javax.swing.JLabel();
+        icoCambio1 = new javax.swing.JLabel();
         PanelEstadisticas = new javax.swing.JPanel();
         fondoEquipo = new javax.swing.JLabel();
         PanelBusqueda = new javax.swing.JPanel();
@@ -1739,13 +1739,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoEspaldar);
         icoEspaldar.setBounds(90, 140, 50, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
-        PanelEquipo.add(jLabel2);
-        jLabel2.setBounds(148, 320, 30, 40);
+        icoCambio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
+        PanelEquipo.add(icoCambio2);
+        icoCambio2.setBounds(148, 320, 30, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
-        PanelEquipo.add(jLabel1);
-        jLabel1.setBounds(147, 60, 30, 40);
+        icoCambio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cambio.png"))); // NOI18N
+        PanelEquipo.add(icoCambio1);
+        icoCambio1.setBounds(147, 60, 30, 40);
 
         PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelEstadisticas.setOpaque(false);
@@ -2282,6 +2282,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel icoArmaAcu2;
     public javax.swing.JLabel icoCabeza;
     public javax.swing.JLabel icoCabezaAcu;
+    private javax.swing.JLabel icoCambio1;
+    private javax.swing.JLabel icoCambio2;
     public javax.swing.JLabel icoEspaldar;
     public javax.swing.JLabel icoHombros;
     public javax.swing.JLabel icoManos;
@@ -2301,8 +2303,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
     public javax.swing.JMenuItem itemUnirClan;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSpinner jSpinner1;
     public javax.swing.JMenu menuAyuda;
     public javax.swing.JMenu menuConfiguracion;
