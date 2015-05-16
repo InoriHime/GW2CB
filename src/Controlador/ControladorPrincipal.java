@@ -5,8 +5,10 @@ import Modelo.Cuenta;
 import Modelo.ModeloPrincipal;
 import Modelo.Personaje;
 import Vista.VentanaPrincipal;
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -59,8 +61,11 @@ public class ControladorPrincipal{
           catch (IllegalAccessException ex) {}
         // Mostramos datos en la tabla
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
+        //Definimos la apariencia de la tabla
         this.vista.TablaPersonajes.setRowSelectionAllowed(true);
         this.vista.PanelTabla.getViewport().setBorder(null);
+        this.vista.TablaPersonajes.setSelectionBackground(new Color(27, 23, 20, 159));
+        this.vista.TablaPersonajes.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         this.vista.txtBusqueda.requestFocus(true);
         
         //Recogemos los datos del usuario a partir del nombre de cuenta recibido en el constructor

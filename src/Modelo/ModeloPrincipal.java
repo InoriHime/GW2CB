@@ -20,7 +20,13 @@ public class ModeloPrincipal extends Database{
     
     /** Obtiene registros de la tabla Personajes y los devuelve en un DefaultTableModel*/
     public DefaultTableModel getTablaPersonaje() {
-      DefaultTableModel tablemodel = new DefaultTableModel();
+      DefaultTableModel tablemodel = new DefaultTableModel(){
+          @Override
+            public boolean isCellEditable(int row, int column) {
+            //all cells false
+            return false;
+         }
+      };
       int registros = 0;
       String[] columNames = {"Personaje","Cuenta","Clase","Niv. Fractales","R. Agonía","Clan","Idiomas"};
       //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
