@@ -251,6 +251,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoCambio2 = new javax.swing.JLabel();
         icoCambio1 = new javax.swing.JLabel();
         PanelEstadisticas = new javax.swing.JPanel();
+        etiPieza = new javax.swing.JLabel();
+        muestraPieza = new javax.swing.JLabel();
+        etiRareza = new javax.swing.JLabel();
+        muestraRareza = new javax.swing.JLabel();
+        etiPoder1 = new javax.swing.JLabel();
+        etiDureza1 = new javax.swing.JLabel();
+        etiVitalidad1 = new javax.swing.JLabel();
+        etiPrecision1 = new javax.swing.JLabel();
+        etiFerocidad1 = new javax.swing.JLabel();
+        etiDanyoCondicion1 = new javax.swing.JLabel();
+        etiPoderCuracion1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         fondoEquipo = new javax.swing.JLabel();
         PanelBusqueda = new javax.swing.JPanel();
         txtBusqueda = new javax.swing.JTextField();
@@ -1361,7 +1381,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(tituloBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 28, 220, 40));
 
         tituloPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/personaje.png"))); // NOI18N
-        getContentPane().add(tituloPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 365, 220, 40));
+        getContentPane().add(tituloPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 378, 220, 40));
 
         tituloEquipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/equipo.png"))); // NOI18N
         getContentPane().add(tituloEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, 220, 40));
@@ -1395,7 +1415,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         TablaPersonajes.getTableHeader().setReorderingAllowed(false);
         PanelTabla.setViewportView(TablaPersonajes);
 
-        getContentPane().add(PanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 580, 320));
+        getContentPane().add(PanelTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 580, 330));
 
         PanelInformacion.setMaximumSize(new java.awt.Dimension(467, 245));
         PanelInformacion.setMinimumSize(new java.awt.Dimension(467, 245));
@@ -1404,7 +1424,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mostrarNombrePersonaje.setForeground(new java.awt.Color(209, 194, 170));
         mostrarNombrePersonaje.setText("-");
-        PanelInformacion.add(mostrarNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 129, -1));
+        PanelInformacion.add(mostrarNombrePersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 150, -1));
 
         etiNombrePersonaje.setForeground(new java.awt.Color(209, 194, 170));
         etiNombrePersonaje.setText("Nombre Personaje:");
@@ -1412,21 +1432,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         etiIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         etiIdiomas.setText("Idiomas:");
-        PanelInformacion.add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 55, -1));
+        PanelInformacion.add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, -1));
 
         etiNombreCuenta.setForeground(new java.awt.Color(209, 194, 170));
         etiNombreCuenta.setText("Nombre de cuenta:");
-        PanelInformacion.add(etiNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        PanelInformacion.add(etiNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         etiServidor.setForeground(new java.awt.Color(209, 194, 170));
         etiServidor.setText("Servidor:");
-        PanelInformacion.add(etiServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 92, -1));
+        PanelInformacion.add(etiServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 50, -1));
 
         PanelAtributos.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Atributos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelAtributos.setOpaque(false);
 
         etiPoder.setForeground(new java.awt.Color(209, 194, 170));
-        etiPoder.setText("Poder:");
+        etiPoder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Power.png"))); // NOI18N
+        etiPoder.setText("  Poder:");
 
         mostrarPoder.setForeground(new java.awt.Color(209, 194, 170));
         mostrarPoder.setText("-");
@@ -1471,69 +1492,85 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mostrarAgonia.setText("-");
 
         etiDanyoCondicion.setForeground(new java.awt.Color(209, 194, 170));
-        etiDanyoCondicion.setText("Daño de Condición:");
+        etiDanyoCondicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Condition_Damage.png"))); // NOI18N
+        etiDanyoCondicion.setText("  Daño de Condición:");
 
         etiPrecision.setForeground(new java.awt.Color(209, 194, 170));
-        etiPrecision.setText("Precisión:");
+        etiPrecision.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Precision.png"))); // NOI18N
+        etiPrecision.setText("  Precisión:");
 
         etiDureza.setForeground(new java.awt.Color(209, 194, 170));
-        etiDureza.setText("Dureza:");
+        etiDureza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Toughness.png"))); // NOI18N
+        etiDureza.setText("  Dureza:");
 
         etiVitalidad.setForeground(new java.awt.Color(209, 194, 170));
-        etiVitalidad.setText("Vitalidad:");
+        etiVitalidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Vitality.png"))); // NOI18N
+        etiVitalidad.setText("  Vitalidad:");
 
         etiFerocidad.setForeground(new java.awt.Color(209, 194, 170));
-        etiFerocidad.setText("Ferocidad:");
+        etiFerocidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Ferocity.png"))); // NOI18N
+        etiFerocidad.setText("  Ferocidad:");
 
         etiPoderCuracion.setForeground(new java.awt.Color(209, 194, 170));
-        etiPoderCuracion.setText("Poder de Curación:");
+        etiPoderCuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/18px-Healing_Power.png"))); // NOI18N
+        etiPoderCuracion.setText("  Poder de Curación:");
 
         etiDuracionBendicion.setForeground(new java.awt.Color(209, 194, 170));
-        etiDuracionBendicion.setText("Durac. Bendición:");
+        etiDuracionBendicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Boon_Duration.png"))); // NOI18N
+        etiDuracionBendicion.setText("  Durac. Bendición:");
 
         etiDuracionCondicion.setForeground(new java.awt.Color(209, 194, 170));
-        etiDuracionCondicion.setText("Durac. de Condición:");
+        etiDuracionCondicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Condition_Duration.png"))); // NOI18N
+        etiDuracionCondicion.setText("  Durac. de Condición:");
 
         etiArmadura.setForeground(new java.awt.Color(209, 194, 170));
-        etiArmadura.setText("Armadura:");
+        etiArmadura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Armor.png"))); // NOI18N
+        etiArmadura.setText("  Armadura:");
 
         etiSalud.setForeground(new java.awt.Color(209, 194, 170));
-        etiSalud.setText("Salud:");
+        etiSalud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Health.png"))); // NOI18N
+        etiSalud.setText("  Salud:");
 
         etiProbabilidadCritica.setForeground(new java.awt.Color(209, 194, 170));
-        etiProbabilidadCritica.setText("Prob. Crítica:");
+        etiProbabilidadCritica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Critical_Chance.png"))); // NOI18N
+        etiProbabilidadCritica.setText("  Prob. Crítica:");
 
         etiDanyoCritico.setForeground(new java.awt.Color(209, 194, 170));
-        etiDanyoCritico.setText("Daño Crítico:");
+        etiDanyoCritico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Critical_Damage.png"))); // NOI18N
+        etiDanyoCritico.setText("  Daño Crítico:");
 
         etiAgonia.setForeground(new java.awt.Color(209, 194, 170));
-        etiAgonia.setText("Resist. Agonía:");
+        etiAgonia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Atributos/Agony_Resistance.png"))); // NOI18N
+        etiAgonia.setText("  Resist. Agonía:");
 
         javax.swing.GroupLayout PanelAtributosLayout = new javax.swing.GroupLayout(PanelAtributos);
         PanelAtributos.setLayout(PanelAtributosLayout);
         PanelAtributosLayout.setHorizontalGroup(
             PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelAtributosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etiPoder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiPrecision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiDureza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiVitalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(etiPoder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(etiDureza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(etiPrecision, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))
+                    .addComponent(etiVitalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(mostrarPrecision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mostrarDureza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mostrarVitalidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mostrarPoder, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
                 .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etiDuracionCondicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(etiDanyoCondicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(etiDuracionBendicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(etiFerocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(etiPoderCuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiDanyoCondicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelAtributosLayout.createSequentialGroup()
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(etiDuracionCondicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(etiDuracionBendicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(15, 15, 15))
+                    .addComponent(etiPoderCuracion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(etiFerocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(mostrarDuracionBendicion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1542,13 +1579,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(mostrarFerocidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(mostrarDuracionCondicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(mostrarDanyoCondicion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etiArmadura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiAgonia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiProbabilidadCritica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiDanyoCritico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(etiSalud, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(etiAgonia, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addComponent(etiProbabilidadCritica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(etiArmadura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(etiSalud, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiDanyoCritico, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(mostrarArmadura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1556,7 +1594,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(mostrarDanyoCritico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mostrarSalud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(mostrarAgonia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         PanelAtributosLayout.setVerticalGroup(
             PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1567,88 +1605,88 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiArmadura)
                             .addComponent(mostrarArmadura))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiProbabilidadCritica)
                             .addComponent(mostrarProbabilidadCritica))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiDanyoCritico)
                             .addComponent(mostrarDanyoCritico))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiSalud)
-                            .addComponent(mostrarSalud))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mostrarSalud)
+                            .addComponent(etiSalud, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiAgonia)
                             .addComponent(mostrarAgonia)))
                     .addGroup(PanelAtributosLayout.createSequentialGroup()
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiDuracionBendicion)
-                            .addComponent(mostrarDuracionBendicion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiDanyoCondicion)
-                            .addComponent(mostrarDanyoCondicion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiDuracionCondicion)
-                            .addComponent(mostrarDuracionCondicion))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiFerocidad)
-                            .addComponent(mostrarFerocidad))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etiPoderCuracion)
-                            .addComponent(mostrarPoderCuracion)))
-                    .addGroup(PanelAtributosLayout.createSequentialGroup()
-                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiPoder)
                             .addComponent(mostrarPoder))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiPrecision)
                             .addComponent(mostrarPrecision))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiDureza)
                             .addComponent(mostrarDureza))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(etiVitalidad)
-                            .addComponent(mostrarVitalidad))))
+                            .addComponent(mostrarVitalidad)))
+                    .addGroup(PanelAtributosLayout.createSequentialGroup()
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiDuracionBendicion)
+                            .addComponent(mostrarDuracionBendicion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiDanyoCondicion)
+                            .addComponent(mostrarDanyoCondicion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiDuracionCondicion)
+                            .addComponent(mostrarDuracionCondicion))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiFerocidad)
+                            .addComponent(mostrarFerocidad))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelAtributosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiPoderCuracion)
+                            .addComponent(mostrarPoderCuracion))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelInformacion.add(PanelAtributos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, 150));
+        PanelInformacion.add(PanelAtributos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 560, 150));
 
         mostrarNombreCuenta.setForeground(new java.awt.Color(209, 194, 170));
         mostrarNombreCuenta.setText("-");
-        PanelInformacion.add(mostrarNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 112, -1));
+        PanelInformacion.add(mostrarNombreCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 112, -1));
 
         mostrarIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         mostrarIdiomas.setText("-");
         mostrarIdiomas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        PanelInformacion.add(mostrarIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 149, 29));
+        PanelInformacion.add(mostrarIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 110, -1));
 
         mostrarServidor.setForeground(new java.awt.Color(209, 194, 170));
         mostrarServidor.setText("-");
-        PanelInformacion.add(mostrarServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 129, -1));
+        PanelInformacion.add(mostrarServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 200, -1));
 
         etiClase.setForeground(new java.awt.Color(209, 194, 170));
         etiClase.setText("Clase:");
-        PanelInformacion.add(etiClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 92, -1));
+        PanelInformacion.add(etiClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 40, -1));
 
         mostrarClase.setForeground(new java.awt.Color(209, 194, 170));
         mostrarClase.setText("-");
-        PanelInformacion.add(mostrarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 129, -1));
+        PanelInformacion.add(mostrarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 80, -1));
 
         fondoInformacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo1.jpg"))); // NOI18N
-        PanelInformacion.add(fondoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 240));
+        PanelInformacion.add(fondoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 230));
 
-        getContentPane().add(PanelInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 580, 240));
+        getContentPane().add(PanelInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 580, 230));
 
         PanelEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelEquipo.setLayout(null);
@@ -1759,15 +1797,163 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelEstadisticas.setOpaque(false);
 
+        etiPieza.setForeground(new java.awt.Color(209, 194, 170));
+        etiPieza.setText("Pieza:");
+
+        muestraPieza.setForeground(new java.awt.Color(209, 194, 170));
+        muestraPieza.setText("-");
+
+        etiRareza.setForeground(new java.awt.Color(209, 194, 170));
+        etiRareza.setText("Rareza:");
+
+        muestraRareza.setForeground(new java.awt.Color(209, 194, 170));
+        muestraRareza.setText("-");
+
+        etiPoder1.setForeground(new java.awt.Color(209, 194, 170));
+        etiPoder1.setText("Poder:");
+
+        etiDureza1.setForeground(new java.awt.Color(209, 194, 170));
+        etiDureza1.setText("Dureza:");
+
+        etiVitalidad1.setForeground(new java.awt.Color(209, 194, 170));
+        etiVitalidad1.setText("Vitalidad:");
+
+        etiPrecision1.setForeground(new java.awt.Color(209, 194, 170));
+        etiPrecision1.setText("Precisión:");
+
+        etiFerocidad1.setForeground(new java.awt.Color(209, 194, 170));
+        etiFerocidad1.setText("Ferocidad:");
+
+        etiDanyoCondicion1.setForeground(new java.awt.Color(209, 194, 170));
+        etiDanyoCondicion1.setText("Daño Cond.:");
+
+        etiPoderCuracion1.setForeground(new java.awt.Color(209, 194, 170));
+        etiPoderCuracion1.setText("Pod. Curación:");
+
+        jLabel1.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel1.setText("Resist. Agonía:");
+
+        jLabel2.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel2.setText("-");
+        jLabel2.setMaximumSize(new java.awt.Dimension(34, 14));
+        jLabel2.setMinimumSize(new java.awt.Dimension(34, 14));
+        jLabel2.setPreferredSize(new java.awt.Dimension(34, 14));
+
+        jLabel3.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel3.setText("-");
+        jLabel3.setMaximumSize(new java.awt.Dimension(34, 14));
+        jLabel3.setMinimumSize(new java.awt.Dimension(34, 14));
+        jLabel3.setPreferredSize(new java.awt.Dimension(34, 14));
+
+        jLabel4.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel4.setText("-");
+        jLabel4.setMaximumSize(new java.awt.Dimension(34, 14));
+        jLabel4.setMinimumSize(new java.awt.Dimension(34, 14));
+        jLabel4.setPreferredSize(new java.awt.Dimension(34, 14));
+
+        jLabel5.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel5.setText("-");
+        jLabel5.setMaximumSize(new java.awt.Dimension(34, 14));
+        jLabel5.setMinimumSize(new java.awt.Dimension(34, 14));
+        jLabel5.setPreferredSize(new java.awt.Dimension(34, 14));
+
+        jLabel6.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel6.setText("-");
+
+        jLabel7.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel7.setText("-");
+
+        jLabel8.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel8.setText("-");
+
+        jLabel9.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel9.setText("-");
+        jLabel9.setMaximumSize(new java.awt.Dimension(34, 14));
+        jLabel9.setMinimumSize(new java.awt.Dimension(34, 14));
+
         javax.swing.GroupLayout PanelEstadisticasLayout = new javax.swing.GroupLayout(PanelEstadisticas);
         PanelEstadisticas.setLayout(PanelEstadisticasLayout);
         PanelEstadisticasLayout.setHorizontalGroup(
             PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 230, Short.MAX_VALUE)
+            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(etiRareza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(etiPieza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                                .addComponent(muestraPieza, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(muestraRareza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(etiPoder1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(etiDureza1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(etiVitalidad1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(etiPrecision1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(4, 4, 4)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(etiPoderCuracion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(etiDanyoCondicion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(etiFerocidad1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap())
         );
         PanelEstadisticasLayout.setVerticalGroup(
             PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 149, Short.MAX_VALUE)
+            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiPieza)
+                    .addComponent(muestraPieza))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiRareza)
+                    .addComponent(muestraRareza))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiPoder1)
+                    .addComponent(etiFerocidad1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiDureza1)
+                    .addComponent(etiDanyoCondicion1)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiVitalidad1)
+                    .addComponent(etiPoderCuracion1)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiPrecision1)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         PanelEquipo.add(PanelEstadisticas);
@@ -1905,7 +2091,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelBusqueda.add(chkBuscarMiembrosMiClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         fondoBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 450));
+        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 450));
 
         getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 450));
 
@@ -1914,7 +2100,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mostrarUsuario.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         mostrarUsuario.setText("-");
-        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 20));
+        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 9, 120, 20));
 
         cbPersonaje.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbPersonaje.setToolTipText("Seleccionar personaje");
@@ -2217,11 +2403,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiClases;
     public javax.swing.JLabel etiConectadoComo;
     public javax.swing.JLabel etiDanyoCondicion;
+    public javax.swing.JLabel etiDanyoCondicion1;
     public javax.swing.JLabel etiDanyoCritico;
     public javax.swing.JLabel etiDuracionBendicion;
     public javax.swing.JLabel etiDuracionCondicion;
     public javax.swing.JLabel etiDureza;
+    public javax.swing.JLabel etiDureza1;
     public javax.swing.JLabel etiFerocidad;
+    public javax.swing.JLabel etiFerocidad1;
     public javax.swing.JLabel etiIdioma;
     public javax.swing.JLabel etiIdiomas;
     public javax.swing.JLabel etiNivelFracMinimo;
@@ -2229,14 +2418,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiNombreCuenta;
     public javax.swing.JLabel etiNombrePersonaje;
     public javax.swing.JLabel etiPersonaje;
+    private javax.swing.JLabel etiPieza;
     public javax.swing.JLabel etiPoder;
+    public javax.swing.JLabel etiPoder1;
     public javax.swing.JLabel etiPoderCuracion;
+    public javax.swing.JLabel etiPoderCuracion1;
     public javax.swing.JLabel etiPrecision;
+    public javax.swing.JLabel etiPrecision1;
     public javax.swing.JLabel etiProbabilidadCritica;
+    private javax.swing.JLabel etiRareza;
     public javax.swing.JLabel etiResistAgoniaMin;
     public javax.swing.JLabel etiSalud;
     public javax.swing.JLabel etiServidor;
     public javax.swing.JLabel etiVitalidad;
+    public javax.swing.JLabel etiVitalidad1;
     private javax.swing.JLabel eti_dialogoAC_Clan;
     private javax.swing.JLabel eti_dialogoAD_Texto;
     private javax.swing.JLabel eti_dialogoCC_NombreClan;
@@ -2318,6 +2513,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
     public javax.swing.JMenuItem itemUnirClan;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public javax.swing.JMenu menuAyuda;
     public javax.swing.JMenu menuConfiguracion;
     public javax.swing.JMenu menuEditar;
@@ -2343,6 +2547,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel mostrarServidor;
     public javax.swing.JLabel mostrarUsuario;
     public javax.swing.JLabel mostrarVitalidad;
+    private javax.swing.JLabel muestraPieza;
+    private javax.swing.JLabel muestraRareza;
     private javax.swing.JPanel panel_dialogoMP_ConfigArma;
     private javax.swing.JPanel panel_dialogoMP_ConfigArmadura;
     private javax.swing.JPanel panel_dialogoMP_Equipo;
