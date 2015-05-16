@@ -257,6 +257,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         radPersonaje = new javax.swing.JRadioButton();
         radClan = new javax.swing.JRadioButton();
         radCuenta = new javax.swing.JRadioButton();
+        etiNivelFracMinimo = new javax.swing.JLabel();
+        txtNivelfracMinimo = new javax.swing.JTextField();
         etiResistAgoniaMin = new javax.swing.JLabel();
         txtAgoniaMinima = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
@@ -1802,6 +1804,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         radCuenta.setOpaque(false);
         PanelBusqueda.add(radCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
+        etiNivelFracMinimo.setForeground(new java.awt.Color(209, 194, 170));
+        etiNivelFracMinimo.setText("Nivel Fractales mínimo:");
+        PanelBusqueda.add(etiNivelFracMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        PanelBusqueda.add(txtNivelfracMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 117, 75, -1));
+
         etiResistAgoniaMin.setForeground(new java.awt.Color(209, 194, 170));
         etiResistAgoniaMin.setText("Resist. Agonía mínima:");
         PanelBusqueda.add(etiResistAgoniaMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, -1, -1));
@@ -1810,65 +1817,65 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnBuscar.setBackground(new java.awt.Color(209, 194, 170));
         btnBuscar.setText("Buscar");
         btnBuscar.setOpaque(false);
-        PanelBusqueda.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 197, -1));
+        PanelBusqueda.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 197, -1));
 
         etiIdioma.setForeground(new java.awt.Color(209, 194, 170));
         etiIdioma.setText("Idioma:");
-        PanelBusqueda.add(etiIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+        PanelBusqueda.add(etiIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
 
         chkEspanyol.setForeground(new java.awt.Color(209, 194, 170));
         chkEspanyol.setText("Español");
         chkEspanyol.setOpaque(false);
-        PanelBusqueda.add(chkEspanyol, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, -1));
+        PanelBusqueda.add(chkEspanyol, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, -1, -1));
 
         chkAleman.setForeground(new java.awt.Color(209, 194, 170));
         chkAleman.setText("Alemán");
         chkAleman.setOpaque(false);
-        PanelBusqueda.add(chkAleman, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+        PanelBusqueda.add(chkAleman, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
         chkFrances.setForeground(new java.awt.Color(209, 194, 170));
         chkFrances.setText("Francés");
         chkFrances.setOpaque(false);
-        PanelBusqueda.add(chkFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+        PanelBusqueda.add(chkFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, -1, -1));
 
         chkIngles.setForeground(new java.awt.Color(209, 194, 170));
         chkIngles.setText("Inglés");
         chkIngles.setOpaque(false);
-        PanelBusqueda.add(chkIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+        PanelBusqueda.add(chkIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         etiClases.setForeground(new java.awt.Color(209, 194, 170));
         etiClases.setText("Clases:");
-        PanelBusqueda.add(etiClases, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        PanelBusqueda.add(etiClases, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
 
         chkGuardian.setForeground(new java.awt.Color(209, 194, 170));
         chkGuardian.setText("Guardián");
         chkGuardian.setOpaque(false);
-        PanelBusqueda.add(chkGuardian, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        PanelBusqueda.add(chkGuardian, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         chkElementalista.setForeground(new java.awt.Color(209, 194, 170));
         chkElementalista.setText("Elementalista");
         chkElementalista.setOpaque(false);
-        PanelBusqueda.add(chkElementalista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        PanelBusqueda.add(chkElementalista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
         chkGuerrero.setForeground(new java.awt.Color(209, 194, 170));
         chkGuerrero.setText("Guerrero");
         chkGuerrero.setOpaque(false);
-        PanelBusqueda.add(chkGuerrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        PanelBusqueda.add(chkGuerrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
 
         chkNigromante.setForeground(new java.awt.Color(209, 194, 170));
         chkNigromante.setText("Nigromante");
         chkNigromante.setOpaque(false);
-        PanelBusqueda.add(chkNigromante, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
+        PanelBusqueda.add(chkNigromante, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
         chkGuardabosques.setForeground(new java.awt.Color(209, 194, 170));
         chkGuardabosques.setText("Guardabosques");
         chkGuardabosques.setOpaque(false);
-        PanelBusqueda.add(chkGuardabosques, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        PanelBusqueda.add(chkGuardabosques, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
         chkIngeniero.setForeground(new java.awt.Color(209, 194, 170));
         chkIngeniero.setText("Ingeniero");
         chkIngeniero.setOpaque(false);
-        PanelBusqueda.add(chkIngeniero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        PanelBusqueda.add(chkIngeniero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
 
         chkLadron.setForeground(new java.awt.Color(209, 194, 170));
         chkLadron.setText("Ladrón");
@@ -1878,22 +1885,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 chkLadronActionPerformed(evt);
             }
         });
-        PanelBusqueda.add(chkLadron, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        PanelBusqueda.add(chkLadron, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
 
         chkHipnotizador.setForeground(new java.awt.Color(209, 194, 170));
         chkHipnotizador.setText("Hipnotizador");
         chkHipnotizador.setOpaque(false);
-        PanelBusqueda.add(chkHipnotizador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+        PanelBusqueda.add(chkHipnotizador, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
 
         chkBuscarMiembrosMiClan.setForeground(new java.awt.Color(209, 194, 170));
         chkBuscarMiembrosMiClan.setText("Buscar solo miembros de mi clan");
         chkBuscarMiembrosMiClan.setOpaque(false);
-        PanelBusqueda.add(chkBuscarMiembrosMiClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        PanelBusqueda.add(chkBuscarMiembrosMiClan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         fondoBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
-        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 407));
+        PanelBusqueda.add(fondoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 450));
 
-        getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 407));
+        getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 450));
 
         etiConectadoComo.setText("Conectado como:");
         getContentPane().add(etiConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
@@ -1935,7 +1942,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         fondoConectadoComo.setText("jLabel17");
         getContentPane().add(fondoConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 220, 20));
 
-        etiNivelFractales.setText("Tu nivel de Fractales actual:");
+        etiNivelFractales.setText("Tu nivel de fractales actual:");
         getContentPane().add(etiNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, 20));
 
         jSpinner1.setToolTipText("Tu nivel actual de fractales");
@@ -2210,6 +2217,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiFerocidad;
     public javax.swing.JLabel etiIdioma;
     public javax.swing.JLabel etiIdiomas;
+    public javax.swing.JLabel etiNivelFracMinimo;
     private javax.swing.JLabel etiNivelFractales;
     public javax.swing.JLabel etiNombreCuenta;
     public javax.swing.JLabel etiNombrePersonaje;
@@ -2346,6 +2354,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel tituloPersonaje;
     public javax.swing.JTextField txtAgoniaMinima;
     public javax.swing.JTextField txtBusqueda;
+    public javax.swing.JTextField txtNivelfracMinimo;
     private javax.swing.JTextField txt_dialogoCC_NombreClan;
     private javax.swing.JTextField txt_dialogoCC_Tag;
     private javax.swing.JPasswordField txt_dialogoCS_Contraseña;
