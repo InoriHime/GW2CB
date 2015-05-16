@@ -285,7 +285,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnModPj = new javax.swing.JButton();
         fondoConectadoComo = new javax.swing.JLabel();
         etiNivelFractales = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        usuNivelFractalActual = new javax.swing.JSpinner();
         fondoNivelFractales = new javax.swing.JLabel();
         etiPersonaje = new javax.swing.JLabel();
         fondoPersonaje = new javax.swing.JLabel();
@@ -1945,8 +1945,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         etiNivelFractales.setText("Tu nivel de fractales actual:");
         getContentPane().add(etiNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, 20));
 
-        jSpinner1.setToolTipText("Tu nivel actual de fractales");
-        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 40, -1));
+        usuNivelFractalActual.setToolTipText("Tu nivel actual de fractales");
+        getContentPane().add(usuNivelFractalActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 40, -1));
 
         fondoNivelFractales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoNivelFractales.setText("jLabel17");
@@ -2311,7 +2311,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
     public javax.swing.JMenuItem itemUnirClan;
-    private javax.swing.JSpinner jSpinner1;
     public javax.swing.JMenu menuAyuda;
     public javax.swing.JMenu menuConfiguracion;
     public javax.swing.JMenu menuEditar;
@@ -2371,5 +2370,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPasswordField txt_dialogoMU_RepetirContrasenya;
     private javax.swing.JTextField txt_dialogoRP_InfusionAgoniaArmadura;
     private javax.swing.JTextField txt_dialogoRP_Nombre;
+    public javax.swing.JSpinner usuNivelFractalActual;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,7 @@
 package Controlador;
 
 /* Importamos el modelo y la interfaz*/
+import Modelo.Cuenta;
 import Modelo.ModeloPrincipal;
 import Vista.VentanaPrincipal;
 import javax.swing.SwingUtilities;
@@ -13,6 +14,12 @@ public class ControladorPrincipal{
     VentanaPrincipal vista;
     /** instancia a nuestro modelo */
     ModeloPrincipal modelo = new ModeloPrincipal();
+    //Usuario de sesion
+    Cuenta usuario;
+    //Array para almacenar temporalmente los datos de usuario con el fin de pasarlos como parametro en el constructur del usuario
+    Object[] datosUsuario = new Object[9];
+    //Almacenamiento del nombre de usuario de sesion pasado como parametro en el contructor
+    String usu;
     
     /** Se declaran en un ENUM las acciones que se realizan desde la
      * interfaz de usuario VISTA y posterior ejecución desde el controlador
@@ -25,8 +32,9 @@ public class ControladorPrincipal{
      /** Constrcutor de clase
      * @param vista Instancia de clase interfaz
      */
-    public ControladorPrincipal( VentanaPrincipal vista ){
+    public ControladorPrincipal(String idusuario, VentanaPrincipal vista ){
         this.vista = vista;
+        this.usu=idusuario;
     }
     
      /** Inicia el skin y las diferentes variables que se utilizan */
@@ -46,6 +54,14 @@ public class ControladorPrincipal{
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
         this.vista.PanelTabla.getViewport().setBorder(null);
         this.vista.txtBusqueda.requestFocus(true);
+        
+        //Recogemos los datos del usuario a partir del nombre de cuenta recibido en el constructor
+        datosUsuario=this.modelo.getDatosCuenta(usu);
+        usuario = new Cuenta(String.valueOf(datosUsuario[0]),String.valueOf(datosUsuario[1]), String.valueOf(datosUsuario[2]), 
+                (int)datosUsuario[3],  (int)datosUsuario[4], (int)datosUsuario[5], (int)datosUsuario[6], (int)datosUsuario[7], (int)datosUsuario[8]);
+        //Mostramos los datos de usuario en la interfaz
+        this.vista.usuNivelFractalActual.setValue(usuario.getNivelFrac());
+        this.vista.mostrarUsuario.setText(usuario.getNombreCuenta());
       
     }
     

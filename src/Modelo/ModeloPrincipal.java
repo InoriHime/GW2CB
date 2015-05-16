@@ -4,10 +4,13 @@ package Modelo;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 public class ModeloPrincipal extends Database{
     Database db=null;
+    
     /*Constructor de la clase*/
     public ModeloPrincipal(){
         db = new Database();
@@ -91,5 +94,35 @@ public class ModeloPrincipal extends Database{
         }
       
         return tablemodel;
+    }
+    public Object[] getDatosCuenta(String cuenta){
+        Object[] datosCuenta=new Object[9];
+        Statement stmt=null;
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("SELECT * FROM Cuentas WHERE NomCuenta ='"+cuenta+"'");
+            res.next();
+            datosCuenta[0]=res.getString("NomCuenta");
+            datosCuenta[1]=res.getString("Email");
+            datosCuenta[2]=res.getString("Contraseña");
+            datosCuenta[3]=res.getInt("NivFractales");
+            datosCuenta[4]=res.getInt("Servidor");
+            datosCuenta[5]=res.getInt("IdiomaIngles");
+            datosCuenta[6]=res.getInt("IdiomaEspañol");
+            datosCuenta[7]=res.getInt("IdiomaFrances");
+            datosCuenta[8]=res.getInt("IdiomaAleman");
+            
+            return datosCuenta;
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+           
     }
 }

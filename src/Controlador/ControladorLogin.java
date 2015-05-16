@@ -48,6 +48,8 @@ public class ControladorLogin implements ActionListener{
             vista.setVisible(true);
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {}
          vista.combServidor.setModel(new DefaultComboBoxModel(servidores.toArray()));
+         vista.combServidor.setSelectedIndex(1);
+         vista.txtNivelFrac.setText("0");
         
         
         this.vista.btnAceptar.setActionCommand("Aceptar");
@@ -80,7 +82,14 @@ public class ControladorLogin implements ActionListener{
                 String contrasenya = String.valueOf(this.vista.txtContrasena.getPassword());
                 String repeContrasenya = String.valueOf(this.vista.txtRepeContrasena.getPassword());
                 String email = this.vista.txtEmail.getText();
-                int nivFrac =  Integer.parseInt(this.vista.txtNivelFrac.getText());
+                String niveFrac=this.vista.txtNivelFrac.getText();
+                int nivFrac=0;
+                if(niveFrac.equals("")){
+                    nivFrac = 0;
+                }else{
+                    nivFrac =  Integer.parseInt(niveFrac);
+                }
+                
                 
                 if(this.modelo.validaDatosRegistro(usuario, email, nivFrac, contrasenya, repeContrasenya)){
                 this.modelo.NuevoUsuario(usuario, email,  nivFrac, contrasenya, repeContrasenya,
@@ -101,7 +110,7 @@ public class ControladorLogin implements ActionListener{
                 String id = this.vista.txtLoginCuenta.getText();
                 String pass = String.valueOf(this.vista.txtLoginContrasena.getPassword());
                 if(this.modelo.comprobarDatosLogin(id, pass)==1){
-                    new ControladorPrincipal(new VentanaPrincipal()).iniciar();
+                    new ControladorPrincipal(id, new VentanaPrincipal()).iniciar();
                     this.vista.setVisible(false);
                 }else{
                     JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
