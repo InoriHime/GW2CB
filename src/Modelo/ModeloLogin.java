@@ -14,8 +14,8 @@ public class ModeloLogin extends Database{
     /* Registra un nuevo usuario*/
     public boolean NuevoUsuario(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya,
             String servidor, int[] idiomas){
-        int idservidor = this.getIdServidor(servidor);//validaDatosRegistro(usuario, email, nivFrac, contrasenya, repeContrasenya)
-        if(true){
+        int idservidor = this.getIdServidor(servidor);
+       
             //Se arma la consulta
             String q=" INSERT INTO Cuentas ( NomCuenta , NivFractales , Email, Contraseña, Servidor, IdiomaIngles"
                     + ",IdiomaEspañol, IdiomaFrances, IdiomaAleman) "
@@ -33,31 +33,23 @@ public class ModeloLogin extends Database{
                 System.err.println( e.getMessage() );
             }
             return false;
-        }
-        else
-         return false;
     }
     
     /* Metodo  para validar datos */
-    private boolean validaDatosRegistro(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya)
+    public boolean validaDatosRegistro(String usuario, String email, int nivFrac, String contrasenya, String repeContrasenya)
     {
-        boolean usuarioCorrecto=usuario.matches("[a-zA-Z\\s]{3,20}'.'[\\n]{4}");
+        boolean usuarioCorrecto=usuario.matches("[a-zA-Z\\s]{3,20}.[0-9]{4}");
         boolean emailCorrecto=email.matches("[-\\w\\.]+@\\w+\\.\\w+")&&email.length()<=40;
         if(usuarioCorrecto&&emailCorrecto){
-           if(contrasenya.length()>=6&&contrasenya.length()<=20){
-               if(contrasenya.equals(repeContrasenya)){
-                   if(nivFrac>0&&nivFrac<51){
-                    return true;
+            if(contrasenya.length()>=6&&contrasenya.length()<=20){  
+                if(contrasenya.equals(repeContrasenya)){
+                    if(nivFrac>0&&nivFrac<51){
+                        return true;
+                    }
                 }
-               }
-                
-           }else{
-               return false;
-           }
-        }else{
-            return false;
-        }
-        return false;
+            }else{ return false; }
+        }else{return false; }
+       return false;
     }
     
     

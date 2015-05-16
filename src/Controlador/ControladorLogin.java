@@ -75,15 +75,22 @@ public class ControladorLogin implements ActionListener{
                 if(this.vista.chkAleman.isSelected()){
                     idiomas[3]=1;
                 }
-                this.modelo.NuevoUsuario(this.vista.txtCuenta.getText(), 
-                                         this.vista.txtEmail.getText(), 
-                                         Integer.parseInt(this.vista.txtNivelFrac.getText()),
-                                         String.valueOf(this.vista.txtContrasena.getPassword()),
-                                         String.valueOf(this.vista.txtRepeContrasena.getPassword()),
+                String usuario = this.vista.txtCuenta.getText();
+                String contrasenya = String.valueOf(this.vista.txtContrasena.getPassword());
+                String repeContrasenya = String.valueOf(this.vista.txtRepeContrasena.getPassword());
+                String email = this.vista.txtEmail.getText();
+                int nivFrac =  Integer.parseInt(this.vista.txtNivelFrac.getText());
+                
+                if(this.modelo.validaDatosRegistro(usuario, email, nivFrac, contrasenya, repeContrasenya)){
+                this.modelo.NuevoUsuario(usuario, email,  nivFrac, contrasenya, repeContrasenya,
                                          this.vista.combServidor.getSelectedItem().toString(),
                                          idiomas);
+                
                 this.vista.Registro.setVisible(false);
                 this.vista.setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null, "El registro contiene uno o mas campos no válidos");
+                }
                 break;
             case Cancelar:
                 this.vista.Registro.setVisible(false);
@@ -101,7 +108,6 @@ public class ControladorLogin implements ActionListener{
                 }
                 break;
             case Registro:
-                this.vista.Registro.setAlwaysOnTop(true);
                 this.vista.Registro.setVisible(true);
                 this.vista.setVisible(false);
                 break;
