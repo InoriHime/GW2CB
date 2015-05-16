@@ -37,6 +37,7 @@ public class ControladorPrincipal{
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
             SwingUtilities.updateComponentTreeUI(vista);
             vista.setVisible(true);
+            this.vista.setLocationRelativeTo(null);
         } catch (UnsupportedLookAndFeelException ex) {}
           catch (ClassNotFoundException ex) {}
           catch (InstantiationException ex) {}

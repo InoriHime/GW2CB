@@ -48,6 +48,7 @@ public class Login extends javax.swing.JFrame {
         chkFrances = new javax.swing.JCheckBox();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        fondoRegistro = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         etiLoginCuenta = new javax.swing.JLabel();
         etiLoginContrasena = new javax.swing.JLabel();
@@ -55,38 +56,71 @@ public class Login extends javax.swing.JFrame {
         txtLoginContrasena = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        fondoLogin = new javax.swing.JLabel();
 
         Registro.setTitle("Registro");
         Registro.setMaximumSize(new java.awt.Dimension(370, 400));
         Registro.setMinimumSize(new java.awt.Dimension(370, 400));
         Registro.setPreferredSize(new java.awt.Dimension(370, 400));
         Registro.setResizable(false);
+        Registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        etiCuenta.setForeground(new java.awt.Color(209, 194, 170));
         etiCuenta.setText("Nombre cuenta (GW2)");
+        Registro.getContentPane().add(etiCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 27, -1, -1));
 
+        etiEmail.setForeground(new java.awt.Color(209, 194, 170));
         etiEmail.setText("Email");
+        Registro.getContentPane().add(etiEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 65, 107, -1));
 
+        etiContrasena.setForeground(new java.awt.Color(209, 194, 170));
         etiContrasena.setText("Contraseña");
+        Registro.getContentPane().add(etiContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 103, 107, -1));
 
+        etiRepeContrasena.setForeground(new java.awt.Color(209, 194, 170));
         etiRepeContrasena.setText("Repetir contraseña");
+        Registro.getContentPane().add(etiRepeContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 144, 107, -1));
 
+        etiServidor.setForeground(new java.awt.Color(209, 194, 170));
         etiServidor.setText("Servidor");
+        Registro.getContentPane().add(etiServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 217, 104, -1));
 
+        etiIdiomas.setForeground(new java.awt.Color(209, 194, 170));
         etiIdiomas.setText("Idiomas");
+        Registro.getContentPane().add(etiIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 252, 104, -1));
 
+        etiNivelFrac.setForeground(new java.awt.Color(209, 194, 170));
         etiNivelFrac.setText("Nivel de Fractales");
+        Registro.getContentPane().add(etiNivelFrac, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 179, -1, -1));
+        Registro.getContentPane().add(txtCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 24, 181, -1));
+        Registro.getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 62, 181, -1));
+        Registro.getContentPane().add(txtContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 100, 181, -1));
+        Registro.getContentPane().add(txtRepeContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 138, 181, -1));
+        Registro.getContentPane().add(txtNivelFrac, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 176, 181, -1));
 
         combServidor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combServidor.setOpaque(false);
+        Registro.getContentPane().add(combServidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 214, 178, -1));
 
-        panelIdiomas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelIdiomas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true));
+        panelIdiomas.setOpaque(false);
 
+        chkIngles.setForeground(new java.awt.Color(209, 194, 170));
         chkIngles.setText("Inglés");
+        chkIngles.setOpaque(false);
 
+        chkEspanol.setForeground(new java.awt.Color(209, 194, 170));
         chkEspanol.setText("Español");
+        chkEspanol.setOpaque(false);
 
+        chkAleman.setForeground(new java.awt.Color(209, 194, 170));
         chkAleman.setText("Aleman");
+        chkAleman.setOpaque(false);
 
+        chkFrances.setForeground(new java.awt.Color(209, 194, 170));
         chkFrances.setText("Francés");
+        chkFrances.setOpaque(false);
 
         javax.swing.GroupLayout panelIdiomasLayout = new javax.swing.GroupLayout(panelIdiomas);
         panelIdiomas.setLayout(panelIdiomasLayout);
@@ -117,153 +151,57 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        Registro.getContentPane().add(panelIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 252, -1, -1));
+
         btnAceptar.setText("Aceptar");
+        btnAceptar.setOpaque(false);
+        Registro.getContentPane().add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.setOpaque(false);
+        Registro.getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
-        javax.swing.GroupLayout RegistroLayout = new javax.swing.GroupLayout(Registro.getContentPane());
-        Registro.getContentPane().setLayout(RegistroLayout);
-        RegistroLayout.setHorizontalGroup(
-            RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistroLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegistroLayout.createSequentialGroup()
-                        .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnAceptar)
-                            .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(etiNivelFrac)
-                                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(etiRepeContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(etiContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(etiEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(etiCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistroLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnCancelar)
-                                .addGap(37, 37, 37))
-                            .addGroup(RegistroLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCuenta)
-                                    .addComponent(txtEmail)
-                                    .addComponent(txtRepeContrasena)
-                                    .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                                    .addComponent(txtNivelFrac))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(RegistroLayout.createSequentialGroup()
-                        .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(etiIdiomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(etiServidor, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RegistroLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(combServidor, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(RegistroLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(panelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(38, 38, 38))))
-        );
-        RegistroLayout.setVerticalGroup(
-            RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistroLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiCuenta)
-                    .addComponent(txtCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiContrasena)
-                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(etiRepeContrasena)
-                    .addComponent(txtRepeContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiNivelFrac)
-                    .addComponent(txtNivelFrac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiServidor)
-                    .addComponent(combServidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegistroLayout.createSequentialGroup()
-                        .addComponent(etiIdiomas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAceptar))
-                    .addGroup(RegistroLayout.createSequentialGroup()
-                        .addComponent(panelIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancelar)
-                        .addGap(0, 10, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+        fondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
+        Registro.getContentPane().add(fondoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 390));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setResizable(false);
 
-        etiLoginCuenta.setText("Usuario");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        etiLoginCuenta.setForeground(new java.awt.Color(209, 194, 170));
+        etiLoginCuenta.setText("Usuario");
+        jPanel1.add(etiLoginCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 56, -1));
+
+        etiLoginContrasena.setForeground(new java.awt.Color(209, 194, 170));
         etiLoginContrasena.setText("Contraseña");
+        jPanel1.add(etiLoginContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         txtLoginCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginCuentaActionPerformed(evt);
             }
         });
+        jPanel1.add(txtLoginCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 97, 145, -1));
+        jPanel1.add(txtLoginContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 137, 145, -1));
 
         btnLogin.setText("Login");
+        btnLogin.setOpaque(false);
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         btnRegistro.setText("Registro");
+        btnRegistro.setOpaque(false);
+        jPanel1.add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(etiLoginContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(etiLoginCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtLoginCuenta)
-                            .addComponent(txtLoginContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(btnLogin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                        .addComponent(btnRegistro)
-                        .addGap(20, 20, 20)))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiLoginCuenta)
-                    .addComponent(txtLoginCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiLoginContrasena)
-                    .addComponent(txtLoginContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogin)
-                    .addComponent(btnRegistro))
-                .addGap(38, 38, 38))
-        );
+        jLabel1.setFont(new java.awt.Font("GWTwoFont Version 1.1", 1, 60)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(209, 194, 170));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("GW2CB");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 260, 60));
+
+        fondoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
+        jPanel1.add(fondoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -338,6 +276,9 @@ public class Login extends javax.swing.JFrame {
     public javax.swing.JLabel etiNivelFrac;
     public javax.swing.JLabel etiRepeContrasena;
     public javax.swing.JLabel etiServidor;
+    private javax.swing.JLabel fondoLogin;
+    private javax.swing.JLabel fondoRegistro;
+    private javax.swing.JLabel jLabel1;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel panelIdiomas;
     public javax.swing.JPasswordField txtContrasena;

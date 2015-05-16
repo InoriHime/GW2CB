@@ -44,6 +44,7 @@ public class ControladorLogin implements ActionListener{
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
             SwingUtilities.updateComponentTreeUI(vista);
             SwingUtilities.updateComponentTreeUI(vista.Registro);
+            this.vista.setLocationRelativeTo(null);
             vista.setVisible(true);
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {}
          vista.combServidor.setModel(new DefaultComboBoxModel(servidores.toArray()));
@@ -108,6 +109,7 @@ public class ControladorLogin implements ActionListener{
                 break;
             case Registro:
                 this.vista.Registro.setVisible(true);
+                this.vista.Registro.setLocationRelativeTo(null);
                 this.vista.setVisible(false);
                 break;
         }
