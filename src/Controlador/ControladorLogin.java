@@ -100,7 +100,6 @@ public class ControladorLogin implements ActionListener{
                 String id = this.vista.txtLoginCuenta.getText();
                 String pass = String.valueOf(this.vista.txtLoginContrasena.getPassword());
                 if(this.modelo.comprobarDatosLogin(id, pass)==1){
-                    System.out.println("fs");
                     new ControladorPrincipal(new VentanaPrincipal()).iniciar();
                     this.vista.setVisible(false);
                 }else{
