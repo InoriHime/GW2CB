@@ -114,72 +114,72 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         case "Tabla":
             fila = this.vista.TablaPersonajes.getSelectedRow();
             personaje = String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0));
-            if(this.modelo.mostrarEquipados(personaje, 1)==1){
+            if(this.modelo.piezaEquipada(personaje, 1)==1){
                 this.vista.icoPies.setIcon(new ImageIcon("src/Vista/Imagenes/Tpies.png"));
             }else{
                 this.vista.icoPies.setIcon(new ImageIcon("src/Vista/Imagenes/botas.jpg"));
             }
 
-            if(this.modelo.mostrarEquipados(personaje, 2)==1){
+            if(this.modelo.piezaEquipada(personaje, 2)==1){
                 this.vista.icoPiernas.setIcon(new ImageIcon("src/Vista/Imagenes/Tpiernas.png"));
             }else{
                 this.vista.icoPiernas.setIcon(new ImageIcon("src/Vista/Imagenes/pantalon.jpg"));
             }
 
-            if(this.modelo.mostrarEquipados(personaje, 3)==1){
+            if(this.modelo.piezaEquipada(personaje, 3)==1){
                 this.vista.icoManos.setIcon(new ImageIcon("src/Vista/Imagenes/Tguantes.png"));
             }else{
                 this.vista.icoManos.setIcon(new ImageIcon("src/Vista/Imagenes/guantes.jpg"));
             }
 
-            if(this.modelo.mostrarEquipados(personaje, 4)==1){
+            if(this.modelo.piezaEquipada(personaje, 4)==1){
                 this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/Tpecho.png"));
             }else{
                 this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/pecho.jpg"));
             }
 
-            if(this.modelo.mostrarEquipados(personaje, 5)==1){
+            if(this.modelo.piezaEquipada(personaje, 5)==1){
                 this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/Thombros.png"));
             }else{
                 this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/hombreras.jpg"));
             }
 
-            if(this.modelo.mostrarEquipados(personaje, 6)==1){
+            if(this.modelo.piezaEquipada(personaje, 6)==1){
                 this.vista.icoCabeza.setIcon(new ImageIcon("src/Vista/Imagenes/Tcabeza.png"));
             }else{
                 this.vista.icoCabeza.setIcon(new ImageIcon("src/Vista/Imagenes/cabeza.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 7)==1){
+            if(this.modelo.piezaEquipada(personaje, 7)==1){
                 this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/Taccesorio1.png"));
             }else{
                 this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/accesorio1.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 8)==1){
+            if(this.modelo.piezaEquipada(personaje, 8)==1){
                 this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/Taccesorio2.png"));
             }else{
                 this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/accesorio2.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 9)==1){
+            if(this.modelo.piezaEquipada(personaje, 9)==1){
                 this.vista.icoAnillo1.setIcon(new ImageIcon("src/Vista/Imagenes/Tanillo1.png"));
             }else{
                 this.vista.icoAnillo1.setIcon(new ImageIcon("src/Vista/Imagenes/anillo1.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 10)==1){
+            if(this.modelo.piezaEquipada(personaje, 10)==1){
                 this.vista.icoAnillo2.setIcon(new ImageIcon("src/Vista/Imagenes/Tanillo2.png"));
             }else{
                 this.vista.icoAnillo2.setIcon(new ImageIcon("src/Vista/Imagenes/anillo2.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 11)==1){
+            if(this.modelo.piezaEquipada(personaje, 11)==1){
                 this.vista.icoEspaldar.setIcon(new ImageIcon("src/Vista/Imagenes/Tespaldar.png"));
             }else{
                 this.vista.icoEspaldar.setIcon(new ImageIcon("src/Vista/Imagenes/espaldar.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 12)==1){
+            if(this.modelo.piezaEquipada(personaje, 12)==1){
                 this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/Tamuleto.png"));
             }else{
                 this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/amuleto.jpg"));
             }
-            if(this.modelo.mostrarEquipados(personaje, 13)==1){
+            if(this.modelo.piezaEquipada(personaje, 13)==1){
                 this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/Tacuacabeza.png"));
             }else{
                 this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/acuacabeza.png"));

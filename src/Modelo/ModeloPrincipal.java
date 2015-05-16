@@ -173,7 +173,7 @@ public class ModeloPrincipal extends Database{
     }
     
     //Cambia los iconos de la derecha con los items equipados al pasarle por parámetro un nombre de personaje
-    public int mostrarEquipados(String personaje, int slot){
+    public int piezaEquipada(String personaje, int slot){
         Statement stmt=null;
         int tiene;
         try{
