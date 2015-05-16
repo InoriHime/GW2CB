@@ -99,7 +99,7 @@ public class ModeloLogin extends Database{
     }
     public int comprobarDatosLogin(String usu, String pass){
         Statement stmt=null;
-         String contr;
+         String contr="";
          String q="SELECT Contraseña FROM Cuentas WHERE NomCuenta='"+usu+"'";
          try {
                 stmt=db.getConexion().createStatement();
@@ -111,13 +111,12 @@ public class ModeloLogin extends Database{
              ResultSet res = stmt.executeQuery(q);
              res.next();
              contr=res.getString("Contraseña");
-             if(contr.equals(pass)){
+         }catch(SQLException e){
+            return 0;
+        }
+         if(contr.equals(pass)){
                  return 1;
              }
-             
-         }catch(SQLException e){
-            JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos");
-        }
          return 0;
     }
     

@@ -1935,15 +1935,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         fondoConectadoComo.setText("jLabel17");
         getContentPane().add(fondoConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 9, 220, 20));
 
-        etiNivelFractales.setText("Nivel de Fractales:");
-        getContentPane().add(etiNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, -1, 20));
+        etiNivelFractales.setText("Tu nivel de Fractales actual:");
+        getContentPane().add(etiNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, 20));
 
         jSpinner1.setToolTipText("Tu nivel actual de fractales");
         getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 40, -1));
 
         fondoNivelFractales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoNivelFractales.setText("jLabel17");
-        getContentPane().add(fondoNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 150, 20));
+        getContentPane().add(fondoNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 190, 20));
 
         etiPersonaje.setBackground(new java.awt.Color(255, 255, 255));
         etiPersonaje.setText("Personaje:");
