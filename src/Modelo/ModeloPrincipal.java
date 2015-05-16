@@ -131,7 +131,7 @@ public class ModeloPrincipal extends Database{
     
     public ArrayList<Personaje> getPersonajesCuenta(String cuenta){
        ArrayList<Personaje> personajes=new ArrayList<>();
-       Personaje p= new Personaje();
+       Personaje p;
         Statement stmt=null;
         try{
             stmt= db.getConexion().createStatement();
@@ -143,7 +143,7 @@ public class ModeloPrincipal extends Database{
         try {
             res = stmt.executeQuery("SELECT * FROM Personajes WHERE Cuenta ='"+cuenta+"'");
             while(res.next()){
-                
+            p= new Personaje();
             p.setNombre(res.getString("NomPj"));
             p.setCuenta(res.getString("Cuenta"));
             p.setRaza(res.getInt("Raza"));
