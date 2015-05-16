@@ -122,7 +122,10 @@ public class ModeloPrincipal extends Database{
         } catch (SQLException ex) {
             Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return null; 
+    }
+    
+    public String[] getPersonajesCuenta(String cuenta){
         return null;
-           
     }
 }
