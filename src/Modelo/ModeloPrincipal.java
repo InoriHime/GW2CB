@@ -82,7 +82,12 @@ public class ModeloPrincipal extends Database{
                 
                 ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][0]+"') as Agonia");
                 res3.next();
+                
                 data[i][4] = res3.getString("Agonia");
+                if(data[i][4]==null){
+                    data[i][4]="0";
+                }
+                
                 
                 
                 try{
