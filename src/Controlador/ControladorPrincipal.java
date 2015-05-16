@@ -3,7 +3,10 @@ package Controlador;
 /* Importamos el modelo y la interfaz*/
 import Modelo.Cuenta;
 import Modelo.ModeloPrincipal;
+import Modelo.Personaje;
 import Vista.VentanaPrincipal;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -20,6 +23,10 @@ public class ControladorPrincipal{
     Object[] datosUsuario = new Object[9];
     //Almacenamiento del nombre de usuario de sesion pasado como parametro en el contructor
     String usu;
+    //Array de personajes
+    ArrayList <Personaje> personajes = new ArrayList<>();
+    //Array de nombres de personajes para mostrar
+    ArrayList<String> nomPjs = new ArrayList<>();
     
     /** Se declaran en un ENUM las acciones que se realizan desde la
      * interfaz de usuario VISTA y posterior ejecución desde el controlador
@@ -52,6 +59,7 @@ public class ControladorPrincipal{
           catch (IllegalAccessException ex) {}
         // Mostramos datos en la tabla
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
+        this.vista.TablaPersonajes.setRowSelectionAllowed(true);
         this.vista.PanelTabla.getViewport().setBorder(null);
         this.vista.txtBusqueda.requestFocus(true);
         
@@ -62,6 +70,14 @@ public class ControladorPrincipal{
         //Mostramos los datos de usuario en la interfaz
         this.vista.usuNivelFractalActual.setValue(usuario.getNivelFrac());
         this.vista.mostrarUsuario.setText(usuario.getNombreCuenta());
+        //Rellenamos el array de personajes
+        personajes = this.modelo.getPersonajesCuenta(usuario.getNombreCuenta());
+        //Rellenamos el array de nombre de personajes para mostrar
+        for(Personaje p:personajes){
+            nomPjs.add(p.getNombre());
+        }
+        //Cargamos los nombres de personaje en el combo box de los personajes del usuario
+        this.vista.cbPersonaje.setModel(new DefaultComboBoxModel(nomPjs.toArray()));
       
     }
     

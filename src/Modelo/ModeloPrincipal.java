@@ -4,9 +4,11 @@ package Modelo;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import Modelo.Personaje;
 
 public class ModeloPrincipal extends Database{
     Database db=null;
@@ -45,13 +47,15 @@ public class ModeloPrincipal extends Database{
     Object[][] data = new String[registros][7];
       try{
           //realizamos la consulta sql y llenamos los datos en la matriz "Object[][] data"
+          
+          //Recogemos los datos a mostrar de personajes y el nombre de sus clases
          ResultSet res = stmt.executeQuery("SELECT NomPj,Cuenta,NomClase, Clase FROM Personajes, Clases WHERE ID_Clase=Clase");
          int i=0;
          while(res.next()){
                 data[i][0] = res.getString("NomPj");
                 data[i][1] = res.getString("Cuenta");
                 data[i][2] = res.getString("NomClase");
-                ResultSet res1 = stmt1.executeQuery("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas,Personajes WHERE NomCuenta='"+data[i][1]+"'");
+                ResultSet res1 = stmt1.executeQuery("SELECT NivFractales,IdiomaIngles,IdiomaEspañol,IdiomaFrances,IdiomaAleman FROM Cuentas WHERE NomCuenta='"+data[i][1]+"'");
                     res1.next();
                     data[i][3] = res1.getString("Nivfractales");
                 
@@ -70,7 +74,7 @@ public class ModeloPrincipal extends Database{
                     }
                 data[i][6] = cad;
                 
-                ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][1]+"') as Agonia");
+                ResultSet res3 = stmt3.executeQuery("SELECT getAgonia('"+data[i][0]+"') as Agonia");
                 res3.next();
                 data[i][4] = res3.getString("Agonia");
                 
@@ -125,7 +129,33 @@ public class ModeloPrincipal extends Database{
         return null; 
     }
     
-    public String[] getPersonajesCuenta(String cuenta){
+    public ArrayList<Personaje> getPersonajesCuenta(String cuenta){
+       ArrayList<Personaje> personajes=new ArrayList<>();
+       Personaje p= new Personaje();
+        Statement stmt=null;
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("SELECT * FROM Personajes WHERE Cuenta ='"+cuenta+"'");
+            while(res.next()){
+                
+            p.setNombre(res.getString("NomPj"));
+            p.setCuenta(res.getString("Cuenta"));
+            p.setRaza(res.getInt("Raza"));
+            p.setClase(res.getInt("Clase"));
+            
+            personajes.add(p);
+            }
+
+            return personajes;
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return null;
     }
 }
