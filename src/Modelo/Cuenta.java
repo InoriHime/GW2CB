@@ -68,6 +68,5 @@ public class Cuenta {
     public void setIdiomas(int[] idiomas) {
         this.idiomas = idiomas;
     }
-//    
     
 }
