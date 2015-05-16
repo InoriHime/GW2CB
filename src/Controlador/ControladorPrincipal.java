@@ -6,15 +6,20 @@ import Modelo.ModeloPrincipal;
 import Modelo.Personaje;
 import Vista.VentanaPrincipal;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 
-public class ControladorPrincipal{
+public class ControladorPrincipal implements ActionListener, MouseListener{
     /** instancia a nuestra interfaz de usuario*/
     VentanaPrincipal vista;
     /** instancia a nuestro modelo */
@@ -29,13 +34,15 @@ public class ControladorPrincipal{
     ArrayList <Personaje> personajes = new ArrayList<>();
     //Array de nombres de personajes para mostrar
     ArrayList<String> nomPjs = new ArrayList<>();
+
+    
     
     /** Se declaran en un ENUM las acciones que se realizan desde la
      * interfaz de usuario VISTA y posterior ejecución desde el controlador
      */
     
     public enum AccionMVC{
-        __MOSTRAR_DATOS;
+        __MOSTRAR_ICONOS_EQUIPO;
     }
      
      /** Constrcutor de clase
@@ -55,10 +62,7 @@ public class ControladorPrincipal{
             SwingUtilities.updateComponentTreeUI(vista);
             vista.setVisible(true);
             this.vista.setLocationRelativeTo(null);
-        } catch (UnsupportedLookAndFeelException ex) {}
-          catch (ClassNotFoundException ex) {}
-          catch (InstantiationException ex) {}
-          catch (IllegalAccessException ex) {}
+        } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {}
         // Mostramos datos en la tabla
         this.vista.TablaPersonajes.setModel(this.modelo.getTablaPersonaje());
         //Definimos la apariencia de la tabla
@@ -83,7 +87,116 @@ public class ControladorPrincipal{
         }
         //Cargamos los nombres de personaje en el combo box de los personajes del usuario
         this.vista.cbPersonaje.setModel(new DefaultComboBoxModel(nomPjs.toArray()));
+        
+        this.vista.TablaPersonajes.setName("Tabla");
+        this.vista.TablaPersonajes.addMouseListener(this);
       
     }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    
+    
+    
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    
+    
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    int fila;
+    String personaje;
+    switch(e.getComponent().getName()){
+        case "Tabla":
+            fila = this.vista.TablaPersonajes.getSelectedRow();
+            personaje = String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0));
+            if(this.modelo.mostrarEquipados(personaje, 1)==1){
+                this.vista.icoPies.setIcon(new ImageIcon("src/Vista/Imagenes/Tpies.png"));
+            }else{
+                this.vista.icoPies.setIcon(new ImageIcon("src/Vista/Imagenes/botas.jpg"));
+            }
+
+            if(this.modelo.mostrarEquipados(personaje, 2)==1){
+                this.vista.icoPiernas.setIcon(new ImageIcon("src/Vista/Imagenes/Tpiernas.png"));
+            }else{
+                this.vista.icoPiernas.setIcon(new ImageIcon("src/Vista/Imagenes/pantalon.jpg"));
+            }
+
+            if(this.modelo.mostrarEquipados(personaje, 3)==1){
+                this.vista.icoManos.setIcon(new ImageIcon("src/Vista/Imagenes/Tguantes.png"));
+            }else{
+                this.vista.icoManos.setIcon(new ImageIcon("src/Vista/Imagenes/guantes.jpg"));
+            }
+
+            if(this.modelo.mostrarEquipados(personaje, 4)==1){
+                this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/Tpecho.png"));
+            }else{
+                this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/pecho.jpg"));
+            }
+
+            if(this.modelo.mostrarEquipados(personaje, 5)==1){
+                this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/Thombros.png"));
+            }else{
+                this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/hombreras.jpg"));
+            }
+
+            if(this.modelo.mostrarEquipados(personaje, 6)==1){
+                this.vista.icoCabeza.setIcon(new ImageIcon("src/Vista/Imagenes/Tcabeza.png"));
+            }else{
+                this.vista.icoCabeza.setIcon(new ImageIcon("src/Vista/Imagenes/cabeza.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 7)==1){
+                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/Taccesorio1.png"));
+            }else{
+                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/accesorio1.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 8)==1){
+                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/Taccesorio2.png"));
+            }else{
+                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/accesorio2.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 9)==1){
+                this.vista.icoAnillo1.setIcon(new ImageIcon("src/Vista/Imagenes/Tanillo1.png"));
+            }else{
+                this.vista.icoAnillo1.setIcon(new ImageIcon("src/Vista/Imagenes/anillo1.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 10)==1){
+                this.vista.icoAnillo2.setIcon(new ImageIcon("src/Vista/Imagenes/Tanillo2.png"));
+            }else{
+                this.vista.icoAnillo2.setIcon(new ImageIcon("src/Vista/Imagenes/anillo2.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 11)==1){
+                this.vista.icoEspaldar.setIcon(new ImageIcon("src/Vista/Imagenes/Tespaldar.png"));
+            }else{
+                this.vista.icoEspaldar.setIcon(new ImageIcon("src/Vista/Imagenes/espaldar.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 12)==1){
+                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/Tamuleto.png"));
+            }else{
+                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/amuleto.jpg"));
+            }
+            if(this.modelo.mostrarEquipados(personaje, 13)==1){
+                this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/Tacuacabeza.png"));
+            }else{
+                this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/acuacabeza.png"));
+            }
+            
+            break;
+    }
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {}
+
+    @Override
+    public void mouseEntered(MouseEvent e) {}
+
+    @Override
+    public void mouseExited(MouseEvent e) {}
+    
     
 }

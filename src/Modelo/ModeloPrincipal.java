@@ -8,11 +8,10 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import Modelo.Personaje;
+import Vista.VentanaPrincipal;
 
 public class ModeloPrincipal extends Database{
     Database db=null;
-    
     /*Constructor de la clase*/
     public ModeloPrincipal(){
         db = new Database();
@@ -110,6 +109,8 @@ public class ModeloPrincipal extends Database{
       
         return tablemodel;
     }
+    
+    //Devuelve los datos principales de la cuenta de la que se pasa el nombre por parámetro
     public Object[] getDatosCuenta(String cuenta){
         Object[] datosCuenta=new Object[9];
         Statement stmt=null;
@@ -140,6 +141,7 @@ public class ModeloPrincipal extends Database{
         return null; 
     }
     
+    //Devuelve los datos de los personajes de la cuenta que se pasa por parametro
     public ArrayList<Personaje> getPersonajesCuenta(String cuenta){
        ArrayList<Personaje> personajes=new ArrayList<>();
        Personaje p;
@@ -168,5 +170,28 @@ public class ModeloPrincipal extends Database{
             Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+    
+    //Cambia los iconos de la derecha con los items equipados al pasarle por parámetro un nombre de personaje
+    public int mostrarEquipados(String personaje, int slot){
+        Statement stmt=null;
+        int tiene;
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("SELECT count(*) as Tiene FROM Pj_Armaduras WHERE NomPj ='"+personaje+"' AND SlotArmadura="+slot);
+            res.next();
+            tiene = res.getInt("Tiene");
+            return tiene;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            return 0;
+        }
     }
 }
