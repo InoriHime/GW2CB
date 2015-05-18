@@ -159,7 +159,7 @@ public class Login extends javax.swing.JFrame {
         btnCancelar.setOpaque(false);
         Registro.getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
-        fondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
+        fondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
         Registro.getContentPane().add(fondoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 390));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -198,7 +198,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("GW2CB");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 260, 80));
 
-        fondoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
+        fondoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
         jPanel1.add(fondoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
