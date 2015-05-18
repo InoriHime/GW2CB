@@ -15,9 +15,28 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
 
+     private static VentanaPrincipal INSTANCE = null;
+ 
+ 
+    // creador sincronizado para protegerse de posibles problemas  multi-hilo
+    // otra prueba para evitar instanciación múltiple 
+    private synchronized static void createInstance() {
+        if (INSTANCE == null) { 
+            INSTANCE = new VentanaPrincipal();
+            
+            
+            
+        }
+    }
+ 
+    public static VentanaPrincipal getInstance() {
+        if (INSTANCE == null) createInstance();
+        return INSTANCE;
+    }
     
-    public VentanaPrincipal() {
-        
+    
+    private VentanaPrincipal() {
+       
         initComponents();
         
         

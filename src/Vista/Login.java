@@ -60,9 +60,7 @@ public class Login extends javax.swing.JFrame {
         fondoLogin = new javax.swing.JLabel();
 
         Registro.setTitle("Registro");
-        Registro.setMaximumSize(new java.awt.Dimension(370, 400));
         Registro.setMinimumSize(new java.awt.Dimension(370, 400));
-        Registro.setPreferredSize(new java.awt.Dimension(370, 400));
         Registro.setResizable(false);
         Registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -198,7 +196,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(209, 194, 170));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("GW2CB");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 260, 60));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 260, 80));
 
         fondoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondo2.jpg"))); // NOI18N
         jPanel1.add(fondoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
