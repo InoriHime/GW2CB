@@ -256,8 +256,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoManos = new javax.swing.JLabel();
         icoPiernas = new javax.swing.JLabel();
         icoPies = new javax.swing.JLabel();
-        icoSetArma1 = new javax.swing.JLabel();
-        icoSetArma2 = new javax.swing.JLabel();
+        icoSet1 = new javax.swing.JLabel();
+        icoArmaPSet1 = new javax.swing.JLabel();
+        icoArmaSSet1 = new javax.swing.JLabel();
+        icoSet2 = new javax.swing.JLabel();
+        icoArmaPSet2 = new javax.swing.JLabel();
+        icoArmaSSet2 = new javax.swing.JLabel();
         icoAnillo2 = new javax.swing.JLabel();
         icoAnillo1 = new javax.swing.JLabel();
         icoAccesorio2 = new javax.swing.JLabel();
@@ -1712,15 +1716,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         PanelEquipo.setLayout(null);
 
-        icoCabeza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/cabeza.jpg"))); // NOI18N
+        icoCabeza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/cabeza.jpg"))); // NOI18N
         PanelEquipo.add(icoCabeza);
         icoCabeza.setBounds(10, 20, 60, 54);
 
-        icoHombros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/hombreras.jpg"))); // NOI18N
+        icoHombros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/hombreras.jpg"))); // NOI18N
         PanelEquipo.add(icoHombros);
         icoHombros.setBounds(10, 80, 60, 54);
 
-        icoPecho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/pecho.jpg"))); // NOI18N
+        icoPecho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/pecho.jpg"))); // NOI18N
         PanelEquipo.add(icoPecho);
         icoPecho.setBounds(10, 140, 60, 54);
 
@@ -1736,13 +1740,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEquipo.add(icoPies);
         icoPies.setBounds(10, 320, 60, 54);
 
-        icoSetArma1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma1.png"))); // NOI18N
-        PanelEquipo.add(icoSetArma1);
-        icoSetArma1.setBounds(90, 20, 60, 110);
+        icoSet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Armas/Set1.png"))); // NOI18N
+        icoSet1.setText("jLabel10");
+        PanelEquipo.add(icoSet1);
+        icoSet1.setBounds(107, 66, 30, 22);
 
-        icoSetArma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/arma2.png"))); // NOI18N
-        PanelEquipo.add(icoSetArma2);
-        icoSetArma2.setBounds(180, 20, 60, 110);
+        icoArmaPSet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/ArmaPSet1.png"))); // NOI18N
+        PanelEquipo.add(icoArmaPSet1);
+        icoArmaPSet1.setBounds(90, 20, 60, 60);
+
+        icoArmaSSet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/ArmaSSet1.png"))); // NOI18N
+        icoArmaSSet1.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoArmaSSet1.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoArmaSSet1.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoArmaSSet1);
+        icoArmaSSet1.setBounds(95, 78, 50, 50);
+
+        icoSet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Armas/Set2.png"))); // NOI18N
+        icoSet2.setText("jLabel10");
+        PanelEquipo.add(icoSet2);
+        icoSet2.setBounds(197, 66, 30, 20);
+
+        icoArmaPSet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/ArmaPSet2.png"))); // NOI18N
+        PanelEquipo.add(icoArmaPSet2);
+        icoArmaPSet2.setBounds(180, 20, 60, 60);
+
+        icoArmaSSet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/ArmaSSet2.png"))); // NOI18N
+        icoArmaSSet2.setMaximumSize(new java.awt.Dimension(40, 40));
+        icoArmaSSet2.setMinimumSize(new java.awt.Dimension(40, 40));
+        icoArmaSSet2.setPreferredSize(new java.awt.Dimension(40, 40));
+        PanelEquipo.add(icoArmaSSet2);
+        icoArmaSSet2.setBounds(185, 78, 50, 50);
 
         icoAnillo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/anillo2.jpg"))); // NOI18N
         icoAnillo2.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -2511,6 +2539,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel icoAnillo2;
     public javax.swing.JLabel icoArmaAcu1;
     public javax.swing.JLabel icoArmaAcu2;
+    public javax.swing.JLabel icoArmaPSet1;
+    public javax.swing.JLabel icoArmaPSet2;
+    public javax.swing.JLabel icoArmaSSet1;
+    public javax.swing.JLabel icoArmaSSet2;
     public javax.swing.JLabel icoCabeza;
     public javax.swing.JLabel icoCabezaAcu;
     private javax.swing.JLabel icoCambio1;
@@ -2521,8 +2553,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel icoPecho;
     public javax.swing.JLabel icoPiernas;
     public javax.swing.JLabel icoPies;
-    public javax.swing.JLabel icoSetArma1;
-    public javax.swing.JLabel icoSetArma2;
+    private javax.swing.JLabel icoSet1;
+    private javax.swing.JLabel icoSet2;
     public javax.swing.JMenuItem itemAbandonarClan;
     public javax.swing.JMenuItem itemAcerca;
     public javax.swing.JMenuItem itemCambiarBD;

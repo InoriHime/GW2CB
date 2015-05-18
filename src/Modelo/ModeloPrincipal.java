@@ -1,6 +1,5 @@
 package Modelo;
 
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import Vista.VentanaPrincipal;
 
 public class ModeloPrincipal extends Database{
     Database db=null;
