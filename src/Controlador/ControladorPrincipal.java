@@ -157,21 +157,45 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
        
     switch(e.getComponent().getName()){
         case "ArmaPSet1":
-
             for(Arma arma:armas){
-
                 if(arma.getSlot()==1){
-                    
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
                 }
             }
             break;
+        case "Arm"
     }
     
     
     }
 
     @Override
-    public void mouseExited(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {
+        switch(e.getComponent().getName()){
+            case "ArmaPSet1":
+                this.vista.muestraPieza.setText("-");
+                    this.vista.muestraRareza.setText("-");
+                    this.vista.muestraPoder.setText("-");
+                    this.vista.muestraPrecision.setText("-");
+                    this.vista.muestraDureza.setText("-");
+                    this.vista.muestraVitalidad.setText("-");
+                    this.vista.muestraFerocidad.setText("-");
+                    this.vista.muestraDanyoCondicion.setText("-");
+                    this.vista.muestraPoderCuracion.setText("-");
+                    this.vista.muestraRAgonia.setText("-");
+                break;
+        }
+    
+    }
     
     
     public ArrayList<Arma> equiparArmas(String personaje){

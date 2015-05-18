@@ -255,7 +255,7 @@ public class ModeloPrincipal extends Database{
         ResultSet res;
         try {
             res = stmt.executeQuery("Select SlotArmadura, Rareza, Poder, Dureza, Vitalidad, M.`Precision`, Ferocidad, DañoCondicion, PoderCuracion, InfSimple, InfAgonia\n" +
-                                    "from Pj_Armaduras as PJ, Modificadores as M WHERE M.ID_Mod = PJ.Modificador PJ.NomPj = '"+personaje+"'");
+                                    "from Pj_Armaduras as PJ, Modificadores as M WHERE M.ID_Mod = PJ.Modificador AND PJ.NomPj = '"+personaje+"'");
            while(res.next()){
                armaduras.add(new Armadura(res.getInt(1),res.getInt(2),res.getInt(3),res.getInt(4),res.getInt(5),res.getInt(6),res.getInt(7),res.getInt(8),res.getInt(9),res.getInt(10),res.getInt(11)));
            }
