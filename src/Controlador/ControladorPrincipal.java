@@ -2,6 +2,7 @@ package Controlador;
 
 /* Importamos el modelo y la interfaz*/
 import Modelo.Arma;
+import Modelo.Armadura;
 import Modelo.Cuenta;
 import Modelo.ModeloPrincipal;
 import Modelo.Personaje;
@@ -137,6 +138,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
             personaje = String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0));
             mostrarImagenes(personaje);
             personajeSeleccionado.setArmas(equiparArmas(personaje));
+            personajeSeleccionado.setArmaduras(equiparArmaduras(personaje));
             
             break;
     }
@@ -151,7 +153,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
     @Override
     public void mouseEntered(MouseEvent e) {
        ArrayList<Arma> armas  = personajeSeleccionado.getArmas();
-
+       ArrayList<Armadura> armaduras  = personajeSeleccionado.getArmaduras();
        
     switch(e.getComponent().getName()){
         case "ArmaPSet1":
@@ -159,7 +161,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
             for(Arma arma:armas){
 
                 if(arma.getSlot()==1){
-                    System.out.println(arma.toString());
+                    
                 }
             }
             break;
@@ -176,6 +178,10 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         
         return this.modelo.setArmas(personaje);
         
+    }
+    
+    public ArrayList<Armadura> equiparArmaduras(String personaje){
+        return this.modelo.setArmaduras(personaje);
     }
     
     
