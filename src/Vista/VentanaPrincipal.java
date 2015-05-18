@@ -1812,14 +1812,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoArmaAcu1.setMinimumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu1.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoArmaAcu1);
-        icoArmaAcu1.setBounds(100, 320, 50, 50);
+        icoArmaAcu1.setBounds(100, 320, 40, 50);
 
         icoArmaAcu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/acuaarma2.png"))); // NOI18N
         icoArmaAcu2.setMaximumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu2.setMinimumSize(new java.awt.Dimension(40, 40));
         icoArmaAcu2.setPreferredSize(new java.awt.Dimension(40, 40));
         PanelEquipo.add(icoArmaAcu2);
-        icoArmaAcu2.setBounds(180, 320, 50, 50);
+        icoArmaAcu2.setBounds(185, 320, 40, 50);
 
         icoCabezaAcu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/ArmadurasV/acuacabeza.png"))); // NOI18N
         icoCabezaAcu.setMaximumSize(new java.awt.Dimension(40, 40));

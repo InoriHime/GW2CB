@@ -159,14 +159,14 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                 this.vista.icoCabeza.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/cabeza.jpg"));
             }
             if(this.modelo.piezaEquipada(personaje, 7)==1){
-                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Taccesorio1.png"));
+                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Taccesorio1.png"));
             }else{
-                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/accesorio1.jpg"));
+                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/accesorio1.jpg"));
             }
             if(this.modelo.piezaEquipada(personaje, 8)==1){
-                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Taccesorio2.png"));
+                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Taccesorio2.png"));
             }else{
-                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/accesorio2.jpg"));
+                this.vista.icoAccesorio2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/accesorio2.jpg"));
             }
             if(this.modelo.piezaEquipada(personaje, 9)==1){
                 this.vista.icoAnillo1.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tanillo1.png"));
@@ -184,16 +184,50 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                 this.vista.icoEspaldar.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/espaldar.jpg"));
             }
             if(this.modelo.piezaEquipada(personaje, 12)==1){
-                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tamuleto.png"));
+                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tamuleto.png"));
             }else{
-                this.vista.icoAccesorio1.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/amuleto.jpg"));
+                this.vista.icoAmuleto.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/amuleto.jpg"));
             }
             if(this.modelo.piezaEquipada(personaje, 13)==1){
                 this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tacuacabeza.png"));
             }else{
                 this.vista.icoCabezaAcu.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/acuacabeza.png"));
             }
-            
+            if(this.modelo.armaEquipada(personaje, 1)!=0){
+                this.vista.icoArmaPSet1.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 1)+".png"));
+            }else{
+                this.vista.icoArmaPSet1.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/ArmaPSet1.png"));
+            }
+
+            if(this.modelo.armaEquipada(personaje, 2)!=0){
+                this.vista.icoArmaSSet1.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 2)+".png"));
+            }else{
+                this.vista.icoArmaSSet1.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/ArmaSSet1.png"));
+            }
+
+            if(this.modelo.armaEquipada(personaje, 4)!=0){
+                this.vista.icoArmaPSet2.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 4)+".png"));
+            }else{
+                this.vista.icoArmaPSet2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/ArmaPSet2.png"));
+            }
+
+            if(this.modelo.armaEquipada(personaje, 5)!=0){
+                this.vista.icoArmaSSet2.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 5)+".png"));
+            }else{
+                this.vista.icoArmaSSet2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/ArmaSSet2.png"));
+            }
+
+            if(this.modelo.armaEquipada(personaje, 3)!=0){
+                this.vista.icoArmaAcu1.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 3)+"1.png"));
+            }else{
+                this.vista.icoArmaAcu1.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/acuaarma1.png"));
+            }
+
+            if(this.modelo.armaEquipada(personaje, 6)!=0){
+                this.vista.icoArmaAcu2.setIcon(new ImageIcon("src/Vista/Imagenes/Armas/"+this.modelo.armaEquipada(personaje, 6)+"2.png"));
+            }else{
+                this.vista.icoArmaAcu2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/acuaarma2.png"));
+            }
             break;
     }
     }
