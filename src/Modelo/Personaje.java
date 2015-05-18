@@ -9,6 +9,7 @@ public class Personaje {
     int raza;
     int clase;
     ArrayList<Arma> armas;
+    ArrayList<Armadura> armaduras;
 
     public Personaje() {
 
@@ -16,6 +17,14 @@ public class Personaje {
 
     public ArrayList<Arma> getArmas() {
         return this.armas;
+    }
+    
+    public ArrayList<Armadura> getArmaduras(){
+        return this.armaduras;
+    }
+    
+    public void setArmaduras(ArrayList<Armadura> armaduras){
+        this.armaduras=armaduras;
     }
 
     public void setArmas(ArrayList<Arma> armas) {

@@ -193,7 +193,7 @@ public class ModeloPrincipal extends Database{
         }
     }
     
-    //Cambia los iconos de la derecha con los items equipados al pasarle por parámetro un nombre de personaje
+    //Devuelve el tipo de arma deñl pj y slop pasados por parametro
     public int armaEquipada(String personaje, int slot){
         Statement stmt=null;
         int tipo;
@@ -238,9 +238,36 @@ public class ModeloPrincipal extends Database{
         ex.printStackTrace();
         }
         
-        
-        
         return armas;
 
     }
+    
+    public ArrayList<Armadura> setArmaduras(String personaje){
+        ArrayList<Armadura> armaduras = new ArrayList<>();
+        Statement stmt=null;
+        
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("Select SlotArmadura, Rareza, Poder, Dureza, Vitalidad, M.`Precision`, Ferocidad, DañoCondicion, PoderCuracion, InfSimple, InfAgonia\n" +
+                                    "from Pj_Armaduras as PJ, Modificadores as M WHERE M.ID_Mod = PJ.Modificador PJ.NomPj = '"+personaje+"'");
+           while(res.next()){
+               armaduras.add(new Armadura(res.getInt(1),res.getInt(2),res.getInt(3),res.getInt(4),res.getInt(5),res.getInt(6),res.getInt(7),res.getInt(8),res.getInt(9),res.getInt(10),res.getInt(11)));
+           }
+
+        } catch (SQLException ex) {
+        ex.printStackTrace();
+        }
+        
+        
+        
+        return armaduras;
+
+    }
+    
 }
