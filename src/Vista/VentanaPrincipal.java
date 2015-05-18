@@ -113,6 +113,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btn_dialogoMP_Modificar1 = new javax.swing.JButton();
         btn_dialogoMP_Cancelar1 = new javax.swing.JButton();
         dialogoModificarPersonaje = new javax.swing.JDialog();
+        txt_dialogoRP_Nombre1 = new javax.swing.JTextField();
+        eti_dialogoRP_Nombre1 = new javax.swing.JLabel();
+        eti_dialogoMP_Clase2 = new javax.swing.JLabel();
+        cb_dialogoMP_Clase2 = new javax.swing.JComboBox();
+        cb_dialogoRP_Raza1 = new javax.swing.JComboBox();
+        eti_dialogoRP_Raza1 = new javax.swing.JLabel();
         panel_dialogoMP_Equipo2 = new javax.swing.JPanel();
         eti_dialogoMP_SlotArma4 = new javax.swing.JLabel();
         cb_dialogoMP_SlotArma2 = new javax.swing.JComboBox();
@@ -120,6 +126,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         cb_dialogoMP_SlotArmadura2 = new javax.swing.JComboBox();
         btn_dialogoMP_ModArmadura2 = new javax.swing.JButton();
         btn_dialogoMP_ModArma2 = new javax.swing.JButton();
+        btn_dialogoMP_Modificar2 = new javax.swing.JButton();
+        btn_dialogoMP_Cancelar2 = new javax.swing.JButton();
         fondo_dialogoMP = new javax.swing.JLabel();
         dialogoUnirseClan = new javax.swing.JDialog();
         eti_dialogoUC_Clan = new javax.swing.JLabel();
@@ -532,7 +540,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMP_Clase1.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMP_Clase1.setText("Clase:");
 
-        panel_dialogoMP_Equipo1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
+        panel_dialogoMP_Equipo1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Equipo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
+        panel_dialogoMP_Equipo1.setForeground(new java.awt.Color(209, 194, 170));
+        panel_dialogoMP_Equipo1.setOpaque(false);
 
         eti_dialogoMP_SlotArma3.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMP_SlotArma3.setText("Slot del Arma:");
@@ -680,18 +690,48 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoModificarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoModificarPersonaje.setTitle("Modificar Personaje");
         dialogoModificarPersonaje.setAlwaysOnTop(true);
-        dialogoModificarPersonaje.setMinimumSize(new java.awt.Dimension(365, 326));
+        dialogoModificarPersonaje.setMinimumSize(new java.awt.Dimension(375, 345));
         dialogoModificarPersonaje.setModal(true);
+        dialogoModificarPersonaje.setPreferredSize(new java.awt.Dimension(370, 320));
         dialogoModificarPersonaje.setResizable(false);
         dialogoModificarPersonaje.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel_dialogoMP_Equipo2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Equipo"));
+        txt_dialogoRP_Nombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoRP_Nombre1ActionPerformed(evt);
+            }
+        });
+        dialogoModificarPersonaje.getContentPane().add(txt_dialogoRP_Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 170, -1));
+
+        eti_dialogoRP_Nombre1.setForeground(new java.awt.Color(209, 194, 170));
+        eti_dialogoRP_Nombre1.setText("Nombre:");
+        dialogoModificarPersonaje.getContentPane().add(eti_dialogoRP_Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        eti_dialogoMP_Clase2.setForeground(new java.awt.Color(209, 194, 170));
+        eti_dialogoMP_Clase2.setText("Clase:");
+        dialogoModificarPersonaje.getContentPane().add(eti_dialogoMP_Clase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+
+        cb_dialogoMP_Clase2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoMP_Clase2.setOpaque(false);
+        dialogoModificarPersonaje.getContentPane().add(cb_dialogoMP_Clase2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 150, -1));
+
+        cb_dialogoRP_Raza1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoRP_Raza1.setOpaque(false);
+        dialogoModificarPersonaje.getContentPane().add(cb_dialogoRP_Raza1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, -1));
+
+        eti_dialogoRP_Raza1.setForeground(new java.awt.Color(209, 194, 170));
+        eti_dialogoRP_Raza1.setText("Raza:");
+        dialogoModificarPersonaje.getContentPane().add(eti_dialogoRP_Raza1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        panel_dialogoMP_Equipo2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Equipo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
+        panel_dialogoMP_Equipo2.setForeground(new java.awt.Color(209, 194, 170));
         panel_dialogoMP_Equipo2.setOpaque(false);
 
         eti_dialogoMP_SlotArma4.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMP_SlotArma4.setText("Slot del Arma:");
 
         cb_dialogoMP_SlotArma2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoMP_SlotArma2.setOpaque(false);
         cb_dialogoMP_SlotArma2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_dialogoMP_SlotArma2ActionPerformed(evt);
@@ -702,6 +742,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMP_SlotArmadura2.setText("Slot de la Armadura:");
 
         cb_dialogoMP_SlotArmadura2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoMP_SlotArmadura2.setOpaque(false);
         cb_dialogoMP_SlotArmadura2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_dialogoMP_SlotArmadura2ActionPerformed(evt);
@@ -760,22 +801,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         panel_dialogoMP_Equipo2Layout.setVerticalGroup(
             panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_dialogoMP_Equipo2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cb_dialogoMP_SlotArma2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(eti_dialogoMP_SlotArma4))
                     .addComponent(btn_dialogoMP_ModArma2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(24, 24, 24)
+                .addGroup(panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel_dialogoMP_Equipo2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cb_dialogoMP_SlotArmadura2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(eti_dialogoMP_SlotArmadura2))
                     .addComponent(btn_dialogoMP_ModArmadura2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        dialogoModificarPersonaje.getContentPane().add(panel_dialogoMP_Equipo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+        dialogoModificarPersonaje.getContentPane().add(panel_dialogoMP_Equipo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 110));
+
+        btn_dialogoMP_Modificar2.setText("Modificar");
+        btn_dialogoMP_Modificar2.setOpaque(false);
+        dialogoModificarPersonaje.getContentPane().add(btn_dialogoMP_Modificar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        btn_dialogoMP_Cancelar2.setText("Cancelar");
+        btn_dialogoMP_Cancelar2.setOpaque(false);
+        dialogoModificarPersonaje.getContentPane().add(btn_dialogoMP_Cancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
 
         fondo_dialogoMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
         dialogoModificarPersonaje.getContentPane().add(fondo_dialogoMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 320));
@@ -2297,6 +2345,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_dialogoMP_ModArma2ActionPerformed
 
+    private void txt_dialogoRP_Nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoRP_Nombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoRP_Nombre1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2358,11 +2410,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoMC_Cancelar;
     private javax.swing.JButton btn_dialogoMC_Modificar;
     private javax.swing.JButton btn_dialogoMP_Cancelar1;
+    private javax.swing.JButton btn_dialogoMP_Cancelar2;
     private javax.swing.JButton btn_dialogoMP_ModArma1;
     public javax.swing.JButton btn_dialogoMP_ModArma2;
     private javax.swing.JButton btn_dialogoMP_ModArmadura1;
     public javax.swing.JButton btn_dialogoMP_ModArmadura2;
     private javax.swing.JButton btn_dialogoMP_Modificar1;
+    private javax.swing.JButton btn_dialogoMP_Modificar2;
     private javax.swing.JButton btn_dialogoMU_Cancelar;
     private javax.swing.JButton btn_dialogoMU_Modificar;
     private javax.swing.JButton btn_dialogoUC_Cancelar;
@@ -2371,6 +2425,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox cb_dialogoAC_Clan;
     private javax.swing.JComboBox cb_dialogoEC_Clan;
     private javax.swing.JComboBox cb_dialogoMP_Clase1;
+    private javax.swing.JComboBox cb_dialogoMP_Clase2;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArma1;
     private javax.swing.JComboBox cb_dialogoMP_ModificadorArma2;
     private javax.swing.JComboBox cb_dialogoMP_RarezaArma1;
@@ -2382,6 +2437,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox cb_dialogoMP_TipoArma1;
     private javax.swing.JComboBox cb_dialogoMU_Servidor;
     private javax.swing.JComboBox cb_dialogoRP_Raza;
+    private javax.swing.JComboBox cb_dialogoRP_Raza1;
     private javax.swing.JComboBox cb_dialogoUC_Clan;
     public javax.swing.JCheckBox chkAleman;
     public javax.swing.JCheckBox chkBuscarMiembrosMiClan;
@@ -2463,6 +2519,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoMC_NombreClan;
     private javax.swing.JLabel eti_dialogoMC_Tag;
     private javax.swing.JLabel eti_dialogoMP_Clase1;
+    private javax.swing.JLabel eti_dialogoMP_Clase2;
     private javax.swing.JLabel eti_dialogoMP_ModificadorArma1;
     private javax.swing.JLabel eti_dialogoMP_ModificadorArma2;
     private javax.swing.JLabel eti_dialogoMP_RarezaArma1;
@@ -2482,7 +2539,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoMU_RepetirContrasenya;
     private javax.swing.JLabel eti_dialogoMU_Servidor;
     private javax.swing.JLabel eti_dialogoRP_Nombre;
+    private javax.swing.JLabel eti_dialogoRP_Nombre1;
     private javax.swing.JLabel eti_dialogoRP_Raza;
+    private javax.swing.JLabel eti_dialogoRP_Raza1;
     private javax.swing.JLabel eti_dialogoUC_Clan;
     public javax.swing.JLabel fondoBusqueda;
     public javax.swing.JLabel fondoConectadoComo;
@@ -2598,6 +2657,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPasswordField txt_dialogoMU_NuevaContrasenya;
     private javax.swing.JPasswordField txt_dialogoMU_RepetirContrasenya;
     private javax.swing.JTextField txt_dialogoRP_Nombre;
+    private javax.swing.JTextField txt_dialogoRP_Nombre1;
     public javax.swing.JSpinner usuNivelFractalActual;
     // End of variables declaration//GEN-END:variables
 }
