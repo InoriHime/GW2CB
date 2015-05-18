@@ -499,6 +499,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoRegistrarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoRegistrarPersonaje.setTitle("Registrar Personaje");
         dialogoRegistrarPersonaje.setAlwaysOnTop(true);
+        dialogoRegistrarPersonaje.setModalityType(java.awt.Dialog.ModalityType.MODELESS);
         dialogoRegistrarPersonaje.setResizable(false);
 
         eti_dialogoRP_Nombre.setText("Nombre:");
@@ -748,6 +749,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoModificarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoModificarPersonaje.setTitle("Modificar Personaje");
         dialogoModificarPersonaje.setAlwaysOnTop(true);
+        dialogoModificarPersonaje.setMaximumSize(new java.awt.Dimension(570, 473));
+        dialogoModificarPersonaje.setMinimumSize(new java.awt.Dimension(570, 473));
+        dialogoModificarPersonaje.setModal(true);
         dialogoModificarPersonaje.setResizable(false);
 
         eti_dialogoMP_Nombre.setText("Nombre:");
@@ -2393,8 +2397,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDialog dialogoCrearClan;
     private javax.swing.JDialog dialogoEliminarClan;
     private javax.swing.JDialog dialogoModificarClan;
-    private javax.swing.JDialog dialogoModificarPersonaje;
-    private javax.swing.JDialog dialogoModificarUsuario;
+    public javax.swing.JDialog dialogoModificarPersonaje;
+    public javax.swing.JDialog dialogoModificarUsuario;
     private javax.swing.JDialog dialogoRegistrarPersonaje;
     private javax.swing.JDialog dialogoUnirseClan;
     public javax.swing.JLabel etiAgonia;

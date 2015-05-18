@@ -42,7 +42,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
      */
     
     public enum AccionMVC{
-        __MOSTRAR_ICONOS_EQUIPO;
+        __MOSTRAR_ICONOS_EQUIPO,
+        __EDITAR_PERSONAJE;
     }
      
      /** Constrcutor de clase
@@ -90,13 +91,21 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         
         this.vista.TablaPersonajes.setName("Tabla");
         this.vista.TablaPersonajes.addMouseListener(this);
-      
+        this.vista.btnModPj.setActionCommand("__EDITAR_PERSONAJE");
+        this.vista.btnModPj.addActionListener(this);
+  
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-    
-    
+        
+        switch(AccionMVC.valueOf(e.getActionCommand())) {
+            case __EDITAR_PERSONAJE:
+                String npj;
+                npj = String.valueOf(this.vista.cbPersonaje.getSelectedItem());
+                new ControladorEditarPersonaje(npj, this.vista.dialogoModificarPersonaje).iniciar();
+            break;
+        }
     
     }
 
