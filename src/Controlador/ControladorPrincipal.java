@@ -172,7 +172,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                 }
             }
             break;
-        case "Arm"
+
     }
     
     
