@@ -192,4 +192,27 @@ public class ModeloPrincipal extends Database{
             return 0;
         }
     }
+    
+    //Cambia los iconos de la derecha con los items equipados al pasarle por parámetro un nombre de personaje
+    public int armaEquipada(String personaje, int slot){
+        Statement stmt=null;
+        int tiene;
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("SELECT count(*) as Tiene FROM Pj_Armas WHERE NomPj ='"+personaje+"' AND SlotArma="+slot);
+            res.next();
+            tiene = res.getInt("Tiene");
+            return tiene;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            return 0;
+        }
+    }
 }

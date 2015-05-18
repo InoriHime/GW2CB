@@ -2034,7 +2034,7 @@
     <Component class="javax.swing.JLabel" name="tituloBusqueda">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/busqueda.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Iconos/busqueda.png"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -2049,7 +2049,7 @@
     <Component class="javax.swing.JLabel" name="tituloPersonaje">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/personaje.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Iconos/personaje.png"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -2064,7 +2064,7 @@
     <Component class="javax.swing.JLabel" name="tituloEquipo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/equipo.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Iconos/equipo.png"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -2837,7 +2837,7 @@
         <Component class="javax.swing.JLabel" name="fondoInformacion">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/fondo1.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo1.jpg"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -2920,7 +2920,7 @@
         <Component class="javax.swing.JLabel" name="icoManos">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/guantes.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/guantes.jpg"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -2935,7 +2935,7 @@
         <Component class="javax.swing.JLabel" name="icoPiernas">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/pantalon.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/pantalon.jpg"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -2950,7 +2950,7 @@
         <Component class="javax.swing.JLabel" name="icoPies">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/botas.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/botas.jpg"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -3069,7 +3069,7 @@
         <Component class="javax.swing.JLabel" name="icoAnillo2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/anillo2.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/anillo2.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3093,7 +3093,7 @@
         <Component class="javax.swing.JLabel" name="icoAnillo1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/anillo1.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/anillo1.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3114,10 +3114,10 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="icoAccesorio2">
+        <Component class="javax.swing.JLabel" name="icoAmuleto">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/accesorio2.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/amuleto.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3138,10 +3138,10 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="icoAccesorio1">
+        <Component class="javax.swing.JLabel" name="icoAccesorio2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/accesorio1.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/accesorio2.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3162,10 +3162,10 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="icoAmuleto">
+        <Component class="javax.swing.JLabel" name="icoAccesorio1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/amuleto.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/accesorio1.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3189,7 +3189,7 @@
         <Component class="javax.swing.JLabel" name="icoArmaAcu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/acuaarma1.png"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/acuaarma1.png"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3213,7 +3213,7 @@
         <Component class="javax.swing.JLabel" name="icoArmaAcu2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/acuaarma2.png"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/acuaarma2.png"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3237,7 +3237,7 @@
         <Component class="javax.swing.JLabel" name="icoCabezaAcu">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/acuacabeza.png"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/acuacabeza.png"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3261,7 +3261,7 @@
         <Component class="javax.swing.JLabel" name="icoEspaldar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/espaldar.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/ArmadurasV/espaldar.jpg"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[40, 40]"/>
@@ -3285,7 +3285,7 @@
         <Component class="javax.swing.JLabel" name="icoCambio2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/cambio.png"/>
+              <Image iconType="3" name="/Vista/Imagenes/Armas/cambio.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -3297,7 +3297,7 @@
         <Component class="javax.swing.JLabel" name="icoCambio1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/cambio.png"/>
+              <Image iconType="3" name="/Vista/Imagenes/Armas/cambio.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -3670,7 +3670,7 @@
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/fondo2.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4118,7 +4118,7 @@
         <Component class="javax.swing.JLabel" name="fondoBusqueda">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/fondo2.jpg"/>
+              <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -4234,7 +4234,7 @@
     <Component class="javax.swing.JLabel" name="fondoConectadoComo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/fondolabel.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Fondo/fondolabel.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
       </Properties>
@@ -4273,7 +4273,7 @@
     <Component class="javax.swing.JLabel" name="fondoNivelFractales">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/fondolabel.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Fondo/fondolabel.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
       </Properties>
@@ -4305,7 +4305,7 @@
     <Component class="javax.swing.JLabel" name="fondoPersonaje">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/fondolabel.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Fondo/fondolabel.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel16"/>
       </Properties>
@@ -4321,7 +4321,7 @@
     <Component class="javax.swing.JLabel" name="fondoPrincipal">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/fondogeneral.jpg"/>
+          <Image iconType="3" name="/Vista/Imagenes/Fondo/fondogeneral.jpg"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[1280, 640]"/>
