@@ -2156,7 +2156,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         cbPersonaje.setOpaque(false);
         getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(892, 10, 140, 22));
 
-        btnCrearPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/add.png"))); // NOI18N
+        btnCrearPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Iconos/add.png"))); // NOI18N
         btnCrearPj.setToolTipText("Crear nuevo personaje");
         btnCrearPj.setBorder(null);
         btnCrearPj.setBorderPainted(false);
@@ -2168,7 +2168,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(btnCrearPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1062, 8, 27, 26));
 
-        btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
+        btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Iconos/edit1.png"))); // NOI18N
         btnModPj.setToolTipText("Editar equipo del personaje");
         btnModPj.setBorder(null);
         btnModPj.setBorderPainted(false);

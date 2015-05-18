@@ -4186,7 +4186,7 @@
     <Component class="javax.swing.JButton" name="btnCrearPj">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/add.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Iconos/add.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Crear nuevo personaje"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -4210,7 +4210,7 @@
     <Component class="javax.swing.JButton" name="btnModPj">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/Imagenes/edit1.png"/>
+          <Image iconType="3" name="/Vista/Imagenes/Iconos/edit1.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Editar equipo del personaje"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
