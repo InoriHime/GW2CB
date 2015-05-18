@@ -499,7 +499,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoRegistrarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoRegistrarPersonaje.setTitle("Registrar Personaje");
         dialogoRegistrarPersonaje.setAlwaysOnTop(true);
-        dialogoRegistrarPersonaje.setModalityType(java.awt.Dialog.ModalityType.MODELESS);
         dialogoRegistrarPersonaje.setResizable(false);
 
         eti_dialogoRP_Nombre.setText("Nombre:");
@@ -749,7 +748,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoModificarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoModificarPersonaje.setTitle("Modificar Personaje");
         dialogoModificarPersonaje.setAlwaysOnTop(true);
-        dialogoModificarPersonaje.setMaximumSize(new java.awt.Dimension(570, 473));
         dialogoModificarPersonaje.setMinimumSize(new java.awt.Dimension(570, 473));
         dialogoModificarPersonaje.setModal(true);
         dialogoModificarPersonaje.setResizable(false);
@@ -2100,16 +2098,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(PanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 450));
 
         etiConectadoComo.setText("Conectado como:");
-        getContentPane().add(etiConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 9, -1, 20));
+        getContentPane().add(etiConectadoComo, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 9, -1, 20));
 
         mostrarUsuario.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         mostrarUsuario.setText("-");
-        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 9, 120, 20));
+        getContentPane().add(mostrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 9, 140, 20));
 
         cbPersonaje.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbPersonaje.setToolTipText("Seleccionar personaje");
         cbPersonaje.setOpaque(false);
-        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(892, 10, 130, 22));
+        getContentPane().add(cbPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(892, 10, 140, 22));
 
         btnCrearPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/add.png"))); // NOI18N
         btnCrearPj.setToolTipText("Crear nuevo personaje");
@@ -2121,7 +2119,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 btnCrearPjActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCrearPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 8, 27, 26));
+        getContentPane().add(btnCrearPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1062, 8, 27, 26));
 
         btnModPj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/edit1.png"))); // NOI18N
         btnModPj.setToolTipText("Editar equipo del personaje");
@@ -2133,7 +2131,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 btnModPjActionPerformed(evt);
             }
         });
-        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1022, 8, 27, 26));
+        getContentPane().add(btnModPj, new org.netbeans.lib.awtextra.AbsoluteConstraints(1034, 8, 27, 26));
 
         fondoConectadoComo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoConectadoComo.setText("jLabel17");
@@ -2147,11 +2145,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         fondoNivelFractales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoNivelFractales.setText("jLabel17");
-        getContentPane().add(fondoNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 190, 20));
+        getContentPane().add(fondoNivelFractales, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 10, 185, 20));
 
         etiPersonaje.setBackground(new java.awt.Color(255, 255, 255));
         etiPersonaje.setText("Personaje:");
-        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 70, 20));
+        getContentPane().add(etiPersonaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(835, 10, 70, 20));
 
         fondoPersonaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/fondolabel.png"))); // NOI18N
         fondoPersonaje.setText("jLabel16");
