@@ -67,13 +67,16 @@ public class ModeloLogin extends Database{
          try {
              ResultSet res = stmt.executeQuery(q);
              while(res.next()){
+                 
                  servidores.add(res.getString("NomServidor"));
              }
+            
              return servidores;
          }catch(SQLException e){
             System.err.println(e.getMessage() );
+            return null;
         }
-         return null;
+         
     }
     
     public int getIdServidor(String Servidor){
