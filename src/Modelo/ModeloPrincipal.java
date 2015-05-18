@@ -214,4 +214,33 @@ public class ModeloPrincipal extends Database{
             return 0;
         }
     }
+    
+    public ArrayList<Arma> setArmas(String personaje){
+        ArrayList<Arma> armas = new ArrayList<Arma>();
+        Statement stmt=null;
+        
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("Select SlotArma,TipoArma, Rareza, Poder, Dureza, Vitalidad, M.`Precision`, Ferocidad, DañoCondicion, PoderCuracion, InfSimple1, InfSimple2 \n" +
+                                    "from Pj_Armas as PJ, Modificadores as M \n" +
+                                    "WHERE M.ID_Mod = PJ.Modificador AND PJ.NomPj = '"+personaje+"'");
+           while(res.next()){
+               armas.add(new Arma(res.getInt(1),res.getInt(2),res.getInt(3),res.getInt(4),res.getInt(5),res.getInt(6),res.getInt(7),res.getInt(8),res.getInt(9),res.getInt(10),res.getInt(11),res.getInt(12)));
+           }
+
+        } catch (SQLException ex) {
+        ex.printStackTrace();
+        }
+        
+        
+        
+        return armas;
+
+    }
 }

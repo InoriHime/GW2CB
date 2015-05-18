@@ -1,12 +1,26 @@
 package Modelo;
 
+import java.util.ArrayList;
+
 public class Personaje {
+
     String nombre;
     String cuenta;
     int raza;
     int clase;
+    ArrayList<Arma> armas;
 
-    public Personaje() {}
+    public Personaje() {
+
+    }
+
+    public ArrayList<Arma> getArmas() {
+        return this.armas;
+    }
+
+    public void setArmas(ArrayList<Arma> armas) {
+        this.armas = armas;
+    }
 
     public String getNombre() {
         return nombre;
@@ -39,6 +53,5 @@ public class Personaje {
     public void setClase(int clase) {
         this.clase = clase;
     }
-    
-    
+
 }

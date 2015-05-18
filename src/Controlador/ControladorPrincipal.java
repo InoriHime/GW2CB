@@ -1,6 +1,7 @@
 package Controlador;
 
 /* Importamos el modelo y la interfaz*/
+import Modelo.Arma;
 import Modelo.Cuenta;
 import Modelo.ModeloPrincipal;
 import Modelo.Personaje;
@@ -35,6 +36,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
     //Array de nombres de personajes para mostrar
     ArrayList<String> nomPjs = new ArrayList<>();
 
+    Personaje personajeSeleccionado = new Personaje();
     
     
     /** Se declaran en un ENUM las acciones que se realizan desde la
@@ -96,6 +98,13 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);
+        
+        
+        
+        //armas
+        this.vista.icoArmaPSet1.setName("ArmaPSet1");
+        this.vista.icoArmaPSet1.addMouseListener(this);
+
   
     }
     
@@ -126,6 +135,51 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         case "Tabla":
             fila = this.vista.TablaPersonajes.getSelectedRow();
             personaje = String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0));
+            mostrarImagenes(personaje);
+            personajeSeleccionado.setArmas(equiparArmas(personaje));
+            
+            break;
+    }
+    }
+
+   
+    
+    
+    @Override
+    public void mouseReleased(MouseEvent e) {}
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+       ArrayList<Arma> armas  = personajeSeleccionado.getArmas();
+
+       
+    switch(e.getComponent().getName()){
+        case "ArmaPSet1":
+
+            for(Arma arma:armas){
+
+                if(arma.getSlot()==1){
+                    System.out.println(arma.toString());
+                }
+            }
+            break;
+    }
+    
+    
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {}
+    
+    
+    public ArrayList<Arma> equiparArmas(String personaje){
+        
+        return this.modelo.setArmas(personaje);
+        
+    }
+    
+    
+     public void mostrarImagenes(String personaje){
             if(this.modelo.piezaEquipada(personaje, 1)==1){
                 this.vista.icoPies.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tpies.png"));
             }else{
@@ -231,18 +285,5 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
             }else{
                 this.vista.icoArmaAcu2.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/acuaarma2.png"));
             }
-            break;
     }
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {}
-
-    @Override
-    public void mouseEntered(MouseEvent e) {}
-
-    @Override
-    public void mouseExited(MouseEvent e) {}
-    
-    
 }
