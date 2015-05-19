@@ -2132,10 +2132,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoCS_Cancelar;
     private javax.swing.JButton btn_dialogoEC_Cancelar;
     private javax.swing.JButton btn_dialogoEC_Eliminar;
-    private javax.swing.JButton btn_dialogoMP_Cancelar;
+    public javax.swing.JButton btn_dialogoMP_Cancelar;
     public javax.swing.JButton btn_dialogoMP_ModArma;
     public javax.swing.JButton btn_dialogoMP_ModArmadura;
-    private javax.swing.JButton btn_dialogoMP_Modificar;
+    public javax.swing.JButton btn_dialogoMP_Modificar;
     private javax.swing.JButton btn_dialogoMU_Cancelar;
     private javax.swing.JButton btn_dialogoMU_Modificar;
     private javax.swing.JButton btn_dialogoRP_Cancelar;
@@ -2152,10 +2152,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox cb_dialogoCArmadura_ModificadorArmadura;
     private javax.swing.JComboBox cb_dialogoCArmadura_RarezaArmadura;
     private javax.swing.JComboBox cb_dialogoEC_Clan;
-    private javax.swing.JComboBox cb_dialogoMP_Clase;
-    private javax.swing.JComboBox cb_dialogoMP_Raza;
-    private javax.swing.JComboBox cb_dialogoMP_SlotArma;
-    private javax.swing.JComboBox cb_dialogoMP_SlotArmadura;
+    public javax.swing.JComboBox cb_dialogoMP_Clase;
+    public javax.swing.JComboBox cb_dialogoMP_Raza;
+    public javax.swing.JComboBox cb_dialogoMP_SlotArma;
+    public javax.swing.JComboBox cb_dialogoMP_SlotArmadura;
     private javax.swing.JComboBox cb_dialogoMU_Servidor;
     private javax.swing.JComboBox cb_dialogoRP_Clase;
     private javax.swing.JComboBox cb_dialogoRP_Raza;
@@ -2353,7 +2353,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel muestraRareza;
     public javax.swing.JLabel muestraStatBase;
     public javax.swing.JLabel muestraVitalidad;
-    private javax.swing.JPanel panel_dialogoMP_Equipo;
+    public javax.swing.JPanel panel_dialogoMP_Equipo;
     private javax.swing.JPanel panel_dialogoRP_Equipo;
     public javax.swing.JRadioButton radClan;
     public javax.swing.JRadioButton radCuenta;
@@ -2378,7 +2378,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dialogoCS_NombreBD;
     private javax.swing.JTextField txt_dialogoCS_Puerto;
     private javax.swing.JTextField txt_dialogoCS_Usuario;
-    private javax.swing.JTextField txt_dialogoMP_Nombre;
+    public javax.swing.JTextField txt_dialogoMP_Nombre;
     private javax.swing.JPasswordField txt_dialogoMU_ContrasenyaAntigua;
     private javax.swing.JTextField txt_dialogoMU_Email;
     private javax.swing.JPasswordField txt_dialogoMU_NuevaContrasenya;

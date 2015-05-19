@@ -9,12 +9,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class ControladorEditarPersonaje {
     
-    JDialog vista;
+    VentanaPrincipal vista;
     ModeloEditarPersonaje modelo;
     Personaje personaje;
     String[] razas, clases, slotArma, slotArmadura;
     
-    ControladorEditarPersonaje(Personaje p, JDialog v) {
+    ControladorEditarPersonaje(Personaje p, VentanaPrincipal v) {
         
         this.vista = v;
         this.personaje = p;
@@ -29,6 +29,8 @@ public class ControladorEditarPersonaje {
             this.vista.setLocationRelativeTo(null);
             this.vista.setVisible(true);
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {}
+        
+        
         
     }
 }
