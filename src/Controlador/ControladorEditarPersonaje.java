@@ -9,8 +9,9 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class ControladorEditarPersonaje {
     
     JDialog vista;
-    String npj;
     ModeloEditarPersonaje modelo;
+    String npj;
+    String[] razas, clases, slotArma, slotArmadura;
     
     ControladorEditarPersonaje(String p, JDialog v) {
         
