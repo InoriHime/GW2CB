@@ -169,4 +169,80 @@ public class ModeloEditarPersonaje {
         
     }
     
+    public ArrayList<String> getRarezas() {
+    
+        ArrayList<String> rarezas = new ArrayList<>();
+        Statement stmt = null;
+        ResultSet res;
+        
+        try {
+            
+            stmt= db.getConexion().createStatement();
+            
+        } catch (SQLException e) {
+            
+            System.err.println(e.getMessage());
+            
+        }
+        
+        try {
+            
+            res = stmt.executeQuery("SELECT NomRareza FROM Rarezas");
+            
+            while (res.next()) {
+                
+                rarezas.add(res.getString("NomSArmadura"));
+                
+            }
+            
+            return rarezas;
+            
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+            
+        }
+  
+        return null;
+        
+    }
+    
+    public ArrayList<String> getModificador() {
+    
+        ArrayList<String> modificadores = new ArrayList<>();
+        Statement stmt = null;
+        ResultSet res;
+        
+        try {
+            
+            stmt= db.getConexion().createStatement();
+            
+        } catch (SQLException e) {
+            
+            System.err.println(e.getMessage());
+            
+        }
+        
+        try {
+            
+            res = stmt.executeQuery("SELECT NomMod FROM Modificadores");
+            
+            while (res.next()) {
+                
+                modificadores.add(res.getString("NomSArmadura"));
+                
+            }
+            
+            return modificadores;
+            
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+            
+        }
+  
+        return null;
+        
+    }
+    
 }

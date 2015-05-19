@@ -767,6 +767,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
+        btn_dialogoMP_ModArmadura.getAccessibleContext().setAccessibleDescription("Modificar el slot de armadura seleccionado.");
+        btn_dialogoMP_ModArma.getAccessibleContext().setAccessibleDescription("Modificar el slot del arma seleccionado.");
+
         dialogoModificarPersonaje.getContentPane().add(panel_dialogoMP_Equipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 110));
 
         btn_dialogoMP_Modificar.setText("Modificar");
@@ -783,6 +786,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoConfigurarArma.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArma.setTitle("Configurar Arma");
         dialogoConfigurarArma.setAlwaysOnTop(true);
+        dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 275));
         dialogoConfigurarArma.setModal(true);
         dialogoConfigurarArma.setResizable(false);
         dialogoConfigurarArma.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -848,6 +852,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoConfigurarArmadura.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArmadura.setTitle("Configurar Armadura");
         dialogoConfigurarArmadura.setAlwaysOnTop(true);
+        dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 245));
         dialogoConfigurarArmadura.setModal(true);
         dialogoConfigurarArmadura.setResizable(false);
         dialogoConfigurarArmadura.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2121,10 +2126,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoAC_Abandonar;
     private javax.swing.JButton btn_dialogoAC_Cancelar;
     private javax.swing.JButton btn_dialogoAD_Aceptar;
-    private javax.swing.JButton btn_dialogoCArma_Aplicar;
-    private javax.swing.JButton btn_dialogoCArma_Cancelar;
-    private javax.swing.JButton btn_dialogoCArmadura_Aplicar;
-    private javax.swing.JButton btn_dialogoCArmadura_Cancelar;
+    public javax.swing.JButton btn_dialogoCArma_Aplicar;
+    public javax.swing.JButton btn_dialogoCArma_Cancelar;
+    public javax.swing.JButton btn_dialogoCArmadura_Aplicar;
+    public javax.swing.JButton btn_dialogoCArmadura_Cancelar;
     private javax.swing.JLabel btn_dialogoCC;
     private javax.swing.JButton btn_dialogoCC_Cancelar;
     private javax.swing.JButton btn_dialogoCC_Crear;
@@ -2146,11 +2151,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoUC_Unirse;
     public javax.swing.JComboBox cbPersonaje;
     private javax.swing.JComboBox cb_dialogoAC_Clan;
-    private javax.swing.JComboBox cb_dialogoCArma_ModificadorArma;
-    private javax.swing.JComboBox cb_dialogoCArma_RarezaArma;
-    private javax.swing.JComboBox cb_dialogoCArma_TipoArma;
-    private javax.swing.JComboBox cb_dialogoCArmadura_ModificadorArmadura;
-    private javax.swing.JComboBox cb_dialogoCArmadura_RarezaArmadura;
+    public javax.swing.JComboBox cb_dialogoCArma_ModificadorArma;
+    public javax.swing.JComboBox cb_dialogoCArma_RarezaArma;
+    public javax.swing.JComboBox cb_dialogoCArma_TipoArma;
+    public javax.swing.JComboBox cb_dialogoCArmadura_ModificadorArmadura;
+    public javax.swing.JComboBox cb_dialogoCArmadura_RarezaArmadura;
     private javax.swing.JComboBox cb_dialogoEC_Clan;
     public javax.swing.JComboBox cb_dialogoMP_Clase;
     public javax.swing.JComboBox cb_dialogoMP_Raza;
@@ -2175,10 +2180,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JCheckBox chkIngles;
     public javax.swing.JCheckBox chkLadron;
     public javax.swing.JCheckBox chkNigromante;
-    private javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple1;
-    private javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple2;
-    private javax.swing.JCheckBox chk_dialogoCArmadura_InfusionAgonia;
-    private javax.swing.JCheckBox chk_dialogoCArmadura_InfusionSimple;
+    public javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple1;
+    public javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple2;
+    public javax.swing.JCheckBox chk_dialogoCArmadura_InfusionAgonia;
+    public javax.swing.JCheckBox chk_dialogoCArmadura_InfusionSimple;
     private javax.swing.JCheckBox chk_dialogoMU_Aleman;
     private javax.swing.JCheckBox chk_dialogoMU_Espanyol;
     private javax.swing.JCheckBox chk_dialogoMU_Frances;
@@ -2186,8 +2191,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDialog dialogoAbandonarClan;
     private javax.swing.JDialog dialogoAcercaDe;
     private javax.swing.JDialog dialogoCambioServidor;
-    private javax.swing.JDialog dialogoConfigurarArma;
-    private javax.swing.JDialog dialogoConfigurarArmadura;
+    public javax.swing.JDialog dialogoConfigurarArma;
+    public javax.swing.JDialog dialogoConfigurarArmadura;
     private javax.swing.JDialog dialogoCrearClan;
     private javax.swing.JDialog dialogoEliminarClan;
     public javax.swing.JDialog dialogoModificarPersonaje;
@@ -2367,10 +2372,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JTextField txtAgoniaMinima;
     public javax.swing.JTextField txtBusqueda;
     public javax.swing.JTextField txtNivelfracMinimo;
-    private javax.swing.JLabel txt_dialogoCArma_SlotArma;
+    public javax.swing.JLabel txt_dialogoCArma_SlotArma;
     private javax.swing.JLabel txt_dialogoCArmadura_InfusionAgonia;
-    private javax.swing.JTextField txt_dialogoCArmadura_ResistAgonia;
-    private javax.swing.JLabel txt_dialogoCArmadura_SlotArmadura;
+    public javax.swing.JTextField txt_dialogoCArmadura_ResistAgonia;
+    public javax.swing.JLabel txt_dialogoCArmadura_SlotArmadura;
     private javax.swing.JTextField txt_dialogoCC_NombreClan;
     private javax.swing.JTextField txt_dialogoCC_Tag;
     private javax.swing.JPasswordField txt_dialogoCS_Contraseña;
