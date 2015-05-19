@@ -13,11 +13,19 @@ public class Personaje {
     ArrayList<Arma> armas;
     ArrayList<Armadura> armaduras;
     
-    int poder, precision, dureza, vitalidad, duraBendicion, danyoCondicion, duraCondicion, ferocidad, pCuracion;
+    int poder;
+    int precision; 
+    int dureza;
+    int vitalidad; 
+            
+    int duraBendicion, danyoCondicion, duraCondicion, ferocidad, pCuracion;
     int armadura, probCritica, danyoCritico, salud, rAgonia;
 
     public Personaje() {
-
+        this.poder=926;
+        this.precision=926; 
+        this.dureza=926;
+        this.vitalidad=926; 
     }
 
     public String getServidor() {
@@ -201,16 +209,14 @@ public class Personaje {
         int prec=0; 
         int dur=0;
         int vit=0;
-        int dbendicion=0;
         int dancond=0;
-        int duracond=0;
         int fero=0;
+        int probcritic=4;
         int pcuracion=0;
-        int armad=0; 
-        int probcritic=0;
-        int dancritic=0;
-        int salu=0;
+        int dancritic=150;
+        int saludbase=0;
         int ar=0;
+        int defensa=0;
         for(Arma a:armas){
             pod+=a.getPoder();
             prec+=a.getPrecision();
@@ -230,16 +236,34 @@ public class Personaje {
             fero+=a.getFerocidad();
             pcuracion+=a.getpCuracion();
             ar+=a.calcAgonia();
+            defensa+=a.getDefensa();
         }
-        //duraBendicion, duraCondicion, armadura, probCritica, danyoCritico, salud,
-        this.poder=pod;
-        this.precision=prec;
-        this.dureza=dur;
-        this.vitalidad=vit;
+        
+        if(this.getClase().equals("Guerrero") || this.getClase().equals("Nigromante")){
+            saludbase=9212;
+        }else if(this.getClase().equals("Ingeniero") || this.getClase().equals("Guardabosques")||
+                this.getClase().equals("Hipnotizador")){
+            saludbase=5922;
+        }else{
+            saludbase=1645;
+        }
+        
+        
+        this.poder=this.poder=pod;
+        this.precision=this.precision=prec;
+        this.dureza=this.dureza=dur;
+        this.vitalidad=this.vitalidad=vit;
         this.danyoCondicion=dancond;
         this.ferocidad=fero;
         this.pCuracion=pcuracion;
         this.rAgonia=ar;
+        this.duraBendicion=0;
+        this.duraCondicion=0;
+        this.armadura=this.dureza+defensa;
+        this.probCritica=probcritic+((int)this.precision/21);
+        this.danyoCritico=dancritic+((int)this.ferocidad/15);
+        this.salud=saludbase+(this.vitalidad*10);
+        
     }
 
 }

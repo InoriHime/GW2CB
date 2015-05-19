@@ -187,7 +187,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 fila = this.vista.TablaPersonajes.getSelectedRow();
                 personajeSeleccionado.setNombre(String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0)));
                 this.asignarDatosPersonaje(personajeSeleccionado);
-                mostrarImagenes(personajeSeleccionado.getNombre());
+                this.mostrarImagenes(personajeSeleccionado.getNombre());
+                this.mostrarAtributosPersonaje(personajeSeleccionado);
                 break;
         }
     }
@@ -198,6 +199,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        try{
+            
         ArrayList<Arma> armas = personajeSeleccionado.getArmas();
         ArrayList<Armadura> armaduras = personajeSeleccionado.getArmaduras();
         switch (e.getComponent().getName()) {
@@ -533,7 +536,9 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 break;
 
         }
-
+        }catch(Exception a){
+            
+        }
     }
 
     @Override
@@ -684,6 +689,32 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         p.setIdiomas(this.modelo.getIdiomas(p.getNombre()));
         p.setArmas(equiparArmas(p.getNombre()));
         p.setArmaduras(equiparArmaduras(p.getNombre()));
+        
+        p.calcularStats();
+    }
+    
+    public void mostrarAtributosPersonaje(Personaje p){
+        this.vista.mostrarNombrePersonaje.setText(p.getNombre());
+        this.vista.mostrarNombreCuenta.setText(p.getCuenta());
+        this.vista.mostrarClase.setText(p.getClase());
+        this.vista.mostrarIdiomas.setText(p.getIdiomas());
+        this.vista.mostrarServidor.setText(p.getServidor());
+        
+        //Atributos
+        this.vista.mostrarPoder.setText(p.getPoder()+"");
+        this.vista.mostrarPrecision.setText(p.getPrecision()+"");
+        this.vista.mostrarDureza.setText(p.getDureza()+"");
+        this.vista.mostrarVitalidad.setText(p.getVitalidad()+"");
+        this.vista.mostrarDuracionBendicion.setText(p.getDuraBendicion()+"");
+        this.vista.mostrarDanyoCondicion.setText(p.getDanyoCondicion()+"");
+        this.vista.mostrarDuracionCondicion.setText(p.getDuraCondicion()+"");
+        this.vista.mostrarFerocidad.setText(p.getFerocidad()+"");
+        this.vista.mostrarPoderCuracion.setText(p.getpCuracion()+"");
+        this.vista.mostrarArmadura.setText(p.getArmadura()+"");
+        this.vista.mostrarProbabilidadCritica.setText(p.getProbCritica()+"");
+        this.vista.mostrarDanyoCritico.setText(p.getDanyoCritico()+"");
+        this.vista.mostrarSalud.setText(p.getSalud()+"");
+        this.vista.mostrarAgonia.setText(p.getrAgonia()+"");
     }
     
     
