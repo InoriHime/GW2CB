@@ -172,14 +172,19 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
     @Override
     public void mousePressed(MouseEvent e) {
     int fila;
-    String personaje;
+    Object[] datosCuenta = new Object[9];
+    int[] datosPj = new int[2];
     switch(e.getComponent().getName()){
         case "Tabla":
             fila = this.vista.TablaPersonajes.getSelectedRow();
-            personaje = String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0));
-            mostrarImagenes(personaje);
-            personajeSeleccionado.setArmas(equiparArmas(personaje));
-            personajeSeleccionado.setArmaduras(equiparArmaduras(personaje));
+            personajeSeleccionado.setNombre(String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 0)));
+            personajeSeleccionado.setCuenta(String.valueOf(this.vista.TablaPersonajes.getValueAt(fila, 1)));
+            datosCuenta = this.modelo.getDatosCuenta(personajeSeleccionado.getCuenta());
+            datosPj = this.modelo.getDatosPersonaje(personajeSeleccionado.getNombre());
+            personajeSeleccionado.setServidor(this.modelo.getNombreServidor((int)datosCuenta[4]));
+            mostrarImagenes(personajeSeleccionado.getNombre());
+            personajeSeleccionado.setArmas(equiparArmas(personajeSeleccionado.getNombre()));
+            personajeSeleccionado.setArmaduras(equiparArmaduras(personajeSeleccionado.getNombre()));
             
             break;
     }

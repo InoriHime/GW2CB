@@ -139,6 +139,30 @@ public class ModeloPrincipal extends Database{
         return null; 
     }
     
+    //Devuelve los datos principales del personaje del que se pasa el nombre por parámetro
+    public int[] getDatosPersonaje(String nompj){
+        int[] datosPersonaje=new int[2];
+        Statement stmt=null;
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("SELECT Raza, Clase FROM Personajes WHERE NomPj ='"+nompj+"'");
+            res.next();
+            datosPersonaje[0]=res.getInt("Raza");
+            datosPersonaje[1]=res.getInt("Clase");
+            
+            return datosPersonaje;
+        } catch (SQLException ex) {
+            Logger.getLogger(ModeloPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null; 
+    }
+    
     //Devuelve los datos de los personajes de la cuenta que se pasa por parametro
     public ArrayList<Personaje> getPersonajesCuenta(String cuenta){
        ArrayList<Personaje> personajes=new ArrayList<>();
@@ -263,11 +287,29 @@ public class ModeloPrincipal extends Database{
         } catch (SQLException ex) {
         ex.printStackTrace();
         }
-        
-        
-        
         return armaduras;
 
+    }
+    
+    public String getNombreServidor(int serv){
+        Statement stmt=null;
+        
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("Select NomServidor FROM Servidores  WHERE Id_Servidor = '"+serv+"'");
+           res.next();
+           return res.getString("NomServidor");
+
+        } catch (SQLException ex) {
+        ex.printStackTrace();
+        }
+        return null;
     }
     
 }
