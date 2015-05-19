@@ -6,6 +6,7 @@ public class Armadura {
     private int rareza;
     private int poder, dureza, vitalidad, precision, ferocidad, dCondicion, pCuracion;
     private int infS, infA;
+    private int defensa;
 
     public Armadura(int slot, int rareza, int poder, int dureza, int vitalidad, int precision, int ferocidad, int dCondicion, int pCuracion, int infS, int infA) {
         this.slot = slot;
@@ -19,7 +20,44 @@ public class Armadura {
         this.pCuracion = pCuracion;
         this.infS = infS;
         this.infA = infA;
+        this.setDefensa();
     }
+    
+    public int getDefensa(){
+        return this.defensa;
+    }
+    
+    public void setDefensa(){
+  
+        if (slot == 6 || slot == 13) {//Cascos
+            if (this.rareza == 1) {//exótico
+                this.defensa=97;
+            } else {//ascendido
+                this.defensa=102;
+            }
+        } else if (slot == 1 || slot == 3 || slot == 4) {//guantes, botas, hombreras
+            if (this.rareza == 1) {//exótico
+                this.defensa=157;
+            } else {//ascendido
+                this.defensa=165;
+            }
+        } else if (slot == 5) {//pecho
+            if (this.rareza == 1) {//exótico
+                this.defensa=338;
+            } else {//ascendido
+                this.defensa=355;
+            }
+        } else if (slot == 2) {//pantalon
+            if (this.rareza == 1) {//exótico
+                this.defensa=218;
+            } else {//ascendido
+                this.defensa=229;
+            }
+        } else{
+            this.defensa=0;
+        }
+    }//fin stat
+    
 
     public String getParte() {
         switch (this.slot) {

@@ -209,6 +209,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -225,6 +227,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -241,6 +245,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -257,6 +263,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -273,6 +281,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -289,6 +299,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Fuerza:");
+                    this.vista.muestraStatBase.setText(arma.getFuerza());
                 }
             }
             break;
@@ -305,6 +317,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -321,6 +335,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -337,6 +353,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -353,6 +371,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -369,6 +389,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -385,6 +407,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -497,6 +521,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
                     this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
                     this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                    this.vista.etiStatBase.setText("Defensa:");
+                    this.vista.muestraStatBase.setText(arma.getDefensa()+"");
                 }
             }
             break;
@@ -519,9 +545,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         this.vista.muestraDanyoCondicion.setText("-");
         this.vista.muestraPoderCuracion.setText("-");
         this.vista.muestraRAgonia.setText("-");
-     
-        
-    
+        this.vista.muestraStatBase.setText("");
+        this.vista.etiStatBase.setText("");
     }
     
     

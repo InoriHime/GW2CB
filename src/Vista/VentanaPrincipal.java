@@ -274,6 +274,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         icoCambio2 = new javax.swing.JLabel();
         icoCambio1 = new javax.swing.JLabel();
         PanelEstadisticas = new javax.swing.JPanel();
+        etiStatBase = new javax.swing.JLabel();
+        muestraStatBase = new javax.swing.JLabel();
         etiPieza = new javax.swing.JLabel();
         muestraPieza = new javax.swing.JLabel();
         etiRareza = new javax.swing.JLabel();
@@ -1553,6 +1555,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelEstadisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(209, 194, 170), 1, true), "Estadísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(209, 194, 170))); // NOI18N
         PanelEstadisticas.setOpaque(false);
 
+        etiStatBase.setForeground(new java.awt.Color(209, 194, 170));
+
+        muestraStatBase.setForeground(new java.awt.Color(209, 194, 170));
+
         etiPieza.setForeground(new java.awt.Color(209, 194, 170));
         etiPieza.setText("Pieza:");
 
@@ -1639,11 +1645,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(etiRareza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(etiPieza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(muestraPieza, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                            .addComponent(muestraRareza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelEstadisticasLayout.createSequentialGroup()
-                                .addComponent(muestraPieza, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(muestraRareza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(etiStatBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(muestraStatBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(PanelEstadisticasLayout.createSequentialGroup()
                         .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(etiPoder1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1652,7 +1660,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                             .addComponent(etiPrecision1, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(muestraPoder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(muestraPoder, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                             .addComponent(muestraDureza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(muestraVitalidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(muestraPrecision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1670,7 +1678,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(muestraPoderCuracion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(muestraFerocidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(muestraFerocidad, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                                     .addComponent(muestraDanyoCondicion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
         );
@@ -1680,11 +1688,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etiPieza)
-                    .addComponent(muestraPieza))
+                    .addComponent(muestraPieza)
+                    .addComponent(etiStatBase))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiRareza)
-                    .addComponent(muestraRareza))
+                .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(etiRareza)
+                        .addComponent(muestraRareza))
+                    .addComponent(muestraStatBase))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(PanelEstadisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etiPoder1)
@@ -2216,6 +2227,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel etiResistAgoniaMin;
     public javax.swing.JLabel etiSalud;
     public javax.swing.JLabel etiServidor;
+    public javax.swing.JLabel etiStatBase;
     public javax.swing.JLabel etiVitalidad;
     public javax.swing.JLabel etiVitalidad1;
     private javax.swing.JLabel eti_dialogoAC_Clan;
@@ -2339,6 +2351,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel muestraPrecision;
     public javax.swing.JLabel muestraRAgonia;
     public javax.swing.JLabel muestraRareza;
+    public javax.swing.JLabel muestraStatBase;
     public javax.swing.JLabel muestraVitalidad;
     private javax.swing.JPanel panel_dialogoMP_Equipo;
     private javax.swing.JPanel panel_dialogoRP_Equipo;

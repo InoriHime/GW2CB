@@ -8,6 +8,7 @@ public class Arma {
     private int infS1, infS2;
     private int tipo;
     private int slot;
+    private int[] fuerza = new int[2];
 
     public Arma(int slot, int tipo, int rareza, int poder, int dureza, int vitalidad, int precision, int ferocidad, int dCondicion, int pCuracion, int infS1, int infS2) {
         this.tipo = tipo;
@@ -22,8 +23,35 @@ public class Arma {
         this.rareza = rareza;
         this.infS1 = infS1;
         this.infS2 = infS2;
+        this.setFuerza();
     }
-
+    
+    public String getFuerza(){
+        return fuerza[0]+"-"+fuerza[1];
+    }
+    
+    public void setFuerza(){
+        //1 mano 1, 2, 3, 7, 9, 10, 12, 14, 15, 16
+        //2 mano 4, 5, 6, 8, 11, 13, 17, 18, 19
+        if (tipo == 1 || tipo == 2 || tipo == 3 || tipo == 7 || tipo == 9 || tipo == 10 || tipo == 12 || tipo == 14 || tipo == 15 || tipo == 16) {//1 mano
+            if (this.rareza == 1) {//exótico
+                this.fuerza[0]=905;
+                this.fuerza[1]=1000;
+            } else {//ascendido
+                this.fuerza[0]=950;
+                this.fuerza[1]=1050;
+            }
+        } else {//2 manos
+            if (this.rareza == 1) {//exótico
+                this.fuerza[0]=920;
+                this.fuerza[1]=1080;
+            } else {//ascendido
+                this.fuerza[0]=966;
+                this.fuerza[1]=1134;
+            }
+        }
+    }
+    
     public int getSlot() {
         return slot;
     }
