@@ -1,5 +1,6 @@
 package Controlador;
 import Modelo.ModeloEditarPersonaje;
+import Modelo.Personaje;
 import Vista.VentanaPrincipal;
 import javax.swing.JDialog;
 import javax.swing.SwingUtilities;
@@ -10,13 +11,13 @@ public class ControladorEditarPersonaje {
     
     JDialog vista;
     ModeloEditarPersonaje modelo;
-    String npj;
+    Personaje personaje;
     String[] razas, clases, slotArma, slotArmadura;
     
-    ControladorEditarPersonaje(String p, JDialog v) {
+    ControladorEditarPersonaje(Personaje p, JDialog v) {
         
         this.vista = v;
-        this.npj = p;
+        this.personaje = p;
         
     }
     
