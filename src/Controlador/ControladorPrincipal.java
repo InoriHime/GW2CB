@@ -509,16 +509,16 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
         
-                this.vista.muestraPieza.setText("-");
-                    this.vista.muestraRareza.setText("-");
-                    this.vista.muestraPoder.setText("-");
-                    this.vista.muestraPrecision.setText("-");
-                    this.vista.muestraDureza.setText("-");
-                    this.vista.muestraVitalidad.setText("-");
-                    this.vista.muestraFerocidad.setText("-");
-                    this.vista.muestraDanyoCondicion.setText("-");
-                    this.vista.muestraPoderCuracion.setText("-");
-                    this.vista.muestraRAgonia.setText("-");
+        this.vista.muestraPieza.setText("-");
+        this.vista.muestraRareza.setText("-");
+        this.vista.muestraPoder.setText("-");
+        this.vista.muestraPrecision.setText("-");
+        this.vista.muestraDureza.setText("-");
+        this.vista.muestraVitalidad.setText("-");
+        this.vista.muestraFerocidad.setText("-");
+        this.vista.muestraDanyoCondicion.setText("-");
+        this.vista.muestraPoderCuracion.setText("-");
+        this.vista.muestraRAgonia.setText("-");
      
         
     
@@ -555,13 +555,13 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                 this.vista.icoManos.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/guantes.jpg"));
             }
 
-            if(this.modelo.piezaEquipada(personaje, 4)==1){
+            if(this.modelo.piezaEquipada(personaje, 5)==1){
                 this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Tpecho.png"));
             }else{
                 this.vista.icoPecho.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/pecho.jpg"));
             }
 
-            if(this.modelo.piezaEquipada(personaje, 5)==1){
+            if(this.modelo.piezaEquipada(personaje, 4)==1){
                 this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/Armaduras/Thombros.png"));
             }else{
                 this.vista.icoHombros.setIcon(new ImageIcon("src/Vista/Imagenes/ArmadurasV/hombreras.jpg"));
