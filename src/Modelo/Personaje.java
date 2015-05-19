@@ -6,8 +6,8 @@ public class Personaje {
 
     String nombre;
     String cuenta;
-    int raza;
-    int clase;
+    String raza;
+    String clase;
     String servidor;
     String idiomas;
     ArrayList<Arma> armas;
@@ -180,19 +180,19 @@ public class Personaje {
         this.cuenta = cuenta;
     }
 
-    public int getRaza() {
+    public String getRaza() {
         return raza;
     }
 
-    public void setRaza(int raza) {
+    public void setRaza(String raza) {
         this.raza = raza;
     }
 
-    public int getClase() {
+    public String getClase() {
         return clase;
     }
 
-    public void setClase(int clase) {
+    public void setClase(String clase) {
         this.clase = clase;
     }
     

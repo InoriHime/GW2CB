@@ -181,8 +181,6 @@ public class ModeloPrincipal extends Database{
             p= new Personaje();
             p.setNombre(res.getString("NomPj"));
             p.setCuenta(res.getString("Cuenta"));
-            p.setRaza(res.getInt("Raza"));
-            p.setClase(res.getInt("Clase"));
             
             personajes.add(p);
             }
@@ -305,6 +303,47 @@ public class ModeloPrincipal extends Database{
             res = stmt.executeQuery("Select NomServidor FROM Servidores  WHERE Id_Servidor = '"+serv+"'");
            res.next();
            return res.getString("NomServidor");
+
+        } catch (SQLException ex) {
+        ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String getNombreClase(int clase){
+        Statement stmt=null;
+        
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+           res = stmt.executeQuery("Select NomClase FROM Clases  WHERE ID_Clase = '"+clase+"'");
+           res.next();
+           return res.getString("NomClase");
+
+        } catch (SQLException ex) {
+        ex.printStackTrace();
+        }
+        return null;
+    }
+    public String getNombreRaza(int raza){
+        Statement stmt=null;
+        
+        try{
+            stmt= db.getConexion().createStatement();
+            
+        }catch(SQLException e){
+         System.err.println(e.getMessage() );
+        }
+        ResultSet res;
+        try {
+            res = stmt.executeQuery("Select NomRaza FROM Razas  WHERE ID_Raza = '"+raza+"'");
+           res.next();
+           return res.getString("NomRaza");
 
         } catch (SQLException ex) {
         ex.printStackTrace();
