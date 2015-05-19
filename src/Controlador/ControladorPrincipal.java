@@ -100,11 +100,52 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);
         
+        this.vista.TablaPersonajes.getColumnModel().getColumn(3).setPreferredWidth(30);
+        this.vista.TablaPersonajes.getColumnModel().getColumn(4).setPreferredWidth(30);
         
         
         //armas
         this.vista.icoArmaPSet1.setName("ArmaPSet1");
         this.vista.icoArmaPSet1.addMouseListener(this);
+        this.vista.icoArmaSSet1.setName("ArmaSSet1");
+        this.vista.icoArmaSSet1.addMouseListener(this);
+        this.vista.icoArmaPSet2.setName("ArmaPSet2");
+        this.vista.icoArmaPSet2.addMouseListener(this);
+        this.vista.icoArmaSSet2.setName("ArmaSSet2");
+        this.vista.icoArmaSSet2.addMouseListener(this);
+        this.vista.icoArmaAcu1.setName("ArmaAcu1");
+        this.vista.icoArmaAcu1.addMouseListener(this);
+        this.vista.icoArmaAcu2.setName("ArmaAcu2");
+        this.vista.icoArmaAcu2.addMouseListener(this);
+        
+        //Armaduras
+        this.vista.icoCabezaAcu.setName("CabezaAcu");
+        this.vista.icoCabezaAcu.addMouseListener(this);
+        this.vista.icoCabeza.setName("Cabeza");
+        this.vista.icoCabeza.addMouseListener(this);
+        this.vista.icoHombros.setName("Hombros");
+        this.vista.icoHombros.addMouseListener(this);
+        this.vista.icoPecho.setName("Pecho");
+        this.vista.icoPecho.addMouseListener(this);
+        this.vista.icoManos.setName("Manos");
+        this.vista.icoManos.addMouseListener(this);
+        this.vista.icoPiernas.setName("Piernas");
+        this.vista.icoPiernas.addMouseListener(this);
+        this.vista.icoPies.setName("Pies");
+        this.vista.icoPies.addMouseListener(this);
+        this.vista.icoEspaldar.setName("Espaldar");
+        this.vista.icoEspaldar.addMouseListener(this);
+        this.vista.icoAmuleto.setName("Amuleto");
+        this.vista.icoAmuleto.addMouseListener(this);
+        this.vista.icoAccesorio1.setName("Accesorio1");
+        this.vista.icoAccesorio1.addMouseListener(this);
+        this.vista.icoAccesorio2.setName("Accesorio2");
+        this.vista.icoAccesorio2.addMouseListener(this);
+        this.vista.icoAnillo1.setName("Anillo1");
+        this.vista.icoAnillo1.addMouseListener(this);
+        this.vista.icoAnillo2.setName("Anillo2");
+        this.vista.icoAnillo2.addMouseListener(this);
+        
 
   
     }
@@ -154,10 +195,9 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
     public void mouseEntered(MouseEvent e) {
        ArrayList<Arma> armas  = personajeSeleccionado.getArmas();
        ArrayList<Armadura> armaduras  = personajeSeleccionado.getArmaduras();
-       
-    switch(e.getComponent().getName()){
+        switch(e.getComponent().getName()){
         case "ArmaPSet1":
-            for(Arma arma:armas){
+              for(Arma arma:armas){
                 if(arma.getSlot()==1){
                     this.vista.muestraPieza.setText(arma.getTipo());
                     this.vista.muestraRareza.setText(arma.getRareza());
@@ -172,7 +212,295 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                 }
             }
             break;
-
+        case "ArmaSSet1":
+            for(Arma arma:armas){
+                if(arma.getSlot()==2){
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "ArmaPSet2":
+            for(Arma arma:armas){
+                if(arma.getSlot()==4){
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "ArmaSSet2":
+            for(Arma arma:armas){
+                if(arma.getSlot()==5){
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "ArmaAcu1":
+            for(Arma arma:armas){
+                if(arma.getSlot()==3){
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "ArmaAcu2":
+            for(Arma arma:armas){
+                if(arma.getSlot()==6){
+                    this.vista.muestraPieza.setText(arma.getTipo());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Cabeza":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==6){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Hombros":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==4){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Pecho":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==5){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Manos":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==3){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Piernas":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==2){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Pies":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==1){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Accesorio1":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==7){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Accesorio2":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==8){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Anillo1":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==9){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Anillo2":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==10){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Espaldar":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==11){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "Amuleto":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==12){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        case "CabezaAcu":
+            for(Armadura arma:armaduras){
+                if(arma.getSlot()==13){
+                    this.vista.muestraPieza.setText(arma.getParte());
+                    this.vista.muestraRareza.setText(arma.getRareza());
+                    this.vista.muestraPoder.setText(arma.getPoder()+"");
+                    this.vista.muestraPrecision.setText(arma.getPrecision()+"");
+                    this.vista.muestraDureza.setText(arma.getDureza()+"");
+                    this.vista.muestraVitalidad.setText(arma.getVitalidad()+"");
+                    this.vista.muestraFerocidad.setText(arma.getFerocidad()+"");
+                    this.vista.muestraDanyoCondicion.setText(arma.getdCondicion()+"");
+                    this.vista.muestraPoderCuracion.setText(arma.getpCuracion()+"");
+                    this.vista.muestraRAgonia.setText(arma.calcAgonia()+"");
+                }
+            }
+            break;
+        
     }
     
     
@@ -180,8 +508,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
 
     @Override
     public void mouseExited(MouseEvent e) {
-        switch(e.getComponent().getName()){
-            case "ArmaPSet1":
+        
                 this.vista.muestraPieza.setText("-");
                     this.vista.muestraRareza.setText("-");
                     this.vista.muestraPoder.setText("-");
@@ -192,8 +519,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
                     this.vista.muestraDanyoCondicion.setText("-");
                     this.vista.muestraPoderCuracion.setText("-");
                     this.vista.muestraRAgonia.setText("-");
-                break;
-        }
+     
+        
     
     }
     

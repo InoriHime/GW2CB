@@ -25,7 +25,7 @@ public class ModeloPrincipal extends Database{
          }
       };
       int registros = 0;
-      String[] columNames = {"Personaje","Cuenta","Clase","Niv. Fractales","R. Agonía","Clan","Idiomas"};
+      String[] columNames = {"Personaje","Cuenta","Clase","Niv.Frac","R.Agonía","Clan","Idiomas"};
       //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
       //para formar la matriz de datos
       

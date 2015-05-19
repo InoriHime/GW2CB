@@ -21,7 +21,7 @@ public class Armadura {
         this.infA = infA;
     }
 
-    public String getSlot() {
+    public String getParte() {
         switch (this.slot) {
             case 1:
                 return "Botas";
@@ -62,6 +62,10 @@ public class Armadura {
 
         }
         return null;
+    }
+    
+    public int getSlot(){
+        return this.slot;
     }
 
     public void setSlot(int slot) {
