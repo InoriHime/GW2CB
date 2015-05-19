@@ -675,15 +675,17 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         Object[] datosCuenta = new Object[9];
         Object[] datosPj = new Object[3];
         
+        datosPj = this.modelo.getDatosPersonaje(p.getNombre());
+        p.setCuenta((String) datosPj[0]);
         datosCuenta = this.modelo.getDatosCuenta(p.getCuenta());
-                datosPj = this.modelo.getDatosPersonaje(p.getNombre());
-                p.setCuenta((String) datosPj[0]);
-                p.setServidor(this.modelo.getNombreServidor((int) datosCuenta[4]));
-                p.setClase(this.modelo.getNombreClase((int) datosPj[2]));
-                p.setRaza(this.modelo.getNombreRaza((int) datosPj[1]));
-                p.setIdiomas(this.modelo.getIdiomas(p.getNombre()));
-                p.setArmas(equiparArmas(p.getNombre()));
-                p.setArmaduras(equiparArmaduras(p.getNombre()));
+        p.setServidor(this.modelo.getNombreServidor((int) datosCuenta[4]));
+        p.setClase(this.modelo.getNombreClase((int) datosPj[2]));
+        p.setRaza(this.modelo.getNombreRaza((int) datosPj[1]));
+        p.setIdiomas(this.modelo.getIdiomas(p.getNombre()));
+        p.setArmas(equiparArmas(p.getNombre()));
+        p.setArmaduras(equiparArmaduras(p.getNombre()));
     }
+    
+    
 
 }

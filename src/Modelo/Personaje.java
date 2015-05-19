@@ -197,7 +197,49 @@ public class Personaje {
     }
     
     public void calcularStats(){
-        
+        int pod=0; 
+        int prec=0; 
+        int dur=0;
+        int vit=0;
+        int dbendicion=0;
+        int dancond=0;
+        int duracond=0;
+        int fero=0;
+        int pcuracion=0;
+        int armad=0; 
+        int probcritic=0;
+        int dancritic=0;
+        int salu=0;
+        int ar=0;
+        for(Arma a:armas){
+            pod+=a.getPoder();
+            prec+=a.getPrecision();
+            dur+=a.getDureza();
+            vit+=a.getVitalidad();
+            dancond+=a.getdCondicion();
+            fero+=a.getFerocidad();
+            pcuracion+=a.getpCuracion();
+            ar+=a.calcAgonia();
+        }
+        for(Armadura a:armaduras){
+            pod+=a.getPoder();
+            prec+=a.getPrecision();
+            dur+=a.getDureza();
+            vit+=a.getVitalidad();
+            dancond+=a.getdCondicion();
+            fero+=a.getFerocidad();
+            pcuracion+=a.getpCuracion();
+            ar+=a.calcAgonia();
+        }
+        //duraBendicion, duraCondicion, armadura, probCritica, danyoCritico, salud,
+        this.poder=pod;
+        this.precision=prec;
+        this.dureza=dur;
+        this.vitalidad=vit;
+        this.danyoCondicion=dancond;
+        this.ferocidad=fero;
+        this.pCuracion=pcuracion;
+        this.rAgonia=ar;
     }
 
 }
