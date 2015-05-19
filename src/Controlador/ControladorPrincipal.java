@@ -155,9 +155,11 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
         
         switch(AccionMVC.valueOf(e.getActionCommand())) {
             case __EDITAR_PERSONAJE:
+                Personaje p = new Personaje();
                 String npj;
                 npj = String.valueOf(this.vista.cbPersonaje.getSelectedItem());
-                new ControladorEditarPersonaje(npj, this.vista.dialogoModificarPersonaje).iniciar();
+                p.setNombre(npj);
+                new ControladorEditarPersonaje(p, this.vista.dialogoModificarPersonaje).iniciar();
             break;
         }
     
@@ -184,7 +186,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener{
             personajeSeleccionado.setServidor(this.modelo.getNombreServidor((int)datosCuenta[4]));
             personajeSeleccionado.setClase(this.modelo.getNombreClase(datosPj[1]));
             personajeSeleccionado.setRaza(this.modelo.getNombreRaza(datosPj[0]));
-            personajeSeleccionado.setIdiomas((String) this.vista.TablaPersonajes.getValueAt(fila, 3));
+            personajeSeleccionado.setIdiomas((String) this.vista.TablaPersonajes.getValueAt(fila, 6));
             mostrarImagenes(personajeSeleccionado.getNombre());
             personajeSeleccionado.setArmas(equiparArmas(personajeSeleccionado.getNombre()));
             personajeSeleccionado.setArmaduras(equiparArmaduras(personajeSeleccionado.getNombre()));
