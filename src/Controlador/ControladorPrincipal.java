@@ -48,9 +48,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
      * usuario VISTA y posterior ejecución desde el controlador
      */
     public enum AccionMVC {
-
-        __MOSTRAR_ICONOS_EQUIPO,
-        __EDITAR_PERSONAJE;
+        __EDITAR_PERSONAJE,
+        __BUSCAR;
     }
 
     /**
@@ -105,6 +104,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.TablaPersonajes.addMouseListener(this);
         this.vista.btnModPj.setActionCommand("__EDITAR_PERSONAJE");
         this.vista.btnModPj.addActionListener(this);
+        this.vista.btnBuscar.setActionCommand("__BUSCAR");
+        this.vista.btnBuscar.addActionListener(this);
 
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);
@@ -167,6 +168,15 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 p.setNombre(npj);
                 this.asignarDatosPersonaje(p);
                 new ControladorEditarPersonaje(p, this.vista).iniciar();
+                break;
+            case __BUSCAR:
+                this.vista.TablaPersonajes.setModel(this.modelo.busqueda(usu, this.vista.txtBusqueda.getText(),
+                        this.vista.radPersonaje.isSelected(), this.vista.radCuenta.isSelected(), this.vista.radClan.isSelected(),
+                        this.vista.txtAgoniaMinima.getText(), this.vista.txtNivelfracMinimo.getText(), this.vista.chkBuscarMiembrosMiClan.isSelected(),
+                        this.vista.chkGuardian.isSelected(), this.vista.chkGuerrero.isSelected(), this.vista.chkElementalista.isSelected(),
+                        this.vista.chkNigromante.isSelected(), this.vista.chkGuardabosques.isSelected(), this.vista.chkLadron.isSelected(),
+                        this.vista.chkIngeniero.isSelected(), this.vista.chkHipnotizador.isSelected(), this.vista.chkIngles.isSelected(),
+                        this.vista.chkEspanyol.isSelected(), this.vista.chkFrances.isSelected(), this.vista.chkAleman.isSelected()));
                 break;
         }
 
