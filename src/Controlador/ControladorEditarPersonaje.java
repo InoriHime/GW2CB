@@ -16,7 +16,7 @@ public class ControladorEditarPersonaje implements ActionListener {
     VentanaPrincipal vista;
     ModeloEditarPersonaje modelo;
     Personaje personaje;
-    ArrayList<String> razas, clases, slotArma, slotArmadura;
+    ArrayList<String> razas, clases, slotArma, slotArmadura, tiposArma, rarezas, modificadores;
     
     ControladorEditarPersonaje(Personaje p, VentanaPrincipal v) {
         
@@ -31,7 +31,11 @@ public class ControladorEditarPersonaje implements ActionListener {
         __EDITAR_ARMA,
         __EDITAR_ARMADURA,
         __MODIFICAR_PERSONAJE,
-        __CANCELAR;
+        __CANCELAR,
+        __APLICAR_ARMA,
+        __CANCELAR_ARMA,
+        __APLICAR_ARMADURA,
+        __CANCELAR_ARMADURA;
         
     }
     
@@ -41,10 +45,13 @@ public class ControladorEditarPersonaje implements ActionListener {
         clases = modelo.getClases();
         slotArma = modelo.getSlotArma();
         slotArmadura = modelo.getSlotArmadura();
+        tiposArma = modelo.getTipoArma();
+        rarezas = modelo.getRarezas();
+        modificadores = modelo.getModificador();
         
         this.vista.txt_dialogoMP_Nombre.setText(personaje.getNombre());
-        this.vista.cb_dialogoMP_Raza.setModel(new DefaultComboBoxModel(razas.toArray()));
-        this.vista.cb_dialogoMP_Clase.setModel(new DefaultComboBoxModel(clases.toArray()));
+        this.vista.cb_dialogoMP_Clase.setModel(new DefaultComboBoxModel(razas.toArray()));
+        this.vista.cb_dialogoMP_Raza.setModel(new DefaultComboBoxModel(clases.toArray()));
         this.vista.cb_dialogoMP_SlotArma.setModel(new DefaultComboBoxModel(slotArma.toArray()));
         this.vista.cb_dialogoMP_SlotArmadura.setModel(new DefaultComboBoxModel(slotArmadura.toArray()));
         
@@ -52,6 +59,18 @@ public class ControladorEditarPersonaje implements ActionListener {
         this.vista.btn_dialogoMP_ModArma.addActionListener(this);
         this.vista.btn_dialogoMP_ModArmadura.setActionCommand("__EDITAR_ARMADURA");
         this.vista.btn_dialogoMP_ModArmadura.addActionListener(this);
+        this.vista.btn_dialogoMP_Modificar.setActionCommand("__MODIFICAR_PERSONAJE");
+        this.vista.btn_dialogoMP_Modificar.addActionListener(this);
+        this.vista.btn_dialogoMP_Cancelar.setActionCommand("__CANCELAR");
+        this.vista.btn_dialogoMP_Cancelar.addActionListener(this);
+        this.vista.btn_dialogoCArma_Aplicar.setActionCommand("__APLICAR_ARMA");
+        this.vista.btn_dialogoCArma_Aplicar.addActionListener(this);
+        this.vista.btn_dialogoCArma_Cancelar.setActionCommand("__CANCELAR_ARMA");
+        this.vista.btn_dialogoCArma_Cancelar.addActionListener(this);
+        this.vista.btn_dialogoCArmadura_Aplicar.setActionCommand("__APLICAR_ARMADURA");
+        this.vista.btn_dialogoCArmadura_Aplicar.addActionListener(this);
+        this.vista.btn_dialogoCArmadura_Cancelar.setActionCommand("__CANCELAR_ARMADURA");
+        this.vista.btn_dialogoCArmadura_Cancelar.addActionListener(this);
         
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
@@ -68,17 +87,38 @@ public class ControladorEditarPersonaje implements ActionListener {
         switch (AccionMVC.valueOf(e.getActionCommand())) {
             
             case __EDITAR_ARMA:
+                this.vista.mostrar_dialogoCArma_SlotArma.setText(this.vista.cb_dialogoMP_SlotArma.getSelectedItem().toString());
+                this.vista.cb_dialogoCArma_TipoArma.setModel(new DefaultComboBoxModel (tiposArma.toArray()));
+                this.vista.cb_dialogoCArma_RarezaArma.setModel(new DefaultComboBoxModel (rarezas.toArray()));
+                this.vista.cb_dialogoCArma_ModificadorArma.setModel(new DefaultComboBoxModel (modificadores.toArray()));
+                
                 this.vista.dialogoConfigurarArma.setLocationRelativeTo(null);
                 this.vista.dialogoConfigurarArma.setVisible(true);
             break;
             
             case __EDITAR_ARMADURA:
+                this.vista.mostrar_dialogoCArmadura_SlotArmadura.setText(this.vista.cb_dialogoMP_SlotArmadura.getSelectedItem().toString());
+                this.vista.cb_dialogoCArmadura_RarezaArmadura.setModel(new DefaultComboBoxModel (rarezas.toArray()));
+                this.vista.cb_dialogoCArmadura_ModificadorArmadura.setModel(new DefaultComboBoxModel (modificadores.toArray()));
+                
                 this.vista.dialogoConfigurarArmadura.setLocationRelativeTo(null);
                 this.vista.dialogoConfigurarArmadura.setVisible(true);
             break;
+                
+            case __CANCELAR:
+                this.vista.dialogoModificarPersonaje.dispose();
+            break;
+                
+            case __CANCELAR_ARMA:
+                this.vista.dialogoConfigurarArma.dispose();
+            break;
+                
+            case __CANCELAR_ARMADURA:
+                this.vista.dialogoConfigurarArmadura.dispose();
+            break;
             
         }
-        
+      
     }
     
 }

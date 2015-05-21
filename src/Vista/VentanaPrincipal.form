@@ -292,6 +292,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_RepetirContrasenya">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoMU_RepetirContrasenyaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_NuevaContrasenya">
             </Component>
@@ -323,6 +326,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dialogoMU_CancelarActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="225" y="371" width="-1" height="-1"/>
@@ -398,7 +404,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Clase">
+        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Raza">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -416,7 +422,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Raza">
+        <Component class="javax.swing.JComboBox" name="cb_dialogoRP_Clase">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -722,7 +728,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Clase">
+        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Raza">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -743,7 +749,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Raza">
+        <Component class="javax.swing.JComboBox" name="cb_dialogoMP_Clase">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -1186,7 +1192,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="txt_dialogoCArma_SlotArma">
+        <Component class="javax.swing.JLabel" name="mostrar_dialogoCArma_SlotArma">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1381,7 +1387,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="txt_dialogoCArmadura_SlotArmadura">
+        <Component class="javax.swing.JLabel" name="mostrar_dialogoCArmadura_SlotArmadura">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="aa" green="c2" red="d1" type="rgb"/>
@@ -1876,6 +1882,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_dialogoCS_Usuario">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoCS_UsuarioActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="167" y="125" width="140" height="-1"/>

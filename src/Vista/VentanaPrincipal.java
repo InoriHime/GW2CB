@@ -101,8 +101,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txt_dialogoRP_Nombre = new javax.swing.JTextField();
         eti_dialogoRP_Nombre = new javax.swing.JLabel();
         eti_dialogoRP_Clase = new javax.swing.JLabel();
-        cb_dialogoRP_Clase = new javax.swing.JComboBox();
         cb_dialogoRP_Raza = new javax.swing.JComboBox();
+        cb_dialogoRP_Clase = new javax.swing.JComboBox();
         eti_dialogoRP_Raza = new javax.swing.JLabel();
         panel_dialogoRP_Equipo = new javax.swing.JPanel();
         eti_dialogoRP_SlotArma = new javax.swing.JLabel();
@@ -118,8 +118,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txt_dialogoMP_Nombre = new javax.swing.JTextField();
         eti_dialogoMP_Nombre = new javax.swing.JLabel();
         eti_dialogoMP_Clase = new javax.swing.JLabel();
-        cb_dialogoMP_Clase = new javax.swing.JComboBox();
         cb_dialogoMP_Raza = new javax.swing.JComboBox();
+        cb_dialogoMP_Clase = new javax.swing.JComboBox();
         eti_dialogoMP_Raza = new javax.swing.JLabel();
         panel_dialogoMP_Equipo = new javax.swing.JPanel();
         eti_dialogoMP_SlotArma = new javax.swing.JLabel();
@@ -141,7 +141,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chk_dialogoCArma_InfusionSimple1 = new javax.swing.JCheckBox();
         chk_dialogoCArma_InfusionSimple2 = new javax.swing.JCheckBox();
         eti_dialogoCArma_SlotArma = new javax.swing.JLabel();
-        txt_dialogoCArma_SlotArma = new javax.swing.JLabel();
+        mostrar_dialogoCArma_SlotArma = new javax.swing.JLabel();
         btn_dialogoCArma_Aplicar = new javax.swing.JButton();
         btn_dialogoCArma_Cancelar = new javax.swing.JButton();
         fondo_dialogoCArma = new javax.swing.JLabel();
@@ -153,7 +153,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         chk_dialogoCArmadura_InfusionSimple = new javax.swing.JCheckBox();
         chk_dialogoCArmadura_InfusionAgonia = new javax.swing.JCheckBox();
         eti_dialogoCArmadura_SlotArmadura = new javax.swing.JLabel();
-        txt_dialogoCArmadura_SlotArmadura = new javax.swing.JLabel();
+        mostrar_dialogoCArmadura_SlotArmadura = new javax.swing.JLabel();
         btn_dialogoCArmadura_Aplicar = new javax.swing.JButton();
         btn_dialogoCArmadura_Cancelar = new javax.swing.JButton();
         txt_dialogoCArmadura_ResistAgonia = new javax.swing.JTextField();
@@ -445,6 +445,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMU_RepetirContrasenya.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMU_RepetirContrasenya.setText("Repetir contraseña:");
 
+        txt_dialogoMU_RepetirContrasenya.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoMU_RepetirContrasenyaActionPerformed(evt);
+            }
+        });
+
         eti_dialogoMU_ContrasenyaAntigua.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMU_ContrasenyaAntigua.setText("Contraseña antigua:");
 
@@ -495,6 +501,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         btn_dialogoMU_Cancelar.setText("Cancelar");
         btn_dialogoMU_Cancelar.setOpaque(false);
+        btn_dialogoMU_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dialogoMU_CancelarActionPerformed(evt);
+            }
+        });
         dialogoModificarUsuario.getContentPane().add(btn_dialogoMU_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 371, -1, -1));
 
         fondo_dialogoMU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
@@ -523,13 +534,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoRP_Clase.setText("Clase:");
         dialogoRegistrarPersonaje.getContentPane().add(eti_dialogoRP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        cb_dialogoRP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cb_dialogoRP_Clase.setOpaque(false);
-        dialogoRegistrarPersonaje.getContentPane().add(cb_dialogoRP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 150, -1));
-
         cb_dialogoRP_Raza.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cb_dialogoRP_Raza.setOpaque(false);
-        dialogoRegistrarPersonaje.getContentPane().add(cb_dialogoRP_Raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, -1));
+        dialogoRegistrarPersonaje.getContentPane().add(cb_dialogoRP_Raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 150, -1));
+
+        cb_dialogoRP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoRP_Clase.setOpaque(false);
+        dialogoRegistrarPersonaje.getContentPane().add(cb_dialogoRP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, -1));
 
         eti_dialogoRP_Raza.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoRP_Raza.setText("Raza:");
@@ -663,13 +674,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoMP_Clase.setText("Clase:");
         dialogoModificarPersonaje.getContentPane().add(eti_dialogoMP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        cb_dialogoMP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cb_dialogoMP_Clase.setOpaque(false);
-        dialogoModificarPersonaje.getContentPane().add(cb_dialogoMP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 150, -1));
-
         cb_dialogoMP_Raza.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cb_dialogoMP_Raza.setOpaque(false);
-        dialogoModificarPersonaje.getContentPane().add(cb_dialogoMP_Raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, -1));
+        dialogoModificarPersonaje.getContentPane().add(cb_dialogoMP_Raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 150, -1));
+
+        cb_dialogoMP_Clase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_dialogoMP_Clase.setOpaque(false);
+        dialogoModificarPersonaje.getContentPane().add(cb_dialogoMP_Clase, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 150, -1));
 
         eti_dialogoMP_Raza.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoMP_Raza.setText("Raza:");
@@ -834,9 +845,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCArma_SlotArma.setText("Slot del Arma:");
         dialogoConfigurarArma.getContentPane().add(eti_dialogoCArma_SlotArma, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
-        txt_dialogoCArma_SlotArma.setForeground(new java.awt.Color(209, 194, 170));
-        txt_dialogoCArma_SlotArma.setText("-");
-        dialogoConfigurarArma.getContentPane().add(txt_dialogoCArma_SlotArma, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 11, 120, -1));
+        mostrar_dialogoCArma_SlotArma.setForeground(new java.awt.Color(209, 194, 170));
+        mostrar_dialogoCArma_SlotArma.setText("-");
+        dialogoConfigurarArma.getContentPane().add(mostrar_dialogoCArma_SlotArma, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 11, 120, -1));
 
         btn_dialogoCArma_Aplicar.setText("Aplicar");
         btn_dialogoCArma_Aplicar.setOpaque(false);
@@ -892,9 +903,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCArmadura_SlotArmadura.setText("Slot del Armadura:");
         dialogoConfigurarArmadura.getContentPane().add(eti_dialogoCArmadura_SlotArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
-        txt_dialogoCArmadura_SlotArmadura.setForeground(new java.awt.Color(209, 194, 170));
-        txt_dialogoCArmadura_SlotArmadura.setText("-");
-        dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_SlotArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 11, 120, -1));
+        mostrar_dialogoCArmadura_SlotArmadura.setForeground(new java.awt.Color(209, 194, 170));
+        mostrar_dialogoCArmadura_SlotArmadura.setText("-");
+        dialogoConfigurarArmadura.getContentPane().add(mostrar_dialogoCArmadura_SlotArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 11, 120, -1));
 
         btn_dialogoCArmadura_Aplicar.setText("Aplicar");
         btn_dialogoCArmadura_Aplicar.setOpaque(false);
@@ -1069,6 +1080,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCS_Usuario.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoCS_Usuario.setText("Usuario de la BD:");
         dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 128, -1, -1));
+
+        txt_dialogoCS_Usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dialogoCS_UsuarioActionPerformed(evt);
+            }
+        });
         dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 125, 140, -1));
         dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 163, 140, -1));
 
@@ -2074,6 +2091,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_dialogoCArmadura_AplicarActionPerformed
 
+    private void txt_dialogoCS_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoCS_UsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoCS_UsuarioActionPerformed
+
+    private void txt_dialogoMU_RepetirContrasenyaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dialogoMU_RepetirContrasenyaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dialogoMU_RepetirContrasenyaActionPerformed
+
+    private void btn_dialogoMU_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dialogoMU_CancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_dialogoMU_CancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2347,6 +2376,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JLabel mostrarServidor;
     public javax.swing.JLabel mostrarUsuario;
     public javax.swing.JLabel mostrarVitalidad;
+    public javax.swing.JLabel mostrar_dialogoCArma_SlotArma;
+    public javax.swing.JLabel mostrar_dialogoCArmadura_SlotArmadura;
     public javax.swing.JLabel muestraDanyoCondicion;
     public javax.swing.JLabel muestraDureza;
     public javax.swing.JLabel muestraFerocidad;
@@ -2372,10 +2403,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JTextField txtAgoniaMinima;
     public javax.swing.JTextField txtBusqueda;
     public javax.swing.JTextField txtNivelfracMinimo;
-    public javax.swing.JLabel txt_dialogoCArma_SlotArma;
     private javax.swing.JLabel txt_dialogoCArmadura_InfusionAgonia;
     public javax.swing.JTextField txt_dialogoCArmadura_ResistAgonia;
-    public javax.swing.JLabel txt_dialogoCArmadura_SlotArmadura;
     private javax.swing.JTextField txt_dialogoCC_NombreClan;
     private javax.swing.JTextField txt_dialogoCC_Tag;
     private javax.swing.JPasswordField txt_dialogoCS_Contraseña;

@@ -169,6 +169,44 @@ public class ModeloEditarPersonaje {
         
     }
     
+    public ArrayList<String> getTipoArma() {
+    
+        ArrayList<String> tipoArma = new ArrayList<>();
+        Statement stmt = null;
+        ResultSet res;
+        
+        try {
+            
+            stmt= db.getConexion().createStatement();
+            
+        } catch (SQLException e) {
+            
+            System.err.println(e.getMessage());
+            
+        }
+        
+        try {
+            
+            res = stmt.executeQuery("SELECT NomTip FROM Tipos_Arma");
+            
+            while (res.next()) {
+                
+                tipoArma.add(res.getString("NomTip"));
+                
+            }
+            
+            return tipoArma;
+            
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+            
+        }
+  
+        return null;
+        
+    }
+    
     public ArrayList<String> getRarezas() {
     
         ArrayList<String> rarezas = new ArrayList<>();
@@ -191,7 +229,7 @@ public class ModeloEditarPersonaje {
             
             while (res.next()) {
                 
-                rarezas.add(res.getString("NomSArmadura"));
+                rarezas.add(res.getString("NomRareza"));
                 
             }
             
@@ -229,7 +267,7 @@ public class ModeloEditarPersonaje {
             
             while (res.next()) {
                 
-                modificadores.add(res.getString("NomSArmadura"));
+                modificadores.add(res.getString("NomMod"));
                 
             }
             
