@@ -786,7 +786,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoConfigurarArma.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArma.setTitle("Configurar Arma");
         dialogoConfigurarArma.setAlwaysOnTop(true);
-        dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 275));
+        dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 288));
         dialogoConfigurarArma.setModal(true);
         dialogoConfigurarArma.setResizable(false);
         dialogoConfigurarArma.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -852,7 +852,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         dialogoConfigurarArmadura.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArmadura.setTitle("Configurar Armadura");
         dialogoConfigurarArmadura.setAlwaysOnTop(true);
-        dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 245));
+        dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 258));
         dialogoConfigurarArmadura.setModal(true);
         dialogoConfigurarArmadura.setResizable(false);
         dialogoConfigurarArmadura.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
