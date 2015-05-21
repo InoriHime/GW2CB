@@ -18,7 +18,8 @@ public class ModeloPrincipal extends Database {
     }
 
     /**
-     * Obtiene registros de la tabla Personajes y los devuelve en un DefaultTableModel
+     * Obtiene registros de la tabla Personajes y los devuelve en un
+     * DefaultTableModel
      */
     public DefaultTableModel getTablaPersonaje() {
         DefaultTableModel tablemodel = new DefaultTableModel() {
@@ -30,7 +31,7 @@ public class ModeloPrincipal extends Database {
         };
         int registros = 0;
         String[] columNames = {"Personaje", "Cuenta", "Clase", "Niv.Frac", "R.Agonía", "Clan", "Idiomas"};
-      //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
+        //obtenemos la cantidad de registros existentes en la tabla y se almacena en la variable "registros"
         //para formar la matriz de datos
 
         Statement stmt = null;
@@ -390,11 +391,11 @@ public class ModeloPrincipal extends Database {
         }
         return null;
     }
-    
-    public DefaultTableModel busqueda(String c_usu, String busqueda, boolean personaje,boolean cuenta,boolean clan,String agonia,
-                                        String fractales, boolean soloclan, boolean guardian, boolean guerrero, boolean elementalista,
-                                        boolean nigromante, boolean guardabosques, boolean ladron, boolean ingeniero,
-                                        boolean hipnotizador, boolean ingles, boolean espanyol, boolean frances, boolean aleman){
+
+    public DefaultTableModel busqueda(String c_usu, String busqueda, boolean personaje, boolean cuenta, boolean clan, String agonia,
+            String fractales, boolean soloclan, boolean guardian, boolean guerrero, boolean elementalista,
+            boolean nigromante, boolean guardabosques, boolean ladron, boolean ingeniero,
+            boolean hipnotizador, boolean ingles, boolean espanyol, boolean frances, boolean aleman) {
         DefaultTableModel tablemodel = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -402,112 +403,109 @@ public class ModeloPrincipal extends Database {
                 return false;
             }
         };
-        String cl="";
-        String pj="";
-        String cu="";
-        String clases="";
-        String idiomas="";
-        String s_clan="";
-        boolean primero=true;
-        boolean[] classB = {guerrero, ingeniero, nigromante, ladron, elementalista, guardabosques, hipnotizador, guardian}; 
+        String cl = "";
+        String pj = "";
+        String cu = "";
+        String clases = "";
+        String idiomas = "";
+        String s_clan = "";
+        boolean primero = true;
+        boolean[] classB = {guerrero, ingeniero, nigromante, ladron, elementalista, guardabosques, hipnotizador, guardian};
         boolean[] idiom = {ingles, espanyol, frances, aleman};
-        if(clan){
-            cl=busqueda;
-        }else if(cuenta){
-            cu=busqueda;
-        }else{
-            pj=busqueda;
+        if (clan) {
+            cl = busqueda;
+        } else if (cuenta) {
+            cu = busqueda;
+        } else {
+            pj = busqueda;
         }
-        
-        for(int i=0;i<8;i++){
-            if(classB[i]){
-                if(primero){
-                    clases+="Cl.ID_Clase = "+i+1;
+
+        for (int i = 0; i < 8; i++) {
+            if (classB[i]) {
+                if (primero) {
+                    clases += "Cl.ID_Clase = " + (i+1);
                     primero = false;
-                }else{
-                    clases+=" OR Cl.ID_Clase = "+i+1;
+                } else {
+                    clases += " OR Cl.ID_Clase = " + (i+1);
                 }
             }
         }
-        primero=true;
-        for(int i=0;i<4;i++){
-            if(idiom[i]){
-                if(primero){
-                    if(i==0){
-                        idiomas+="C.IdiomaIngles=TRUE";
-                    }else if(i==1){
-                        idiomas+="C.IdiomaEspañol=TRUE";
-                    }else if(i==2){
-                        idiomas+="C.IdiomaFrances=TRUE";
-                    }else{
-                        idiomas+="C.IdiomaAleman=TRUE";
+        primero = true;
+        for (int i = 0; i < 4; i++) {
+            if (idiom[i]) {
+                if (primero) {
+                    if (i == 0) {
+                        idiomas += "C.IdiomaIngles=TRUE";
+                    } else if (i == 1) {
+                        idiomas += "C.IdiomaEspañol=TRUE";
+                    } else if (i == 2) {
+                        idiomas += "C.IdiomaFrances=TRUE";
+                    } else {
+                        idiomas += "C.IdiomaAleman=TRUE";
                     }
                     primero = false;
-                }else{
-                    if(i==1){
-                        idiomas+=" OR C.IdiomaEspañol=TRUE";
-                    }else if(i==2){
-                        idiomas+=" OR C.IdiomaFrances=TRUE";
-                    }else{
-                        idiomas+=" OR C.IdiomaAleman=TRUE";
+                } else {
+                    if (i == 1) {
+                        idiomas += " OR C.IdiomaEspañol=TRUE";
+                    } else if (i == 2) {
+                        idiomas += " OR C.IdiomaFrances=TRUE";
+                    } else {
+                        idiomas += " OR C.IdiomaAleman=TRUE";
                     }
                 }
             }
         }
-        
-        if(!clases.equals("")){
-            clases="AND ("+clases+") ";
+
+        if (!clases.equals("")) {
+            clases = "AND (" + clases + ") ";
         }
-        if(!idiomas.equals("")){
-            clases="AND ("+idiomas+") ";
+        if (!idiomas.equals("")) {
+            idiomas = "AND (" + idiomas + ") ";
         }
-        if(soloclan){
-            s_clan="AND CC.Clan IN (SELECT CC.Clan FROM Clan_Cuenta CC, Cuentas C WHERE C.NomCuenta=CC.Cuenta AND C.NomCuenta LIKE '%"+c_usu+"%') ";
+        if (soloclan) {
+            s_clan = "AND CC.Clan IN (SELECT CC.Clan FROM Clan_Cuenta CC, Cuentas C WHERE C.NomCuenta=CC.Cuenta AND C.NomCuenta LIKE '%" + c_usu + "%') ";
         }
-        if(agonia.equals("")){
-            agonia="0";
+        if (agonia.equals("")) {
+            agonia = "0";
         }
-        if(fractales.equals("")){
-            fractales="0";
+        if (fractales.equals("")) {
+            fractales = "0";
         }
-        
-        String q="SELECT P.NomPj, P.Cuenta, Cl.NomClase, C.NivFractales, getAgonia(NomPj), CC.Clan, C.IdiomaIngles," +
-                "C.IdiomaEspañol, C.IdiomaFrances, C.IdiomaAleman " +
-                "FROM Personajes P, Cuentas C, Clan_Cuenta CC, Clases Cl WHERE C.NomCuenta=P.Cuenta AND C.NomCuenta=CC.Cuenta " +
-                "AND P.Clase=Cl.ID_Clase AND (CC.Clan LIKE '%"+cl+"%' OR P.NomPj LIKE '%"+pj+"%' OR P.Cuenta LIKE '%"+cu+"%') " +
-                "AND getAgonia(NomPj)>="+agonia+" "+
-                "AND C.NivFractales>="+fractales+" "+
-                s_clan +" "+
-                clases+" "+
-                idiomas;
-        String qcount="SELECT Count(*)" +
-                "FROM Personajes P, Cuentas C, Clan_Cuenta CC, Clases Cl WHERE C.NomCuenta=P.Cuenta AND C.NomCuenta=CC.Cuenta " +
-                "AND P.Clase=Cl.ID_Clase AND (CC.Clan LIKE '%"+cl+"%' OR P.NomPj LIKE '%"+pj+"%' OR P.Cuenta LIKE '%"+cu+"%') " +
-                "AND getAgonia(NomPj)>="+agonia+" "+
-                "AND C.NivFractales>="+fractales+" "+
-                s_clan +" "+
-                clases+" "+
-                idiomas;
-        
-        System.out.println(q);
-        
-        
+
+        String q = "SELECT P.NomPj, P.Cuenta, Cl.NomClase, C.NivFractales, getAgonia(NomPj) as Agonia, CC.Clan, C.IdiomaIngles,"
+                + "C.IdiomaEspañol, C.IdiomaFrances, C.IdiomaAleman "
+                + "FROM Personajes P, Cuentas C LEFT JOIN Clan_Cuenta CC ON C.NomCuenta=CC.Cuenta, Clases Cl WHERE C.NomCuenta=P.Cuenta "
+                + "AND P.Clase=Cl.ID_Clase AND (CC.Clan LIKE '%" + cl + "%' AND P.NomPj LIKE '%" + pj + "%' AND P.Cuenta LIKE '%" + cu + "%') "
+                + "AND getAgonia(NomPj)>=" + agonia + " "
+                + "AND C.NivFractales>=" + fractales + " "
+                + s_clan + " "
+                + clases + " "
+                + idiomas;
+        String qcount = "SELECT Count(*) as total "
+                + "FROM Personajes P, Cuentas C LEFT JOIN Clan_Cuenta CC ON C.NomCuenta=CC.Cuenta, Clases Cl WHERE C.NomCuenta=P.Cuenta "
+                + "AND P.Clase=Cl.ID_Clase AND (CC.Clan LIKE '%" + cl + "%' AND P.NomPj LIKE '%" + pj + "%' AND P.Cuenta LIKE '%" + cu + "%') "
+                + "AND getAgonia(NomPj)>=" + agonia + " "
+                + "AND C.NivFractales>=" + fractales + " "
+                + s_clan + " "
+                + clases + " "
+                + idiomas;
+
         int registros = 0;
         String[] columNames = {"Personaje", "Cuenta", "Clase", "Niv.Frac", "R.Agonía", "Clan", "Idiomas"};
-         Statement stmt = null;
-         try {
+        Statement stmt = null;
+        try {
 
             stmt = db.getConexion().createStatement();
             ResultSet res = stmt.executeQuery(qcount);
             res.next();
             registros = res.getInt("total");
-
+            System.out.println(registros);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
         //se crea una matriz con tantas filas y columnas que necesite
         Object[][] data = new String[registros][7];
-        
+
         try {
           //realizamos la consulta sql y llenamos los datos en la matriz "Object[][] data"
 
@@ -528,16 +526,15 @@ public class ModeloPrincipal extends Database {
                 if (res.getBoolean("IdiomaAleman")) {
                     cad = cad.concat("[GER]");
                 }
-                
+
                 data[i][0] = res.getString("NomPj");
                 data[i][1] = res.getString("Cuenta");
                 data[i][2] = res.getString("NomClase");
-                data[i][3] = res.getString("NivFrac");
+                data[i][3] = res.getString("NivFractales");
                 data[i][4] = res.getString("Agonia");
-                data[i][5]=res.getString("NomClan");
+                data[i][5] = res.getString("Clan");
                 data[i][6] = cad;
 
-                
                 if (data[i][4] == null) {
                     data[i][4] = "0";
                 }
