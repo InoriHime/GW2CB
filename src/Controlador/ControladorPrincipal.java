@@ -177,6 +177,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                         this.vista.chkNigromante.isSelected(), this.vista.chkGuardabosques.isSelected(), this.vista.chkLadron.isSelected(),
                         this.vista.chkIngeniero.isSelected(), this.vista.chkHipnotizador.isSelected(), this.vista.chkIngles.isSelected(),
                         this.vista.chkEspanyol.isSelected(), this.vista.chkFrances.isSelected(), this.vista.chkAleman.isSelected()));
+                this.vista.TablaPersonajes.getColumnModel().getColumn(3).setPreferredWidth(30);
+                this.vista.TablaPersonajes.getColumnModel().getColumn(4).setPreferredWidth(30);
                 break;
         }
 

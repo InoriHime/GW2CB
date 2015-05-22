@@ -489,6 +489,8 @@ public class ModeloPrincipal extends Database {
                 + s_clan + " "
                 + clases + " "
                 + idiomas;
+        
+        System.out.println(q);
 
         int registros = 0;
         String[] columNames = {"Personaje", "Cuenta", "Clase", "Niv.Frac", "R.Agonía", "Clan", "Idiomas"};
