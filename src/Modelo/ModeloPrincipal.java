@@ -554,5 +554,43 @@ public class ModeloPrincipal extends Database {
         }
         return tablemodel;
     }
+    
+    public ArrayList<String> getClanes () {
+        
+        ArrayList<String> clanes = new ArrayList<>();
+        Statement stmt = null;
+        ResultSet res;
+        
+        try {
+            
+            stmt= db.getConexion().createStatement();
+            
+        } catch (SQLException e) {
+            
+            System.err.println(e.getMessage());
+            
+        }
+        
+        try {
+            
+            res = stmt.executeQuery("SELECT NomClan FROM Clanes");
+            
+            while (res.next()) {
+                
+                clanes.add(res.getString("NomClan"));
+                
+            }
+            
+            return clanes;
+            
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+            
+        }
+  
+        return null;
+        
+    }
 
 }

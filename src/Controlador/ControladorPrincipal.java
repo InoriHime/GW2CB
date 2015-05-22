@@ -252,6 +252,21 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 this.vista.dialogoAcercaDe.setLocationRelativeTo(null);
                 this.vista.dialogoAcercaDe.setVisible(true);
                 break;
+            case "__UNIRSE_CLAN":
+                this.vista.dialogoUnirseClan.setLocationRelativeTo(null);
+                this.vista.dialogoUnirseClan.setVisible(true);
+                break;
+            case "__MODIFICAR_PERSONAJE":
+                Personaje p = new Personaje();
+                String npj;
+                npj = String.valueOf(this.vista.cbPersonaje.getSelectedItem());
+                p.setNombre(npj);
+                this.asignarDatosPersonaje(p);
+                MEP.setPersonaje(p);
+                MEP.cargarDatosPersonaje();
+                this.vista.dialogoModificarPersonaje.setVisible(true);
+                this.vista.dialogoModificarPersonaje.setLocationRelativeTo(null);
+                break;
         }
     }
 

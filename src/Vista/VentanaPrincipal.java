@@ -932,6 +932,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoUnirseClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoUnirseClan.setTitle("Unirse al Clan");
+        dialogoUnirseClan.setMinimumSize(new java.awt.Dimension(285, 145));
         dialogoUnirseClan.setModal(true);
         dialogoUnirseClan.setResizable(false);
         dialogoUnirseClan.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
