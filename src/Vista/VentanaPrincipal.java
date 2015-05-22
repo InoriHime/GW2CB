@@ -198,8 +198,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCS_Contraseña = new javax.swing.JLabel();
         btn_dialogoCS_Aplicar = new javax.swing.JButton();
         btn_dialogoCS_Cancelar = new javax.swing.JButton();
-        txt_dialogoCS_Puerto = new javax.swing.JTextField();
-        eti_dialogoCS_Puerto = new javax.swing.JLabel();
         fondo_dialogoCS = new javax.swing.JLabel();
         dialogoAcercaDe = new javax.swing.JDialog();
         btn_dialogoAD_Aceptar = new javax.swing.JButton();
@@ -1073,40 +1071,35 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         eti_dialogoCS_NombreBD.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoCS_NombreBD.setText("Nombre de la Base de Datos:");
-        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_NombreBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
-        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_NombreBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 87, 140, -1));
+        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_NombreBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 52, -1, -1));
+        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_NombreBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 49, 140, -1));
 
         eti_dialogoCS_Usuario.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoCS_Usuario.setText("Usuario de la BD:");
-        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 128, -1, -1));
+        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         txt_dialogoCS_Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_dialogoCS_UsuarioActionPerformed(evt);
             }
         });
-        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 125, 140, -1));
-        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 163, 140, -1));
+        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 87, 140, -1));
+        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 125, 140, -1));
 
         eti_dialogoCS_Contraseña.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoCS_Contraseña.setText("Contraseña:");
-        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 166, -1, -1));
+        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 128, -1, -1));
 
         btn_dialogoCS_Aplicar.setText("Aplicar");
         btn_dialogoCS_Aplicar.setOpaque(false);
-        dialogoCambioServidor.getContentPane().add(btn_dialogoCS_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 201, -1, -1));
+        dialogoCambioServidor.getContentPane().add(btn_dialogoCS_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 163, -1, -1));
 
         btn_dialogoCS_Cancelar.setText("Cancelar");
         btn_dialogoCS_Cancelar.setOpaque(false);
-        dialogoCambioServidor.getContentPane().add(btn_dialogoCS_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 201, -1, -1));
-        dialogoCambioServidor.getContentPane().add(txt_dialogoCS_Puerto, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 49, 68, -1));
-
-        eti_dialogoCS_Puerto.setForeground(new java.awt.Color(209, 194, 170));
-        eti_dialogoCS_Puerto.setText("Puerto:");
-        dialogoCambioServidor.getContentPane().add(eti_dialogoCS_Puerto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 52, -1, -1));
+        dialogoCambioServidor.getContentPane().add(btn_dialogoCS_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 163, -1, -1));
 
         fondo_dialogoCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
-        dialogoCambioServidor.getContentPane().add(fondo_dialogoCS, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 240));
+        dialogoCambioServidor.getContentPane().add(fondo_dialogoCS, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 202));
 
         dialogoAcercaDe.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoAcercaDe.setTitle("Acerca de...");
@@ -2278,7 +2271,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoCS_Contraseña;
     private javax.swing.JLabel eti_dialogoCS_DireccionIP;
     private javax.swing.JLabel eti_dialogoCS_NombreBD;
-    private javax.swing.JLabel eti_dialogoCS_Puerto;
     private javax.swing.JLabel eti_dialogoCS_Usuario;
     private javax.swing.JLabel eti_dialogoEC_Clan;
     private javax.swing.JLabel eti_dialogoMP_Clase;
@@ -2410,7 +2402,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPasswordField txt_dialogoCS_Contraseña;
     private javax.swing.JTextField txt_dialogoCS_DireccionIP;
     private javax.swing.JTextField txt_dialogoCS_NombreBD;
-    private javax.swing.JTextField txt_dialogoCS_Puerto;
     private javax.swing.JTextField txt_dialogoCS_Usuario;
     public javax.swing.JTextField txt_dialogoMP_Nombre;
     private javax.swing.JPasswordField txt_dialogoMU_ContrasenyaAntigua;
