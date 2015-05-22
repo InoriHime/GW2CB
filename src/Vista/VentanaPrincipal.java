@@ -2155,10 +2155,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoAD_Aceptar;
     public javax.swing.JButton btn_dialogoCArma_Aplicar;
     public javax.swing.JButton btn_dialogoCArma_Cancelar;
-    private javax.swing.JButton btn_dialogoCArma_SinEquipar;
+    public javax.swing.JButton btn_dialogoCArma_SinEquipar;
     public javax.swing.JButton btn_dialogoCArmadura_Aplicar;
     public javax.swing.JButton btn_dialogoCArmadura_Cancelar;
-    private javax.swing.JButton btn_dialogoCArmadura_SinEquipar;
+    public javax.swing.JButton btn_dialogoCArmadura_SinEquipar;
     private javax.swing.JLabel btn_dialogoCC;
     private javax.swing.JButton btn_dialogoCC_Cancelar;
     private javax.swing.JButton btn_dialogoCC_Crear;

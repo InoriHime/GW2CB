@@ -84,10 +84,14 @@ public class ControladorEditarPersonaje implements ActionListener {
         this.vista.btn_dialogoCArma_Aplicar.addActionListener(this);
         this.vista.btn_dialogoCArma_Cancelar.setActionCommand("__CANCELAR_ARMA");
         this.vista.btn_dialogoCArma_Cancelar.addActionListener(this);
+        this.vista.btn_dialogoCArma_SinEquipar.setActionCommand("__SIN_EQUIPAR_ARMA");
+        this.vista.btn_dialogoCArma_SinEquipar.addActionListener(this);
         this.vista.btn_dialogoCArmadura_Aplicar.setActionCommand("__APLICAR_ARMADURA");
         this.vista.btn_dialogoCArmadura_Aplicar.addActionListener(this);
         this.vista.btn_dialogoCArmadura_Cancelar.setActionCommand("__CANCELAR_ARMADURA");
         this.vista.btn_dialogoCArmadura_Cancelar.addActionListener(this);
+        this.vista.btn_dialogoCArmadura_SinEquipar.setActionCommand("__SIN_EQUIPAR_ARMADURA");
+        this.vista.btn_dialogoCArmadura_SinEquipar.addActionListener(this);
         
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
@@ -102,6 +106,7 @@ public class ControladorEditarPersonaje implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         
         int slotArma, slotArmadura;
+        boolean rellenoTipo, rellenoRareza, rellenoModificacion;
         
         switch (AccionMVC.valueOf(e.getActionCommand())) {
             
@@ -260,39 +265,52 @@ public class ControladorEditarPersonaje implements ActionListener {
             case __APLICAR_ARMA:
                 slotArma = this.vista.cb_dialogoMP_SlotArma.getSelectedIndex();
                 
-                eliminarArma[slotArma] = false;
-                nuevoArma[slotArma] = true;
+                if (this.vista.cb_dialogoCArma_TipoArma.getSelectedIndex() > -1 &&
+                        this.vista.cb_dialogoCArma_RarezaArma.getSelectedIndex() > -1 &&
+                        this.vista.cb_dialogoCArma_ModificadorArma.getSelectedIndex() > -1) {
+                    
+                    eliminarArma[slotArma] = false;
+                    nuevoArma[slotArma] = true;
                 
-                armas[slotArma][0] = slotArma + 1;
-                armas[slotArma][1] = this.vista.cb_dialogoCArma_TipoArma.getSelectedIndex() + 1;
-                armas[slotArma][2] = this.vista.cb_dialogoCArma_ModificadorArma.getSelectedIndex() + 1;
-                armas[slotArma][3] = this.vista.cb_dialogoCArma_RarezaArma.getSelectedIndex() + 1;
+                    armas[slotArma][0] = slotArma + 1;
+                    armas[slotArma][1] = this.vista.cb_dialogoCArma_TipoArma.getSelectedIndex() + 1;
+                    armas[slotArma][2] = this.vista.cb_dialogoCArma_ModificadorArma.getSelectedIndex() + 1;
+                    armas[slotArma][3] = this.vista.cb_dialogoCArma_RarezaArma.getSelectedIndex() + 1;
                 
-                if (this.vista.chk_dialogoCArma_InfusionSimple1.isSelected()) {
+                    if (this.vista.chk_dialogoCArma_InfusionSimple1.isSelected()) {
                     
-                    armas[slotArma][4] = 1;
+                        armas[slotArma][4] = 1;
                     
-                } else {
+                    } else {
                     
-                    armas[slotArma][4] = 0;
+                        armas[slotArma][4] = 0;
                     
-                }
+                    }
                 
-                if (this.vista.chk_dialogoCArma_InfusionSimple2.isSelected()) {
+                    if (this.vista.chk_dialogoCArma_InfusionSimple2.isSelected()) {
                     
-                    armas[slotArma][5] = 1;
+                        armas[slotArma][5] = 1;
                     
-                } else {
+                    } else {
                     
-                    armas[slotArma][5] = 0;
+                        armas[slotArma][5] = 0;
                     
-                }
+                    }
                
-                this.vista.dialogoConfigurarArma.dispose();
+                    this.vista.dialogoConfigurarArma.dispose();
+                
+                } else {
+                    
+                    JOptionPane.showMessageDialog(this.vista.dialogoConfigurarArma, "Los campos 'Tipo de Arma', 'Rareza' y 'Modificador' son obligatorios.");
+                    
+                }
             break;
                 
             case __APLICAR_ARMADURA:
                 slotArmadura = this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex();
+                
+                if (this.vista.cb_dialogoCArmadura_RarezaArmadura.getSelectedIndex() > -1 &&
+                        this.vista.cb_dialogoCArmadura_ModificadorArmadura.getSelectedIndex() > -1) {
                 
                 eliminarArmadura[slotArmadura] = false;
                 nuevoArmadura[slotArmadura] = true;
@@ -312,6 +330,12 @@ public class ControladorEditarPersonaje implements ActionListener {
                 }
                 
                 armaduras[slotArmadura][4] = Integer.parseInt(this.vista.txt_dialogoCArmadura_ResistAgonia.getText());
+                
+                } else {
+                    
+                    JOptionPane.showMessageDialog(this.vista.dialogoConfigurarArmadura, "Los campos 'Rareza' y 'Modificador' son obligatorios.");
+                    
+                }
                 
                 this.vista.dialogoConfigurarArmadura.dispose();
             break;
