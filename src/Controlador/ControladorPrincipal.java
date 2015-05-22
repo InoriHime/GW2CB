@@ -116,6 +116,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.itemSalir.addMouseListener(this);
         this.vista.itemRegPj.setName("__REGISTRAR_PERSONAJE");
         this.vista.itemRegPj.addMouseListener(this);
+        this.vista.itemModPj.setName("__MODIFICAR_PERSONAJE");
+        
 
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);

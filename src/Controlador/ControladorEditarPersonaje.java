@@ -102,9 +102,7 @@ public class ControladorEditarPersonaje implements ActionListener {
         this.vista.cb_dialogoMP_Clase.setModel(new DefaultComboBoxModel(clases.toArray()));
         this.vista.cb_dialogoMP_Clase.setSelectedIndex(modelo.getClase(personaje.getNombre()) - 1);
         this.vista.cb_dialogoMP_SlotArma.setModel(new DefaultComboBoxModel(slotArma.toArray()));
-        this.vista.cb_dialogoMP_SlotArma.setSelectedIndex(-1);
         this.vista.cb_dialogoMP_SlotArmadura.setModel(new DefaultComboBoxModel(slotArmadura.toArray()));
-        this.vista.cb_dialogoMP_SlotArmadura.setSelectedIndex(-1);
     }
     
     public void setPersonaje(Personaje p){
@@ -190,10 +188,9 @@ public class ControladorEditarPersonaje implements ActionListener {
                         }
 
                     }
-                    this.vista.dialogoConfigurarArma.setVisible(true);
                     this.vista.dialogoConfigurarArma.setLocationRelativeTo(null);
+                    this.vista.dialogoConfigurarArma.setVisible(true);
                     
-
                 } else {
 
                     JOptionPane.showMessageDialog(null, "Tiene que seleccionar un slot para modificar.");
