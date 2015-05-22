@@ -1953,7 +1953,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuUsuario.add(itemModificarDatos);
         menuUsuario.add(separadorUsuario);
 
-        itemCerrarUsuario.setText("Cerrar usuario");
+        itemCerrarUsuario.setText("Salir");
         menuUsuario.add(itemCerrarUsuario);
 
         MenuBarra.add(menuUsuario);

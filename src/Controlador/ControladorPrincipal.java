@@ -106,6 +106,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.btnModPj.addActionListener(this);
         this.vista.btnBuscar.setActionCommand("__BUSCAR");
         this.vista.btnBuscar.addActionListener(this);
+        this.vista.itemCerrarUsuario.addMouseListener(this);
+        this.vista.itemCerrarUsuario.setName("__SALIR");
 
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);
@@ -201,6 +203,9 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 this.asignarDatosPersonaje(personajeSeleccionado);
                 this.mostrarImagenes(personajeSeleccionado.getNombre());
                 this.mostrarAtributosPersonaje(personajeSeleccionado);
+                break;
+            case "__SALIR":
+                this.vista.dispose();
                 break;
         }
     }
