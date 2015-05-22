@@ -151,13 +151,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCArmadura_ModificadorArmadura = new javax.swing.JLabel();
         cb_dialogoCArmadura_ModificadorArmadura = new javax.swing.JComboBox();
         chk_dialogoCArmadura_InfusionSimple = new javax.swing.JCheckBox();
-        chk_dialogoCArmadura_InfusionAgonia = new javax.swing.JCheckBox();
         eti_dialogoCArmadura_SlotArmadura = new javax.swing.JLabel();
         mostrar_dialogoCArmadura_SlotArmadura = new javax.swing.JLabel();
         btn_dialogoCArmadura_Aplicar = new javax.swing.JButton();
         btn_dialogoCArmadura_Cancelar = new javax.swing.JButton();
         txt_dialogoCArmadura_ResistAgonia = new javax.swing.JTextField();
         txt_dialogoCArmadura_InfusionAgonia = new javax.swing.JLabel();
+        eti_dialogoCArmadura_InfusionAgonia = new javax.swing.JLabel();
         fondo_dialogoCArmadura = new javax.swing.JLabel();
         dialogoUnirseClan = new javax.swing.JDialog();
         eti_dialogoUC_Clan = new javax.swing.JLabel();
@@ -356,7 +356,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoModificarUsuario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoModificarUsuario.setTitle("Modificar Usuario");
-        dialogoModificarUsuario.setAlwaysOnTop(true);
         dialogoModificarUsuario.setModal(true);
         dialogoModificarUsuario.setResizable(false);
         dialogoModificarUsuario.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -513,7 +512,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoRegistrarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoRegistrarPersonaje.setTitle("Registrar Personaje");
-        dialogoRegistrarPersonaje.setAlwaysOnTop(true);
         dialogoRegistrarPersonaje.setMinimumSize(new java.awt.Dimension(375, 345));
         dialogoRegistrarPersonaje.setModal(true);
         dialogoRegistrarPersonaje.setResizable(false);
@@ -653,7 +651,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoModificarPersonaje.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoModificarPersonaje.setTitle("Modificar Personaje");
-        dialogoModificarPersonaje.setAlwaysOnTop(true);
         dialogoModificarPersonaje.setMinimumSize(new java.awt.Dimension(375, 345));
         dialogoModificarPersonaje.setModal(true);
         dialogoModificarPersonaje.setResizable(false);
@@ -796,7 +793,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoConfigurarArma.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArma.setTitle("Configurar Arma");
-        dialogoConfigurarArma.setAlwaysOnTop(true);
         dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 288));
         dialogoConfigurarArma.setModal(true);
         dialogoConfigurarArma.setResizable(false);
@@ -862,7 +858,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoConfigurarArmadura.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArmadura.setTitle("Configurar Armadura");
-        dialogoConfigurarArmadura.setAlwaysOnTop(true);
         dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 258));
         dialogoConfigurarArmadura.setModal(true);
         dialogoConfigurarArmadura.setResizable(false);
@@ -894,11 +889,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         dialogoConfigurarArmadura.getContentPane().add(chk_dialogoCArmadura_InfusionSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 119, -1, -1));
 
-        chk_dialogoCArmadura_InfusionAgonia.setForeground(new java.awt.Color(209, 194, 170));
-        chk_dialogoCArmadura_InfusionAgonia.setText("Infusión Agonía: (+");
-        chk_dialogoCArmadura_InfusionAgonia.setOpaque(false);
-        dialogoConfigurarArmadura.getContentPane().add(chk_dialogoCArmadura_InfusionAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 148, -1, -1));
-
         eti_dialogoCArmadura_SlotArmadura.setForeground(new java.awt.Color(209, 194, 170));
         eti_dialogoCArmadura_SlotArmadura.setText("Slot del Armadura:");
         dialogoConfigurarArmadura.getContentPane().add(eti_dialogoCArmadura_SlotArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
@@ -919,18 +909,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btn_dialogoCArmadura_Cancelar.setText("Cancelar");
         btn_dialogoCArmadura_Cancelar.setOpaque(false);
         dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 189, -1, -1));
-        dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_ResistAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 149, 32, -1));
+        dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_ResistAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 149, 32, -1));
 
         txt_dialogoCArmadura_InfusionAgonia.setForeground(new java.awt.Color(209, 194, 170));
         txt_dialogoCArmadura_InfusionAgonia.setText("RA)");
-        dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_InfusionAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 152, -1, -1));
+        dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_InfusionAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 152, -1, -1));
+
+        eti_dialogoCArmadura_InfusionAgonia.setForeground(new java.awt.Color(209, 194, 170));
+        eti_dialogoCArmadura_InfusionAgonia.setText("Infusión Agonía (+");
+        dialogoConfigurarArmadura.getContentPane().add(eti_dialogoCArmadura_InfusionAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 149, -1, 20));
 
         fondo_dialogoCArmadura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
         dialogoConfigurarArmadura.getContentPane().add(fondo_dialogoCArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 230));
 
         dialogoUnirseClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoUnirseClan.setTitle("Unirse al Clan");
-        dialogoUnirseClan.setAlwaysOnTop(true);
         dialogoUnirseClan.setModal(true);
         dialogoUnirseClan.setResizable(false);
         dialogoUnirseClan.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -961,7 +954,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoAbandonarClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoAbandonarClan.setTitle("Abandonar Clan");
-        dialogoAbandonarClan.setAlwaysOnTop(true);
         dialogoAbandonarClan.setModal(true);
         dialogoAbandonarClan.setResizable(false);
         dialogoAbandonarClan.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -992,7 +984,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoCrearClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoCrearClan.setTitle("Crear Clan");
-        dialogoCrearClan.setAlwaysOnTop(true);
         dialogoCrearClan.setModal(true);
         dialogoCrearClan.setResizable(false);
         dialogoCrearClan.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1031,7 +1022,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoEliminarClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoEliminarClan.setTitle("Eliminar Clan");
-        dialogoEliminarClan.setAlwaysOnTop(true);
         dialogoEliminarClan.setModal(true);
         dialogoEliminarClan.setResizable(false);
         dialogoEliminarClan.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1062,7 +1052,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoCambioServidor.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoCambioServidor.setTitle("Cambiar Servidor");
-        dialogoCambioServidor.setAlwaysOnTop(true);
         dialogoCambioServidor.setModal(true);
         dialogoCambioServidor.setResizable(false);
         dialogoCambioServidor.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1111,7 +1100,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoAcercaDe.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoAcercaDe.setTitle("Acerca de...");
-        dialogoAcercaDe.setAlwaysOnTop(true);
         dialogoAcercaDe.setModal(true);
         dialogoAcercaDe.setResizable(false);
         dialogoAcercaDe.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2211,7 +2199,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JCheckBox chkNigromante;
     public javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple1;
     public javax.swing.JCheckBox chk_dialogoCArma_InfusionSimple2;
-    public javax.swing.JCheckBox chk_dialogoCArmadura_InfusionAgonia;
     public javax.swing.JCheckBox chk_dialogoCArmadura_InfusionSimple;
     private javax.swing.JCheckBox chk_dialogoMU_Aleman;
     private javax.swing.JCheckBox chk_dialogoMU_Espanyol;
@@ -2270,6 +2257,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel eti_dialogoCArma_RarezaArma;
     private javax.swing.JLabel eti_dialogoCArma_SlotArma;
     private javax.swing.JLabel eti_dialogoCArma_TipoArma;
+    private javax.swing.JLabel eti_dialogoCArmadura_InfusionAgonia;
     private javax.swing.JLabel eti_dialogoCArmadura_ModificadorArmadura;
     private javax.swing.JLabel eti_dialogoCArmadura_RarezaArmadura;
     private javax.swing.JLabel eti_dialogoCArmadura_SlotArmadura;
