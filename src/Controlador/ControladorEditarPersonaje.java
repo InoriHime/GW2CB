@@ -18,10 +18,13 @@ public class ControladorEditarPersonaje implements ActionListener {
     ModeloEditarPersonaje modelo;
     Personaje personaje;
     ArrayList<String> razas, clases, slotArma, slotArmadura, tiposArma, rarezas, modificadores;
+    int raza, clase;
     int[][] armas = new int[6][6];
-    int[][] armaduras = new int [13][5];
-    boolean[] nuevoArma = new boolean [6];
-    boolean[] nuevoArmadura = new boolean [13];
+    int[][] armaduras = new int[13][5];
+    boolean[] nuevoArma = new boolean[6];
+    boolean[] nuevoArmadura = new boolean[13];
+    boolean[] eliminarArma = new boolean[6];
+    boolean[] eliminarArmadura = new boolean[13];
     
     ControladorEditarPersonaje(Personaje p, VentanaPrincipal v) {
         
@@ -39,8 +42,10 @@ public class ControladorEditarPersonaje implements ActionListener {
         __CANCELAR,
         __APLICAR_ARMA,
         __CANCELAR_ARMA,
+        __SIN_EQUIPAR_ARMA,
         __APLICAR_ARMADURA,
-        __CANCELAR_ARMADURA;
+        __CANCELAR_ARMADURA,
+        __SIN_EQUIPAR_ARMADURA;
         
     }
     
@@ -101,65 +106,77 @@ public class ControladorEditarPersonaje implements ActionListener {
         switch (AccionMVC.valueOf(e.getActionCommand())) {
             
             case __EDITAR_ARMA:
-                if (this.vista.cb_dialogoMP_SlotArma.getSelectedIndex() > -1) {
+                slotArma = this.vista.cb_dialogoMP_SlotArma.getSelectedIndex();
                 
+                if (this.vista.cb_dialogoMP_SlotArma.getSelectedIndex() > -1) {
+                    
                     this.vista.mostrar_dialogoCArma_SlotArma.setText(this.vista.cb_dialogoMP_SlotArma.getSelectedItem().toString());
                     this.vista.cb_dialogoCArma_TipoArma.setModel(new DefaultComboBoxModel (tiposArma.toArray()));
                     this.vista.cb_dialogoCArma_RarezaArma.setModel(new DefaultComboBoxModel (rarezas.toArray()));
                     this.vista.cb_dialogoCArma_ModificadorArma.setModel(new DefaultComboBoxModel (modificadores.toArray()));
-                
-                    slotArma = this.vista.cb_dialogoMP_SlotArma.getSelectedIndex();
-                
-                    try {
-                   
-                        this.vista.cb_dialogoCArma_TipoArma.setSelectedIndex(armas[slotArma][1] - 1);
                     
-                    } catch (NullPointerException exc) {
-                    
+                    if (eliminarArma[slotArma] = true) {
+                        
                         this.vista.cb_dialogoCArma_TipoArma.setSelectedIndex(-1);
-                    
-                    }
-                
-                    try {
-                    
-                        this.vista.cb_dialogoCArma_RarezaArma.setSelectedIndex(armas[slotArma][3] - 1);
-                    
-                    } catch (NullPointerException exc) {
-                    
                         this.vista.cb_dialogoCArma_RarezaArma.setSelectedIndex(-1);
-                    
-                    }
-                
-                    try {
-                    
-                        this.vista.cb_dialogoCArma_ModificadorArma.setSelectedIndex(armas[slotArma][2] - 1);
-                    
-                    } catch (NullPointerException exc) {
-                    
                         this.vista.cb_dialogoCArma_ModificadorArma.setSelectedIndex(-1);
-                    
-                    }
-                
-                    if (armas[slotArma][4] == 1) {
-                    
-                        this.vista.chk_dialogoCArma_InfusionSimple1.setSelected(true);
-                    
-                    } else {
-                    
                         this.vista.chk_dialogoCArma_InfusionSimple1.setSelected(false);
-                    
-                    }
-                
-                    if (armas[slotArma][5] == 1) {
-                    
-                        this.vista.chk_dialogoCArma_InfusionSimple2.setSelected(true);
-                    
-                    } else {
-                    
                         this.vista.chk_dialogoCArma_InfusionSimple2.setSelected(false);
+                        
+                    } else {
+                
+                        try {
+                   
+                            this.vista.cb_dialogoCArma_TipoArma.setSelectedIndex(armas[slotArma][1] - 1);
+                    
+                        } catch (NullPointerException exc) {
+                    
+                            this.vista.cb_dialogoCArma_TipoArma.setSelectedIndex(-1);
+                    
+                        }
+                
+                        try {
+                    
+                            this.vista.cb_dialogoCArma_RarezaArma.setSelectedIndex(armas[slotArma][3] - 1);
+                    
+                        } catch (NullPointerException exc) {
+                    
+                            this.vista.cb_dialogoCArma_RarezaArma.setSelectedIndex(-1);
+                    
+                        }
+                
+                        try {
+                    
+                            this.vista.cb_dialogoCArma_ModificadorArma.setSelectedIndex(armas[slotArma][2] - 1);
+                    
+                        } catch (NullPointerException exc) {
+                    
+                            this.vista.cb_dialogoCArma_ModificadorArma.setSelectedIndex(-1);
+                    
+                        }
+                
+                        if (armas[slotArma][4] == 1) {
+                    
+                            this.vista.chk_dialogoCArma_InfusionSimple1.setSelected(true);
+                    
+                        } else {
+                    
+                            this.vista.chk_dialogoCArma_InfusionSimple1.setSelected(false);
+                    
+                        }
+                
+                        if (armas[slotArma][5] == 1) {
+                    
+                            this.vista.chk_dialogoCArma_InfusionSimple2.setSelected(true);
+                    
+                        } else {
+                    
+                            this.vista.chk_dialogoCArma_InfusionSimple2.setSelected(false);
+                    
+                        }
                     
                     }
-                
+                    
                     this.vista.dialogoConfigurarArma.setLocationRelativeTo(null);
                     this.vista.dialogoConfigurarArma.setVisible(true);
                 
@@ -171,52 +188,63 @@ public class ControladorEditarPersonaje implements ActionListener {
             break;
             
             case __EDITAR_ARMADURA:
+                slotArmadura = this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex();
+                
                 if (this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex() > -1) {
                     
                     this.vista.mostrar_dialogoCArmadura_SlotArmadura.setText(this.vista.cb_dialogoMP_SlotArmadura.getSelectedItem().toString());
                     this.vista.cb_dialogoCArmadura_RarezaArmadura.setModel(new DefaultComboBoxModel (rarezas.toArray()));
                     this.vista.cb_dialogoCArmadura_ModificadorArmadura.setModel(new DefaultComboBoxModel (modificadores.toArray()));
-                
-                    slotArmadura = this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex();
-                
-                    try {
                     
-                        this.vista.cb_dialogoCArmadura_RarezaArmadura.setSelectedIndex(armaduras[slotArmadura][2] - 1);
-                    
-                    } catch (NullPointerException exc) {
-                    
+                    if (eliminarArmadura[slotArmadura] == true) {
+                        
                         this.vista.cb_dialogoCArmadura_RarezaArmadura.setSelectedIndex(-1);
-                    
-                    }
-                
-                    try {
-                    
-                        this.vista.cb_dialogoCArmadura_ModificadorArmadura.setSelectedIndex(armaduras[slotArmadura][1] - 1);
-                    
-                    } catch (NullPointerException exc) {
-                    
                         this.vista.cb_dialogoCArmadura_ModificadorArmadura.setSelectedIndex(-1);
-                    
-                    }  
-                
-                    if (armaduras[slotArmadura][3] == 1) {
-                    
-                        this.vista.chk_dialogoCArmadura_InfusionSimple.setSelected(true);
-                    
-                    } else {
-                    
                         this.vista.chk_dialogoCArmadura_InfusionSimple.setSelected(false);
-                    
-                    }
-                
-                    if (armaduras[slotArmadura][4] > 0) {
-                    
-                        this.vista.txt_dialogoCArmadura_ResistAgonia.setText(Integer.toString(armaduras[slotArmadura][4]));
-                    
-                    } else {
-                    
                         this.vista.txt_dialogoCArmadura_ResistAgonia.setText("0");
+                        
+                    } else {
+                
+                        try {
                     
+                            this.vista.cb_dialogoCArmadura_RarezaArmadura.setSelectedIndex(armaduras[slotArmadura][2] - 1);
+                    
+                        } catch (NullPointerException exc) {
+                    
+                            this.vista.cb_dialogoCArmadura_RarezaArmadura.setSelectedIndex(-1);
+                    
+                        }
+                
+                        try {
+                    
+                            this.vista.cb_dialogoCArmadura_ModificadorArmadura.setSelectedIndex(armaduras[slotArmadura][1] - 1);
+                    
+                        } catch (NullPointerException exc) {
+                    
+                            this.vista.cb_dialogoCArmadura_ModificadorArmadura.setSelectedIndex(-1);
+                    
+                        }  
+                
+                        if (armaduras[slotArmadura][3] == 1) {
+                    
+                            this.vista.chk_dialogoCArmadura_InfusionSimple.setSelected(true);
+                    
+                        } else {
+                    
+                            this.vista.chk_dialogoCArmadura_InfusionSimple.setSelected(false);
+                    
+                        }
+                
+                        if (armaduras[slotArmadura][4] > 0) {
+                    
+                            this.vista.txt_dialogoCArmadura_ResistAgonia.setText(Integer.toString(armaduras[slotArmadura][4]));
+                    
+                        } else {
+                    
+                            this.vista.txt_dialogoCArmadura_ResistAgonia.setText("0");
+                    
+                        }
+                        
                     }
                 
                     this.vista.dialogoConfigurarArmadura.setLocationRelativeTo(null);
@@ -229,22 +257,11 @@ public class ControladorEditarPersonaje implements ActionListener {
                 }
             break;
                 
-            case __CANCELAR:
-                this.vista.dialogoModificarPersonaje.dispose();
-            break;
-                
             case __APLICAR_ARMA:
                 slotArma = this.vista.cb_dialogoMP_SlotArma.getSelectedIndex();
                 
-                if (armas[slotArma][0] != slotArma + 1) {
-                    
-                    nuevoArma[slotArma] = true;
-                    
-                } else {
-                    
-                    nuevoArma[slotArma] = false;
-                    
-                }
+                eliminarArma[slotArma] = false;
+                nuevoArma[slotArma] = true;
                 
                 armas[slotArma][0] = slotArma + 1;
                 armas[slotArma][1] = this.vista.cb_dialogoCArma_TipoArma.getSelectedIndex() + 1;
@@ -270,8 +287,37 @@ public class ControladorEditarPersonaje implements ActionListener {
                     armas[slotArma][5] = 0;
                     
                 }
-                
+               
                 this.vista.dialogoConfigurarArma.dispose();
+            break;
+                
+            case __APLICAR_ARMADURA:
+                slotArmadura = this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex();
+                
+                eliminarArmadura[slotArmadura] = false;
+                nuevoArmadura[slotArmadura] = true;
+                
+                armaduras[slotArmadura][0] = slotArmadura + 1;
+                armaduras[slotArmadura][1] = this.vista.cb_dialogoCArmadura_ModificadorArmadura.getSelectedIndex() + 1;
+                armaduras[slotArmadura][2] = this.vista.cb_dialogoCArmadura_RarezaArmadura.getSelectedIndex() + 1;
+                
+                if (this.vista.chk_dialogoCArmadura_InfusionSimple.isSelected()) {
+                    
+                    armaduras[slotArmadura][3] = 1;
+                    
+                } else {
+                    
+                    armaduras[slotArmadura][3] = 0;
+                    
+                }
+                
+                armaduras[slotArmadura][4] = Integer.parseInt(this.vista.txt_dialogoCArmadura_ResistAgonia.getText());
+                
+                this.vista.dialogoConfigurarArmadura.dispose();
+            break;
+             
+            case __CANCELAR:
+                this.vista.dialogoModificarPersonaje.dispose();
             break;
                 
             case __CANCELAR_ARMA:
@@ -280,6 +326,33 @@ public class ControladorEditarPersonaje implements ActionListener {
                 
             case __CANCELAR_ARMADURA:
                 this.vista.dialogoConfigurarArmadura.dispose();
+            break;
+                
+            case __SIN_EQUIPAR_ARMA:
+                slotArma = this.vista.cb_dialogoMP_SlotArma.getSelectedIndex();
+                
+                nuevoArma[slotArma] = false;
+                eliminarArma[slotArma] = true;
+                
+                this.vista.dialogoConfigurarArma.dispose();
+            break;
+                
+            case __SIN_EQUIPAR_ARMADURA:
+                slotArmadura = this.vista.cb_dialogoMP_SlotArmadura.getSelectedIndex();
+                
+                nuevoArmadura[slotArmadura] = false;
+                eliminarArmadura[slotArmadura] = true;
+                
+                this.vista.dialogoConfigurarArmadura.dispose();
+            break;
+                
+            case __MODIFICAR_PERSONAJE:
+                raza = this.vista.cb_dialogoMP_Raza.getSelectedIndex() + 1;
+                clase = this.vista.cb_dialogoMP_Clase.getSelectedIndex() + 1;
+                
+                modelo.modificarPersonaje(personaje.getNombre(), this.vista.txt_dialogoMP_Nombre.getText(), raza, clase, armas, armaduras, nuevoArma, eliminarArma, nuevoArmadura, eliminarArmadura);
+                
+                this.vista.dialogoModificarPersonaje.dispose();
             break;
             
         }

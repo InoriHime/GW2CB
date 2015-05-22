@@ -144,6 +144,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mostrar_dialogoCArma_SlotArma = new javax.swing.JLabel();
         btn_dialogoCArma_Aplicar = new javax.swing.JButton();
         btn_dialogoCArma_Cancelar = new javax.swing.JButton();
+        btn_dialogoCArma_SinEquipar = new javax.swing.JButton();
         fondo_dialogoCArma = new javax.swing.JLabel();
         dialogoConfigurarArmadura = new javax.swing.JDialog();
         eti_dialogoCArmadura_RarezaArmadura = new javax.swing.JLabel();
@@ -158,6 +159,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txt_dialogoCArmadura_ResistAgonia = new javax.swing.JTextField();
         txt_dialogoCArmadura_InfusionAgonia = new javax.swing.JLabel();
         eti_dialogoCArmadura_InfusionAgonia = new javax.swing.JLabel();
+        btn_dialogoCArmadura_SinEquipar = new javax.swing.JButton();
         fondo_dialogoCArmadura = new javax.swing.JLabel();
         dialogoUnirseClan = new javax.swing.JDialog();
         eti_dialogoUC_Clan = new javax.swing.JLabel();
@@ -793,7 +795,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         dialogoConfigurarArma.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArma.setTitle("Configurar Arma");
-        dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 288));
+        dialogoConfigurarArma.setMinimumSize(new java.awt.Dimension(235, 314));
         dialogoConfigurarArma.setModal(true);
         dialogoConfigurarArma.setResizable(false);
         dialogoConfigurarArma.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -847,18 +849,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         btn_dialogoCArma_Aplicar.setText("Aplicar");
         btn_dialogoCArma_Aplicar.setOpaque(false);
-        dialogoConfigurarArma.getContentPane().add(btn_dialogoCArma_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 224, -1, -1));
+        dialogoConfigurarArma.getContentPane().add(btn_dialogoCArma_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 254, -1, -1));
 
         btn_dialogoCArma_Cancelar.setText("Cancelar");
         btn_dialogoCArma_Cancelar.setOpaque(false);
-        dialogoConfigurarArma.getContentPane().add(btn_dialogoCArma_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 224, -1, -1));
+        dialogoConfigurarArma.getContentPane().add(btn_dialogoCArma_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 254, -1, -1));
+
+        btn_dialogoCArma_SinEquipar.setText("Sin Equipar");
+        btn_dialogoCArma_SinEquipar.setOpaque(false);
+        dialogoConfigurarArma.getContentPane().add(btn_dialogoCArma_SinEquipar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         fondo_dialogoCArma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
-        dialogoConfigurarArma.getContentPane().add(fondo_dialogoCArma, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 260));
+        dialogoConfigurarArma.getContentPane().add(fondo_dialogoCArma, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 290));
 
         dialogoConfigurarArmadura.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoConfigurarArmadura.setTitle("Configurar Armadura");
-        dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 258));
+        dialogoConfigurarArmadura.setMinimumSize(new java.awt.Dimension(255, 280));
         dialogoConfigurarArmadura.setModal(true);
         dialogoConfigurarArmadura.setResizable(false);
         dialogoConfigurarArmadura.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -904,11 +910,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 btn_dialogoCArmadura_AplicarActionPerformed(evt);
             }
         });
-        dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 189, -1, -1));
+        dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_Aplicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 219, -1, -1));
 
         btn_dialogoCArmadura_Cancelar.setText("Cancelar");
         btn_dialogoCArmadura_Cancelar.setOpaque(false);
-        dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 189, -1, -1));
+        dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 219, -1, -1));
         dialogoConfigurarArmadura.getContentPane().add(txt_dialogoCArmadura_ResistAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 149, 32, -1));
 
         txt_dialogoCArmadura_InfusionAgonia.setForeground(new java.awt.Color(209, 194, 170));
@@ -919,8 +925,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eti_dialogoCArmadura_InfusionAgonia.setText("Infusión Agonía (+");
         dialogoConfigurarArmadura.getContentPane().add(eti_dialogoCArmadura_InfusionAgonia, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 149, -1, 20));
 
+        btn_dialogoCArmadura_SinEquipar.setText("Sin Equipar");
+        btn_dialogoCArmadura_SinEquipar.setOpaque(false);
+        dialogoConfigurarArmadura.getContentPane().add(btn_dialogoCArmadura_SinEquipar, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 186, -1, -1));
+
         fondo_dialogoCArmadura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Fondo/fondo2.jpg"))); // NOI18N
-        dialogoConfigurarArmadura.getContentPane().add(fondo_dialogoCArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 230));
+        dialogoConfigurarArmadura.getContentPane().add(fondo_dialogoCArmadura, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 260));
 
         dialogoUnirseClan.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dialogoUnirseClan.setTitle("Unirse al Clan");
@@ -2145,8 +2155,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dialogoAD_Aceptar;
     public javax.swing.JButton btn_dialogoCArma_Aplicar;
     public javax.swing.JButton btn_dialogoCArma_Cancelar;
+    private javax.swing.JButton btn_dialogoCArma_SinEquipar;
     public javax.swing.JButton btn_dialogoCArmadura_Aplicar;
     public javax.swing.JButton btn_dialogoCArmadura_Cancelar;
+    private javax.swing.JButton btn_dialogoCArmadura_SinEquipar;
     private javax.swing.JLabel btn_dialogoCC;
     private javax.swing.JButton btn_dialogoCC_Cancelar;
     private javax.swing.JButton btn_dialogoCC_Crear;

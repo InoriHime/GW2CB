@@ -1,9 +1,11 @@
 package Modelo;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class ModeloEditarPersonaje {
     
@@ -446,6 +448,84 @@ public class ModeloEditarPersonaje {
         }
   
         return null;
+        
+    }
+    
+    public boolean modificarPersonaje(String antiguoNom,String nuevoNom, int r, int c, int[][] arm, int[][] ad, boolean[] narm, boolean[] earm, boolean[] nad, boolean[] ead) {
+        
+        String q;
+        
+        try {
+            
+            PreparedStatement pstm;
+            
+            q = "UPDATE Personajes SET NomPj = '" + nuevoNom + "', Raza = " + r + ", Clase = " + c + " WHERE NomPj = '" + antiguoNom + "'";
+            pstm = db.getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            
+            for(int i = 0; i < 6; i++) {
+            
+                if (earm[i] == true) {
+                
+                    q = "DELETE FROM Pj_Armas WHERE NomPj = '" + nuevoNom + "' AND SlotArma = '" + (i + 1) + "'";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                
+                } else if (narm[i] == true) {
+                
+                    q = "DELETE FROM Pj_Armas WHERE NomPj = '" + nuevoNom + "' AND SlotArma = '" + (i + 1) + "'";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                    
+                    q = "INSERT INTO Pj_Armas (NomPj, SlotArma, TipoArma, Modificador, Rareza, InfSimple1, InfSimple2) VALUES ('" + nuevoNom + "', " + arm[i][0] + ", " + arm[i][1] + ", " + arm[i][2] + ", " + arm[i][3] + ", " + arm[i][4] + ", " + arm[i][5] + ")";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                
+                }
+            
+            }
+        
+        
+            for(int j = 0; j < 13; j++) {
+            
+                if (ead[j] == true) {
+                
+                    q = "DELETE FROM Pj_Armaduras WHERE NomPj = '" + nuevoNom + "' AND SlotArmadura = '" + (j + 1) + "'";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                
+                } else if (nad[j] == true) {
+                
+                    q = "DELETE FROM Pj_Armaduras WHERE NomPj = '" + nuevoNom + "' AND SlotArmadura = '" + (j + 1) + "'";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                    
+                    q = "INSERT INTO Pj_Armaduras (NomPj, SlotArmadura, Modificador, Rareza, InfSimple, InfAgonia) VALUES ('" + nuevoNom + "', " + ad[j][0] + ", " + ad[j][1] + ", " + ad[j][2] + ", " + ad[j][3] + ", " + ad[j][4] + "";
+                    pstm = db.getConexion().prepareStatement(q);
+                    pstm.execute();
+                    pstm.close();
+                
+                }
+            
+            }
+            
+            JOptionPane.showMessageDialog(null, "Personaje modificado con éxito.");
+            
+            return true;
+            
+        } catch (SQLException e) {
+            
+            e.printStackTrace();
+            
+        }
+        
+        return false;
         
     }
     
