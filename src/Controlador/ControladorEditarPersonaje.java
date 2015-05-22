@@ -60,18 +60,7 @@ public class ControladorEditarPersonaje implements ActionListener {
         rarezas = modelo.getNombreRarezas();
         modificadores = modelo.getNombreModificador();
 
-        armas = modelo.getArmas(personaje.getNombre());
-        armaduras = modelo.getArmaduras(personaje.getNombre());
-
-        this.vista.txt_dialogoMP_Nombre.setText(personaje.getNombre());
-        this.vista.cb_dialogoMP_Raza.setModel(new DefaultComboBoxModel(razas.toArray()));
-        this.vista.cb_dialogoMP_Raza.setSelectedIndex(modelo.getRaza(personaje.getNombre()) - 1);
-        this.vista.cb_dialogoMP_Clase.setModel(new DefaultComboBoxModel(clases.toArray()));
-        this.vista.cb_dialogoMP_Clase.setSelectedIndex(modelo.getClase(personaje.getNombre()) - 1);
-        this.vista.cb_dialogoMP_SlotArma.setModel(new DefaultComboBoxModel(slotArma.toArray()));
-        this.vista.cb_dialogoMP_SlotArma.setSelectedIndex(-1);
-        this.vista.cb_dialogoMP_SlotArmadura.setModel(new DefaultComboBoxModel(slotArmadura.toArray()));
-        this.vista.cb_dialogoMP_SlotArmadura.setSelectedIndex(-1);
+        this.cargarDatosPersonaje();
 
         this.vista.btn_dialogoMP_ModArma.setActionCommand("__EDITAR_ARMA");
         this.vista.btn_dialogoMP_ModArma.addActionListener(this);
@@ -98,10 +87,28 @@ public class ControladorEditarPersonaje implements ActionListener {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
             SwingUtilities.updateComponentTreeUI(vista);
             this.vista.dialogoModificarPersonaje.setLocationRelativeTo(null);
-            this.vista.dialogoModificarPersonaje.setVisible(true);
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
         }
 
+    }
+    
+    public void cargarDatosPersonaje(){
+        armas = modelo.getArmas(personaje.getNombre());
+        armaduras = modelo.getArmaduras(personaje.getNombre());
+
+        this.vista.txt_dialogoMP_Nombre.setText(personaje.getNombre());
+        this.vista.cb_dialogoMP_Raza.setModel(new DefaultComboBoxModel(razas.toArray()));
+        this.vista.cb_dialogoMP_Raza.setSelectedIndex(modelo.getRaza(personaje.getNombre()) - 1);
+        this.vista.cb_dialogoMP_Clase.setModel(new DefaultComboBoxModel(clases.toArray()));
+        this.vista.cb_dialogoMP_Clase.setSelectedIndex(modelo.getClase(personaje.getNombre()) - 1);
+        this.vista.cb_dialogoMP_SlotArma.setModel(new DefaultComboBoxModel(slotArma.toArray()));
+        this.vista.cb_dialogoMP_SlotArma.setSelectedIndex(-1);
+        this.vista.cb_dialogoMP_SlotArmadura.setModel(new DefaultComboBoxModel(slotArmadura.toArray()));
+        this.vista.cb_dialogoMP_SlotArmadura.setSelectedIndex(-1);
+    }
+    
+    public void setPersonaje(Personaje p){
+        this.personaje=p;
     }
 
     @Override
