@@ -52,7 +52,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
      */
     public enum AccionMVC {
         __EDITAR_PERSONAJE,
-        __BUSCAR;
+        __BUSCAR,
+        __ACEPTAR_ACERCA;
     }
 
     /**
@@ -109,6 +110,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.btnModPj.addActionListener(this);
         this.vista.btnBuscar.setActionCommand("__BUSCAR");
         this.vista.btnBuscar.addActionListener(this);
+        this.vista.btn_dialogoAD_Aceptar.setActionCommand("__ACEPTAR_ACERCA");
+        this.vista.btn_dialogoAD_Aceptar.addActionListener(this);
         
         this.vista.itemModificarDatos.setName("__MODIFICAR_USUARIO");
         this.vista.itemModificarDatos.addMouseListener(this);
@@ -217,6 +220,9 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 this.vista.TablaPersonajes.getColumnModel().getColumn(3).setPreferredWidth(30);
                 this.vista.TablaPersonajes.getColumnModel().getColumn(4).setPreferredWidth(30);
                 break;
+            case __ACEPTAR_ACERCA:
+                this.vista.dialogoAcercaDe.dispose();
+                break;
         }
 
     }
@@ -241,6 +247,10 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 break;
             case "__SALIR":
                 this.vista.dispatchEvent(new WindowEvent(this.vista, WindowEvent.WINDOW_CLOSING));
+                break;
+            case "__ACERCA":
+                this.vista.dialogoAcercaDe.setLocationRelativeTo(null);
+                this.vista.dialogoAcercaDe.setVisible(true);
                 break;
         }
     }

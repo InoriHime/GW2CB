@@ -31,6 +31,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="159" y="98" width="181" height="-1"/>
@@ -44,6 +47,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre cuenta (GW2):"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="28" width="-1" height="-1"/>
@@ -61,6 +67,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="159" y="136" width="-1" height="-1"/>
@@ -112,6 +121,9 @@
                 <Property name="text" type="java.lang.String" value="Ingl&#xe9;s"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Espanyol">
               <Properties>
@@ -121,6 +133,9 @@
                 <Property name="text" type="java.lang.String" value="Espa&#xf1;ol"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Aleman">
               <Properties>
@@ -130,6 +145,9 @@
                 <Property name="text" type="java.lang.String" value="Aleman"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chk_dialogoMU_Frances">
               <Properties>
@@ -139,6 +157,9 @@
                 <Property name="text" type="java.lang.String" value="Franc&#xe9;s"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -149,6 +170,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="63" width="111" height="-1"/>
@@ -162,6 +186,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Servidor:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="101" width="104" height="-1"/>
@@ -175,6 +202,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Idiomas:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="136" width="107" height="-1"/>
@@ -182,6 +212,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_dialogoMU_Email">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="159" y="60" width="181" height="-1"/>
@@ -195,6 +228,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="-"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="159" y="28" width="181" height="-1"/>
@@ -217,6 +253,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="214" width="350" height="-1"/>
@@ -281,6 +320,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Nueva contrase&#xf1;a:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="eti_dialogoMU_RepetirContrasenya">
               <Properties>
@@ -289,13 +331,22 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Repetir contrase&#xf1;a:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_RepetirContrasenya">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoMU_RepetirContrasenyaActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_NuevaContrasenya">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="eti_dialogoMU_ContrasenyaAntigua">
               <Properties>
@@ -304,8 +355,14 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Contrase&#xf1;a antigua:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JPasswordField" name="txt_dialogoMU_ContrasenyaAntigua">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -314,6 +371,9 @@
             <Property name="text" type="java.lang.String" value="Modificar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="64" y="371" width="-1" height="-1"/>
@@ -328,6 +388,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dialogoMU_CancelarActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="225" y="371" width="-1" height="-1"/>
@@ -340,6 +403,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="380" height="420"/>
@@ -370,6 +436,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoRP_NombreActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="90" y="30" width="170" height="-1"/>
@@ -383,6 +452,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="30" width="-1" height="-1"/>
@@ -396,6 +468,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Clase:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="110" width="-1" height="-1"/>
@@ -414,6 +489,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="90" y="70" width="150" height="-1"/>
@@ -432,6 +510,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="90" y="110" width="150" height="-1"/>
@@ -445,6 +526,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Raza:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="70" width="-1" height="-1"/>
@@ -470,6 +554,9 @@
             </Property>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="150" width="-1" height="110"/>
@@ -533,6 +620,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Slot del Arma:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArma">
               <Properties>
@@ -549,6 +639,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_dialogoRP_SlotArmaActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="eti_dialogoRP_SlotArmadura">
               <Properties>
@@ -557,6 +650,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Slot de la Armadura:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoRP_SlotArmadura">
               <Properties>
@@ -573,6 +669,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_dialogoRP_SlotArmaduraActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dialogoRP_ModArmadura">
               <Properties>
@@ -637,6 +736,9 @@
             <Property name="text" type="java.lang.String" value="Registrar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="20" y="280" width="-1" height="-1"/>
@@ -648,6 +750,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="270" y="280" width="-1" height="-1"/>
@@ -660,6 +765,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="370" height="320"/>
@@ -706,6 +814,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="30" width="-1" height="-1"/>
@@ -719,6 +830,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Clase:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="110" width="-1" height="-1"/>
@@ -774,6 +888,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Raza:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="70" width="-1" height="-1"/>
@@ -865,6 +982,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Slot del Arma:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArma">
               <Properties>
@@ -892,6 +1012,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Slot de la Armadura:"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JComboBox" name="cb_dialogoMP_SlotArmadura">
               <Properties>
@@ -1010,6 +1133,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="370" height="320"/>
@@ -1043,6 +1169,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Tipo de Arma:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="46" width="-1" height="-1"/>
@@ -1077,6 +1206,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Rareza:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="84" width="-1" height="-1"/>
@@ -1111,6 +1243,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Modificador:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="122" width="-1" height="-1"/>
@@ -1182,6 +1317,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Slot del Arma:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="11" width="-1" height="-1"/>
@@ -1252,6 +1390,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="230" height="290"/>
@@ -1285,6 +1426,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Rareza:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="46" width="-1" height="-1"/>
@@ -1319,6 +1463,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Modificador:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="84" width="-1" height="-1"/>
@@ -1373,6 +1520,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Slot del Armadura:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="11" width="-1" height="-1"/>
@@ -1443,6 +1593,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="RA)"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="161" y="152" width="-1" height="-1"/>
@@ -1456,6 +1609,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Infusi&#xf3;n Agon&#xed;a (+"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="31" y="149" width="-1" height="20"/>
@@ -1482,6 +1638,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="250" height="260"/>
@@ -1497,6 +1656,9 @@
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1509,6 +1671,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Clan:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="24" y="33" width="-1" height="-1"/>
@@ -1530,6 +1695,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_dialogoUC_ClanActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="91" y="30" width="160" height="-1"/>
@@ -1541,6 +1709,9 @@
             <Property name="text" type="java.lang.String" value="Unirse"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="43" y="82" width="-1" height="-1"/>
@@ -1552,6 +1723,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="158" y="82" width="-1" height="-1"/>
@@ -1564,6 +1738,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="280" height="130"/>
@@ -1579,6 +1756,9 @@
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1591,6 +1771,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Clan:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="24" y="33" width="-1" height="-1"/>
@@ -1612,6 +1795,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_dialogoAC_ClanActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="91" y="30" width="160" height="-1"/>
@@ -1623,6 +1809,9 @@
             <Property name="text" type="java.lang.String" value="Abandonar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="43" y="82" width="-1" height="-1"/>
@@ -1634,6 +1823,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="158" y="82" width="-1" height="-1"/>
@@ -1646,6 +1838,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="280" height="130"/>
@@ -1661,6 +1856,9 @@
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1673,6 +1871,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre del Clan:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="27" y="29" width="-1" height="-1"/>
@@ -1683,6 +1884,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoCC_NombreClanActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="127" y="26" width="160" height="-1"/>
@@ -1696,6 +1900,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Tag:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="27" y="67" width="-1" height="-1"/>
@@ -1703,6 +1910,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_dialogoCC_Tag">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="127" y="64" width="48" height="-1"/>
@@ -1717,6 +1927,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dialogoCC_CrearActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="50" y="115" width="-1" height="-1"/>
@@ -1728,6 +1941,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="188" y="115" width="-1" height="-1"/>
@@ -1740,6 +1956,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="320" height="160"/>
@@ -1755,6 +1974,9 @@
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1767,6 +1989,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Clan:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="24" y="33" width="-1" height="-1"/>
@@ -1788,6 +2013,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_dialogoEC_ClanActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="91" y="30" width="160" height="-1"/>
@@ -1799,6 +2027,9 @@
             <Property name="text" type="java.lang.String" value="Eliminar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="43" y="82" width="-1" height="-1"/>
@@ -1810,6 +2041,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="158" y="82" width="-1" height="-1"/>
@@ -1822,6 +2056,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="280" height="130"/>
@@ -1837,6 +2074,9 @@
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1849,6 +2089,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Direcci&#xf3;n IP:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="14" width="-1" height="-1"/>
@@ -1856,6 +2099,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_dialogoCS_DireccionIP">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="167" y="11" width="140" height="-1"/>
@@ -1869,6 +2115,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre de la Base de Datos:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="52" width="-1" height="-1"/>
@@ -1876,6 +2125,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_dialogoCS_NombreBD">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="167" y="49" width="140" height="-1"/>
@@ -1889,6 +2141,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Usuario de la BD:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="90" width="-1" height="-1"/>
@@ -1899,6 +2154,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dialogoCS_UsuarioActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="167" y="87" width="140" height="-1"/>
@@ -1906,6 +2164,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txt_dialogoCS_Contrase&#xf1;a">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="167" y="125" width="140" height="-1"/>
@@ -1919,6 +2180,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="128" width="-1" height="-1"/>
@@ -1930,6 +2194,9 @@
             <Property name="text" type="java.lang.String" value="Aplicar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="41" y="163" width="-1" height="-1"/>
@@ -1941,6 +2208,9 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="199" y="163" width="-1" height="-1"/>
@@ -1953,6 +2223,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="320" height="202"/>
@@ -1965,9 +2238,15 @@
       <Properties>
         <Property name="defaultCloseOperation" type="int" value="2"/>
         <Property name="title" type="java.lang.String" value="Acerca de..."/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[385, 295]"/>
+        </Property>
         <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -1978,6 +2257,9 @@
             <Property name="text" type="java.lang.String" value="Aceptar"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="153" y="237" width="-1" height="-1"/>
@@ -1991,6 +2273,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Texto sobre la Aplicaci&#xf3;n."/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="30" y="23" width="-1" height="-1"/>
@@ -2003,6 +2288,9 @@
               <Image iconType="3" name="/Vista/Imagenes/Fondo/fondo2.jpg"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="380" height="280"/>
