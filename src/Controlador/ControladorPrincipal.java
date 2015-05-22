@@ -31,6 +31,8 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
      * instancia a nuestro modelo
      */
     ModeloPrincipal modelo = new ModeloPrincipal();
+    
+    ControladorEditarPersonaje MEP;
     //Usuario de sesion
     Cuenta usuario;
     //Array para almacenar temporalmente los datos de usuario con el fin de pasarlos como parametro en el constructur del usuario
@@ -162,6 +164,14 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.icoAnillo1.addMouseListener(this);
         this.vista.icoAnillo2.setName("Anillo2");
         this.vista.icoAnillo2.addMouseListener(this);
+        
+        Personaje p = new Personaje();
+        String npj;
+        npj = String.valueOf(this.vista.cbPersonaje.getSelectedItem());
+        p.setNombre(npj);
+        this.asignarDatosPersonaje(p);
+        MEP=new ControladorEditarPersonaje(p, this.vista);
+        MEP.iniciar();
 
     }
 
@@ -175,7 +185,11 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 npj = String.valueOf(this.vista.cbPersonaje.getSelectedItem());
                 p.setNombre(npj);
                 this.asignarDatosPersonaje(p);
-                new ControladorEditarPersonaje(p, this.vista).iniciar();
+                MEP.setPersonaje(p);
+                MEP.cargarDatosPersonaje();
+                this.vista.dialogoModificarPersonaje.setVisible(true);
+                this.vista.dialogoModificarPersonaje.setLocationRelativeTo(null);
+
                 break;
             case __BUSCAR:
                 this.vista.TablaPersonajes.setModel(this.modelo.busqueda(usu, this.vista.txtBusqueda.getText(),
