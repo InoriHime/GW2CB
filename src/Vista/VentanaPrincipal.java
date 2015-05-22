@@ -341,7 +341,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuUsuario = new javax.swing.JMenu();
         itemModificarDatos = new javax.swing.JMenuItem();
         separadorUsuario = new javax.swing.JPopupMenu.Separator();
-        itemCerrarUsuario = new javax.swing.JMenuItem();
+        itemSalir = new javax.swing.JMenuItem();
         menuEditar = new javax.swing.JMenu();
         itemRegPj = new javax.swing.JMenuItem();
         itemModPj = new javax.swing.JMenuItem();
@@ -1953,8 +1953,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuUsuario.add(itemModificarDatos);
         menuUsuario.add(separadorUsuario);
 
-        itemCerrarUsuario.setText("Salir");
-        menuUsuario.add(itemCerrarUsuario);
+        itemSalir.setText("Salir");
+        menuUsuario.add(itemSalir);
 
         MenuBarra.add(menuUsuario);
 
@@ -2343,12 +2343,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public javax.swing.JMenuItem itemAbandonarClan;
     public javax.swing.JMenuItem itemAcerca;
     public javax.swing.JMenuItem itemCambiarBD;
-    public javax.swing.JMenuItem itemCerrarUsuario;
     public javax.swing.JMenuItem itemEliminarClan;
     public javax.swing.JMenuItem itemModPj;
     public javax.swing.JMenuItem itemModificarDatos;
     public javax.swing.JMenuItem itemRegClan;
     public javax.swing.JMenuItem itemRegPj;
+    public javax.swing.JMenuItem itemSalir;
     public javax.swing.JMenuItem itemUnirClan;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JMenu menuAyuda;

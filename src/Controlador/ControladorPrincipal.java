@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -106,8 +107,13 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
         this.vista.btnModPj.addActionListener(this);
         this.vista.btnBuscar.setActionCommand("__BUSCAR");
         this.vista.btnBuscar.addActionListener(this);
-        this.vista.itemCerrarUsuario.addMouseListener(this);
-        this.vista.itemCerrarUsuario.setName("__SALIR");
+        
+        this.vista.itemModificarDatos.setName("__MODIFICAR_USUARIO");
+        this.vista.itemModificarDatos.addMouseListener(this);
+        this.vista.itemSalir.setName("__SALIR");
+        this.vista.itemSalir.addMouseListener(this);
+        this.vista.itemRegPj.setName("__REGISTRAR_PERSONAJE");
+        this.vista.itemRegPj.addMouseListener(this);
 
         this.vista.icoCabeza.setName("Cabeza");
         this.vista.icoCabeza.addMouseListener(this);
@@ -205,7 +211,7 @@ public class ControladorPrincipal implements ActionListener, MouseListener {
                 this.mostrarAtributosPersonaje(personajeSeleccionado);
                 break;
             case "__SALIR":
-                this.vista.dispose();
+                this.vista.dispatchEvent(new WindowEvent(this.vista, WindowEvent.WINDOW_CLOSING));
                 break;
         }
     }
